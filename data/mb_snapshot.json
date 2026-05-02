@@ -1,0 +1,320 @@
+{
+  "fetched_at": "2026-05-02T20:11:51.164789+00:00",
+  "mbid": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+  "artist": {
+    "name": "iZLET",
+    "sort_name": "iZLET",
+    "type": "Group",
+    "country": "HR",
+    "disambiguation": "",
+    "begin": "2009",
+    "ended": false,
+    "aliases": [
+      "Braća Kumerle"
+    ],
+    "tags": [
+      "alternative rock",
+      "croatian",
+      "hrvatski rock",
+      "indie rock",
+      "rock"
+    ],
+    "rating": null,
+    "urls": [
+      {
+        "type": "bandcamp",
+        "url": "https://izlet.bandcamp.com/"
+      },
+      {
+        "type": "discogs",
+        "url": "https://www.discogs.com/artist/6610944"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d"
+      },
+      {
+        "type": "free streaming",
+        "url": "https://www.deezer.com/artist/5054702"
+      },
+      {
+        "type": "purchase for download",
+        "url": "https://music.apple.com/us/artist/682224896"
+      },
+      {
+        "type": "social network",
+        "url": "https://twitter.com/bracakumerle"
+      },
+      {
+        "type": "social network",
+        "url": "https://www.facebook.com/bracakumerle"
+      },
+      {
+        "type": "social network",
+        "url": "https://www.instagram.com/bracakumerle/"
+      },
+      {
+        "type": "streaming",
+        "url": "https://music.apple.com/us/artist/682224896"
+      },
+      {
+        "type": "streaming",
+        "url": "https://tidal.com/artist/5080072"
+      },
+      {
+        "type": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q139595518"
+      },
+      {
+        "type": "youtube",
+        "url": "https://www.youtube.com/@BracaKumerle"
+      }
+    ]
+  },
+  "release_groups": [
+    {
+      "id": "1580c3c5-c3a1-454a-8d9f-e454706c0ce7",
+      "title": "Nikad ne znaš, to je ono...",
+      "type": "Album",
+      "secondary_types": [],
+      "first_release_date": "2016"
+    },
+    {
+      "id": "3f006410-461d-42be-a02d-80caa113241b",
+      "title": "Sjever uz odsutne",
+      "type": "Single",
+      "secondary_types": [],
+      "first_release_date": "2025-11-15"
+    },
+    {
+      "id": "6a2e5c21-ea78-46fd-8424-73b15f9f8270",
+      "title": "Nema Mjesta",
+      "type": "Single",
+      "secondary_types": [],
+      "first_release_date": "2018-07-23"
+    },
+    {
+      "id": "b7c9ceb7-e8fb-4024-b127-1b22cb23c101",
+      "title": "Katarza",
+      "type": "Album",
+      "secondary_types": [],
+      "first_release_date": "2019"
+    }
+  ],
+  "recordings": [
+    {
+      "id": "12b10e3b-2cbb-4068-bbc9-56e7182e7a82",
+      "title": "Majčin Skut",
+      "length_ms": 282000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "247bb381-9b46-40aa-b5bc-929be70ab534",
+      "title": "Osmijeh je bitan",
+      "length_ms": 190000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "28bdb8b2-b195-48a2-9723-e52f41364cd5",
+      "title": "Zaklopi moje oči",
+      "length_ms": 218000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "3171c330-2543-4fe7-8a0d-24c13161ae17",
+      "title": "Ti Si Čudesna",
+      "length_ms": 200000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "374ae819-1734-4220-9814-b53e1eb6aa9b",
+      "title": "Zašto šutim",
+      "length_ms": 235000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "4a911066-4107-41ae-b067-471a718b1f92",
+      "title": "Uredi se",
+      "length_ms": 150000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "4bb6b6bc-a497-4109-972f-c916e1b196b7",
+      "title": "Ponekad",
+      "length_ms": 158000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "4df50866-fe13-48f4-afb7-7f2c5ac5efba",
+      "title": "Maša",
+      "length_ms": 260000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "546f6e21-7875-4067-b61c-cf533133ae3f",
+      "title": "Oceana",
+      "length_ms": 238000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "563f75b4-bb12-4c8c-87ae-3cc188fe3ce5",
+      "title": "Imam",
+      "length_ms": 210000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "66cb882f-9e31-4386-931b-803ccea5abc4",
+      "title": "Čaroban otok",
+      "length_ms": 160000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "6b8f6f5f-f7bc-41a8-bbb4-91653f21a90e",
+      "title": "Noćima (Here I Am)",
+      "length_ms": 377000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "81e739e9-6c7d-46b9-95b6-0903a5aa0826",
+      "title": "Ne Žurim",
+      "length_ms": 270000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "87cf4afb-efbf-4627-a8b1-170725fa7807",
+      "title": "Sjever uz odsutne",
+      "length_ms": 139000,
+      "first_release_date": "2025-11-15",
+      "video": false
+    },
+    {
+      "id": "88d51955-de06-4df0-ba8c-e5b2b81704e7",
+      "title": "Kako Da Se Smijem",
+      "length_ms": 274000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "89043cf0-918c-4f4e-90fe-637564b5a9d5",
+      "title": "Princeza Tea",
+      "length_ms": 231000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "8b46c318-95d8-4470-acf2-f20d10996e50",
+      "title": "Žalo",
+      "length_ms": 180000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "93525962-b260-4fed-8405-a40fb4f13733",
+      "title": "U svijetu bajki",
+      "length_ms": 259000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "9619900b-84dc-40f2-a2ff-888c8f8cfcdd",
+      "title": "Svemir",
+      "length_ms": 210000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "9fba8aab-a10f-444b-9949-75071488d42b",
+      "title": "Siluete",
+      "length_ms": 143000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "bfabd2b6-7034-4f1d-adac-35b2fc8628bd",
+      "title": "Urota duhova",
+      "length_ms": 246000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "c11545fd-982a-44b9-916f-ab5231c376be",
+      "title": "Čast",
+      "length_ms": 246000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "c89d1bb2-a9a8-4c55-b684-1685b01041ff",
+      "title": "Nema Mjesta",
+      "length_ms": 202000,
+      "first_release_date": "2018-07-23",
+      "video": false
+    },
+    {
+      "id": "cb36241c-8c9b-4a73-bbe6-9c7d838c2934",
+      "title": "Oni Spavaju",
+      "length_ms": 225000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "cdc1bc6a-b0ec-4d81-9c4a-9eb9c2692817",
+      "title": "Pernastica",
+      "length_ms": 210000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "d6e4207c-5ea0-48ea-8fd2-f93eaffb3681",
+      "title": "Tko si ti",
+      "length_ms": 219000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "e59efd8d-e467-4d45-a673-487192fc5c6f",
+      "title": "Poslije svega",
+      "length_ms": 170000,
+      "first_release_date": "2019",
+      "video": false
+    },
+    {
+      "id": "e7ad5317-584a-404b-8358-6394ad49ad8f",
+      "title": "Topim Se I Gubim Se",
+      "length_ms": 246000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "ec21a39b-f8f7-4936-bc95-ed5dfd8d5829",
+      "title": "Dva Gemišta",
+      "length_ms": 155000,
+      "first_release_date": "2016",
+      "video": false
+    },
+    {
+      "id": "fab1a643-7c4d-45be-ba9e-c2b8817c82ac",
+      "title": "Kokosovo mlijeko",
+      "length_ms": 206000,
+      "first_release_date": "2019",
+      "video": false
+    }
+  ],
+  "stats": {
+    "release_group_count": 4,
+    "recording_count": 30
+  }
+}

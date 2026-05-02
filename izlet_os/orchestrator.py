@@ -7,6 +7,11 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, Tuple
 
+# Connectors
+sys.path.insert(0, str(Path(__file__).parent))
+from connectors.musicbrainz_agent import MusicBrainzAgent
+from connectors.wikidata_agent import WikidataAgent
+
 # ═══════════════════════════════════════════════════════════════════════════
 # PIPELINE MANAGER v2.1: Full Authority Layer Integration + Link Verification
 # ═══════════════════════════════════════════════════════════════════════════
@@ -26,8 +31,8 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(message)s',
     handlers=[
-        logging.FileHandler(LOG_FILE),
-        logging.StreamHandler()
+        logging.FileHandler(LOG_FILE, encoding='utf-8'),
+        logging.StreamHandler(stream=open(sys.stdout.fileno(), mode='w', encoding='utf-8', closefd=False)),
     ]
 )
 logger = logging.getLogger(__name__)
@@ -39,11 +44,12 @@ logger = logging.getLogger(__name__)
 class PipelineManager:
     """
     Autonomni stroj s HTTP link verifikacijom:
-    1. LOAD → Učitaj master_registry.json
-    2. SCAN → Očitaj core entitete + linkove
-    3. VERIFY → HTTP 200 check na Distribution + Communication slojeve
+    1. LOAD     → Učitaj master_registry.json
+    2. SCAN     → Očitaj core entitete + linkove
+    3. VERIFY   → HTTP 200 check na Distribution + Communication slojeve
     4. GENERATE → Kreiraj schema_org_verified.json s aktivnim linkovima
-    5. LOG → Spremi audit trail s dokazima
+    5. LOG      → Spremi audit trail s dokazima
+    6. LIVE     → Dohvati live podatke s MusicBrainz i Wikidata API-ja
     """
     
     def __init__(self):
@@ -177,15 +183,10 @@ class PipelineManager:
             schema_module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(schema_module)
             
-            result = schema_module.build_schema_org()
-            
-            if result:
-                active_count = len(self._extract_active_links())
-                logger.info(f"✅ Schema.org generirano s {active_count} dinamičkih linkova")
-                return True
-            else:
-                logger.error("❌ Schema.org generacija neuspješna")
-                return False
+            schema_module.generate_izlet_schema()
+            active_count = len(self._extract_active_links())
+            logger.info(f"✅ Schema.org generirano s {active_count} dinamičkih linkova")
+            return True
         
         except Exception as e:
             logger.error(f"❌ Greška pri generaciji schema-a: {e}")
@@ -200,9 +201,47 @@ class PipelineManager:
                 active.extend([url for url in layer_links.values() if url and url.strip()])
         return active
     
+    def fetch_live_data(self) -> bool:
+        """KORAK 6: Dohvati live podatke s MusicBrainz i Wikidata API-ja"""
+        logger.info(f"\n[KORAK 6/6] Dohvaćanje live podataka s vanjskih autoriteta...")
+
+        success = True
+
+        # MusicBrainz
+        try:
+            logger.info("  → MusicBrainz API...")
+            mb = MusicBrainzAgent()
+            snapshot, path = mb.snapshot()
+            artist = snapshot["artist"]
+            stats  = snapshot["stats"]
+            logger.info(f"     ✅ Artist: {artist['name']} ({artist['type']})")
+            logger.info(f"     ✅ Release groups: {stats['release_group_count']}")
+            logger.info(f"     ✅ Recordings: {stats['recording_count']}")
+            logger.info(f"     ✅ Saved → {path}")
+        except Exception as e:
+            logger.error(f"     ❌ MusicBrainz greška: {e}")
+            success = False
+
+        # Wikidata
+        try:
+            logger.info("  → Wikidata API...")
+            wd = WikidataAgent()
+            snapshot, snap_path, state_path, changed = wd.snapshot()
+            for qid, ent in snapshot["entities"].items():
+                label = ent["labels"].get("hr") or ent["labels"].get("en", qid)
+                desc  = ent["descriptions"].get("hr") or ent["descriptions"].get("en", "")
+                logger.info(f"     ✅ {qid}: {label} — {desc}")
+            logger.info(f"     ✅ Snapshot → {snap_path}")
+            logger.info(f"     ✅ State    → {state_path} (changed: {changed})")
+        except Exception as e:
+            logger.error(f"     ❌ Wikidata greška: {e}")
+            success = False
+
+        return success
+
     def generate_report(self) -> None:
         """Finalni izvještaj s dokaznim materijalom"""
-        logger.info(f"\n[KORAK 5/5] Geniranje finalnog izvještaja...")
+        logger.info(f"\n[KORAK 5/6] Geniranje finalnog izvještaja...")
         
         logger.info(f"\n╔════════════════════════════════════════════════════════════════╗")
         logger.info(f"║  PIPELINE EXECUTION REPORT - {self.timestamp}              ║")
@@ -239,6 +278,10 @@ class PipelineManager:
                 return False
             
             self.generate_report()
+
+            if not self.fetch_live_data():
+                return False
+
             return True
         
         except Exception as e:

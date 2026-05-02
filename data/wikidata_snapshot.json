@@ -1,0 +1,136 @@
+{
+  "fetched_at": "2026-05-02T20:11:51.706379+00:00",
+  "q_ids": [
+    "Q139595518",
+    "Q139595619",
+    "Q139595627"
+  ],
+  "entities": {
+    "Q139595518": {
+      "qid": "Q139595518",
+      "labels": {
+        "hr": "iZLET",
+        "en": "iZLET"
+      },
+      "descriptions": {
+        "hr": "hrvatski rock sastav",
+        "en": "Croatian rock band from Zagreb"
+      },
+      "aliases": {
+        "hr": [
+          "Izlet",
+          "izlet",
+          "iZLET band"
+        ],
+        "en": [
+          "Izlet",
+          "izlet",
+          "iZLET band"
+        ]
+      },
+      "instance_of": [
+        "Q215380"
+      ],
+      "genre": [
+        "Q11399",
+        "Q9300624",
+        "Q9759",
+        "Q1236268"
+      ],
+      "country": [],
+      "country_of_origin": [
+        "Q224"
+      ],
+      "inception": [
+        "+2007-00-00T00:00:00Z"
+      ],
+      "publication_date": [],
+      "performer": [],
+      "record_label": [
+        "Q139595723",
+        "Q3115750"
+      ],
+      "official_website": [
+        "http://www.bracakumerle.com"
+      ],
+      "spotify_artist_id": [
+        "11wCFDSyZy0LfWkgllak6d"
+      ],
+      "musicbrainz_artist_id": [
+        "b973e6f2-c282-473a-b2fb-ffb4466b312f"
+      ],
+      "discogs_artist_id": [],
+      "youtube_channel_id": [
+        "UC8jNEBUrOqCcXqVleV9ccKg"
+      ],
+      "duration_min": [],
+      "image": []
+    },
+    "Q139595619": {
+      "qid": "Q139595619",
+      "labels": {
+        "hr": "Petar Kumerle",
+        "en": "Petar Kumerle"
+      },
+      "descriptions": {
+        "hr": "hrvatski glazbenik i projekt menadžer",
+        "en": "Croatian musician and project manager"
+      },
+      "aliases": {},
+      "instance_of": [
+        "Q5"
+      ],
+      "genre": [],
+      "country": [],
+      "country_of_origin": [],
+      "inception": [],
+      "publication_date": [],
+      "performer": [],
+      "record_label": [],
+      "official_website": [
+        "https://bracakumerle.com/petar"
+      ],
+      "spotify_artist_id": [],
+      "musicbrainz_artist_id": [
+        "9ab299e2-499b-4abc-8585-e09dee7990e3"
+      ],
+      "discogs_artist_id": [],
+      "youtube_channel_id": [],
+      "duration_min": [],
+      "image": []
+    },
+    "Q139595627": {
+      "qid": "Q139595627",
+      "labels": {
+        "hr": "Toni Kumerle",
+        "en": "Toni Kumerle"
+      },
+      "descriptions": {
+        "hr": "hrvatski glazbenik i grafički dizajner",
+        "en": "Croatian musician and graphic designer"
+      },
+      "aliases": {},
+      "instance_of": [
+        "Q5"
+      ],
+      "genre": [],
+      "country": [],
+      "country_of_origin": [],
+      "inception": [],
+      "publication_date": [],
+      "performer": [],
+      "record_label": [],
+      "official_website": [
+        "https://bracakumerle.com/toni"
+      ],
+      "spotify_artist_id": [],
+      "musicbrainz_artist_id": [
+        "b134ce50-d8fa-4180-8734-76cbbcc820f3"
+      ],
+      "discogs_artist_id": [],
+      "youtube_channel_id": [],
+      "duration_min": [],
+      "image": []
+    }
+  }
+}
