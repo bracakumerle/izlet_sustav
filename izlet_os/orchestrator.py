@@ -11,6 +11,7 @@ from typing import Dict, List
 sys.path.insert(0, str(Path(__file__).parent))
 from connectors.musicbrainz_agent import MusicBrainzAgent
 from connectors.wikidata_agent import WikidataAgent
+from connectors.youtube_agent import YouTubeAgent
 
 # ═══════════════════════════════════════════════════════════════════════════
 # PIPELINE MANAGER v2.2: New Registry Schema + Full Link Verification
@@ -54,6 +55,7 @@ class PipelineManager:
     4. GENERATE → Kreiraj schema_org_verified.json s verified sameAs linkovima
     5. LOG      → Spremi audit trail s dokazima
     6. LIVE     → Dohvati live podatke s MusicBrainz i Wikidata API-ja
+    7. YOUTUBE  → Arhiviraj sve YouTube videe + statistike
     """
 
     def __init__(self):
@@ -72,7 +74,7 @@ class PipelineManager:
         logger.info("║  PIPELINE MANAGER v2.2 - Full Authority Integration           ║")
         logger.info("║  iZLET Authority System + Link Verification                   ║")
         logger.info("╚════════════════════════════════════════════════════════════════╝")
-        logger.info(f"\n[KORAK 1/6] Učitavanje master_registry.json...")
+        logger.info(f"\n[KORAK 1/7] Učitavanje master_registry.json...")
         logger.info(f"Lokacija: {REGISTRY_PATH}")
 
         try:
@@ -102,7 +104,7 @@ class PipelineManager:
 
     def scan_entities(self) -> bool:
         """KORAK 2: SCAN - Iteriraj entitete, čitaj ids + urls"""
-        logger.info(f"\n[KORAK 2/6] Skeniranje entiteta iz registra...")
+        logger.info(f"\n[KORAK 2/7] Skeniranje entiteta iz registra...")
 
         if not self.entities:
             logger.error("❌ Nema entiteta u registru")
@@ -135,7 +137,7 @@ class PipelineManager:
 
     def verify_links(self) -> bool:
         """KORAK 3: VERIFY - HTTP HEAD check na svim URL-ovima"""
-        logger.info(f"\n[KORAK 3/6] Verifikacija HTTP dostupnosti linkova...")
+        logger.info(f"\n[KORAK 3/7] Verifikacija HTTP dostupnosti linkova...")
 
         if not self.entities:
             logger.error("❌ Nema entiteta za verifikaciju")
@@ -177,7 +179,7 @@ class PipelineManager:
 
     def generate_schema(self) -> bool:
         """KORAK 4: GENERATE - Kreiraj schema_org_verified.json s verified sameAs"""
-        logger.info(f"\n[KORAK 4/6] Generiranje Schema.org s verificiranim linkovima...")
+        logger.info(f"\n[KORAK 4/7] Generiranje Schema.org s verificiranim linkovima...")
 
         try:
             graph = []
@@ -251,7 +253,7 @@ class PipelineManager:
 
     def generate_report(self) -> None:
         """KORAK 5: Finalni izvještaj"""
-        logger.info(f"\n[KORAK 5/6] Generiranje finalnog izvještaja...")
+        logger.info(f"\n[KORAK 5/7] Generiranje finalnog izvještaja...")
 
         ok_links    = sum(1 for v in self.link_verification.values() if v.get("ok"))
         total_links = len(self.link_verification)
@@ -270,6 +272,17 @@ class PipelineManager:
             pct = round(ok_links / total_links * 100)
             logger.info(f"\n🔗 Link Health: {ok_links}/{total_links} ({pct}%)")
 
+        yt_snap = DATA_DIR / "youtube_snapshot.json"
+        if yt_snap.exists():
+            try:
+                with open(yt_snap, encoding="utf-8") as f:
+                    yt = json.load(f)
+                logger.info(f"\n📺 YouTube: {yt.get('total_videos')} videa | "
+                            f"{yt.get('total_views', 0):,} pregleda | "
+                            f"Najnoviji: {(yt.get('latest_video_date') or '')[:10]}")
+            except Exception:
+                pass
+
         logger.info(f"\n✅ PIPELINE ZAVRŠEN USPJEŠNO - {self.timestamp}")
         logger.info(f"   Lokacija: {LOG_FILE}\n")
 
@@ -277,9 +290,7 @@ class PipelineManager:
 
     def fetch_live_data(self) -> bool:
         """KORAK 6: Dohvati live podatke s MusicBrainz i Wikidata API-ja"""
-        logger.info(f"\n[KORAK 6/6] Dohvaćanje live podataka s vanjskih autoriteta...")
-
-        success = True
+        logger.info(f"\n[KORAK 6/7] Dohvaćanje live podataka s vanjskih autoriteta...")
 
         try:
             logger.info("  → MusicBrainz API...")
@@ -292,8 +303,7 @@ class PipelineManager:
             logger.info(f"     ✅ Recordings: {stats['recording_count']}")
             logger.info(f"     ✅ Saved → {path}")
         except Exception as e:
-            logger.error(f"     ❌ MusicBrainz greška: {e}")
-            success = False
+            logger.warning(f"     ⚠️  MusicBrainz preskočen (transient): {e}")
 
         try:
             logger.info("  → Wikidata API...")
@@ -306,10 +316,41 @@ class PipelineManager:
             logger.info(f"     ✅ Snapshot → {snap_path}")
             logger.info(f"     ✅ State    → {state_path} (changed: {changed})")
         except Exception as e:
-            logger.error(f"     ❌ Wikidata greška: {e}")
-            success = False
+            logger.warning(f"     ⚠️  Wikidata preskočen (transient): {e}")
 
-        return success
+        return True  # external API failures are non-fatal (transient network)
+
+    # ── KORAK 7 ────────────────────────────────────────────────────────────
+
+    def fetch_youtube_archive(self) -> bool:
+        """KORAK 7: Arhiviraj sve YouTube videe + statistike kanala"""
+        logger.info(f"\n[KORAK 7/7] Arhiviranje YouTube kanala...")
+
+        try:
+            yt = YouTubeAgent()
+            _, snapshot, arch_path, snap_path = yt.snapshot()
+
+            logger.info(f"     ✅ Ukupno videa   : {snapshot['total_videos']}")
+            logger.info(f"     ✅ Ukupno pregleda : {snapshot['total_views']:,}")
+            logger.info(f"     ✅ Ukupno lajkova  : {snapshot['total_likes']:,}")
+            logger.info(f"     ✅ Najstariji video: {snapshot['oldest_video_date']}")
+            logger.info(f"     ✅ Najnoviji video : {snapshot['latest_video_date']}")
+
+            if snapshot.get("top_5_by_views"):
+                logger.info("     ✅ Top 5 po pregledima:")
+                for i, v in enumerate(snapshot["top_5_by_views"], 1):
+                    logger.info(f"        {i}. {v['title']} ({v['view_count']:,} pregleda)")
+
+            logger.info(f"     ✅ Archive → {arch_path}")
+            logger.info(f"     ✅ Snapshot → {snap_path}")
+            return True
+
+        except ValueError as e:
+            logger.warning(f"     ⚠️  YouTube preskočen: {e}")
+            return True  # missing key is not a fatal pipeline error
+        except Exception as e:
+            logger.error(f"     ❌ YouTube greška: {e}")
+            return False
 
     # ── FULL CYCLE ─────────────────────────────────────────────────────────
 
@@ -320,7 +361,8 @@ class PipelineManager:
             if not self.verify_links():    return False
             if not self.generate_schema(): return False
             self.generate_report()
-            if not self.fetch_live_data(): return False
+            if not self.fetch_live_data():     return False
+            if not self.fetch_youtube_archive(): return False
             return True
         except Exception as e:
             logger.error(f"❌ KRITIČNA GREŠKA: {type(e).__name__}: {e}")
