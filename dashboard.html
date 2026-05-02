@@ -16,9 +16,6 @@
       --accent2: #e8c96b;
       --text:    #e8e8e8;
       --muted:   #555;
-      --green:   #1DB954;
-      --blue:    #1d6fa4;
-      --orange:  #e07b39;
     }
 
     html { scroll-behavior: smooth; }
@@ -78,6 +75,29 @@
     }
     .refresh-btn:hover { background: var(--accent); color: #000; }
 
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
+      max-width: 1100px;
+      margin: 2rem auto 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-divider-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .section-divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
     /* ── GRID ── */
     .grid {
       max-width: 1100px;
@@ -116,9 +136,13 @@
     }
 
     .card-icon svg { width: 16px; height: 16px; }
-    .icon-spotify  { background: #1DB954; }
-    .icon-mb       { background: #ba478f; }
-    .icon-wikidata { background: #006699; }
+    .icon-spotify   { background: #1DB954; }
+    .icon-mb        { background: #ba478f; }
+    .icon-wikidata  { background: #006699; }
+    .icon-youtube   { background: #FF0000; }
+    .icon-discogs   { background: #333; }
+    .icon-wikipedia { background: #3366cc; }
+    .icon-system    { background: #1a7a40; }
 
     .card-title {
       font-size: 0.8rem;
@@ -141,6 +165,7 @@
     .status-loading { background: #222; color: var(--muted); }
     .status-ok      { background: rgba(29,185,84,0.15); color: #1DB954; }
     .status-error   { background: rgba(224,80,57,0.15); color: #e05039; }
+    .status-warn    { background: rgba(224,168,57,0.15); color: #e0a839; }
 
     .card-body {
       padding: 1.25rem;
@@ -151,11 +176,7 @@
     }
 
     /* ── ARTIST HERO ── */
-    .artist-hero {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
+    .artist-hero { display: flex; gap: 1rem; align-items: center; }
 
     .artist-img {
       width: 72px;
@@ -187,11 +208,8 @@
 
     .artist-meta span { white-space: nowrap; }
 
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
+    /* ── PILL LIST ── */
+    .pill-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
     .pill {
       font-size: 0.65rem;
@@ -203,7 +221,7 @@
       text-transform: capitalize;
     }
 
-    /* ── TRACK LIST ── */
+    /* ── SECTION LABEL ── */
     .section-label {
       font-size: 0.65rem;
       letter-spacing: 0.25em;
@@ -212,6 +230,7 @@
       margin-bottom: 0.5rem;
     }
 
+    /* ── TRACK LIST ── */
     .track-list { display: flex; flex-direction: column; gap: 0.4rem; }
 
     .track {
@@ -262,11 +281,7 @@
       text-overflow: ellipsis;
     }
 
-    .track-dur {
-      font-size: 0.68rem;
-      color: var(--muted);
-      flex-shrink: 0;
-    }
+    .track-dur { font-size: 0.68rem; color: var(--muted); flex-shrink: 0; }
 
     /* ── ALBUM GRID ── */
     .album-grid {
@@ -304,10 +319,7 @@
       -webkit-box-orient: vertical;
     }
 
-    .album-year {
-      font-size: 0.6rem;
-      color: var(--muted);
-    }
+    .album-year { font-size: 0.6rem; color: var(--muted); }
 
     /* ── STAT ROWS ── */
     .stat-row {
@@ -329,7 +341,6 @@
       font-size: 0.72rem;
       font-family: 'Courier New', monospace;
     }
-
     .stat-link:hover { text-decoration: underline; }
 
     /* ── ENTITY BLOCK ── */
@@ -340,30 +351,92 @@
       border: 1px solid var(--border);
     }
 
-    .entity-qid {
-      font-size: 0.65rem;
-      font-family: 'Courier New', monospace;
-      color: var(--accent);
-      margin-bottom: 0.3rem;
+    .entity-qid { font-size: 0.65rem; font-family: 'Courier New', monospace; color: var(--accent); margin-bottom: 0.3rem; }
+    .entity-label { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.15rem; }
+    .entity-desc { font-size: 0.72rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .entity-props { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+    /* ── WIKI EXTRACT ── */
+    .wiki-extract {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: #aaa;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
-    .entity-label {
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 0.15rem;
+    .wiki-thumb {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: var(--border);
     }
 
-    .entity-desc {
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
+    /* ── VIDEO LIST ── */
+    .video-list { display: flex; flex-direction: column; gap: 0.4rem; }
 
-    .entity-props {
+    .video-item {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
+      gap: 0.6rem;
+      align-items: center;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.12s;
     }
+
+    .video-item:hover { background: rgba(255,255,255,0.04); }
+
+    .video-thumb {
+      width: 56px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 4px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    .video-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .video-date { font-size: 0.65rem; color: var(--muted); flex-shrink: 0; }
+
+    /* ── SYSTEM STATUS ── */
+    .agent-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.02);
+      margin-bottom: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .agent-name { color: var(--muted); font-size: 0.72rem; }
+
+    .badge {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 1rem;
+      font-weight: 700;
+    }
+
+    .badge-ok   { background: rgba(29,185,84,0.15); color: #1DB954; }
+    .badge-warn { background: rgba(224,168,57,0.15); color: #e0a839; }
+    .badge-err  { background: rgba(224,80,57,0.15);  color: #e05039; }
 
     /* ── FOOTER ── */
     .dash-footer {
@@ -383,7 +456,6 @@
       background-size: 200% 100%;
       animation: shimmer 1.4s infinite;
       border-radius: 4px;
-      height: 0.8rem;
     }
 
     @keyframes shimmer {
@@ -421,15 +493,19 @@
   <button class="refresh-btn" onclick="loadAll()">↺ Osvježi</button>
 </div>
 
+<!-- ══════════════ ROW 1: MUSIC DATABASES ══════════════ -->
+<div class="section-divider">
+  <span class="section-divider-label">Glazbene baze</span>
+  <div class="section-divider-line"></div>
+</div>
+
 <div class="grid">
 
-  <!-- ── SPOTIFY CARD ── -->
+  <!-- SPOTIFY -->
   <div class="card" id="card-spotify">
     <div class="card-header">
       <div class="card-icon icon-spotify">
-        <svg viewBox="0 0 24 24" fill="#fff">
-          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
       </div>
       <span class="card-title">Spotify</span>
       <span class="card-status status-loading" id="status-spotify">Učitavam…</span>
@@ -441,13 +517,11 @@
     </div>
   </div>
 
-  <!-- ── MUSICBRAINZ CARD ── -->
+  <!-- MUSICBRAINZ -->
   <div class="card" id="card-mb">
     <div class="card-header">
       <div class="card-icon icon-mb">
-        <svg viewBox="0 0 24 24" fill="#fff">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
       </div>
       <span class="card-title">MusicBrainz</span>
       <span class="card-status status-loading" id="status-mb">Učitavam…</span>
@@ -459,18 +533,90 @@
     </div>
   </div>
 
-  <!-- ── WIKIDATA CARD ── -->
+  <!-- WIKIDATA -->
   <div class="card" id="card-wd">
     <div class="card-header">
       <div class="card-icon icon-wikidata">
-        <svg viewBox="0 0 24 24" fill="#fff">
-          <path d="M4.002 3v18h1.5V3zm1.996 0v18h4.5V3zm6.496 0v18h1.5V3zm3.004 0v18h4.5V3z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M4.002 3v18h1.5V3zm1.996 0v18h4.5V3zm6.496 0v18h1.5V3zm3.004 0v18h4.5V3z"/></svg>
       </div>
       <span class="card-title">Wikidata</span>
       <span class="card-status status-loading" id="status-wd">Učitavam…</span>
     </div>
     <div class="card-body" id="body-wd">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════ ROW 2: PLATFORMS & KNOWLEDGE ══════════════ -->
+<div class="section-divider">
+  <span class="section-divider-label">Platforme &amp; Znanje</span>
+  <div class="section-divider-line"></div>
+</div>
+
+<div class="grid">
+
+  <!-- YOUTUBE -->
+  <div class="card" id="card-youtube">
+    <div class="card-header">
+      <div class="card-icon icon-youtube">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <span class="card-title">YouTube</span>
+      <span class="card-status status-loading" id="status-youtube">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-youtube">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+  <!-- DISCOGS -->
+  <div class="card" id="card-discogs">
+    <div class="card-header">
+      <div class="card-icon icon-discogs">
+        <svg viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <span class="card-title">Discogs</span>
+      <span class="card-status status-loading" id="status-discogs">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-discogs">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+  <!-- WIKIPEDIA -->
+  <div class="card" id="card-wikipedia">
+    <div class="card-header">
+      <div class="card-icon icon-wikipedia">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M12.09 13.119c-.936 1.932-2.217 4.548-2.853 5.728-.616 1.074-1.127.931-1.532.029-1.406-3.321-4.293-9.144-5.651-12.409-.251-.601-.441-.987-.619-1.139-.181-.15-.554-.24-1.122-.271C.103 5.033 0 4.982 0 4.898v-.455l.052-.045c.924-.005 5.401 0 5.401 0l.051.045v.434c0 .119-.075.176-.225.176l-.564.031c-.485.029-.727.164-.727.436 0 .135.053.33.166.601 1.082 2.636 4.264 9.113 5.397 11.615l.053.1 1.369-2.868-1.025-2.49-1.305-3.029c-.243-.56-.592-.863-1.049-.914l-.363-.03c-.135-.021-.2-.086-.2-.196v-.451l.051-.045c1.054-.005 4.274 0 4.274 0l.05.045v.408c0 .124-.076.18-.227.18l-.434.031c-.485.029-.727.164-.727.436 0 .176.099.444.297.806l.777 1.693c.222-.478.554-1.158.777-1.635.27-.551.418-.898.449-1.042.03-.126.045-.247.045-.361 0-.27-.228-.417-.683-.444l-.422-.031c-.121-.021-.181-.086-.181-.196v-.451l.05-.045c.754-.005 3.224 0 3.224 0l.051.045v.408c0 .124-.076.18-.228.18l-.378.031c-.453.029-.679.166-.679.438 0 .135.05.33.157.601l.795 1.747 1.083-2.426c.135-.3.203-.527.203-.681 0-.27-.228-.417-.683-.444l-.422-.031c-.121-.021-.181-.086-.181-.196v-.451l.05-.045c.754-.005 2.521 0 2.521 0l.051.045v.408c0 .124-.076.18-.228.18l-.34.031c-.416.034-.722.156-.916.362-.195.207-.534.776-1.012 1.708l-1.023 2.126 1.275 2.834c.203-.44.542-1.139.766-1.622.248-.52.392-.863.432-.994.04-.127.059-.247.059-.366 0-.275-.23-.424-.69-.451l-.422-.031c-.121-.021-.181-.086-.181-.196v-.451l.05-.045c.751-.005 3.023 0 3.023 0l.051.045v.408c0 .124-.076.18-.228.18l-.378.031c-.343.025-.602.118-.769.285-.169.165-.481.704-.934 1.617z"/></svg>
+      </div>
+      <span class="card-title">Wikipedia / Wikidata</span>
+      <span class="card-status status-loading" id="status-wikipedia">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-wikipedia">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+  <!-- SYSTEM STATUS -->
+  <div class="card" id="card-system">
+    <div class="card-header">
+      <div class="card-icon icon-system">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <span class="card-title">System Status</span>
+      <span class="card-status status-loading" id="status-system">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-system">
       <div class="skeleton skeleton-block"></div>
       <div class="skeleton skeleton-line"></div>
       <div class="skeleton skeleton-line short"></div>
@@ -486,14 +632,9 @@
 </p>
 
 <script>
-  const SPOTIFY_FN   = '/.netlify/functions/spotify';
-  const MB_SNAP      = '/data/mb_snapshot.json';
-  const WD_SNAP      = '/data/wikidata_snapshot.json';
-
-  const WIKIDATA_LABELS = {
-    Q215380:  'rock bend', Q11399: 'rock', Q9300624: 'indie rock',
-    Q9759: 'alternative rock', Q1236268: 'pop rock', Q224: 'Hrvatska',
-  };
+  const FN = (name) => `/.netlify/functions/${name}`;
+  const MB_SNAP = '/data/mb_snapshot.json';
+  const WD_SNAP = '/data/wikidata_snapshot.json';
 
   function fmt_ms(ms) {
     if (!ms) return '—';
@@ -502,8 +643,11 @@
     return `${m}:${s}`;
   }
 
-  function fmt_num(n) {
-    return n == null ? '—' : n.toLocaleString('hr');
+  function fmt_num(n) { return n == null ? '—' : n.toLocaleString('hr'); }
+
+  function fmt_date(iso) {
+    if (!iso) return '—';
+    return new Date(iso).toLocaleDateString('hr', { year:'numeric', month:'short', day:'numeric' });
   }
 
   function set_status(id, type, text) {
@@ -512,22 +656,28 @@
     el.textContent = text;
   }
 
+  function skeleton_html() {
+    return `<div class="skeleton skeleton-block"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line short"></div>`;
+  }
+
   function render_error(id, msg) {
     set_status(id, 'error', 'Greška');
     document.getElementById('body-' + id).innerHTML =
       `<div class="error-msg">⚠ ${msg}</div>`;
   }
 
-  // ── SPOTIFY ──────────────────────────────────────────────────────────────
+  // ── SPOTIFY ────────────────────────────────────────────────────────────────
   async function load_spotify() {
     try {
-      const r   = await fetch(SPOTIFY_FN);
-      const d   = await r.json();
+      const r = await fetch(FN('spotify'));
+      const d = await r.json();
       if (d.error) throw new Error(d.error);
 
       const a   = d.artist;
       const top = (d.top_tracks || []).slice(0, 8);
-      const alb = (d.albums || []).slice(0, 8);
+      const alb = (d.albums     || []).slice(0, 8);
 
       set_status('spotify', 'ok', `${fmt_num(a.followers)} pratitelja`);
 
@@ -542,139 +692,61 @@
             </div>
           </div>
         </div>
-
-        ${a.genres?.length ? `
-        <div>
-          <div class="section-label">Žanrovi</div>
-          <div class="pill-list">${a.genres.map(g => `<span class="pill">${g}</span>`).join('')}</div>
-        </div>` : ''}
-
-        ${top.length ? `
-        <div>
-          <div class="section-label">Top pjesme</div>
-          <div class="track-list">
-            ${top.map((t, i) => `
-              <a class="track" href="${t.external_url}" target="_blank" rel="noopener">
-                <span class="track-num">${i + 1}</span>
-                ${t.album?.image ? `<img class="track-img" src="${t.album.image}" alt="" loading="lazy">` : '<div class="track-img"></div>'}
-                <div class="track-info">
-                  <div class="track-name">${t.name}</div>
-                  <div class="track-album">${t.album?.name || ''}</div>
-                </div>
-                <span class="track-dur">${fmt_ms(t.duration_ms)}</span>
-              </a>`).join('')}
-          </div>
-        </div>` : ''}
-
-        ${alb.length ? `
-        <div>
-          <div class="section-label">Diskografija</div>
-          <div class="album-grid">
-            ${alb.map(a => `
-              <a class="album-card" href="${a.external_url}" target="_blank" rel="noopener">
-                ${a.image ? `<img class="album-img" src="${a.image}" alt="${a.name}" loading="lazy">` : '<div class="album-img"></div>'}
-                <div class="album-name">${a.name}</div>
-                <div class="album-year">${(a.release_date || '').slice(0,4)}</div>
-              </a>`).join('')}
-          </div>
-        </div>` : ''}
-
-        <div class="stat-row">
-          <span class="stat-key">Spotify ID</span>
-          <a class="stat-link" href="${a.external_url}" target="_blank" rel="noopener">${a.id}</a>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">Dohvaćeno</span>
-          <span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${new Date(d.fetched_at).toLocaleString('hr')}</span>
-        </div>
+        ${a.genres?.length ? `<div><div class="section-label">Žanrovi</div><div class="pill-list">${a.genres.map(g=>`<span class="pill">${g}</span>`).join('')}</div></div>` : ''}
+        ${top.length ? `<div><div class="section-label">Top pjesme</div><div class="track-list">${top.map((t,i)=>`
+          <a class="track" href="${t.external_url}" target="_blank" rel="noopener">
+            <span class="track-num">${i+1}</span>
+            ${t.album?.image ? `<img class="track-img" src="${t.album.image}" alt="" loading="lazy">` : '<div class="track-img"></div>'}
+            <div class="track-info"><div class="track-name">${t.name}</div><div class="track-album">${t.album?.name||''}</div></div>
+            <span class="track-dur">${fmt_ms(t.duration_ms)}</span>
+          </a>`).join('')}</div></div>` : ''}
+        ${alb.length ? `<div><div class="section-label">Diskografija</div><div class="album-grid">${alb.map(a=>`
+          <a class="album-card" href="${a.external_url}" target="_blank" rel="noopener">
+            ${a.image ? `<img class="album-img" src="${a.image}" alt="${a.name}" loading="lazy">` : '<div class="album-img"></div>'}
+            <div class="album-name">${a.name}</div>
+            <div class="album-year">${(a.release_date||'').slice(0,4)}</div>
+          </a>`).join('')}</div></div>` : ''}
+        <div class="stat-row"><span class="stat-key">Spotify ID</span><a class="stat-link" href="${a.external_url}" target="_blank" rel="noopener">${a.id}</a></div>
+        <div class="stat-row"><span class="stat-key">Dohvaćeno</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(d.fetched_at)}</span></div>
       `;
-    } catch (err) {
-      render_error('spotify', err.message);
-    }
+    } catch (err) { render_error('spotify', err.message); }
   }
 
-  // ── MUSICBRAINZ ──────────────────────────────────────────────────────────
+  // ── MUSICBRAINZ ───────────────────────────────────────────────────────────
   async function load_mb() {
     try {
       const r = await fetch(MB_SNAP);
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      const d = await r.json();
-      const a = d.artist;
+      const d   = await r.json();
+      const a   = d.artist;
       const rgs = d.release_groups || [];
-      const recs = d.recordings   || [];
+      const recs = d.recordings    || [];
 
       set_status('mb', 'ok', `${d.stats?.recording_count} snimki`);
 
-      const albums   = rgs.filter(r => r.type === 'Album');
-      const singles  = rgs.filter(r => r.type === 'Single');
+      const albums  = rgs.filter(r => r.type === 'Album');
+      const singles = rgs.filter(r => r.type === 'Single');
 
       document.getElementById('body-mb').innerHTML = `
         <div>
-          <div class="stat-row">
-            <span class="stat-key">Ime</span>
-            <span class="stat-val">${a.name}</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-key">Tip</span>
-            <span class="stat-val">${a.type || '—'}</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-key">Zemlja</span>
-            <span class="stat-val">${a.country || '—'}</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-key">Osnovan</span>
-            <span class="stat-val">${a.begin || '—'}</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-key">Albumi</span>
-            <span class="stat-val">${albums.length}</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-key">Singlovi</span>
-            <span class="stat-val">${singles.length}</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-key">Snimke</span>
-            <span class="stat-val">${recs.length}</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-key">Alias</span>
-            <span class="stat-val">${(a.aliases || []).join(', ') || '—'}</span>
-          </div>
+          <div class="stat-row"><span class="stat-key">Ime</span><span class="stat-val">${a.name}</span></div>
+          <div class="stat-row"><span class="stat-key">Tip</span><span class="stat-val">${a.type||'—'}</span></div>
+          <div class="stat-row"><span class="stat-key">Zemlja</span><span class="stat-val">${a.country||'—'}</span></div>
+          <div class="stat-row"><span class="stat-key">Osnovan</span><span class="stat-val">${a.begin||'—'}</span></div>
+          <div class="stat-row"><span class="stat-key">Albumi</span><span class="stat-val">${albums.length}</span></div>
+          <div class="stat-row"><span class="stat-key">Singlovi</span><span class="stat-val">${singles.length}</span></div>
+          <div class="stat-row"><span class="stat-key">Snimke</span><span class="stat-val">${recs.length}</span></div>
+          <div class="stat-row"><span class="stat-key">Alias</span><span class="stat-val">${(a.aliases||[]).join(', ')||'—'}</span></div>
         </div>
-
-        ${a.tags?.length ? `
-        <div>
-          <div class="section-label">Tagovi</div>
-          <div class="pill-list">${a.tags.map(t => `<span class="pill">${t}</span>`).join('')}</div>
-        </div>` : ''}
-
-        <div>
-          <div class="section-label">Izdanja</div>
-          <div class="track-list">
-            ${rgs.map(rg => `
-              <a class="track" href="https://musicbrainz.org/release-group/${rg.id}" target="_blank" rel="noopener">
-                <div class="track-info">
-                  <div class="track-name">${rg.title}</div>
-                  <div class="track-album">${rg.type} · ${(rg.first_release_date || '').slice(0,4)}</div>
-                </div>
-              </a>`).join('')}
-          </div>
-        </div>
-
-        <div class="stat-row">
-          <span class="stat-key">MBID</span>
-          <a class="stat-link" href="https://musicbrainz.org/artist/${d.mbid}" target="_blank" rel="noopener">${d.mbid.slice(0,8)}…</a>
-        </div>
-        <div class="stat-row">
-          <span class="stat-key">Snapshot</span>
-          <span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${new Date(d.fetched_at).toLocaleString('hr')}</span>
-        </div>
+        ${a.tags?.length ? `<div><div class="section-label">Tagovi</div><div class="pill-list">${a.tags.map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>` : ''}
+        <div><div class="section-label">Izdanja</div><div class="track-list">${rgs.map(rg=>`
+          <a class="track" href="https://musicbrainz.org/release-group/${rg.id}" target="_blank" rel="noopener">
+            <div class="track-info"><div class="track-name">${rg.title}</div><div class="track-album">${rg.type} · ${(rg.first_release_date||'').slice(0,4)}</div></div>
+          </a>`).join('')}</div></div>
+        <div class="stat-row"><span class="stat-key">MBID</span><a class="stat-link" href="https://musicbrainz.org/artist/${d.mbid}" target="_blank" rel="noopener">${d.mbid.slice(0,8)}…</a></div>
+        <div class="stat-row"><span class="stat-key">Snapshot</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(d.fetched_at)}</span></div>
       `;
-    } catch (err) {
-      render_error('mb', err.message);
-    }
+    } catch (err) { render_error('mb', err.message); }
   }
 
   // ── WIKIDATA ──────────────────────────────────────────────────────────────
@@ -685,55 +757,204 @@
       const d = await r.json();
       const entities = d.entities || {};
 
-      const count = Object.keys(entities).length;
-      set_status('wd', 'ok', `${count} entiteta`);
+      set_status('wd', 'ok', `${Object.keys(entities).length} entiteta`);
 
       const blocks = Object.values(entities).map(e => {
         const label = e.labels?.hr || e.labels?.en || e.qid;
         const desc  = e.descriptions?.hr || e.descriptions?.en || '';
         const props = [];
-
-        if (e.spotify_artist_id?.length)    props.push(`Spotify: ${e.spotify_artist_id[0]}`);
+        if (e.spotify_artist_id?.length)     props.push(`Spotify: ${e.spotify_artist_id[0]}`);
         if (e.musicbrainz_artist_id?.length) props.push(`MB: ${e.musicbrainz_artist_id[0].slice(0,8)}…`);
-        if (e.youtube_channel_id?.length)   props.push(`YT: ${e.youtube_channel_id[0]}`);
-        if (e.official_website?.length)     props.push(`Web: ${e.official_website[0].replace(/^https?:\/\//, '')}`);
-        if (e.inception?.length)            props.push(`Osnovan: ${e.inception[0].replace(/^\+(\d{4}).*/, '$1')}`);
-        if (e.country_of_origin?.length)    props.push(`Zemlja: ${e.country_of_origin[0]}`);
-
-        return `
-          <div class="entity-block">
-            <div class="entity-qid">
-              <a class="stat-link" href="https://www.wikidata.org/wiki/${e.qid}" target="_blank" rel="noopener">${e.qid}</a>
-            </div>
-            <div class="entity-label">${label}</div>
-            <div class="entity-desc">${desc}</div>
-            ${props.length ? `<div class="entity-props">${props.map(p => `<span class="pill">${p}</span>`).join('')}</div>` : ''}
-          </div>`;
+        if (e.youtube_channel_id?.length)    props.push(`YT: ${e.youtube_channel_id[0]}`);
+        if (e.official_website?.length)      props.push(`Web: ${e.official_website[0].replace(/^https?:\/\//,'')}`);
+        if (e.inception?.length)             props.push(`Osnovan: ${e.inception[0].replace(/^\+(\d{4}).*/,'$1')}`);
+        return `<div class="entity-block">
+          <div class="entity-qid"><a class="stat-link" href="https://www.wikidata.org/wiki/${e.qid}" target="_blank" rel="noopener">${e.qid}</a></div>
+          <div class="entity-label">${label}</div>
+          <div class="entity-desc">${desc}</div>
+          ${props.length ? `<div class="entity-props">${props.map(p=>`<span class="pill">${p}</span>`).join('')}</div>` : ''}
+        </div>`;
       });
 
       document.getElementById('body-wd').innerHTML = `
         ${blocks.join('')}
-        <div class="stat-row">
-          <span class="stat-key">Snapshot</span>
-          <span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${new Date(d.fetched_at).toLocaleString('hr')}</span>
-        </div>
+        <div class="stat-row"><span class="stat-key">Snapshot</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(d.fetched_at)}</span></div>
       `;
-    } catch (err) {
-      render_error('wd', err.message);
-    }
+    } catch (err) { render_error('wd', err.message); }
   }
 
+  // ── YOUTUBE ───────────────────────────────────────────────────────────────
+  async function load_youtube() {
+    try {
+      const r = await fetch(FN('youtube'));
+      const d = await r.json();
+      if (d.error) throw new Error(d.error);
+
+      set_status('youtube', 'ok', `${fmt_num(d.view_count)} pregleda`);
+
+      document.getElementById('body-youtube').innerHTML = `
+        <div>
+          <div class="stat-row"><span class="stat-key">Kanal</span><a class="stat-link" href="${d.channel_url}" target="_blank" rel="noopener">${d.channel_name || '@bracakumerle'}</a></div>
+          <div class="stat-row"><span class="stat-key">Pretplatnici</span><span class="stat-val">${fmt_num(d.subscriber_count)}</span></div>
+          <div class="stat-row"><span class="stat-key">Ukupno pregleda</span><span class="stat-val">${fmt_num(d.view_count)}</span></div>
+          <div class="stat-row"><span class="stat-key">Videa</span><span class="stat-val">${fmt_num(d.video_count)}</span></div>
+        </div>
+        ${d.latest_videos?.length ? `
+        <div>
+          <div class="section-label">Najnoviji videi</div>
+          <div class="video-list">
+            ${d.latest_videos.map(v => `
+              <a class="video-item" href="${v.url}" target="_blank" rel="noopener">
+                ${v.thumbnail ? `<img class="video-thumb" src="${v.thumbnail}" alt="" loading="lazy">` : '<div class="video-thumb"></div>'}
+                <div class="video-title">${v.title}</div>
+                <span class="video-date">${fmt_date(v.published_at)}</span>
+              </a>`).join('')}
+          </div>
+        </div>` : ''}
+        <div class="stat-row"><span class="stat-key">Channel ID</span><span class="stat-val" style="font-size:0.65rem;font-family:monospace;color:var(--muted)">${d.channel_id}</span></div>
+      `;
+    } catch (err) { render_error('youtube', err.message); }
+  }
+
+  // ── DISCOGS ───────────────────────────────────────────────────────────────
+  async function load_discogs() {
+    try {
+      const r = await fetch(FN('discogs'));
+      const d = await r.json();
+      if (d.error) throw new Error(d.error);
+
+      const total = d.pagination?.total_releases || d.releases?.length || 0;
+      set_status('discogs', 'ok', `${total} izdanja`);
+
+      const artist = d.artist || {};
+      const label  = d.label  || {};
+      const rels   = (d.releases || []).slice(0, 8);
+
+      document.getElementById('body-discogs').innerHTML = `
+        ${artist.images?.[0] ? `<img class="wiki-thumb" src="${artist.images[0]}" alt="${artist.name}" loading="lazy">` : ''}
+        <div>
+          <div class="stat-row"><span class="stat-key">Artist</span><a class="stat-link" href="${artist.discogs_url}" target="_blank" rel="noopener">${artist.name}</a></div>
+          <div class="stat-row"><span class="stat-key">Label</span><a class="stat-link" href="${label.discogs_url}" target="_blank" rel="noopener">${label.name||'—'}</a></div>
+          <div class="stat-row"><span class="stat-key">Data Quality</span><span class="stat-val">${artist.data_quality||'—'}</span></div>
+          <div class="stat-row"><span class="stat-key">Ukupno izdanja</span><span class="stat-val">${total}</span></div>
+        </div>
+        ${artist.profile ? `<div class="wiki-extract">${artist.profile.replace(/\[.*?\]/g,'')}</div>` : ''}
+        ${rels.length ? `
+        <div>
+          <div class="section-label">Izdanja</div>
+          <div class="track-list">
+            ${rels.map(rel => `
+              <a class="track" href="https://www.discogs.com/release/${rel.id}" target="_blank" rel="noopener">
+                ${rel.thumb ? `<img class="track-img" src="${rel.thumb}" alt="" loading="lazy">` : '<div class="track-img"></div>'}
+                <div class="track-info">
+                  <div class="track-name">${rel.title}</div>
+                  <div class="track-album">${rel.type||''} ${rel.year ? '· '+rel.year : ''}</div>
+                </div>
+              </a>`).join('')}
+          </div>
+        </div>` : ''}
+      `;
+    } catch (err) { render_error('discogs', err.message); }
+  }
+
+  // ── WIKIPEDIA ─────────────────────────────────────────────────────────────
+  async function load_wikipedia() {
+    try {
+      const r = await fetch(FN('wikipedia'));
+      const d = await r.json();
+      if (d.error) throw new Error(d.error);
+
+      const wiki = d.wikipedia || {};
+      const wd   = d.wikidata  || {};
+
+      const found = wiki.found !== false;
+      set_status('wikipedia', found ? 'ok' : 'warn', found ? 'Wikipedia HR ✓' : 'Nema članka');
+
+      document.getElementById('body-wikipedia').innerHTML = `
+        ${wiki.thumbnail ? `<img class="wiki-thumb" src="${wiki.thumbnail}" alt="${wiki.title}" loading="lazy">` : ''}
+        ${wiki.extract ? `<div class="wiki-extract">${wiki.extract}</div>` : '<div class="error-msg" style="color:#e0a839;background:rgba(224,168,57,0.08);border-color:rgba(224,168,57,0.2);">⚠ Članak nije pronađen na hr.wikipedia.org</div>'}
+        <div>
+          ${wiki.url ? `<div class="stat-row"><span class="stat-key">Wikipedia</span><a class="stat-link" href="${wiki.url}" target="_blank" rel="noopener">hr.wikipedia.org/wiki/IZLET</a></div>` : ''}
+          <div class="stat-row"><span class="stat-key">Zadnja izmjena</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${wiki.last_edited ? fmt_date(wiki.last_edited) : '—'}</span></div>
+          <div class="stat-row"><span class="stat-key">Wikidata QID</span><a class="stat-link" href="${wd.url}" target="_blank" rel="noopener">${wd.qid}</a></div>
+          <div class="stat-row"><span class="stat-key">Label HR</span><span class="stat-val">${wd.label_hr||'—'}</span></div>
+          <div class="stat-row"><span class="stat-key">Opis HR</span><span class="stat-val" style="font-size:0.7rem;color:#aaa;text-align:right;max-width:60%">${wd.desc_hr||'—'}</span></div>
+          ${wd.founded ? `<div class="stat-row"><span class="stat-key">Osnovan</span><span class="stat-val">${wd.founded}</span></div>` : ''}
+          ${wd.spotify_id ? `<div class="stat-row"><span class="stat-key">Spotify ID</span><span class="stat-val" style="font-size:0.65rem;font-family:monospace;color:var(--muted)">${wd.spotify_id}</span></div>` : ''}
+        </div>
+      `;
+    } catch (err) { render_error('wikipedia', err.message); }
+  }
+
+  // ── SYSTEM ────────────────────────────────────────────────────────────────
+  async function load_system() {
+    try {
+      const r = await fetch(FN('system'));
+      const d = await r.json();
+      if (d.error) throw new Error(d.error);
+
+      set_status('system', 'ok', 'Online');
+
+      const agents = (d.agents_status || '').split(' ').filter(Boolean);
+
+      const yt = d.youtube;
+      const mb = d.musicbrainz;
+      const wd = d.wikidata;
+
+      document.getElementById('body-system').innerHTML = `
+        <div>
+          <div class="stat-row"><span class="stat-key">Zadnji run</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(d.last_run)}</span></div>
+          <div class="stat-row"><span class="stat-key">Link health</span><span class="stat-val">${d.urls_verified}</span></div>
+          <div class="stat-row"><span class="stat-key">Commit</span><span class="stat-val" style="font-family:monospace;font-size:0.75rem">${d.commit||'—'}</span></div>
+        </div>
+
+        <div>
+          <div class="section-label">Agenti</div>
+          <div class="agent-row"><span class="agent-name">Spotify API</span><span class="badge badge-ok">✅ Online</span></div>
+          <div class="agent-row"><span class="agent-name">MusicBrainz API</span><span class="badge badge-ok">✅ Online</span></div>
+          <div class="agent-row"><span class="agent-name">Wikidata API</span><span class="badge badge-ok">✅ Online</span></div>
+          <div class="agent-row"><span class="agent-name">YouTube API</span><span class="badge badge-ok">✅ Online</span></div>
+          <div class="agent-row"><span class="agent-name">Discogs API</span><span class="badge badge-ok">✅ Public</span></div>
+          <div class="agent-row"><span class="agent-name">Wikipedia API</span><span class="badge badge-ok">✅ Public</span></div>
+        </div>
+
+        ${yt ? `<div>
+          <div class="section-label">YouTube snapshot</div>
+          <div class="stat-row"><span class="stat-key">Videa</span><span class="stat-val">${fmt_num(yt.total_videos)}</span></div>
+          <div class="stat-row"><span class="stat-key">Pregleda</span><span class="stat-val">${fmt_num(yt.total_views)}</span></div>
+          <div class="stat-row"><span class="stat-key">Najnoviji video</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(yt.latest_video_date)}</span></div>
+        </div>` : ''}
+
+        ${mb ? `<div>
+          <div class="section-label">MusicBrainz snapshot</div>
+          <div class="stat-row"><span class="stat-key">Release grupe</span><span class="stat-val">${mb.release_groups}</span></div>
+          <div class="stat-row"><span class="stat-key">Snimke</span><span class="stat-val">${mb.recordings}</span></div>
+          <div class="stat-row"><span class="stat-key">Dohvaćeno</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(mb.fetched_at)}</span></div>
+        </div>` : ''}
+
+        ${wd ? `<div>
+          <div class="section-label">Wikidata state</div>
+          <div class="stat-row"><span class="stat-key">Zadnja provjera</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(wd.last_checked)}</span></div>
+          <div class="stat-row"><span class="stat-key">Promjena</span><span class="badge ${wd.changed ? 'badge-warn' : 'badge-ok'}">${wd.changed ? '⚠ Da' : '✓ Ne'}</span></div>
+          <div class="stat-row"><span class="stat-key">Hash</span><span class="stat-val" style="font-size:0.65rem;font-family:monospace;color:var(--muted)">${wd.hash}</span></div>
+        </div>` : ''}
+      `;
+    } catch (err) { render_error('system', err.message); }
+  }
+
+  // ── LOAD ALL ──────────────────────────────────────────────────────────────
+  const ALL_IDS = ['spotify','mb','wd','youtube','discogs','wikipedia','system'];
+
   async function loadAll() {
-    // Reset to loading state
-    ['spotify','mb','wd'].forEach(id => {
+    ALL_IDS.forEach(id => {
       set_status(id, 'loading', 'Učitavam…');
-      document.getElementById('body-' + id).innerHTML = `
-        <div class="skeleton skeleton-block"></div>
-        <div class="skeleton skeleton-line"></div>
-        <div class="skeleton skeleton-line short"></div>`;
+      document.getElementById('body-' + id).innerHTML = skeleton_html();
     });
 
-    await Promise.all([load_spotify(), load_mb(), load_wd()]);
+    await Promise.all([
+      load_spotify(), load_mb(), load_wd(),
+      load_youtube(), load_discogs(), load_wikipedia(), load_system(),
+    ]);
 
     document.getElementById('last-updated').textContent =
       'Ažurirano: ' + new Date().toLocaleString('hr');
