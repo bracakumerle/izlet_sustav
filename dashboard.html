@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iZLET – Dashboard | Braća Kumerle</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0a0a0a;
+      --surface: #111;
+      --card:    #141414;
+      --border:  #1e1e1e;
+      --accent:  #c8a84b;
+      --accent2: #e8c96b;
+      --text:    #e8e8e8;
+      --muted:   #555;
+      --green:   #1DB954;
+      --blue:    #1d6fa4;
+      --orange:  #e07b39;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      max-width: 1100px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.25rem;
+    }
+
+    .header-left { display: flex; align-items: baseline; gap: 1rem; }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff 0%, var(--accent2) 60%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .page-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .refresh-btn {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: none;
+      border: 1px solid var(--accent);
+      border-radius: 1rem;
+      padding: 0.35rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .refresh-btn:hover { background: var(--accent); color: #000; }
+
+    /* ── GRID ── */
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-icon svg { width: 16px; height: 16px; }
+    .icon-spotify  { background: #1DB954; }
+    .icon-mb       { background: #ba478f; }
+    .icon-wikidata { background: #006699; }
+
+    .card-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .card-status {
+      margin-left: auto;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 1rem;
+      font-weight: 600;
+    }
+
+    .status-loading { background: #222; color: var(--muted); }
+    .status-ok      { background: rgba(29,185,84,0.15); color: #1DB954; }
+    .status-error   { background: rgba(224,80,57,0.15); color: #e05039; }
+
+    .card-body {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* ── ARTIST HERO ── */
+    .artist-hero {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .artist-img {
+      width: 72px;
+      height: 72px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    .artist-info { flex: 1; min-width: 0; }
+
+    .artist-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .artist-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .artist-meta span { white-space: nowrap; }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 1rem;
+      background: rgba(200,168,75,0.12);
+      color: var(--accent2);
+      text-transform: capitalize;
+    }
+
+    /* ── TRACK LIST ── */
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .track-list { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .track {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 0.6rem;
+      border-radius: 6px;
+      transition: background 0.12s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .track:hover { background: rgba(255,255,255,0.04); }
+
+    .track-num {
+      font-size: 0.7rem;
+      color: var(--muted);
+      width: 1.2rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .track-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      object-fit: cover;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    .track-info { flex: 1; min-width: 0; }
+
+    .track-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .track-album {
+      font-size: 0.68rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .track-dur {
+      font-size: 0.68rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    /* ── ALBUM GRID ── */
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .album-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .album-card:hover .album-img { opacity: 0.8; }
+
+    .album-img {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 6px;
+      object-fit: cover;
+      background: var(--border);
+      transition: opacity 0.15s;
+    }
+
+    .album-name {
+      font-size: 0.65rem;
+      line-height: 1.3;
+      color: #aaa;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .album-year {
+      font-size: 0.6rem;
+      color: var(--muted);
+    }
+
+    /* ── STAT ROWS ── */
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+    }
+
+    .stat-row:last-child { border-bottom: none; }
+    .stat-key  { color: var(--muted); font-size: 0.72rem; }
+    .stat-val  { font-weight: 600; text-align: right; }
+
+    .stat-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    .stat-link:hover { text-decoration: underline; }
+
+    /* ── ENTITY BLOCK ── */
+    .entity-block {
+      padding: 0.75rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .entity-qid {
+      font-size: 0.65rem;
+      font-family: 'Courier New', monospace;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .entity-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+
+    .entity-desc {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .entity-props {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    /* ── FOOTER ── */
+    .dash-footer {
+      max-width: 1100px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .dash-footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── SKELETON ── */
+    .skeleton {
+      background: linear-gradient(90deg, var(--border) 25%, #1a1a1a 50%, var(--border) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 4px;
+      height: 0.8rem;
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .skeleton-block { height: 5rem; border-radius: 8px; }
+    .skeleton-line  { height: 0.75rem; margin-bottom: 0.5rem; }
+    .skeleton-line.short { width: 60%; }
+
+    /* ── ERROR ── */
+    .error-msg {
+      font-size: 0.78rem;
+      color: #e05039;
+      padding: 0.75rem;
+      background: rgba(224,80,57,0.08);
+      border-radius: 6px;
+      border: 1px solid rgba(224,80,57,0.2);
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 1rem 0.75rem 3rem; }
+      .logo { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <a class="logo" href="/">iZLET</a>
+    <span class="page-label">Live Dashboard</span>
+  </div>
+  <button class="refresh-btn" onclick="loadAll()">↺ Osvježi</button>
+</div>
+
+<div class="grid">
+
+  <!-- ── SPOTIFY CARD ── -->
+  <div class="card" id="card-spotify">
+    <div class="card-header">
+      <div class="card-icon icon-spotify">
+        <svg viewBox="0 0 24 24" fill="#fff">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        </svg>
+      </div>
+      <span class="card-title">Spotify</span>
+      <span class="card-status status-loading" id="status-spotify">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-spotify">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+  <!-- ── MUSICBRAINZ CARD ── -->
+  <div class="card" id="card-mb">
+    <div class="card-header">
+      <div class="card-icon icon-mb">
+        <svg viewBox="0 0 24 24" fill="#fff">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+        </svg>
+      </div>
+      <span class="card-title">MusicBrainz</span>
+      <span class="card-status status-loading" id="status-mb">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-mb">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+  <!-- ── WIKIDATA CARD ── -->
+  <div class="card" id="card-wd">
+    <div class="card-header">
+      <div class="card-icon icon-wikidata">
+        <svg viewBox="0 0 24 24" fill="#fff">
+          <path d="M4.002 3v18h1.5V3zm1.996 0v18h4.5V3zm6.496 0v18h1.5V3zm3.004 0v18h4.5V3z"/>
+        </svg>
+      </div>
+      <span class="card-title">Wikidata</span>
+      <span class="card-status status-loading" id="status-wd">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-wd">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+</div>
+
+<p class="dash-footer">
+  <a href="/">← Početna</a> &nbsp;·&nbsp;
+  iZLET – Braća Kumerle &nbsp;·&nbsp;
+  <span id="last-updated">—</span>
+</p>
+
+<script>
+  const SPOTIFY_FN   = '/.netlify/functions/spotify';
+  const MB_SNAP      = '/data/mb_snapshot.json';
+  const WD_SNAP      = '/data/wikidata_snapshot.json';
+
+  const WIKIDATA_LABELS = {
+    Q215380:  'rock bend', Q11399: 'rock', Q9300624: 'indie rock',
+    Q9759: 'alternative rock', Q1236268: 'pop rock', Q224: 'Hrvatska',
+  };
+
+  function fmt_ms(ms) {
+    if (!ms) return '—';
+    const m = Math.floor(ms / 60000);
+    const s = Math.floor((ms % 60000) / 1000).toString().padStart(2, '0');
+    return `${m}:${s}`;
+  }
+
+  function fmt_num(n) {
+    return n == null ? '—' : n.toLocaleString('hr');
+  }
+
+  function set_status(id, type, text) {
+    const el = document.getElementById('status-' + id);
+    el.className = 'card-status status-' + type;
+    el.textContent = text;
+  }
+
+  function render_error(id, msg) {
+    set_status(id, 'error', 'Greška');
+    document.getElementById('body-' + id).innerHTML =
+      `<div class="error-msg">⚠ ${msg}</div>`;
+  }
+
+  // ── SPOTIFY ──────────────────────────────────────────────────────────────
+  async function load_spotify() {
+    try {
+      const r   = await fetch(SPOTIFY_FN);
+      const d   = await r.json();
+      if (d.error) throw new Error(d.error);
+
+      const a   = d.artist;
+      const top = (d.top_tracks || []).slice(0, 8);
+      const alb = (d.albums || []).slice(0, 8);
+
+      set_status('spotify', 'ok', `${fmt_num(a.followers)} pratitelja`);
+
+      document.getElementById('body-spotify').innerHTML = `
+        <div class="artist-hero">
+          ${a.image ? `<img class="artist-img" src="${a.image}" alt="${a.name}" loading="lazy">` : '<div class="artist-img"></div>'}
+          <div class="artist-info">
+            <div class="artist-name">${a.name}</div>
+            <div class="artist-meta">
+              <span>♥ ${fmt_num(a.followers)}</span>
+              <span>◉ Popularity: ${a.popularity}</span>
+            </div>
+          </div>
+        </div>
+
+        ${a.genres?.length ? `
+        <div>
+          <div class="section-label">Žanrovi</div>
+          <div class="pill-list">${a.genres.map(g => `<span class="pill">${g}</span>`).join('')}</div>
+        </div>` : ''}
+
+        ${top.length ? `
+        <div>
+          <div class="section-label">Top pjesme</div>
+          <div class="track-list">
+            ${top.map((t, i) => `
+              <a class="track" href="${t.external_url}" target="_blank" rel="noopener">
+                <span class="track-num">${i + 1}</span>
+                ${t.album?.image ? `<img class="track-img" src="${t.album.image}" alt="" loading="lazy">` : '<div class="track-img"></div>'}
+                <div class="track-info">
+                  <div class="track-name">${t.name}</div>
+                  <div class="track-album">${t.album?.name || ''}</div>
+                </div>
+                <span class="track-dur">${fmt_ms(t.duration_ms)}</span>
+              </a>`).join('')}
+          </div>
+        </div>` : ''}
+
+        ${alb.length ? `
+        <div>
+          <div class="section-label">Diskografija</div>
+          <div class="album-grid">
+            ${alb.map(a => `
+              <a class="album-card" href="${a.external_url}" target="_blank" rel="noopener">
+                ${a.image ? `<img class="album-img" src="${a.image}" alt="${a.name}" loading="lazy">` : '<div class="album-img"></div>'}
+                <div class="album-name">${a.name}</div>
+                <div class="album-year">${(a.release_date || '').slice(0,4)}</div>
+              </a>`).join('')}
+          </div>
+        </div>` : ''}
+
+        <div class="stat-row">
+          <span class="stat-key">Spotify ID</span>
+          <a class="stat-link" href="${a.external_url}" target="_blank" rel="noopener">${a.id}</a>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Dohvaćeno</span>
+          <span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${new Date(d.fetched_at).toLocaleString('hr')}</span>
+        </div>
+      `;
+    } catch (err) {
+      render_error('spotify', err.message);
+    }
+  }
+
+  // ── MUSICBRAINZ ──────────────────────────────────────────────────────────
+  async function load_mb() {
+    try {
+      const r = await fetch(MB_SNAP);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const d = await r.json();
+      const a = d.artist;
+      const rgs = d.release_groups || [];
+      const recs = d.recordings   || [];
+
+      set_status('mb', 'ok', `${d.stats?.recording_count} snimki`);
+
+      const albums   = rgs.filter(r => r.type === 'Album');
+      const singles  = rgs.filter(r => r.type === 'Single');
+
+      document.getElementById('body-mb').innerHTML = `
+        <div>
+          <div class="stat-row">
+            <span class="stat-key">Ime</span>
+            <span class="stat-val">${a.name}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">Tip</span>
+            <span class="stat-val">${a.type || '—'}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">Zemlja</span>
+            <span class="stat-val">${a.country || '—'}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">Osnovan</span>
+            <span class="stat-val">${a.begin || '—'}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">Albumi</span>
+            <span class="stat-val">${albums.length}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">Singlovi</span>
+            <span class="stat-val">${singles.length}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">Snimke</span>
+            <span class="stat-val">${recs.length}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">Alias</span>
+            <span class="stat-val">${(a.aliases || []).join(', ') || '—'}</span>
+          </div>
+        </div>
+
+        ${a.tags?.length ? `
+        <div>
+          <div class="section-label">Tagovi</div>
+          <div class="pill-list">${a.tags.map(t => `<span class="pill">${t}</span>`).join('')}</div>
+        </div>` : ''}
+
+        <div>
+          <div class="section-label">Izdanja</div>
+          <div class="track-list">
+            ${rgs.map(rg => `
+              <a class="track" href="https://musicbrainz.org/release-group/${rg.id}" target="_blank" rel="noopener">
+                <div class="track-info">
+                  <div class="track-name">${rg.title}</div>
+                  <div class="track-album">${rg.type} · ${(rg.first_release_date || '').slice(0,4)}</div>
+                </div>
+              </a>`).join('')}
+          </div>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-key">MBID</span>
+          <a class="stat-link" href="https://musicbrainz.org/artist/${d.mbid}" target="_blank" rel="noopener">${d.mbid.slice(0,8)}…</a>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Snapshot</span>
+          <span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${new Date(d.fetched_at).toLocaleString('hr')}</span>
+        </div>
+      `;
+    } catch (err) {
+      render_error('mb', err.message);
+    }
+  }
+
+  // ── WIKIDATA ──────────────────────────────────────────────────────────────
+  async function load_wd() {
+    try {
+      const r = await fetch(WD_SNAP);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const d = await r.json();
+      const entities = d.entities || {};
+
+      const count = Object.keys(entities).length;
+      set_status('wd', 'ok', `${count} entiteta`);
+
+      const blocks = Object.values(entities).map(e => {
+        const label = e.labels?.hr || e.labels?.en || e.qid;
+        const desc  = e.descriptions?.hr || e.descriptions?.en || '';
+        const props = [];
+
+        if (e.spotify_artist_id?.length)    props.push(`Spotify: ${e.spotify_artist_id[0]}`);
+        if (e.musicbrainz_artist_id?.length) props.push(`MB: ${e.musicbrainz_artist_id[0].slice(0,8)}…`);
+        if (e.youtube_channel_id?.length)   props.push(`YT: ${e.youtube_channel_id[0]}`);
+        if (e.official_website?.length)     props.push(`Web: ${e.official_website[0].replace(/^https?:\/\//, '')}`);
+        if (e.inception?.length)            props.push(`Osnovan: ${e.inception[0].replace(/^\+(\d{4}).*/, '$1')}`);
+        if (e.country_of_origin?.length)    props.push(`Zemlja: ${e.country_of_origin[0]}`);
+
+        return `
+          <div class="entity-block">
+            <div class="entity-qid">
+              <a class="stat-link" href="https://www.wikidata.org/wiki/${e.qid}" target="_blank" rel="noopener">${e.qid}</a>
+            </div>
+            <div class="entity-label">${label}</div>
+            <div class="entity-desc">${desc}</div>
+            ${props.length ? `<div class="entity-props">${props.map(p => `<span class="pill">${p}</span>`).join('')}</div>` : ''}
+          </div>`;
+      });
+
+      document.getElementById('body-wd').innerHTML = `
+        ${blocks.join('')}
+        <div class="stat-row">
+          <span class="stat-key">Snapshot</span>
+          <span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${new Date(d.fetched_at).toLocaleString('hr')}</span>
+        </div>
+      `;
+    } catch (err) {
+      render_error('wd', err.message);
+    }
+  }
+
+  async function loadAll() {
+    // Reset to loading state
+    ['spotify','mb','wd'].forEach(id => {
+      set_status(id, 'loading', 'Učitavam…');
+      document.getElementById('body-' + id).innerHTML = `
+        <div class="skeleton skeleton-block"></div>
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line short"></div>`;
+    });
+
+    await Promise.all([load_spotify(), load_mb(), load_wd()]);
+
+    document.getElementById('last-updated').textContent =
+      'Ažurirano: ' + new Date().toLocaleString('hr');
+  }
+
+  loadAll();
+</script>
+</body>
+</html>
