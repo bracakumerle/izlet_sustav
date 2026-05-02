@@ -1,0 +1,19 @@
+{
+  "project": "iZLET_Authority_System",
+  "entities": [
+    {"name": "iZLET", "type": "Band", "wikidata_id": "Q139595518"},
+    {"name": "Braća Kumerle", "type": "Brand/Duo", "wikidata_id": "Q139595609"},
+    {"name": "Braća Kumerle Music", "type": "Label", "wikidata_id": "Q139595640"},
+    {"name": "Toni Kumerle", "type": "Person", "wikidata_id": "Q139595627"},
+    {"name": "Petar Kumerle", "type": "Person", "wikidata_id": "Q139595619"}
+  ],
+  "tracks": [
+    {
+      "id": "IZL-003",
+      "title": "Sjever uz odsutne",
+      "artist": "iZLET",
+      "wikidata_id": "Q139595589",
+      "status": "verified"
+    }
+  ]
+}
