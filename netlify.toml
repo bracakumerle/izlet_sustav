@@ -24,6 +24,12 @@
     Access-Control-Allow-Headers = "Content-Type"
     Access-Control-Allow-Methods = "GET, OPTIONS"
 
+# Correct Content-Type for sitemap.xml
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+
 # Friendly redirect: /spotify → function
 [[redirects]]
   from   = "/api/spotify"
