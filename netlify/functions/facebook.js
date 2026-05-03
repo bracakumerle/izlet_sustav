@@ -4,7 +4,7 @@ const https = require('https');
 const PAGE_ID    = '142089129226973';
 const GRAPH_BASE = 'https://graph.facebook.com/v19.0';
 const PAGE_FIELDS = 'name,fan_count,followers_count,about,website,verification_status,picture.type(large)';
-const POST_FIELDS = 'id,message,story,created_time,full_picture,likes.summary(true),comments.summary(true),shares';
+const POST_FIELDS = 'id,message,story,created_time';
 
 function get(url) {
   return new Promise((resolve, reject) => {
@@ -19,6 +19,14 @@ function get(url) {
   });
 }
 
+async function exchangePageToken(userToken) {
+  const enc = encodeURIComponent;
+  const res = await get(
+    `${GRAPH_BASE}/${PAGE_ID}?fields=access_token&access_token=${enc(userToken)}`
+  );
+  return res.data.access_token || userToken;
+}
+
 exports.handler = async () => {
   const headers = {
     'Content-Type':                'application/json',
@@ -26,8 +34,8 @@ exports.handler = async () => {
     'Cache-Control':               'public, max-age=300',
   };
 
-  const token = process.env.FACEBOOK_PAGE_TOKEN;
-  if (!token) {
+  const rawToken = process.env.FACEBOOK_PAGE_TOKEN;
+  if (!rawToken) {
     return {
       statusCode: 503,
       headers,
@@ -37,6 +45,8 @@ exports.handler = async () => {
 
   try {
     const enc   = encodeURIComponent;
+    const token = await exchangePageToken(rawToken);
+
     const [pageRes, postsRes] = await Promise.all([
       get(`${GRAPH_BASE}/${PAGE_ID}?fields=${enc(PAGE_FIELDS)}&access_token=${enc(token)}`),
       get(`${GRAPH_BASE}/${PAGE_ID}/posts?fields=${enc(POST_FIELDS)}&limit=6&access_token=${enc(token)}`),
@@ -47,10 +57,6 @@ exports.handler = async () => {
       id:           p.id,
       message:      p.message || p.story || null,
       created_time: p.created_time,
-      image:        p.full_picture || null,
-      likes:        p.likes?.summary?.total_count ?? 0,
-      comments:     p.comments?.summary?.total_count ?? 0,
-      shares:       p.shares?.count ?? 0,
     }));
 
     return {

@@ -1,0 +1,36 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "MusicGroup",
+            "@id": "https://bracakumerle.com/#iZLET",
+            "name": "iZLET",
+            "genre": "Rock",
+            "member": [
+                {
+                    "@type": "Person",
+                    "name": "Petar Kumerle"
+                },
+                {
+                    "@type": "Person",
+                    "name": "Toni Kumerle"
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://bracakumerle.com/#PetarKumerle",
+            "name": "Petar Kumerle",
+            "jobTitle": "Product Manager",
+            "sameAs": [
+                "https://www.discogs.com/artist/Petar+Kumerle",
+                "https://www.linkedin.com/in/petarkumerle"
+            ]
+        },
+        {
+            "@type": "Organization",
+            "name": "Braća Kumerle Music",
+            "@id": "https://bracakumerle.com/#Label"
+        }
+    ]
+}

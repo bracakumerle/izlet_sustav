@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iZLET – Braća Kumerle | Hrvatski rock bend</title>
+  <meta name="description" content="iZLET je hrvatski rock bend – Braća Kumerle. Slušaj na Spotifyu, YouTubeu, Apple Musicu i Deezeru." />
+  <meta property="og:title" content="iZLET – Braća Kumerle" />
+  <meta property="og:description" content="Hrvatski rock bend. Slušaj sada." />
+  <meta property="og:type" content="music.musician" />
+  <meta property="og:url" content="https://bracakumerle.com" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "iZLET",
+    "alternateName": "Braća Kumerle",
+    "url": "https://bracakumerle.com",
+    "genre": "Rock",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Hrvatska"
+    },
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q139595518",
+      "https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f",
+      "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d",
+      "https://www.youtube.com/@bracakumerle",
+      "https://www.facebook.com/bracakumerle",
+      "https://music.apple.com/us/artist/izlet/1234567890",
+      "https://www.deezer.com/artist/izlet"
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0a0a;
+      --surface:  #111111;
+      --border:   #1e1e1e;
+      --accent:   #c8a84b;
+      --accent2:  #e8c96b;
+      --text:     #e8e8e8;
+      --muted:    #666;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(200,168,75,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 50% 80%, rgba(200,168,75,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .band-label {
+      font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    .band-name {
+      font-size: clamp(5rem, 18vw, 14rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 0.9;
+      background: linear-gradient(135deg, #fff 0%, var(--accent2) 50%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .band-sub {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    .tagline {
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      color: #888;
+      letter-spacing: 0.05em;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ── PLATFORM LINKS ── */
+    .platforms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .platform-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      border: 1px solid transparent;
+    }
+
+    .platform-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+
+    .btn-spotify  { background: #1DB954; color: #000; }
+    .btn-spotify:hover  { background: #1ed760; }
+
+    .btn-youtube  { background: #FF0000; color: #fff; }
+    .btn-youtube:hover  { background: #ff2222; }
+
+    .btn-apple    { background: #fc3c44; color: #fff; }
+    .btn-apple:hover    { background: #ff5560; }
+
+    .btn-deezer   { background: #A238FF; color: #fff; }
+    .btn-deezer:hover   { background: #b45fff; }
+
+    .btn-facebook { background: #1877F2; color: #fff; }
+    .btn-facebook:hover { background: #2d8cff; }
+
+    .platform-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ── SCROLL HINT ── */
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease 1s both;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      width: 1px;
+      height: 2rem;
+      background: linear-gradient(to bottom, var(--muted), transparent);
+    }
+
+    /* ── INFO SECTION ── */
+    .info-section {
+      width: 100%;
+      max-width: 800px;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-text {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.8;
+      color: #aaa;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ── IDENTITY STRIP ── */
+    .identity-strip {
+      width: 100%;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .id-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .id-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .id-value {
+      font-size: 0.8rem;
+      color: #888;
+      font-family: 'Courier New', monospace;
+    }
+
+    .id-value a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .id-value a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--border);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="band-label">Braća Kumerle predstavljaju</p>
+    <h1 class="band-name">iZLET</h1>
+    <p class="band-sub">Hrvatski rock bend</p>
+    <p class="tagline">Slušaj. Osjeti. Izleti.</p>
+
+    <div class="platforms">
+
+      <!-- Spotify -->
+      <a class="platform-btn btn-spotify"
+         href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.494 17.324a.748.748 0 01-1.029.25c-2.818-1.723-6.365-2.112-10.541-1.157a.748.748 0 01-.333-1.458c4.571-1.045 8.492-.595 11.654 1.337.353.215.464.676.249 1.028zm1.466-3.261a.936.936 0 01-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 01-.543-1.792c4.358-1.322 9.776-.682 13.48 1.596a.935.935 0 01.308 1.287zm.126-3.395C15.457 8.422 9.37 8.2 5.535 9.374a1.124 1.124 0 01-.652-2.149c4.388-1.332 11.678-1.075 16.292 1.618a1.124 1.124 0 01-1.089 1.967v-.001z"/>
+        </svg>
+        Spotify
+      </a>
+
+      <!-- YouTube -->
+      <a class="platform-btn btn-youtube"
+         href="https://www.youtube.com/@bracakumerle"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        YouTube
+      </a>
+
+      <!-- Apple Music -->
+      <a class="platform-btn btn-apple"
+         href="https://music.apple.com/search?term=iZLET+Braca+Kumerle"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208a5.66 5.66 0 00-.39 1.548c-.06.562-.08 1.126-.085 1.69V17.55c.01.544.04 1.09.135 1.628.28 1.549 1.095 2.75 2.415 3.6a5.113 5.113 0 001.91.662c.586.1 1.18.135 1.774.15.047.002.094.007.14.007H18.3c.522-.013 1.043-.04 1.558-.13 1.44-.25 2.642-1.01 3.472-2.21.41-.6.65-1.27.775-1.98.065-.37.088-.744.1-1.12l.003-.16V6.358c0-.078-.01-.156-.014-.234zM8.516 6.66v8.99l7.758-4.49-7.758-4.5z"/>
+        </svg>
+        Apple Music
+      </a>
+
+      <!-- Deezer -->
+      <a class="platform-btn btn-deezer"
+         href="https://www.deezer.com/search/iZLET%20Braca%20Kumerle"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.944 18.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm-5.472 6.5h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm-5.472 9.75h4.112v1.5H8zm0-3.25h4.112v1.5H8zm0-3.25h4.112v1.5H8zm-5.472 6.5h4.112v1.5H2.528zm0-3.25h4.112v1.5H2.528z"/>
+        </svg>
+        Deezer
+      </a>
+
+      <!-- Facebook -->
+      <a class="platform-btn btn-facebook"
+         href="https://www.facebook.com/bracakumerle"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.532-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+        Facebook
+      </a>
+
+    </div>
+
+    <div class="scroll-hint">više</div>
+  </section>
+
+  <!-- INFO -->
+  <section class="info-section">
+    <p class="section-label">O bendu</p>
+    <p class="info-text">
+      iZLET su Braća Kumerle — hrvatski rock bend koji spaja energiju živih nastupa
+      s autorskim zvukom oblikovanim između Jadrana i kontinenta.
+      Glazba dostupna na svim platformama.
+    </p>
+  </section>
+
+  <!-- IDENTITY STRIP -->
+  <div class="identity-strip">
+    <div class="id-item">
+      <span class="id-label">Wikidata</span>
+      <span class="id-value">
+        <a href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Q139595518</a>
+      </span>
+    </div>
+    <div class="id-item">
+      <span class="id-label">MusicBrainz</span>
+      <span class="id-value">
+        <a href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">b973e6f2</a>
+      </span>
+    </div>
+    <div class="id-item">
+      <span class="id-label">Spotify ID</span>
+      <span class="id-value">
+        <a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">11wCFDSyZy0LfWkgllak6d</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 iZLET – Braća Kumerle. Sva prava pridržana.</p>
+  </footer>
+
+</body>
+</html>

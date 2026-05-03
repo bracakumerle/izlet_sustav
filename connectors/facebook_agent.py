@@ -16,10 +16,8 @@ PAGE_FIELDS = (
     "name,fan_count,followers_count,about,website,"
     "category,verification_status,picture.type(large)"
 )
-POST_FIELDS = (
-    "id,message,story,created_time,full_picture,"
-    "likes.summary(true),comments.summary(true),shares"
-)
+# Minimal fields — works with basic page token; no engagement metrics needed
+POST_FIELDS = "id,message,story,created_time"
 
 
 def _load_token() -> str:
@@ -36,13 +34,41 @@ def _load_token() -> str:
 
 def _get(url: str, params: dict) -> dict:
     r = requests.get(url, params=params, timeout=15)
-    r.raise_for_status()
+    if not r.ok:
+        try:
+            err = r.json()
+        except Exception:
+            err = r.text
+        raise requests.HTTPError(
+            f"HTTP {r.status_code}: {err}", response=r
+        )
     return r.json()
+
+
+def _exchange_page_token(user_token: str, page_id: str) -> str:
+    """Exchange a user token for the Page Access Token of the given page.
+
+    Pages managed via Business Suite don't appear in /me/accounts, so we fetch
+    the access_token field directly from the page endpoint instead.
+    """
+    r = requests.get(
+        f"{GRAPH_BASE}/{page_id}",
+        params={"fields": "access_token", "access_token": user_token},
+        timeout=15,
+    )
+    if r.ok:
+        page_token = r.json().get("access_token")
+        if page_token and page_token != user_token:
+            return page_token
+    return user_token
 
 
 class FacebookAgent:
     def __init__(self):
-        self.token = _load_token()
+        raw   = _load_token()
+        self.token = _exchange_page_token(raw, PAGE_ID)
+        if self.token != raw:
+            print(f"[Facebook] Exchanged user token for Page Access Token")
 
     def fetch_page_info(self) -> dict:
         data = _get(
@@ -63,29 +89,32 @@ class FacebookAgent:
 
     def fetch_posts(self, limit: int = 100) -> list[dict]:
         posts = []
-        url    = f"{GRAPH_BASE}/{PAGE_ID}/posts"
-        params = {
-            "fields":       POST_FIELDS,
-            "limit":        min(limit, 100),
-            "access_token": self.token,
-        }
-
-        while url and len(posts) < limit:
-            data = _get(url, params)
-            for p in data.get("data", []):
-                posts.append({
-                    "id":           p.get("id"),
-                    "message":      p.get("message") or p.get("story"),
-                    "created_time": p.get("created_time"),
-                    "image":        p.get("full_picture"),
-                    "likes":        p.get("likes", {}).get("summary", {}).get("total_count", 0),
-                    "comments":     p.get("comments", {}).get("summary", {}).get("total_count", 0),
-                    "shares":       p.get("shares", {}).get("count", 0),
-                })
-            next_page = data.get("paging", {}).get("next")
-            url    = next_page if next_page else None
-            params = {}  # next URL already contains all params
-            time.sleep(0.3)
+        # Try /posts first, fall back to /feed
+        for endpoint in (f"{GRAPH_BASE}/{PAGE_ID}/posts", f"{GRAPH_BASE}/{PAGE_ID}/feed"):
+            url    = endpoint
+            params = {
+                "fields":       POST_FIELDS,
+                "limit":        min(limit, 100),
+                "access_token": self.token,
+            }
+            try:
+                while url and len(posts) < limit:
+                    data = _get(url, params)
+                    for p in data.get("data", []):
+                        posts.append({
+                            "id":           p.get("id"),
+                            "message":      p.get("message") or p.get("story"),
+                            "created_time": p.get("created_time"),
+                        })
+                    next_page = data.get("paging", {}).get("next")
+                    url    = next_page if next_page else None
+                    params = {}
+                    time.sleep(0.3)
+                break  # success — stop trying endpoints
+            except requests.HTTPError as e:
+                print(f"[Facebook] {endpoint.split('/')[-1]} endpoint failed: {e}")
+                posts = []
+                continue
 
         return posts
 

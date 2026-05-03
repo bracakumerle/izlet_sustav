@@ -1,0 +1,116 @@
+╔════════════════════════════════════════════════════════════════╗
+║  PIPELINE MANAGER v2.2 - Full Authority Integration           ║
+║  iZLET Authority System + Link Verification                   ║
+╚════════════════════════════════════════════════════════════════╝
+
+[KORAK 1/6] Učitavanje master_registry.json...
+Lokacija: C:\Users\petar\OneDrive\Desktop\izlet_sustav\master_registry.json
+✅ Registry učitan
+   - Entiteta: 4
+   - URL-ova ukupno: 40
+
+[KORAK 2/6] Skeniranje entiteta iz registra...
+
+  → Entiteti (4):
+     ✅ iZLET (MusicGroup)
+        IDs    → wikidata: Q139595518 | musicbrainz: b973e6f2-c282-473a-b2fb-ffb4466b312f | spotify: 11wCFDSyZy0LfWkgllak6d | apple_music: 682224896 | deezer: 5054702 | discogs: 6610944 | youtube_channel_id: UC8jNEBUrOqCcXqVleV9ccKg | facebook_page_id: 142089129226973
+        URL-ovi→ 17 platformi
+     ✅ Petar Kumerle (Person)
+        IDs    → wikidata: Q139595619 | musicbrainz: 9ab299e2
+        URL-ovi→ 8 platformi
+     ✅ Toni Kumerle (Person)
+        IDs    → wikidata: Q139595627 | musicbrainz: b134ce50
+        URL-ovi→ 8 platformi
+     ✅ Braća Kumerle Music (MusicLabel)
+        IDs    → discogs: 4368922
+        URL-ovi→ 7 platformi
+
+✅ Skeniranje završeno: 4 entiteta
+
+[KORAK 3/6] Verifikacija HTTP dostupnosti linkova...
+
+  → iZLET:
+     ✅ website              200  https://bracakumerle.com
+     ✅ spotify              200  https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d
+     ✅ apple_music          200  https://music.apple.com/artist/682224896
+     ✅ deezer               200  https://www.deezer.com/artist/5054702
+     ✅ youtube              200  https://www.youtube.com/@bracakumerle
+     ✅ youtube_music        200  https://music.youtube.com/channel/UC8jNEBUrOqCcXqVleV9ccKg
+     ✅ facebook             200  https://www.facebook.com/142089129226973
+     ⚠️  discogs              403  https://www.discogs.com/artist/6610944
+     ✅ musicbrainz          200  https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f
+     ✅ wikidata             200  https://www.wikidata.org/wiki/Q139595518
+     ✅ tidal                200  https://tidal.com/browse/artist/11wCFDSyZy0LfWkgllak6d
+     ✅ amazon_music         200  https://music.amazon.com/artists/11wCFDSyZy0LfWkgllak6d
+     ✅ instagram            200  https://www.instagram.com/bracakumerle
+     ⚠️  twitter_x            403  https://x.com/bracakumerle
+     ✅ tiktok               200  https://www.tiktok.com/@bracakumerle
+     ✅ threads              200  https://www.threads.net/@bracakumerle
+     ⚠️  wikipedia_hr         404  https://hr.wikipedia.org/wiki/IZLET_(bend)
+
+  → Petar Kumerle:
+     ✅ wikidata             200  https://www.wikidata.org/wiki/Q139595619
+     ⚠️  musicbrainz          400  https://musicbrainz.org/artist/9ab299e2
+     ⚠️  website              404  https://bracakumerle.com/petar
+     ✅ instagram            200  https://www.instagram.com/bracakumerle
+     ✅ facebook             200  https://www.facebook.com/142089129226973
+     ⚠️  twitter_x            403  https://x.com/bracakumerle
+     ✅ tiktok               200  https://www.tiktok.com/@bracakumerle
+     ✅ threads              200  https://www.threads.net/@bracakumerle
+
+  → Toni Kumerle:
+     ✅ wikidata             200  https://www.wikidata.org/wiki/Q139595627
+     ⚠️  musicbrainz          400  https://musicbrainz.org/artist/b134ce50
+     ⚠️  website              404  https://bracakumerle.com/toni
+     ✅ instagram            200  https://www.instagram.com/bracakumerle
+     ✅ facebook             200  https://www.facebook.com/142089129226973
+     ⚠️  twitter_x            403  https://x.com/bracakumerle
+     ✅ tiktok               200  https://www.tiktok.com/@bracakumerle
+     ✅ threads              200  https://www.threads.net/@bracakumerle
+
+  → Braća Kumerle Music:
+     ⚠️  website              404  https://bracakumerle.com/bkm
+     ⚠️  discogs              403  https://www.discogs.com/label/4368922
+     ✅ facebook             200  https://www.facebook.com/142089129226973
+     ✅ instagram            200  https://www.instagram.com/bracakumerle
+     ⚠️  twitter_x            403  https://x.com/bracakumerle
+     ✅ tiktok               200  https://www.tiktok.com/@bracakumerle
+     ✅ threads              200  https://www.threads.net/@bracakumerle
+
+✅ Link verifikacija: 28/40 dostupni
+
+[KORAK 4/6] Generiranje Schema.org s verificiranim linkovima...
+✅ Schema.org generirano: 4 entiteta, 28 verified sameAs linkova
+   Saved → C:\Users\petar\OneDrive\Desktop\izlet_sustav\data\schema_org_verified.json
+
+[KORAK 5/6] Generiranje finalnog izvještaja...
+
+╔════════════════════════════════════════════════════════════════╗
+║  PIPELINE EXECUTION REPORT - 2026-05-02 23:11:58              ║
+╚════════════════════════════════════════════════════════════════╝
+
+📊 SAŽETAK IZVRŠAVANJA:
+   - Entiteta skeniranih:   4
+   - Linkova verificiranih: 40
+   - Linkova dostupnih:     28/40
+   - Schema.org generirano: True
+   - Audit trail:           C:\Users\petar\OneDrive\Desktop\izlet_sustav\logs\scan_report_20260502_231158.txt
+
+🔗 Link Health: 28/40 (70%)
+
+✅ PIPELINE ZAVRŠEN USPJEŠNO - 2026-05-02 23:11:58
+   Lokacija: C:\Users\petar\OneDrive\Desktop\izlet_sustav\logs\scan_report_20260502_231158.txt
+
+
+[KORAK 6/6] Dohvaćanje live podataka s vanjskih autoriteta...
+  → MusicBrainz API...
+     ✅ Artist: iZLET (Group)
+     ✅ Release groups: 4
+     ✅ Recordings: 30
+     ✅ Saved → C:\Users\petar\OneDrive\Desktop\izlet_sustav\data\mb_snapshot.json
+  → Wikidata API...
+     ✅ Q139595518: iZLET — hrvatski rock sastav
+     ✅ Q139595619: Petar Kumerle — hrvatski glazbenik i projekt menadžer
+     ✅ Q139595627: Toni Kumerle — hrvatski glazbenik i grafički dizajner
+     ✅ Snapshot → C:\Users\petar\OneDrive\Desktop\izlet_sustav\data\wikidata_snapshot.json
+     ✅ State    → C:\Users\petar\OneDrive\Desktop\izlet_sustav\data\wikidata_state.json (changed: False)

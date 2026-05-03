@@ -1,0 +1,7 @@
+Lokacija: C:\Users\petar\OneDrive\Desktop\izlet_sustav\master_registry.json
+   - Core entiteta: 0
+   - Track-ova: 1
+
+[KORAK 2/5] Skeniranje core entiteta...
+
+[KORAK 3/5] Verifikacija HTTP dostupnosti linkova...

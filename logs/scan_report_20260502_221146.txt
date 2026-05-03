@@ -1,0 +1,57 @@
+╔════════════════════════════════════════════════════════════════╗
+║  PIPELINE MANAGER v2.1 - Full Authority Integration           ║
+║  iZLET Authority System + Link Verification                   ║
+╚════════════════════════════════════════════════════════════════╝
+
+[KORAK 1/5] Učitavanje master_registry.json...
+Lokacija: C:\Users\petar\OneDrive\Desktop\izlet_sustav\master_registry.json
+✅ Registry učitan
+   - Core entiteta: 0
+   - Track-ova: 1
+
+[KORAK 2/5] Skeniranje core entiteta...
+
+  → Core entiteti (Authority Foundation):
+
+✅ Skeniranje završeno: 0 entiteta
+
+[KORAK 3/5] Verifikacija HTTP dostupnosti linkova...
+
+  → Distribution Layer (Streaming):
+
+  → Communication Layer (Authority):
+
+✅ Link verifikacija: 0/0 dostupni
+
+[KORAK 4/5] Generiranje Schema.org s dinamičkim linkovima...
+✅ Schema.org generirano s 0 dinamičkih linkova
+
+[KORAK 5/6] Geniranje finalnog izvještaja...
+
+╔════════════════════════════════════════════════════════════════╗
+║  PIPELINE EXECUTION REPORT - 2026-05-02 22:11:46              ║
+╚════════════════════════════════════════════════════════════════╝
+
+📊 SAŽETAK IZVRŠAVANJA:
+   - Core entiteta skeniranih: 0
+   - Linkova verificiranih: 0
+   - Schema.org generirano: False
+   - Audit trail (Log): C:\Users\petar\OneDrive\Desktop\izlet_sustav\logs\scan_report_20260502_221146.txt
+
+✅ PIPELINE ZAVRŠEN USPJEŠNO - 2026-05-02 22:11:46
+   Dokazni materijal spreman za General-a
+   Lokacija: C:\Users\petar\OneDrive\Desktop\izlet_sustav\logs\scan_report_20260502_221146.txt
+
+
+[KORAK 6/6] Dohvaćanje live podataka s vanjskih autoriteta...
+  → MusicBrainz API...
+     ✅ Artist: iZLET (Group)
+     ✅ Release groups: 4
+     ✅ Recordings: 30
+     ✅ Saved → C:\Users\petar\OneDrive\Desktop\izlet_sustav\data\mb_snapshot.json
+  → Wikidata API...
+     ✅ Q139595518: iZLET — hrvatski rock sastav
+     ✅ Q139595619: Petar Kumerle — hrvatski glazbenik i projekt menadžer
+     ✅ Q139595627: Toni Kumerle — hrvatski glazbenik i grafički dizajner
+     ✅ Snapshot → C:\Users\petar\OneDrive\Desktop\izlet_sustav\data\wikidata_snapshot.json
+     ✅ State    → C:\Users\petar\OneDrive\Desktop\izlet_sustav\data\wikidata_state.json (changed: True)
