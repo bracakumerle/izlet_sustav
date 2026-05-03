@@ -143,6 +143,7 @@
     .icon-discogs   { background: #333; }
     .icon-wikipedia { background: #3366cc; }
     .icon-system    { background: #1a7a40; }
+    .icon-facebook  { background: #1877F2; }
 
     .card-title {
       font-size: 0.8rem;
@@ -438,6 +439,29 @@
     .badge-warn { background: rgba(224,168,57,0.15); color: #e0a839; }
     .badge-err  { background: rgba(224,80,57,0.15);  color: #e05039; }
 
+    /* ── FACEBOOK POSTS ── */
+    .fb-post {
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .fb-post-msg {
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: var(--text);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .fb-post-date { font-size: 0.65rem; color: var(--muted); }
+
     /* ── FOOTER ── */
     .dash-footer {
       max-width: 1100px;
@@ -617,6 +641,32 @@
       <span class="card-status status-loading" id="status-system">Učitavam…</span>
     </div>
     <div class="card-body" id="body-system">
+      <div class="skeleton skeleton-block"></div>
+      <div class="skeleton skeleton-line"></div>
+      <div class="skeleton skeleton-line short"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════ ROW 3: SOCIAL MEDIA ══════════════ -->
+<div class="section-divider">
+  <span class="section-divider-label">Društvene mreže</span>
+  <div class="section-divider-line"></div>
+</div>
+
+<div class="grid">
+
+  <!-- FACEBOOK -->
+  <div class="card" id="card-facebook">
+    <div class="card-header">
+      <div class="card-icon icon-facebook">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      </div>
+      <span class="card-title">Facebook</span>
+      <span class="card-status status-loading" id="status-facebook">Učitavam…</span>
+    </div>
+    <div class="card-body" id="body-facebook">
       <div class="skeleton skeleton-block"></div>
       <div class="skeleton skeleton-line"></div>
       <div class="skeleton skeleton-line short"></div>
@@ -942,8 +992,45 @@
     } catch (err) { render_error('system', err.message); }
   }
 
+  // ── FACEBOOK ──────────────────────────────────────────────────────────────
+  async function load_facebook() {
+    try {
+      const r = await fetch(FN('facebook'));
+      const d = await r.json();
+      if (d.error) throw new Error(d.error);
+
+      const pg    = d.page || {};
+      const posts = (d.latest_posts || []).slice(0, 3);
+
+      set_status('facebook', 'ok', `${fmt_num(pg.followers_count)} pratitelja`);
+
+      document.getElementById('body-facebook').innerHTML = `
+        <div>
+          <div class="stat-row"><span class="stat-key">Stranica</span>
+            <a class="stat-link" href="https://www.facebook.com/${pg.id}" target="_blank" rel="noopener">${pg.name || '—'}</a>
+          </div>
+          <div class="stat-row"><span class="stat-key">Pratitelji</span><span class="stat-val">${fmt_num(pg.followers_count)}</span></div>
+          <div class="stat-row"><span class="stat-key">Sviđanja</span><span class="stat-val">${fmt_num(pg.fan_count)}</span></div>
+          ${pg.about ? `<div class="stat-row"><span class="stat-key">O stranici</span><span class="stat-val" style="font-size:0.7rem;color:#aaa;text-align:right;max-width:65%">${pg.about}</span></div>` : ''}
+        </div>
+        ${posts.length ? `
+        <div>
+          <div class="section-label">Zadnje objave</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            ${posts.map(p => `
+              <div class="fb-post">
+                <div class="fb-post-msg">${p.message || '(bez teksta)'}</div>
+                <div class="fb-post-date">${fmt_date(p.created_time)}</div>
+              </div>`).join('')}
+          </div>
+        </div>` : '<div class="error-msg" style="color:#e0a839;background:rgba(224,168,57,0.08);border-color:rgba(224,168,57,0.2);">Nema objava</div>'}
+        <div class="stat-row"><span class="stat-key">Dohvaćeno</span><span class="stat-val" style="font-size:0.7rem;color:var(--muted)">${fmt_date(d.fetched_at)}</span></div>
+      `;
+    } catch (err) { render_error('facebook', err.message); }
+  }
+
   // ── LOAD ALL ──────────────────────────────────────────────────────────────
-  const ALL_IDS = ['spotify','mb','wd','youtube','discogs','wikipedia','system'];
+  const ALL_IDS = ['spotify','mb','wd','youtube','discogs','wikipedia','system','facebook'];
 
   async function loadAll() {
     ALL_IDS.forEach(id => {
@@ -954,6 +1041,7 @@
     await Promise.all([
       load_spotify(), load_mb(), load_wd(),
       load_youtube(), load_discogs(), load_wikipedia(), load_system(),
+      load_facebook(),
     ]);
 
     document.getElementById('last-updated').textContent =
