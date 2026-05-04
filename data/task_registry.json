@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-02",
+  "last_updated": "2026-05-04",
   "tasks": [
     {
       "id": "INFRA-001",
@@ -72,8 +72,10 @@
       "type": "data_fetch",
       "description": "Facebook API integracija",
       "owner": "GPT",
-      "status": "blocked",
-      "blocker": "Facebook app review potreban"
+      "status": "done",
+      "completed": "2026-05-04",
+      "note": "implementirano retroaktivno",
+      "output": "netlify/functions/facebook.js, connectors/facebook_agent.py"
     },
     {
       "id": "DATA-005",
@@ -87,7 +89,10 @@
       "type": "seo",
       "description": "Google Search Console verifikacija bracakumerle.com",
       "owner": "General",
-      "status": "pending"
+      "status": "done",
+      "completed": "2026-05-04",
+      "note": "implementirano retroaktivno",
+      "output": "index.html meta name=google-site-verification"
     },
     {
       "id": "SEO-002",
