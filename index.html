@@ -19,6 +19,10 @@
   <meta property="og:type" content="music.musician" />
   <meta property="og:url" content="https://bracakumerle.com" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,306 +51,348 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #0a0a0a;
-      --surface:  #111111;
-      --border:   #1e1e1e;
-      --accent:   #c8a84b;
-      --accent2:  #e8c96b;
-      --text:     #e8e8e8;
-      --muted:    #666;
+      --bg:    #080808;
+      --ink:   #e8e6e1;
+      --gold:  #c8a84b;
+      --gold2: #e8c96b;
+      --dim:   #252525;
+      --muted: #4a4a4a;
+      --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --sans:  'Raleway', 'Helvetica Neue', Arial, sans-serif;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
-      color: var(--text);
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     /* ── HERO ── */
     .hero {
+      position: relative;
       width: 100%;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
       overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
       background-image: url('hero.jpg');
       background-size: cover;
       background-position: center 30%;
       background-repeat: no-repeat;
     }
 
-    /* dark overlay + gold vignette on top of photo */
-    .hero::before {
-      content: '';
+    .hero-overlay {
       position: absolute;
       inset: 0;
-      background:
-        rgba(0, 0, 0, 0.45),
-        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(200,168,75,0.07) 0%, transparent 70%);
-      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(8, 8, 8, 0.52) 0%,
+        rgba(8, 8, 8, 0.28) 25%,
+        rgba(8, 8, 8, 0.48) 55%,
+        rgba(8, 8, 8, 0.88) 80%,
+        #080808 100%
+      );
     }
 
-    .band-label {
-      font-size: clamp(0.7rem, 1.5vw, 0.85rem);
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.2rem;
-      font-weight: 500;
-    }
-
-    .band-name {
-      font-size: clamp(5rem, 18vw, 14rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 0.9;
-      background: linear-gradient(135deg, #fff 0%, var(--accent2) 50%, var(--accent) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.4rem;
+    .hero-content {
+      flex: 1;
       position: relative;
       z-index: 1;
-    }
-
-    .band-sub {
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      font-weight: 300;
-      letter-spacing: 0.15em;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 3rem;
-    }
-
-    .tagline {
-      font-size: clamp(0.9rem, 2vw, 1.05rem);
-      color: #888;
-      letter-spacing: 0.05em;
-      margin-bottom: 3.5rem;
-    }
-
-    /* ── PLATFORM LINKS ── */
-    .platform-groups {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
-      position: relative;
-      z-index: 1;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem 2rem;
+    }
+
+    /* ── LOGO ── */
+    .hero-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 1.75rem;
+      opacity: 0.9;
+    }
+
+    /* ── BAND LABEL ── */
+    .band-label {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: clamp(0.58rem, 1.1vw, 0.72rem);
+      letter-spacing: 0.48em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── BAND NAME ── */
+    .band-name {
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: clamp(5.5rem, 22vw, 15rem);
+      line-height: 0.87;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+
+    .band-name .i-gold {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ── BAND SUBTITLE ── */
+    .band-sub {
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: clamp(0.72rem, 1.6vw, 0.9rem);
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    /* ── TAGLINE ── */
+    .tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(0.88rem, 1.7vw, 1.05rem);
+      color: #585858;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ── PLATFORM GROUPS ── */
+    .platform-groups {
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      margin-bottom: 2.5rem;
     }
 
     .platform-group-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.35em;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 0.58rem;
+      letter-spacing: 0.42em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.65rem;
-      text-align: center;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+      color: var(--gold);
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--dim);
+      margin-bottom: 0.25rem;
+      text-align: left;
     }
 
-    .platforms {
+    .platform-link {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-    }
-
-    .platform-btn {
-      display: inline-flex;
       align-items: center;
-      gap: 0.55rem;
-      padding: 0.75rem 1.4rem;
-      border-radius: 2rem;
+      justify-content: space-between;
+      padding: 0.55rem 0;
       text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-      border: 1px solid transparent;
+      color: #606060;
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: clamp(0.82rem, 1.4vw, 0.92rem);
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid transparent;
+      transition: color 0.22s ease, border-color 0.22s ease;
     }
 
-    .platform-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    .platform-link:hover {
+      color: var(--ink);
+      border-bottom-color: var(--dim);
     }
 
-    .btn-spotify  { background: #1DB954; color: #000; }
-    .btn-spotify:hover  { background: #1ed760; }
-
-    .btn-youtube  { background: #FF0000; color: #fff; }
-    .btn-youtube:hover  { background: #ff2222; }
-
-    .btn-apple    { background: #fc3c44; color: #fff; }
-    .btn-apple:hover    { background: #ff5560; }
-
-    .btn-deezer   { background: #A238FF; color: #fff; }
-    .btn-deezer:hover   { background: #b45fff; }
-
-    .btn-facebook { background: #1877F2; color: #fff; }
-    .btn-facebook:hover { background: #2d8cff; }
-
-    .btn-tidal     { background: #000; color: #fff; border-color: #333; }
-    .btn-tidal:hover     { background: #1a1a1a; }
-    .btn-instagram { background: #E1306C; color: #fff; }
-    .btn-instagram:hover { background: #f04080; }
-    .btn-x         { background: #000; color: #fff; border-color: #333; }
-    .btn-x:hover         { background: #1a1a1a; }
-    .btn-tiktok    { background: #010101; color: #fff; border-color: #333; }
-    .btn-tiktok:hover    { background: #222; }
-    .btn-discogs   { background: #333; color: #fff; }
-    .btn-discogs:hover   { background: #444; }
-    .btn-wikipedia { background: #3366cc; color: #fff; }
-    .btn-wikipedia:hover { background: #4477dd; }
-    .btn-email     { background: #444; color: #e8e8e8; }
-    .btn-email:hover     { background: #555; }
-    .btn-revolut   { background: #0666EB; color: #fff; }
-    .btn-revolut:hover   { background: #1877f2; }
-
-    .platform-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-
-    /* ── HERO LOGO ── */
-    .hero-logo {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 16px auto;
-      position: relative;
-      z-index: 1;
+    .platform-link .arrow {
+      font-size: 0.75rem;
+      opacity: 0;
+      transform: translateX(-5px);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      color: var(--gold);
     }
 
-    /* ── LIVE PHOTO BAND ── */
-    .live-photo-band {
-      width: 100%;
-      max-height: 480px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      margin-bottom: 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .live-photo-band img {
-      width: 100%;
-      object-fit: cover;
-      object-position: center 25%;
+    .platform-link:hover .arrow {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     /* ── SCROLL HINT ── */
     .scroll-hint {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
       color: var(--muted);
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 0.58rem;
+      letter-spacing: 0.38em;
       text-transform: uppercase;
-      animation: fadeIn 2s ease 1s both;
+      margin-top: 0.5rem;
+      animation: fadeInUp 2.5s ease 1.5s both;
     }
 
     .scroll-hint::after {
       content: '';
       width: 1px;
-      height: 2rem;
+      height: 1.75rem;
       background: linear-gradient(to bottom, var(--muted), transparent);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── LIVE PHOTO ── */
+    .live-photo-wrap {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .live-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+      filter: grayscale(100%) contrast(1.15) brightness(0.72);
+    }
+
+    .live-photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 140px;
+      background: linear-gradient(to bottom, var(--bg), transparent);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .live-photo-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 180px;
+      background: linear-gradient(to top, var(--bg), transparent);
+      z-index: 2;
+      pointer-events: none;
     }
 
     /* ── INFO SECTION ── */
     .info-section {
       width: 100%;
-      max-width: 800px;
-      padding: 5rem 2rem;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 6rem 2rem 5rem;
       text-align: center;
     }
 
-    .section-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
+    .section-eyebrow {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 0.58rem;
+      letter-spacing: 0.42em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1.75rem;
     }
 
     .info-text {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: 1.8;
-      color: #aaa;
-      max-width: 600px;
-      margin: 0 auto;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      line-height: 1.82;
+      color: #7a7a7a;
     }
 
-    /* ── IDENTITY STRIP ── */
-    .identity-strip {
+    /* ── ENTITY GRAPH ── */
+    .entity-graph {
       width: 100%;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem 4rem;
-      margin-bottom: 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid var(--dim);
+      padding: 4rem 2rem 4.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 3rem 2.5rem;
     }
 
-    .id-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    .id-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.25em;
+    .entity-col-label {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 0.58rem;
+      letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--gold);
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--dim);
+      margin-bottom: 0.75rem;
     }
 
-    .id-value {
-      font-size: 0.8rem;
-      color: #888;
-      font-family: 'Courier New', monospace;
-    }
-
-    .id-value a {
-      color: var(--accent);
+    .entity-item {
+      display: block;
+      font-family: 'Courier New', 'Courier', monospace;
+      font-size: 0.68rem;
+      color: #404040;
       text-decoration: none;
+      padding: 0.22rem 0;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+      transition: color 0.18s ease;
     }
 
-    .id-value a:hover { text-decoration: underline; }
+    a.entity-item:hover { color: var(--gold); }
+
+    .entity-plain {
+      display: block;
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 0.7rem;
+      color: #3a3a3a;
+      padding: 0.22rem 0;
+      letter-spacing: 0.06em;
+      line-height: 1.5;
+    }
 
     /* ── FOOTER ── */
     footer {
       width: 100%;
+      border-top: 1px solid var(--dim);
       padding: 2rem;
       text-align: center;
-      color: var(--muted);
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-      border-top: 1px solid var(--border);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateX(-50%) translateY(8px); }
-      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .footer-copy {
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .platform-groups { max-width: 100%; }
+      .live-photo-wrap { height: 340px; }
+      .entity-graph { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -354,148 +400,100 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img src="logo.png" alt="iZLET logo" class="hero-logo">
-    <p class="band-label">Braća Kumerle predstavljaju</p>
-    <h1 class="band-name">iZLET</h1>
-    <p class="band-sub">Hrvatski rock bend</p>
-    <p class="tagline">Slušaj. Osjeti. Izleti.</p>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
-    <div class="platform-groups">
+    <div class="hero-content">
+      <img src="logo.png" alt="iZLET logo" class="hero-logo">
+      <p class="band-label">Braća Kumerle</p>
+      <h1 class="band-name"><span class="i-gold">i</span>ZLET</h1>
+      <p class="band-sub">Hrvatski rock bend</p>
+      <p class="tagline">Slušaj. Osjeti. Izleti.</p>
 
-      <!-- ── Streaming ── -->
-      <div>
-        <p class="platform-group-label">Streaming</p>
-        <div class="platforms">
+      <div class="platform-groups">
 
-          <a class="platform-btn btn-spotify"
+        <!-- Streaming -->
+        <div>
+          <p class="platform-group-label">Streaming</p>
+          <a class="platform-link"
              href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.494 17.324a.748.748 0 01-1.029.25c-2.818-1.723-6.365-2.112-10.541-1.157a.748.748 0 01-.333-1.458c4.571-1.045 8.492-.595 11.654 1.337.353.215.464.676.249 1.028zm1.466-3.261a.936.936 0 01-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 01-.543-1.792c4.358-1.322 9.776-.682 13.48 1.596a.935.935 0 01.308 1.287zm.126-3.395C15.457 8.422 9.37 8.2 5.535 9.374a1.124 1.124 0 01-.652-2.149c4.388-1.332 11.678-1.075 16.292 1.618a1.124 1.124 0 01-1.089 1.967v-.001z"/>
-            </svg>
-            Spotify
+            Spotify <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-youtube"
+          <a class="platform-link"
              href="https://www.youtube.com/@bracakumerle"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-            YouTube
+            YouTube <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-apple"
+          <a class="platform-link"
              href="https://music.apple.com/gb/artist/izlet/682224896"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208a5.66 5.66 0 00-.39 1.548c-.06.562-.08 1.126-.085 1.69V17.55c.01.544.04 1.09.135 1.628.28 1.549 1.095 2.75 2.415 3.6a5.113 5.113 0 001.91.662c.586.1 1.18.135 1.774.15.047.002.094.007.14.007H18.3c.522-.013 1.043-.04 1.558-.13 1.44-.25 2.642-1.01 3.472-2.21.41-.6.65-1.27.775-1.98.065-.37.088-.744.1-1.12l.003-.16V6.358c0-.078-.01-.156-.014-.234zM8.516 6.66v8.99l7.758-4.49-7.758-4.5z"/>
-            </svg>
-            Apple Music
+            Apple Music <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-deezer"
+          <a class="platform-link"
              href="https://www.deezer.com/hr/artist/5054702"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.944 18.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm-5.472 6.5h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm0-3.25h4.112v1.5h-4.112zm-5.472 9.75h4.112v1.5H8zm0-3.25h4.112v1.5H8zm0-3.25h4.112v1.5H8zm-5.472 6.5h4.112v1.5H2.528zm0-3.25h4.112v1.5H2.528z"/>
-            </svg>
-            Deezer
+            Deezer <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-tidal"
+          <a class="platform-link"
              href="https://tidal.com/artist/5080072"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.012 3.992L8.008 7.996 4.004 3.992 0 7.996l4.004 4.004 4.004-4.004 4.004 4.004 4.004-4.004L20.02 11.996l3.98-4.004-4.004-3.992-3.984 3.992zM8.008 12.008l-4.004 4.004L0 12.008l4.004-4.004zm8.008 0l-4.004 4.004-4.004-4.004 4.004-4.004z"/>
-            </svg>
-            Tidal
+            Tidal <span class="arrow">→</span>
           </a>
-
         </div>
-      </div>
 
-      <!-- ── Društvene mreže ── -->
-      <div>
-        <p class="platform-group-label">Društvene mreže</p>
-        <div class="platforms">
-
-          <a class="platform-btn btn-facebook"
+        <!-- Društvene mreže -->
+        <div>
+          <p class="platform-group-label">Društvene mreže</p>
+          <a class="platform-link"
              href="https://www.facebook.com/bracakumerle"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.532-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-            </svg>
-            Facebook
+            Facebook <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-instagram"
+          <a class="platform-link"
              href="https://www.instagram.com/bracakumerle"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
-            Instagram
+            Instagram <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-x"
+          <a class="platform-link"
              href="https://x.com/bracakumerle"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            X
+            X <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-tiktok"
+          <a class="platform-link"
              href="https://www.tiktok.com/@bracakumerle"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.19 8.19 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
-            </svg>
-            TikTok
+            TikTok <span class="arrow">→</span>
           </a>
-
         </div>
-      </div>
 
-      <!-- ── Kontakt ── -->
-      <div>
-        <p class="platform-group-label">Kontakt</p>
-        <div class="platforms">
-
-          <a class="platform-btn btn-email"
-             href="mailto:izletband@gmail.com">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            Email
+        <!-- Kontakt -->
+        <div>
+          <p class="platform-group-label">Kontakt</p>
+          <a class="platform-link" href="mailto:izletband@gmail.com">
+            Email <span class="arrow">→</span>
           </a>
-
-          <a class="platform-btn btn-revolut"
+          <a class="platform-link"
              href="https://revolut.me/pkumerle"
              target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-            Donacije
+            Donacije <span class="arrow">→</span>
           </a>
-
         </div>
+
       </div>
 
+      <div class="scroll-hint">više</div>
     </div>
 
-    <div class="live-photo-band">
-      <img src="live.jpg" alt="iZLET – live nastup" />
+    <!-- Live photo — bottom of hero, fades into page -->
+    <div class="live-photo-wrap">
+      <img src="live.jpg" alt="iZLET – live nastup">
     </div>
-
-    <div class="scroll-hint">više</div>
   </section>
 
   <!-- INFO -->
   <section class="info-section">
-    <p class="section-label">O bendu</p>
+    <p class="section-eyebrow">O bendu</p>
     <p class="info-text">
       iZLET su Braća Kumerle — hrvatski rock bend koji spaja energiju živih nastupa
       s autorskim zvukom oblikovanim između Jadrana i kontinenta.
@@ -503,43 +501,51 @@
     </p>
   </section>
 
-  <!-- IDENTITY STRIP -->
-  <div class="identity-strip">
-    <div class="id-item">
-      <span class="id-label">Wikidata</span>
-      <span class="id-value">
-        <a href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Q139595518</a>
-      </span>
+  <!-- ENTITY GRAPH -->
+  <div class="entity-graph">
+
+    <div>
+      <p class="entity-col-label">iZLET</p>
+      <a class="entity-item" href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Q139595518</a>
+      <a class="entity-item" href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">b973e6f2</a>
+      <a class="entity-item" href="https://www.discogs.com/artist/6610944" target="_blank" rel="noopener">Discogs 6610944</a>
+      <a class="entity-item" href="https://hr.wikipedia.org/wiki/IZLET" target="_blank" rel="noopener">Wikipedia (hr)</a>
     </div>
-    <div class="id-item">
-      <span class="id-label">MusicBrainz</span>
-      <span class="id-value">
-        <a href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">b973e6f2</a>
-      </span>
+
+    <div>
+      <p class="entity-col-label">Braća Kumerle</p>
+      <a class="entity-item" href="https://bracakumerle.com">bracakumerle.com</a>
+      <a class="entity-item" href="https://www.facebook.com/bracakumerle" target="_blank" rel="noopener">Facebook</a>
+      <a class="entity-item" href="https://www.instagram.com/bracakumerle" target="_blank" rel="noopener">Instagram</a>
+      <a class="entity-item" href="https://x.com/bracakumerle" target="_blank" rel="noopener">X</a>
+      <a class="entity-item" href="https://www.tiktok.com/@bracakumerle" target="_blank" rel="noopener">TikTok</a>
     </div>
-    <div class="id-item">
-      <span class="id-label">Spotify ID</span>
-      <span class="id-value">
-        <a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">11wCFDSyZy0LfWkgllak6d</a>
-      </span>
+
+    <div>
+      <p class="entity-col-label">Streaming</p>
+      <a class="entity-item" href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">Spotify</a>
+      <a class="entity-item" href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">YouTube</a>
+      <a class="entity-item" href="https://music.apple.com/gb/artist/izlet/682224896" target="_blank" rel="noopener">Apple Music</a>
+      <a class="entity-item" href="https://www.deezer.com/hr/artist/5054702" target="_blank" rel="noopener">Deezer</a>
+      <a class="entity-item" href="https://tidal.com/artist/5080072" target="_blank" rel="noopener">Tidal</a>
     </div>
-    <div class="id-item">
-      <span class="id-label">Discogs</span>
-      <span class="id-value">
-        <a href="https://www.discogs.com/artist/6610944" target="_blank" rel="noopener">6610944</a>
-      </span>
+
+    <div>
+      <p class="entity-col-label">Toni Kumerle</p>
+      <span class="entity-plain">Gitara, vokal</span>
     </div>
-    <div class="id-item">
-      <span class="id-label">Wikipedia</span>
-      <span class="id-value">
-        <a href="https://hr.wikipedia.org/wiki/IZLET" target="_blank" rel="noopener">hr.wikipedia.org/wiki/IZLET</a>
-      </span>
+
+    <div>
+      <p class="entity-col-label">Petar Kumerle</p>
+      <span class="entity-plain">Bubnjevi</span>
+      <a class="entity-item" href="mailto:izletband@gmail.com">izletband@gmail.com</a>
     </div>
+
   </div>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 iZLET – Braća Kumerle. Sva prava pridržana.</p>
+    <p class="footer-copy">&copy; 2026 iZLET – Braća Kumerle. Sva prava pridržana.</p>
   </footer>
 
 </body>
