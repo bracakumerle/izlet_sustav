@@ -96,11 +96,10 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(8, 8, 8, 0.52) 0%,
-        rgba(8, 8, 8, 0.28) 25%,
-        rgba(8, 8, 8, 0.48) 55%,
-        rgba(8, 8, 8, 0.88) 80%,
-        #080808 100%
+        rgba(8, 8, 8, 0.30) 0%,
+        rgba(8, 8, 8, 0.55) 35%,
+        rgba(8, 8, 8, 0.65) 65%,
+        rgba(8, 8, 8, 1.00) 100%
       );
     }
 
@@ -123,8 +122,9 @@
       border-radius: 50%;
       display: block;
       margin-bottom: 1.75rem;
-      filter: brightness(0) invert(1);
-      opacity: 0.75;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 6px;
+      opacity: 0.9;
     }
 
     /* ── BAND LABEL ── */
@@ -134,8 +134,9 @@
       font-size: clamp(0.58rem, 1.1vw, 0.72rem);
       letter-spacing: 0.48em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: rgba(201, 168, 76, 0.9);
       margin-bottom: 1.1rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7);
     }
 
     /* ── BAND NAME ── */
@@ -264,7 +265,8 @@
     .live-photo-wrap {
       position: relative;
       width: 100%;
-      height: 500px;
+      height: 340px;
+      max-height: 340px;
       overflow: hidden;
       flex-shrink: 0;
       z-index: 1;
@@ -274,7 +276,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 25%;
+      object-position: center 20%;
       display: block;
       filter: grayscale(100%) contrast(1.15) brightness(0.72);
     }
@@ -536,12 +538,12 @@
 
     <div>
       <p class="entity-col-label">Toni Kumerle</p>
-      <span class="entity-plain">Gitara, vokal</span>
+      <span class="entity-plain">Creative Director</span>
     </div>
 
     <div>
       <p class="entity-col-label">Petar Kumerle</p>
-      <span class="entity-plain">Bubnjevi</span>
+      <span class="entity-plain">Project Manager</span>
       <a class="entity-item" href="mailto:izletband@gmail.com">izletband@gmail.com</a>
     </div>
 
