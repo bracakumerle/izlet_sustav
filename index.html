@@ -75,7 +75,8 @@
     .hero {
       position: relative;
       width: 100%;
-      min-height: 100vh;
+      height: 100vh;
+      min-height: 620px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -117,12 +118,13 @@
 
     /* ── LOGO ── */
     .hero-logo {
-      width: 64px;
-      height: 64px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       display: block;
       margin-bottom: 1.75rem;
-      opacity: 0.9;
+      filter: brightness(0) invert(1);
+      opacity: 0.75;
     }
 
     /* ── BAND LABEL ── */
@@ -180,7 +182,8 @@
       display: flex;
       flex-direction: column;
       gap: 2.25rem;
-      margin-bottom: 2.5rem;
+      margin: 4rem auto 2.5rem;
+      padding: 0 2rem;
     }
 
     .platform-group-label {
@@ -410,78 +413,6 @@
       <p class="band-sub">Hrvatski rock bend</p>
       <p class="tagline">Slušaj. Osjeti. Izleti.</p>
 
-      <div class="platform-groups">
-
-        <!-- Streaming -->
-        <div>
-          <p class="platform-group-label">Streaming</p>
-          <a class="platform-link"
-             href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d"
-             target="_blank" rel="noopener noreferrer">
-            Spotify <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://www.youtube.com/@bracakumerle"
-             target="_blank" rel="noopener noreferrer">
-            YouTube <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://music.apple.com/gb/artist/izlet/682224896"
-             target="_blank" rel="noopener noreferrer">
-            Apple Music <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://www.deezer.com/hr/artist/5054702"
-             target="_blank" rel="noopener noreferrer">
-            Deezer <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://tidal.com/artist/5080072"
-             target="_blank" rel="noopener noreferrer">
-            Tidal <span class="arrow">→</span>
-          </a>
-        </div>
-
-        <!-- Društvene mreže -->
-        <div>
-          <p class="platform-group-label">Društvene mreže</p>
-          <a class="platform-link"
-             href="https://www.facebook.com/bracakumerle"
-             target="_blank" rel="noopener noreferrer">
-            Facebook <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://www.instagram.com/bracakumerle"
-             target="_blank" rel="noopener noreferrer">
-            Instagram <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://x.com/bracakumerle"
-             target="_blank" rel="noopener noreferrer">
-            X <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://www.tiktok.com/@bracakumerle"
-             target="_blank" rel="noopener noreferrer">
-            TikTok <span class="arrow">→</span>
-          </a>
-        </div>
-
-        <!-- Kontakt -->
-        <div>
-          <p class="platform-group-label">Kontakt</p>
-          <a class="platform-link" href="mailto:izletband@gmail.com">
-            Email <span class="arrow">→</span>
-          </a>
-          <a class="platform-link"
-             href="https://revolut.me/pkumerle"
-             target="_blank" rel="noopener noreferrer">
-            Donacije <span class="arrow">→</span>
-          </a>
-        </div>
-
-      </div>
-
       <div class="scroll-hint">više</div>
     </div>
 
@@ -490,6 +421,79 @@
       <img src="live.jpg" alt="iZLET – live nastup">
     </div>
   </section>
+
+  <!-- PLATFORM LINKS -->
+  <div class="platform-groups">
+
+    <!-- Streaming -->
+    <div>
+      <p class="platform-group-label">Streaming</p>
+      <a class="platform-link"
+         href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d"
+         target="_blank" rel="noopener noreferrer">
+        Spotify <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://www.youtube.com/@bracakumerle"
+         target="_blank" rel="noopener noreferrer">
+        YouTube <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://music.apple.com/gb/artist/izlet/682224896"
+         target="_blank" rel="noopener noreferrer">
+        Apple Music <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://www.deezer.com/hr/artist/5054702"
+         target="_blank" rel="noopener noreferrer">
+        Deezer <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://tidal.com/artist/5080072"
+         target="_blank" rel="noopener noreferrer">
+        Tidal <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Društvene mreže -->
+    <div>
+      <p class="platform-group-label">Društvene mreže</p>
+      <a class="platform-link"
+         href="https://www.facebook.com/bracakumerle"
+         target="_blank" rel="noopener noreferrer">
+        Facebook <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://www.instagram.com/bracakumerle"
+         target="_blank" rel="noopener noreferrer">
+        Instagram <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://x.com/bracakumerle"
+         target="_blank" rel="noopener noreferrer">
+        X <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://www.tiktok.com/@bracakumerle"
+         target="_blank" rel="noopener noreferrer">
+        TikTok <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- Kontakt -->
+    <div>
+      <p class="platform-group-label">Kontakt</p>
+      <a class="platform-link" href="mailto:izletband@gmail.com">
+        Email <span class="arrow">→</span>
+      </a>
+      <a class="platform-link"
+         href="https://revolut.me/pkumerle"
+         target="_blank" rel="noopener noreferrer">
+        Donacije <span class="arrow">→</span>
+      </a>
+    </div>
+
+  </div>
 
   <!-- INFO -->
   <section class="info-section">
