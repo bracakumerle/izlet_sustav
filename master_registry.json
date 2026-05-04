@@ -103,6 +103,7 @@
   },
   "registries": {
     "works": "works_registry.json",
-    "events": "events_registry.json"
+    "events": "events_registry.json",
+    "metrics": "metrics_registry.json"
   }
 }

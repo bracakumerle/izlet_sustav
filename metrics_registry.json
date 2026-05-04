@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "description": "Unified performance metrics layer za iZLET_sustav. Ne mijenja works_registry ni events_registry — samo ih referencira kroz entity_id.",
+  "platform_enum": ["youtube", "spotify", "facebook", "instagram", "tiktok"],
+  "type_enum": ["video_metrics", "audio_metrics", "social_metrics"],
+  "source_enum": ["manual_snapshot", "api_pull", "unavailable"],
+  "metrics": [
+    {
+      "entity_id": "izlet",
+      "platform": "youtube",
+      "type": "video_metrics",
+      "timestamp": "2026-05-04",
+      "data": {
+        "subscribers": 3590,
+        "views_total": 3039285,
+        "views_30d": 78661,
+        "videos_total": 246,
+        "subscribers_gained_30d": 70
+      },
+      "source": "manual_snapshot"
+    },
+    {
+      "entity_id": "izlet",
+      "platform": "spotify",
+      "type": "audio_metrics",
+      "timestamp": null,
+      "data": {
+        "streams_total": null,
+        "monthly_listeners": null,
+        "followers": null
+      },
+      "source": "unavailable",
+      "note": "Spotify for Artists OAuth nije spojen. Manualni unos ili API pull u budućoj fazi."
+    },
+    {
+      "entity_id": "izlet",
+      "platform": "facebook",
+      "type": "social_metrics",
+      "timestamp": "2026-05-04",
+      "data": {
+        "followers": 10022,
+        "posts_archived": 200
+      },
+      "source": "manual_snapshot"
+    }
+  ]
+}
