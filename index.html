@@ -148,11 +148,12 @@
 
     .platform-group-label {
       font-size: 0.7rem;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 0.65rem;
       text-align: center;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.8);
     }
 
     .platforms {
@@ -214,6 +215,35 @@
     .btn-revolut:hover   { background: #1877f2; }
 
     .platform-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ── HERO LOGO ── */
+    .hero-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 16px auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── LIVE PHOTO BAND ── */
+    .live-photo-band {
+      width: 100%;
+      max-height: 480px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .live-photo-band img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
 
     /* ── SCROLL HINT ── */
     .scroll-hint {
@@ -324,6 +354,7 @@
 
   <!-- HERO -->
   <section class="hero">
+    <img src="logo.png" alt="iZLET logo" class="hero-logo">
     <p class="band-label">Braća Kumerle predstavljaju</p>
     <h1 class="band-name">iZLET</h1>
     <p class="band-sub">Hrvatski rock bend</p>
@@ -453,6 +484,10 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="live-photo-band">
+      <img src="live.jpg" alt="iZLET – live nastup" />
     </div>
 
     <div class="scroll-hint">više</div>
