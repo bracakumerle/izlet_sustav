@@ -93,6 +93,12 @@
         "wikipedia_hr": null
       },
       "url_count": 7
+    },
+    "braca_kumerle": {
+      "name": "Braća Kumerle",
+      "type": "Alias",
+      "alias_of": "braca_kumerle_music",
+      "note": "Skraćeni entitet za use u event linkovima — refers to Braća Kumerle Music i/ili iZLET kao performing act"
     }
   },
   "registries": {

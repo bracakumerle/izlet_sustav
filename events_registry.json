@@ -27,11 +27,11 @@
       },
       "participants": [
         {
-          "entity_id": "person_toni_kumerle",
+          "entity_id": "toni_kumerle",
           "role": "performer"
         },
         {
-          "entity_id": "person_petar_kumerle",
+          "entity_id": "petar_kumerle",
           "role": "performer"
         }
       ],
@@ -102,7 +102,7 @@
       },
       "participants": [
         {
-          "entity_id": "person_toni_kumerle",
+          "entity_id": "toni_kumerle",
           "role": "involved_person"
         }
       ],
