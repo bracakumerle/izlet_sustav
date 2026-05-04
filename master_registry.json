@@ -94,5 +94,9 @@
       },
       "url_count": 7
     }
+  },
+  "registries": {
+    "works": "works_registry.json",
+    "events": "events_registry.json"
   }
 }

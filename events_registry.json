@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "id_namespace": "izlet.events",
+  "description": "Registry događaja vezanih uz iZLET / Braća Kumerle ekosustav. Odvojeno od works_registry.json — eventi su vremenski ograničeni, works su statični artefakti.",
+  "event_types": [
+    "event_type.live_performance",
+    "event_type.public_incident",
+    "event_type.media_appearance",
+    "event_type.legal_proceeding"
+  ],
+  "status_lifecycle": [
+    "node.raw",
+    "node.referenced",
+    "node.validated"
+  ],
+  "events": [
+    {
+      "event_id": "event_strice_ivane_performance_2025",
+      "created_at": "2026-05-04",
+      "name": "Striče Ivane — javna izvedba na Trgu bana Jelačića",
+      "type": "event_type.live_performance",
+      "date": "2025-11-15",
+      "location": {
+        "name": "Trg bana Josipa Jelačića",
+        "city": "Zagreb",
+        "country": "Croatia"
+      },
+      "participants": [
+        {
+          "entity_id": "person_toni_kumerle",
+          "role": "performer"
+        },
+        {
+          "entity_id": "person_petar_kumerle",
+          "role": "performer"
+        }
+      ],
+      "related_works": [
+        {
+          "work_id": "strice_ivane_cover",
+          "relation": "performed"
+        }
+      ],
+      "related_entities": [
+        {
+          "entity_id": "izlet",
+          "relation": "performing_act"
+        },
+        {
+          "entity_id": "braca_kumerle",
+          "relation": "performing_act"
+        }
+      ],
+      "metrics": {
+        "youtube_views": 70000,
+        "facebook_views_estimated_min": 150000,
+        "facebook_views_estimated_max": 300000
+      },
+      "sources": [
+        {
+          "type": "media",
+          "name": "Dalmacija Danas",
+          "url": null,
+          "date": "2025-11-15"
+        },
+        {
+          "type": "media",
+          "name": "Tjedno",
+          "url": "https://www.tjedno.hr/13100758-2/",
+          "date": "2025-11-15"
+        },
+        {
+          "type": "media",
+          "name": "Hercegovina.in",
+          "url": "https://hercegovina.in/video-himna-hvo-a-izvedena-na-glavnom-zagrebackom-trgu/",
+          "date": "2025-11-25"
+        },
+        {
+          "type": "media",
+          "name": "HOP portal",
+          "url": null,
+          "date": "2025-11-15"
+        }
+      ],
+      "wikipedia": {
+        "status": "candidate",
+        "wikidata_status": "pending",
+        "notes": "Viralni event — potrebna stabilizacija izvora prije Wikipedia objave"
+      },
+      "status": "node.referenced"
+    },
+    {
+      "event_id": "event_gazenje_ruza_2025",
+      "created_at": "2026-05-04",
+      "name": "Gaženje ruža u Zagrebu",
+      "type": "event_type.public_incident",
+      "date": "2025-12-06",
+      "location": {
+        "name": "Trg bana Josipa Jelačića",
+        "city": "Zagreb",
+        "country": "Croatia"
+      },
+      "participants": [
+        {
+          "entity_id": "person_toni_kumerle",
+          "role": "involved_person"
+        }
+      ],
+      "related_entities": [
+        {
+          "entity_id": "izlet",
+          "relation": "mentioned_in_media"
+        },
+        {
+          "entity_id": "braca_kumerle",
+          "relation": "mentioned_in_media"
+        }
+      ],
+      "sources": [
+        {
+          "type": "media",
+          "name": "Index.hr",
+          "url": "https://www.index.hr/vijesti/clanak/policija-prijavila-muskarca-koji-je-gazio-ruze-u-zagrebu-evo-za-sto-ga-terete/2738582.aspx",
+          "date": "2025-12-09"
+        },
+        {
+          "type": "media",
+          "name": "Dnevnik.hr",
+          "url": "https://dnevnik.hr/vijesti/hrvatska/prijavljen-muskarac-koji-je-na-zagrebackom-trgu-gazio-ruze-za-ubijene-zene---951027.html",
+          "date": "2025-12-09"
+        },
+        {
+          "type": "media",
+          "name": "Istra24",
+          "url": "https://www.istra24.hr/crna-kronika/nakon-sto-je-zgrozio-javnost-policija-prijavila-tonija-kumerlea-muskarca-koji-je-gazio-ruze-za-zrtve-femicida",
+          "date": "2025-12-09"
+        },
+        {
+          "type": "factcheck",
+          "name": "Faktograf.hr",
+          "url": "https://faktograf.hr/2026/03/20/ni-napad-na-policajku-a-ni-gazenje-ruza-na-trgu-policija-i-sudstvo-nisu-kvalificirali-kao-femicid/",
+          "date": "2026-03-20"
+        }
+      ],
+      "legal": {
+        "classification": "misdemeanor",
+        "jurisdiction": "HR",
+        "law": "Zakon o prekršajima protiv javnog reda i mira, čl. 6",
+        "status": "charged",
+        "note": "Optužni prijedlog podnesen nadležnom sudu"
+      },
+      "wikipedia": {
+        "status": "archived_draft",
+        "wikidata_status": "pending",
+        "draft_location": "wikipedia/arhiva/gazenje_ruza_zagreb_2025.wikitext",
+        "notes": "COI — ne objavljuje se direktno. Prolazi kroz neutralnog posrednika."
+      },
+      "status": "node.referenced"
+    }
+  ]
+}
