@@ -21,7 +21,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Raleway:wght@200;300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Raleway:wght@200;300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Raleway:wght@200;300;400;500&display=swap"></noscript>
 
   <script type="application/ld+json">
   {
@@ -58,7 +60,7 @@
       --dim:   #252525;
       --muted: #4a4a4a;
       --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-      --sans:  'Raleway', 'Helvetica Neue', Arial, sans-serif;
+      --sans:  'Raleway', system-ui, sans-serif;
     }
 
     html { scroll-behavior: smooth; }
