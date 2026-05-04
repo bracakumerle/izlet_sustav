@@ -50,8 +50,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "3aqsGyAU8uZ7gLJLRIsR06",
+      "isrc": "HRA371600088",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -66,8 +66,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "297oh7P3lMdaaHwKGJofe5",
+      "isrc": "HRA371200384",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
@@ -82,10 +82,13 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "1OqLa2wkxlt0KDsdGzcoZ0",
+      "isrc": "HRA371300115",
       "wikipedia_eligible": true,
-      "media_references": ["MTV Adria rotation 2013", "HRT Radio Dubrovnik top lista"],
+      "media_references": [
+        "MTV Adria rotation 2013",
+        "HRT Radio Dubrovnik top lista"
+      ],
       "notes": "MTV Adria rotacija — najjači authority signal od svih 32 djela"
     },
     "oo_da_sa_krilima": {
@@ -102,7 +105,7 @@
       "isrc": null,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": "demo/unreleased — nije dostupno na Spotifyu"
     },
     "sreo_sam_te": {
       "rank": 5,
@@ -118,7 +121,7 @@
       "isrc": null,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": "demo/unreleased — nije dostupno na Spotifyu"
     },
     "tranu": {
       "rank": 6,
@@ -134,7 +137,7 @@
       "isrc": null,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": "demo/unreleased — nije dostupno na Spotifyu"
     },
     "masa": {
       "rank": 7,
@@ -146,8 +149,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "32rBh69oUY9VdNrLI83uwk",
+      "isrc": "HRA371400333",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
@@ -162,8 +165,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "7CaHN36I9TE7yCAQyZEFsl",
+      "isrc": "HRA371400523",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
@@ -182,7 +185,7 @@
       "isrc": null,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": "demo/unreleased — nije dostupno na Spotifyu"
     },
     "zasto_sutim": {
       "rank": 10,
@@ -194,8 +197,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "1UG0hZAJfmZhi99rVXnQh9",
+      "isrc": "HRA371800851",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -210,8 +213,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "0SesSNZyYJYsGxETJUTDmK",
+      "isrc": "HRA371600089",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
@@ -226,8 +229,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "2A1DDrt0F8PQddvplKWy28",
+      "isrc": "HRA371600046",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
@@ -242,8 +245,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "7HBUjyQSVHRkjvfsVAW4D2",
+      "isrc": "HRA371600084",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Album Nikad ne znaš (2016)"
@@ -258,8 +261,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "1vVheT9TKNU8IojyaQ3fwr",
+      "isrc": "HRA371600086",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Album Nikad ne znaš (2016)"
@@ -274,8 +277,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "1DdVjkk6JBJfri0DDVq8Gt",
+      "isrc": "HRA371600085",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Album Nikad ne znaš (2016)"
@@ -290,8 +293,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "5MSCzS8vYk7BSfx0AeDitg",
+      "isrc": "HRA371600087",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Album Nikad ne znaš (2016)"
@@ -306,8 +309,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "2HMaqDJgaqDM5bEghmaQKj",
+      "isrc": "HRA371600082",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Album Nikad ne znaš (2016)"
@@ -322,8 +325,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "5bYJa4KDWnm4yDDJQyrTTC",
+      "isrc": "HRA371600083",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Album Nikad ne znaš (2016)"
@@ -338,8 +341,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "6OvDRJkl8hcvuKv2kL40nb",
+      "isrc": "HRA371800589",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -354,8 +357,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "2eZOUlMECJSMsfymyDEadO",
+      "isrc": "HRA371800598",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Demo era (EL, 2010)"
@@ -370,8 +373,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "38Bnf0zNXSHX96AWjHCEee",
+      "isrc": "HRA371800642",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -386,8 +389,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "6xjlYNlucQ1KK5Xh9VgMqM",
+      "isrc": "HRA371800845",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": "Vjerojatno dio 'Čast i čisti obraz'"
@@ -402,8 +405,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "2pGECWf2zVWk4eVGjHlJd1",
+      "isrc": "HRA371800848",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -418,8 +421,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "5zlg2YGG8znxRfZLCp5t8T",
+      "isrc": "HRA371800854",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -434,8 +437,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "3zHeeqt3JopIvnJ0SUD8JS",
+      "isrc": "HRA371800852",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -450,8 +453,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "57MTsMpliXxB7zcjnV2E3Y",
+      "isrc": "HRA371800853",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -466,8 +469,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "4cPuVizRajTD6tUTc25jBI",
+      "isrc": "HRA371800849",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -482,8 +485,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "1pMYqxkam2FRmLhenM5kcE",
+      "isrc": "HRA371800674",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -498,8 +501,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "4yWTJzOtL5xZcUNp13XggK",
+      "isrc": "HRA371800846",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -514,8 +517,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "4ig34nM7rIdmpaVZseI5ht",
+      "isrc": "HRA371800847",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -530,8 +533,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "1fkGMfaLZUpHSuYPsxWNU4",
+      "isrc": "HRA371800850",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
@@ -546,8 +549,8 @@
       "musicbrainz_work_id": null,
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
+      "spotify_track_id": "3zdlj3GR8qaKGWjOi7wRzI",
+      "isrc": "HRA371800820",
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null

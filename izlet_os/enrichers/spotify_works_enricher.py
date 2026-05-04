@@ -16,6 +16,8 @@ Requires in .env (project root):
 
 from __future__ import annotations
 
+import argparse
+import io
 import json
 import os
 import re
@@ -26,6 +28,10 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 import requests
+
+# Force UTF-8 output on Windows (cp1252 can't encode box-drawing chars / emoji)
+if hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 
@@ -103,29 +109,29 @@ class SpotifyClient:
                 time.sleep(wait)
                 continue
             if r.status_code == 401:
-                # token expired mid-run — refresh once
                 self._token = self._fetch_token()
                 self.headers["Authorization"] = f"Bearer {self._token}"
                 continue
-            r.raise_for_status()
+            if not r.ok:
+                raise RuntimeError(f"HTTP {r.status_code} — {r.text[:200]}")
             return r.json()
         raise RuntimeError(f"Failed after retries: {endpoint}")
 
     # ── Discography fetch ──────────────────────────────────────────────────
 
     def fetch_artist_albums(self, artist_id: str) -> list[dict]:
-        """Return all release stubs (album, single, compilation)."""
+        """Return all release stubs. limit=10 — Spotify dev-mode quota ceiling."""
         albums, offset = [], 0
         while True:
             data = self._get(
                 f"artists/{artist_id}/albums",
-                {"include_groups": "album,single,compilation", "limit": 50, "offset": offset},
+                {"limit": 10, "offset": offset},
             )
             items = data.get("items", [])
             albums.extend(items)
             if not data.get("next"):
                 break
-            offset += 50
+            offset += 10
             time.sleep(0.2)
         return albums
 
@@ -133,33 +139,37 @@ class SpotifyClient:
         """Return simplified track objects for one album."""
         tracks, offset = [], 0
         while True:
-            data = self._get(f"albums/{album_id}/tracks", {"limit": 50, "offset": offset})
+            data = self._get(f"albums/{album_id}/tracks", {"limit": 10, "offset": offset})
             tracks.extend(data.get("items", []))
             if not data.get("next"):
                 break
-            offset += 50
+            offset += 10
             time.sleep(0.15)
         return tracks
 
-    def fetch_tracks_batch(self, track_ids: list[str]) -> list[dict]:
-        """Full track objects (includes ISRC) in batches of 50."""
-        result = []
-        for i in range(0, len(track_ids), 50):
-            batch = track_ids[i : i + 50]
-            data  = self._get("tracks", {"ids": ",".join(batch)})
-            result.extend(t for t in (data.get("tracks") or []) if t)
-            time.sleep(0.2)
-        return result
+    def search_track(self, title: str, limit: int = 5) -> list[dict]:
+        """
+        Search for tracks by title within iZLET discography.
+        Returns full track objects (includes ISRC) filtered to this artist.
+        Uses Search API because batch /tracks is restricted in dev mode.
+        """
+        data = self._get("search", {"q": f'"{title}" artist:IZLET', "type": "track", "limit": limit})
+        items = data.get("tracks", {}).get("items", []) or []
+        # filter to this artist only
+        return [
+            t for t in items
+            if any(a["id"] == ARTIST_ID for a in t.get("artists", []))
+        ]
 
     def build_catalog(self, artist_id: str) -> list[dict]:
         """
-        Full discography catalog with ISRCs.
+        Discography catalog from artist albums (no ISRCs at this stage —
+        ISRCs are fetched per-match via Search API to avoid 403 on /tracks).
         Returns list of:
           {track_id, title, normalized, album, year, isrc, duration_ms}
         """
         print(f"\n  → Fetching releases for artist {artist_id}…")
         albums = self.fetch_artist_albums(artist_id)
-        # deduplicate by album id (markets can cause duplicates)
         seen_albums: set[str] = set()
         unique_albums = []
         for a in albums:
@@ -181,15 +191,10 @@ class SpotifyClient:
                         "album":       alb["name"],
                         "year":        (alb.get("release_date") or "")[:4],
                         "duration_ms": t.get("duration_ms"),
-                        "isrc":        None,
+                        "isrc":        None,  # enriched per-match via search_track()
                     })
 
-        print(f"    {len(raw_tracks)} unique tracks found — fetching ISRCs…")
-        full = self.fetch_tracks_batch([t["track_id"] for t in raw_tracks])
-        isrc_map = {ft["id"]: ft.get("external_ids", {}).get("isrc") for ft in full}
-        for t in raw_tracks:
-            t["isrc"] = isrc_map.get(t["track_id"])
-
+        print(f"    {len(raw_tracks)} unique tracks in catalog (ISRCs resolved per-match via Search)")
         return raw_tracks
 
 
@@ -403,13 +408,108 @@ def build_preview_json(results: list[dict], catalog: list[dict]) -> dict:
     }
 
 
+# ── Apply ───────────────────────────────────────────────────────────────────
+
+_NE_ZURIM_2016_ID   = "7CaHN36I9TE7yCAQyZEFsl"
+_NOT_FOUND_NOTE     = "demo/unreleased — nije dostupno na Spotifyu"
+
+
+def apply_from_preview(client: SpotifyClient) -> None:
+    """
+    Read data/spotify_enrichment_preview.json and write enriched fields into
+    works_registry.json without re-running the full catalog fetch.
+
+    Rules (per user instruction):
+      • confirmed_matches  → write spotify_track_id + isrc
+      • ne_zurim_se        → use 2016 album version (NE_ZURIM_2016_ID), resolve ISRC via Search
+      • not_found (4 keys) → set notes = "demo/unreleased — nije dostupno na Spotifyu"
+    """
+    print("╔══════════════════════════════════════════════════════════╗")
+    print("║  Spotify Works Enricher — APPLY mode                    ║")
+    print("║  Writing spotify_track_id + isrc into works_registry    ║")
+    print("╚══════════════════════════════════════════════════════════╝")
+
+    if not PREVIEW_PATH.exists():
+        print(f"\n❌  Preview not found: {PREVIEW_PATH}")
+        print("    Run without --apply first to generate the preview.")
+        sys.exit(1)
+
+    with open(PREVIEW_PATH, encoding="utf-8") as f:
+        preview = json.load(f)
+
+    if not WORKS_PATH.exists():
+        print(f"\n❌  works_registry.json not found: {WORKS_PATH}")
+        sys.exit(1)
+
+    with open(WORKS_PATH, encoding="utf-8") as f:
+        registry = json.load(f)
+
+    works   = registry.get("works", {})
+    applied = 0
+
+    # ── 1. Confirmed matches (EXACT / FUZZY) ──────────────────────────────
+    print(f"\n  → Applying {len(preview['confirmed_matches'])} confirmed matches…")
+    for m in preview.get("confirmed_matches", []):
+        key = m["work_key"]
+        if key not in works:
+            print(f"    ⚠️   {key} — not in works_registry, skipping")
+            continue
+        works[key]["spotify_track_id"] = m["spotify_track_id"]
+        works[key]["isrc"]             = m["isrc"]
+        applied += 1
+        print(f"    ✅  {key:<30}  isrc={m['isrc']}")
+
+    # ── 2. Ne žurim se — 2016 canonical version ──────────────────────────
+    print(f"\n  → Resolving 'ne_zurim_se' (2016 canonical)…")
+    ne_key = "ne_zurim_se"
+    isrc_ne_zurim: str | None = None
+
+    hits = client.search_track("Ne Žurim", limit=10)
+    for h in hits:
+        if h["id"] == _NE_ZURIM_2016_ID:
+            isrc_ne_zurim = h.get("external_ids", {}).get("isrc")
+            break
+    if not isrc_ne_zurim:
+        for h in hits:
+            yr = (h.get("album", {}).get("release_date") or "")[:4]
+            if yr == "2016":
+                isrc_ne_zurim = h.get("external_ids", {}).get("isrc")
+                break
+
+    if ne_key in works:
+        works[ne_key]["spotify_track_id"] = _NE_ZURIM_2016_ID
+        works[ne_key]["isrc"]             = isrc_ne_zurim
+        applied += 1
+        print(f"    ✅  {ne_key:<30}  isrc={isrc_ne_zurim or '(unresolved)'}  [2016 album]")
+    else:
+        print(f"    ⚠️   {ne_key} not found in works_registry")
+
+    # ── 3. NOT_FOUND → notes ─────────────────────────────────────────────
+    print(f"\n  → Annotating {len(preview['not_found'])} not-found works…")
+    for nf in preview.get("not_found", []):
+        key = nf["work_key"]
+        if key not in works:
+            print(f"    ⚠️   {key} — not in works_registry, skipping")
+            continue
+        works[key]["notes"] = _NOT_FOUND_NOTE
+        print(f"    📝  {key}")
+
+    # ── 4. Persist ────────────────────────────────────────────────────────
+    registry["works"] = works
+    with open(WORKS_PATH, "w", encoding="utf-8") as f:
+        json.dump(registry, f, ensure_ascii=False, indent=2)
+
+    print(f"\n  ✅  {applied} Spotify IDs written to works_registry.json")
+    print(f"      {WORKS_PATH}\n")
+
+
 # ── Main ────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    print("╔══════════════════════════════════════════════════════════╗")
-    print("║  Spotify Works Enricher — iZLET discography matcher     ║")
-    print("║  READ-ONLY preview mode — works_registry.json untouched ║")
-    print("╚══════════════════════════════════════════════════════════╝")
+    parser = argparse.ArgumentParser(description="iZLET Spotify Works Enricher")
+    parser.add_argument("--apply", action="store_true",
+                        help="Write preview results into works_registry.json")
+    args = parser.parse_args()
 
     # ── credentials ──────────────────────────────────────────────────────
     _load_env()
@@ -421,8 +521,18 @@ def main() -> None:
         print("    Add to .env (project root):")
         print("      SPOTIFY_CLIENT_ID=<your_client_id>")
         print("      SPOTIFY_CLIENT_SECRET=<your_client_secret>")
-        print("\n    Get them at: https://developer.spotify.com/dashboard")
         sys.exit(1)
+
+    client = SpotifyClient(client_id, client_secret)
+
+    if args.apply:
+        apply_from_preview(client)
+        return
+
+    print("╔══════════════════════════════════════════════════════════╗")
+    print("║  Spotify Works Enricher — iZLET discography matcher     ║")
+    print("║  READ-ONLY preview mode — works_registry.json untouched ║")
+    print("╚══════════════════════════════════════════════════════════╝")
 
     # ── load works ───────────────────────────────────────────────────────
     if not WORKS_PATH.exists():
@@ -436,7 +546,6 @@ def main() -> None:
     print(f"\n  → Loaded {len(works)} works from works_registry.json")
 
     # ── build Spotify catalog ─────────────────────────────────────────────
-    client  = SpotifyClient(client_id, client_secret)
     catalog = client.build_catalog(ARTIST_ID)
     print(f"    Catalog built: {len(catalog)} tracks with ISRCs")
 
@@ -444,10 +553,22 @@ def main() -> None:
     matcher = WorksMatcher(catalog)
     results: list[dict] = []
 
-    print("\n  → Matching works against catalog…")
+    print("\n  → Matching works against catalog + resolving ISRCs via Search…")
     for work_key, work in works.items():
         title_norm = normalize(work.get("title_normalized", work.get("title_original", "")))
         result     = matcher.match(work_key, title_norm, work.get("title_original", ""))
+
+        # Enrich ISRC via Search API for EXACT and FUZZY matches
+        if result["status"] in ("EXACT", "FUZZY") and result["candidates"]:
+            cand = result["candidates"][0]
+            if not cand.get("isrc"):
+                search_hits = client.search_track(work.get("title_normalized", ""), limit=5)
+                if search_hits:
+                    best = search_hits[0]
+                    cand["isrc"]     = best.get("external_ids", {}).get("isrc")
+                    cand["track_id"] = best["id"]
+            time.sleep(0.15)
+
         results.append({
             "work_key":         work_key,
             "rank":             work.get("rank"),
