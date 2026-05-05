@@ -4,5 +4,6 @@
 # Secrets
 .env
 
-# Spotify token (contains access + refresh tokens)
+# OAuth tokens (contain access + refresh tokens)
 registries/.spotify_token.json
+registries/.youtube_token.json
