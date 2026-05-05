@@ -24,7 +24,7 @@ from pathlib import Path
 from datetime import timezone
 
 if hasattr(sys.stdout, "buffer"):
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", write_through=True)
 
 from googleapiclient.errors import HttpError
 from dotenv import load_dotenv
@@ -201,10 +201,13 @@ def sanitize(tags):
     return [t.strip() for t in tags if isinstance(t, str) and t.strip()]
 
 
-def _do_update(youtube, video_id, tags):
+def _do_update(youtube, video_id, snippet, tags):
+    # YouTube requires title + categoryId in snippet on every update
+    body_snippet = {k: snippet[k] for k in ("title", "categoryId", "defaultLanguage", "defaultAudioLanguage") if k in snippet}
+    body_snippet["tags"] = tags
     youtube.videos().update(
         part="snippet",
-        body={"id": video_id, "snippet": {"tags": tags}},
+        body={"id": video_id, "snippet": body_snippet},
     ).execute()
 
 
@@ -216,11 +219,12 @@ def fetch_snippet(youtube, video_id: str) -> dict:
     return items[0]["snippet"]
 
 
-def update_video_tags(youtube, video_id, existing_tags, new_tags):
+def update_video_tags(youtube, video_id, snippet, existing_tags, new_tags):
     existing = sanitize(existing_tags)
     new      = sanitize(new_tags)
     merged   = list(dict.fromkeys(existing + new))
 
+    last_error = None
     for tags, mode in [
         (merged, "merged"),
         (new,    "new_only"),
@@ -232,16 +236,22 @@ def update_video_tags(youtube, video_id, existing_tags, new_tags):
         ),
     ]:
         try:
-            _do_update(youtube, video_id, tags)
+            _do_update(youtube, video_id, snippet, tags)
             log_event(video_id, mode, len(existing), len(tags))
             return mode, len(existing), len(tags)
         except HttpError as e:
+            last_error = e
+            print(f"  [fallback] {mode} failed: {e}", flush=True)
             if not is_invalid_tag_error(e):
                 raise
         except Exception as final_error:
             log_event(video_id, "failed", len(existing), 0, final_error)
-            print(traceback.format_exc())
+            print(traceback.format_exc(), flush=True)
             raise
+
+    # All 3 stages exhausted
+    log_event(video_id, "all_stages_failed", len(existing), 0, last_error)
+    raise RuntimeError(f"All update stages failed for {video_id}: {last_error}")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -259,19 +269,22 @@ def main() -> None:
         video_id = entry["id"]
         add_tags = entry["add_tags"]
 
+        print(f"  Processing video: {video_id}", flush=True)
+
         try:
             snippet  = fetch_snippet(youtube, video_id)
             title    = snippet.get("title", video_id)
             existing = snippet.get("tags") or []
+            print(f"  Fetched snippet OK — title: {title[:60]!r}  existing tags: {len(existing)}", flush=True)
 
-            result = update_video_tags(youtube, video_id, existing, add_tags)
-            if result:
-                mode, before, after = result
-                print(f"  OK  {video_id}  [{title[:50]}]")
-                print(f"      mode={mode}  tags: {before} -> {after}\n")
+            mode, before, after = update_video_tags(youtube, video_id, snippet, existing, add_tags)
+            print(f"  OK  {video_id}  [{title[:50]}]", flush=True)
+            print(f"      mode={mode}  tags: {before} -> {after}\n", flush=True)
 
         except Exception as e:
-            print(f"  FAIL  {video_id} — {e}\n")
+            print(f"  FAIL  {video_id} — {e}", flush=True)
+            print(traceback.format_exc(), flush=True)
+            print(flush=True)
 
 
 if __name__ == "__main__":
