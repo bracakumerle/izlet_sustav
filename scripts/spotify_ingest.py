@@ -109,7 +109,11 @@ def _fetch_artist(access_token: str) -> dict:
     )
     if not r.ok:
         raise SystemExit(f"❌  Artist fetch failed: HTTP {r.status_code} — {r.text}")
-    return r.json()
+    data = r.json()
+    print("\n  --- RAW API RESPONSE ---")
+    print(json.dumps(data, indent=2, ensure_ascii=False))
+    print("  --- END RESPONSE ---\n")
+    return data
 
 
 # ── Registry update ──────────────────────────────────────────────────────────
@@ -147,13 +151,20 @@ def main() -> None:
     print(f"  Fetching artist {ARTIST_ID}…")
     artist = _fetch_artist(access_token)
 
-    followers   = artist["followers"]["total"]
-    popularity  = artist["popularity"]
-    name        = artist.get("name", "iZLET")
+    print(f"  Fields present in response: {sorted(artist.keys())}")
 
-    print(f"  Artist   : {name}")
-    print(f"  Followers: {followers:,}")
-    print(f"  Popularity: {popularity}/100")
+    followers  = artist.get("followers", {}).get("total", None)
+    popularity = artist.get("popularity", None)
+    name       = artist.get("name", "iZLET")
+
+    if followers is None:
+        print("  ⚠️   'followers' field missing from API response")
+    if popularity is None:
+        print("  ⚠️   'popularity' field missing from API response")
+
+    print(f"  Artist    : {name}")
+    print(f"  Followers : {followers:,}" if followers is not None else "  Followers : None")
+    print(f"  Popularity: {popularity}/100" if popularity is not None else "  Popularity: None")
 
     _update_metrics(followers, popularity)
 

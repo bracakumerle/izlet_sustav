@@ -24,7 +24,7 @@ import requests
 
 CLIENT_ID    = "a638c04d2b6043b1a4c3adda6db5bad9"
 REDIRECT_URI = "https://bracakumerle.com/callback"
-SCOPE        = "user-read-private"
+SCOPE        = ""  # public endpoints only — no user scope required
 TOKEN_URL    = "https://accounts.spotify.com/api/token"
 AUTH_URL     = "https://accounts.spotify.com/authorize"
 TOKEN_PATH   = Path(__file__).parent.parent / "registries" / ".spotify_token.json"
@@ -79,15 +79,17 @@ def main() -> None:
     code_verifier, code_challenge = _generate_pkce()
     state = secrets.token_urlsafe(16)
 
-    auth_params = urllib.parse.urlencode({
+    params: dict = {
         "client_id":             CLIENT_ID,
         "response_type":         "code",
         "redirect_uri":          REDIRECT_URI,
-        "scope":                 SCOPE,
         "state":                 state,
         "code_challenge_method": "S256",
         "code_challenge":        code_challenge,
-    })
+    }
+    if SCOPE:
+        params["scope"] = SCOPE
+    auth_params = urllib.parse.urlencode(params)
     auth_link = f"{AUTH_URL}?{auth_params}"
 
     print("\n  Opening browser for Spotify authorization…")
