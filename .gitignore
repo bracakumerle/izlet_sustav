@@ -1,2 +1,8 @@
 # Local Netlify folder
 .netlify
+
+# Secrets
+.env
+
+# Spotify token (contains access + refresh tokens)
+registries/.spotify_token.json
