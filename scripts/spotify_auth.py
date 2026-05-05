@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-spotify_auth.py — Spotify OAuth2 Authorization Code Flow
+spotify_auth.py — Spotify OAuth2 PKCE Authorization Code Flow
 iZLET_sustav | Layer: auth
 
-Otvara browser, čeka callback na localhost:8888, zamjenjuje code za token
-i sprema ga u registries/.spotify_token.json.
+No client secret required. Uses PKCE (RFC 7636) for secure token exchange.
 
 Usage:
     python scripts/spotify_auth.py
@@ -12,93 +11,52 @@ Usage:
 
 import base64
 import hashlib
-import http.server
 import json
-import os
 import secrets
-import threading
-import time
 import urllib.parse
-import urllib.request
 import webbrowser
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
-from dotenv import load_dotenv
 
 # ── Config ─────────────────────────────────────────────────────────────────
 
-CLIENT_ID     = "a638c04d2b6043b1a4c3adda6db5bad9"
-REDIRECT_URI  = "http://localhost:8888/callback"
-SCOPE         = "user-read-private"
-PORT          = 8888
-TOKEN_URL     = "https://accounts.spotify.com/api/token"
-AUTH_URL      = "https://accounts.spotify.com/authorize"
-TOKEN_PATH    = Path(__file__).parent.parent / "registries" / ".spotify_token.json"
-
-# ── Load secret ────────────────────────────────────────────────────────────
-
-load_dotenv(Path(__file__).parent.parent / ".env")
-CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
-if not CLIENT_SECRET:
-    raise SystemExit("❌  SPOTIFY_CLIENT_SECRET not found in .env")
-
-# ── Local callback server ───────────────────────────────────────────────────
-
-_captured_code: str | None = None
-_server_error:  str | None = None
+CLIENT_ID    = "a638c04d2b6043b1a4c3adda6db5bad9"
+REDIRECT_URI = "https://bracakumerle.com/callback"
+SCOPE        = "user-read-private"
+TOKEN_URL    = "https://accounts.spotify.com/api/token"
+AUTH_URL     = "https://accounts.spotify.com/authorize"
+TOKEN_PATH   = Path(__file__).parent.parent / "registries" / ".spotify_token.json"
 
 
-class _CallbackHandler(http.server.BaseHTTPRequestHandler):
-    def do_GET(self):
-        global _captured_code, _server_error
-        parsed = urllib.parse.urlparse(self.path)
-        params = dict(urllib.parse.parse_qsl(parsed.query))
+# ── PKCE helpers ────────────────────────────────────────────────────────────
 
-        if "error" in params:
-            _server_error = params["error"]
-            body = b"<h2>Authorization denied. You can close this tab.</h2>"
-        elif "code" in params:
-            _captured_code = params["code"]
-            body = b"<h2>Authorization successful. You can close this tab.</h2>"
-        else:
-            body = b"<h2>Unexpected callback. Check terminal.</h2>"
-
-        self.send_response(200)
-        self.send_header("Content-Type", "text/html")
-        self.end_headers()
-        self.wfile.write(body)
-
-    def log_message(self, *args):
-        pass  # suppress request logs
-
-
-def _start_server() -> http.server.HTTPServer:
-    server = http.server.HTTPServer(("localhost", PORT), _CallbackHandler)
-    t = threading.Thread(target=server.handle_request, daemon=True)
-    t.start()
-    return server
+def _generate_pkce() -> tuple[str, str]:
+    """Return (code_verifier, code_challenge)."""
+    code_verifier = secrets.token_urlsafe(64)[:96]
+    digest = hashlib.sha256(code_verifier.encode()).digest()
+    code_challenge = base64.urlsafe_b64encode(digest).rstrip(b"=").decode()
+    return code_verifier, code_challenge
 
 
 # ── Token exchange ──────────────────────────────────────────────────────────
 
-def _exchange_code(code: str) -> dict:
-    credentials = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
+def _exchange_code(code: str, code_verifier: str) -> dict:
     r = requests.post(
         TOKEN_URL,
         data={
-            "grant_type":   "authorization_code",
-            "code":         code,
-            "redirect_uri": REDIRECT_URI,
+            "grant_type":    "authorization_code",
+            "code":          code,
+            "redirect_uri":  REDIRECT_URI,
+            "client_id":     CLIENT_ID,
+            "code_verifier": code_verifier,
         },
-        headers={
-            "Authorization": f"Basic {credentials}",
-            "Content-Type":  "application/x-www-form-urlencoded",
-        },
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
         timeout=15,
     )
-    r.raise_for_status()
+    if not r.ok:
+        raise SystemExit(f"❌  Token exchange failed: HTTP {r.status_code} — {r.text}")
     return r.json()
 
 
@@ -109,6 +67,7 @@ def _save_token(token: dict) -> None:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "client_id":    CLIENT_ID,
         "scope":        SCOPE,
+        "flow":         "pkce",
     }
     with open(TOKEN_PATH, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
@@ -117,50 +76,52 @@ def _save_token(token: dict) -> None:
 # ── Main ────────────────────────────────────────────────────────────────────
 
 def main() -> None:
+    code_verifier, code_challenge = _generate_pkce()
     state = secrets.token_urlsafe(16)
 
     auth_params = urllib.parse.urlencode({
-        "client_id":     CLIENT_ID,
-        "response_type": "code",
-        "redirect_uri":  REDIRECT_URI,
-        "scope":         SCOPE,
-        "state":         state,
+        "client_id":             CLIENT_ID,
+        "response_type":         "code",
+        "redirect_uri":          REDIRECT_URI,
+        "scope":                 SCOPE,
+        "state":                 state,
+        "code_challenge_method": "S256",
+        "code_challenge":        code_challenge,
     })
     auth_link = f"{AUTH_URL}?{auth_params}"
 
-    print("  Starting local callback server on port 8888…")
-    server = _start_server()
-
-    print(f"  Opening browser for Spotify authorization…")
+    print("\n  Opening browser for Spotify authorization…")
     webbrowser.open(auth_link)
-    print(f"  If browser did not open, visit:\n  {auth_link}\n")
+    print(f"\n  If browser did not open, visit:\n  {auth_link}\n")
 
-    print("  Waiting for callback", end="", flush=True)
-    for _ in range(120):
-        if _captured_code or _server_error:
-            break
-        time.sleep(0.5)
-        print(".", end="", flush=True)
-    print()
+    print("  After approving, copy the full callback URL from browser and paste here:")
+    print("  (URL will start with https://bracakumerle.com/callback?code=…)\n")
 
-    server.server_close()
+    raw = input("  Callback URL: ").strip()
+    if not raw:
+        raise SystemExit("❌  No URL provided.")
 
-    if _server_error:
-        raise SystemExit(f"❌  Authorization denied: {_server_error}")
-    if not _captured_code:
-        raise SystemExit("❌  Timeout — no callback received within 60s")
+    parsed = urllib.parse.urlparse(raw)
+    params = dict(urllib.parse.parse_qsl(parsed.query))
 
-    print("  Exchanging code for token…")
-    token = _exchange_code(_captured_code)
+    if "error" in params:
+        raise SystemExit(f"❌  Authorization denied: {params['error']}")
+    if "code" not in params:
+        raise SystemExit(f"❌  No code found in URL: {raw}")
+    if params.get("state") != state:
+        raise SystemExit("❌  State mismatch — possible CSRF. Aborting.")
+
+    code = params["code"]
+    print("\n  Exchanging code for token…")
+    token = _exchange_code(code, code_verifier)
 
     _save_token(token)
 
     expires_in = token.get("expires_in", 3600)
-    expiry_min = expires_in // 60
     print(f"\n  ✅  Token saved → {TOKEN_PATH}")
     print(f"      access_token : {token['access_token'][:24]}…")
     print(f"      token_type   : {token.get('token_type')}")
-    print(f"      expires_in   : {expires_in}s ({expiry_min} min)")
+    print(f"      expires_in   : {expires_in}s ({expires_in // 60} min)")
     print(f"      scope        : {token.get('scope')}")
     print(f"      refresh_token: {'yes' if token.get('refresh_token') else 'no'}\n")
 
