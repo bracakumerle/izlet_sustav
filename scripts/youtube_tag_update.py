@@ -14,11 +14,19 @@ Requires in .env (project root):
     YOUTUBE_CLIENT_SECRET=...
 """
 
+import datetime
+import io
 import json
 import os
-from datetime import datetime, timezone
+import sys
+import traceback
 from pathlib import Path
+from datetime import timezone
 
+if hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+
+from googleapiclient.errors import HttpError
 from dotenv import load_dotenv
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
@@ -168,37 +176,72 @@ def get_credentials() -> Credentials:
 
 # ── YouTube tag operations ────────────────────────────────────────────────────
 
-def fetch_snippet(youtube, video_id: str) -> dict:
-    response = youtube.videos().list(
+def is_invalid_tag_error(e):
+    try:
+        msg = str(e).lower()
+    except Exception:
+        return False
+    return any(s in msg for s in ("invalid", "tag", "parameter", "snippet"))
+
+
+def log_event(video_id, mode, before, after, error=None):
+    event = {
+        "timestamp":   str(datetime.datetime.utcnow()),
+        "video_id":    video_id,
+        "mode":        mode,
+        "tags_before": before,
+        "tags_after":  after,
+        "error":       str(error) if error else None,
+    }
+    sys.stdout.write("TAG_UPDATE_EVENT:" + json.dumps(event) + "\n")
+    sys.stdout.flush()
+
+
+def sanitize(tags):
+    return [t.strip() for t in tags if isinstance(t, str) and t.strip()]
+
+
+def _do_update(youtube, video_id, tags):
+    youtube.videos().update(
         part="snippet",
-        id=video_id,
+        body={"id": video_id, "snippet": {"tags": tags}},
     ).execute()
 
+
+def fetch_snippet(youtube, video_id: str) -> dict:
+    response = youtube.videos().list(part="snippet", id=video_id).execute()
     items = response.get("items", [])
     if not items:
         raise RuntimeError(f"Video not found: {video_id}")
     return items[0]["snippet"]
 
 
-def merge_tags(existing: list[str], add_tags: list[str]) -> list[str]:
-    existing_lower = {t.lower() for t in existing}
-    merged = list(existing)
-    for tag in add_tags:
-        if tag.lower() not in existing_lower:
-            merged.append(tag)
-            existing_lower.add(tag.lower())
-    return merged
+def update_video_tags(youtube, video_id, existing_tags, new_tags):
+    existing = sanitize(existing_tags)
+    new      = sanitize(new_tags)
+    merged   = list(dict.fromkeys(existing + new))
 
-
-def update_tags(youtube, video_id: str, snippet: dict, merged_tags: list[str]) -> None:
-    snippet["tags"] = merged_tags
-    youtube.videos().update(
-        part="snippet",
-        body={
-            "id":      video_id,
-            "snippet": snippet,
-        },
-    ).execute()
+    for tags, mode in [
+        (merged, "merged"),
+        (new,    "new_only"),
+        (
+            [t.encode("ascii", "ignore").decode("ascii").strip()
+             for t in new
+             if t.encode("ascii", "ignore").decode("ascii").strip()],
+            "ascii_fallback",
+        ),
+    ]:
+        try:
+            _do_update(youtube, video_id, tags)
+            log_event(video_id, mode, len(existing), len(tags))
+            return mode, len(existing), len(tags)
+        except HttpError as e:
+            if not is_invalid_tag_error(e):
+                raise
+        except Exception as final_error:
+            log_event(video_id, "failed", len(existing), 0, final_error)
+            print(traceback.format_exc())
+            raise
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -220,22 +263,15 @@ def main() -> None:
             snippet  = fetch_snippet(youtube, video_id)
             title    = snippet.get("title", video_id)
             existing = snippet.get("tags") or []
-            merged   = merge_tags(existing, add_tags)
-            added    = len(merged) - len(existing)
 
-            if added == 0:
-                print(f"  ✓  {video_id}  [{title[:50]}]")
-                print(f"     Tags unchanged ({len(existing)} tags — all already present)\n")
-                continue
-
-            update_tags(youtube, video_id, snippet, merged)
-            print(f"  ✅  {video_id}  [{title[:50]}]")
-            print(f"     Tags: {len(existing)} → {len(merged)}  (+{added} new)\n")
+            result = update_video_tags(youtube, video_id, existing, add_tags)
+            if result:
+                mode, before, after = result
+                print(f"  OK  {video_id}  [{title[:50]}]")
+                print(f"      mode={mode}  tags: {before} -> {after}\n")
 
         except Exception as e:
-            print(f"  ❌  {video_id} — {e}\n")
-
-    print("  Done.\n")
+            print(f"  FAIL  {video_id} — {e}\n")
 
 
 if __name__ == "__main__":
