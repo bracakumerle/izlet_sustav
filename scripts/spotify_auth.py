@@ -1,131 +1,89 @@
 #!/usr/bin/env python3
 """
-spotify_auth.py — Spotify OAuth2 PKCE Authorization Code Flow
+spotify_auth.py — Spotify Client Credentials flow
 iZLET_sustav | Layer: auth
 
-No client secret required. Uses PKCE (RFC 7636) for secure token exchange.
+No browser, no user login. Fetches an app-level access token
+with full public API access. Valid for 1h; re-run to refresh.
 
 Usage:
     python scripts/spotify_auth.py
+
+Requires in .env (project root):
+    SPOTIFY_CLIENT_SECRET=...
 """
 
 import base64
-import hashlib
 import json
-import secrets
-import urllib.parse
-import webbrowser
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from dotenv import load_dotenv
 
-# ── Config ─────────────────────────────────────────────────────────────────
+# ── Config ──────────────────────────────────────────────────────────────────
 
-CLIENT_ID    = "a638c04d2b6043b1a4c3adda6db5bad9"
-REDIRECT_URI = "https://bracakumerle.com/callback"
-SCOPE        = ""  # public endpoints only — no user scope required
-TOKEN_URL    = "https://accounts.spotify.com/api/token"
-AUTH_URL     = "https://accounts.spotify.com/authorize"
-TOKEN_PATH   = Path(__file__).parent.parent / "registries" / ".spotify_token.json"
+CLIENT_ID  = "a638c04d2b6043b1a4c3adda6db5bad9"
+TOKEN_URL  = "https://accounts.spotify.com/api/token"
+TOKEN_PATH = Path(__file__).parent.parent / "registries" / ".spotify_token.json"
 
+# ── Credentials ─────────────────────────────────────────────────────────────
 
-# ── PKCE helpers ────────────────────────────────────────────────────────────
+load_dotenv(Path(__file__).parent.parent / ".env")
+CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
+if not CLIENT_SECRET:
+    raise SystemExit(
+        "❌  SPOTIFY_CLIENT_SECRET not found in .env\n"
+        "    Add: SPOTIFY_CLIENT_SECRET=<your_secret>"
+    )
 
-def _generate_pkce() -> tuple[str, str]:
-    """Return (code_verifier, code_challenge)."""
-    code_verifier = secrets.token_urlsafe(64)[:96]
-    digest = hashlib.sha256(code_verifier.encode()).digest()
-    code_challenge = base64.urlsafe_b64encode(digest).rstrip(b"=").decode()
-    return code_verifier, code_challenge
+# ── Token fetch ──────────────────────────────────────────────────────────────
 
-
-# ── Token exchange ──────────────────────────────────────────────────────────
-
-def _exchange_code(code: str, code_verifier: str) -> dict:
+def fetch_token() -> dict:
+    credentials = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
     r = requests.post(
         TOKEN_URL,
-        data={
-            "grant_type":    "authorization_code",
-            "code":          code,
-            "redirect_uri":  REDIRECT_URI,
-            "client_id":     CLIENT_ID,
-            "code_verifier": code_verifier,
+        data={"grant_type": "client_credentials"},
+        headers={
+            "Authorization": f"Basic {credentials}",
+            "Content-Type":  "application/x-www-form-urlencoded",
         },
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
         timeout=15,
     )
     if not r.ok:
-        raise SystemExit(f"❌  Token exchange failed: HTTP {r.status_code} — {r.text}")
+        raise SystemExit(f"❌  Auth failed: HTTP {r.status_code} — {r.text}")
     return r.json()
 
 
-def _save_token(token: dict) -> None:
+def save_token(token: dict) -> None:
     TOKEN_PATH.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         **token,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "client_id":    CLIENT_ID,
-        "scope":        SCOPE,
-        "flow":         "pkce",
+        "flow":         "client_credentials",
     }
     with open(TOKEN_PATH, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
 
 
-# ── Main ────────────────────────────────────────────────────────────────────
+# ── Main ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    code_verifier, code_challenge = _generate_pkce()
-    state = secrets.token_urlsafe(16)
+    print("\n  Spotify Auth — Client Credentials")
+    print("  ───────────────────────────────────")
+    print("  Fetching token…")
 
-    params: dict = {
-        "client_id":             CLIENT_ID,
-        "response_type":         "code",
-        "redirect_uri":          REDIRECT_URI,
-        "state":                 state,
-        "code_challenge_method": "S256",
-        "code_challenge":        code_challenge,
-    }
-    if SCOPE:
-        params["scope"] = SCOPE
-    auth_params = urllib.parse.urlencode(params)
-    auth_link = f"{AUTH_URL}?{auth_params}"
-
-    print("\n  Opening browser for Spotify authorization…")
-    webbrowser.open(auth_link)
-    print(f"\n  If browser did not open, visit:\n  {auth_link}\n")
-
-    print("  After approving, copy the full callback URL from browser and paste here:")
-    print("  (URL will start with https://bracakumerle.com/callback?code=…)\n")
-
-    raw = input("  Callback URL: ").strip()
-    if not raw:
-        raise SystemExit("❌  No URL provided.")
-
-    parsed = urllib.parse.urlparse(raw)
-    params = dict(urllib.parse.parse_qsl(parsed.query))
-
-    if "error" in params:
-        raise SystemExit(f"❌  Authorization denied: {params['error']}")
-    if "code" not in params:
-        raise SystemExit(f"❌  No code found in URL: {raw}")
-    if params.get("state") != state:
-        raise SystemExit("❌  State mismatch — possible CSRF. Aborting.")
-
-    code = params["code"]
-    print("\n  Exchanging code for token…")
-    token = _exchange_code(code, code_verifier)
-
-    _save_token(token)
+    token = fetch_token()
+    save_token(token)
 
     expires_in = token.get("expires_in", 3600)
     print(f"\n  ✅  Token saved → {TOKEN_PATH}")
     print(f"      access_token : {token['access_token'][:24]}…")
     print(f"      token_type   : {token.get('token_type')}")
     print(f"      expires_in   : {expires_in}s ({expires_in // 60} min)")
-    print(f"      scope        : {token.get('scope')}")
-    print(f"      refresh_token: {'yes' if token.get('refresh_token') else 'no'}\n")
+    print(f"      flow         : client_credentials\n")
 
 
 if __name__ == "__main__":

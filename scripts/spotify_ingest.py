@@ -10,18 +10,20 @@ Usage:
     python scripts/spotify_ingest.py
 """
 
+import base64
 import json
-import sys
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from dotenv import load_dotenv
 
 # ── Paths ───────────────────────────────────────────────────────────────────
 
-ROOT           = Path(__file__).parent.parent
-TOKEN_PATH     = ROOT / "registries" / ".spotify_token.json"
-METRICS_PATH   = ROOT / "metrics_registry.json"
+ROOT         = Path(__file__).parent.parent
+TOKEN_PATH   = ROOT / "registries" / ".spotify_token.json"
+METRICS_PATH = ROOT / "metrics_registry.json"
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
@@ -29,6 +31,11 @@ CLIENT_ID  = "a638c04d2b6043b1a4c3adda6db5bad9"
 ARTIST_ID  = "11wCFDSyZy0LfWkgllak6d"
 TOKEN_URL  = "https://accounts.spotify.com/api/token"
 ARTIST_URL = f"https://api.spotify.com/v1/artists/{ARTIST_ID}"
+
+load_dotenv(ROOT / ".env")
+CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
+if not CLIENT_SECRET:
+    raise SystemExit("❌  SPOTIFY_CLIENT_SECRET not found in .env")
 
 
 # ── Token management ─────────────────────────────────────────────────────────
@@ -53,55 +60,51 @@ def _is_expired(token: dict) -> bool:
     return age >= expires_in - 60  # 60s safety margin
 
 
-def _refresh(token: dict) -> dict:
-    refresh_token = token.get("refresh_token")
-    if not refresh_token:
-        raise SystemExit(
-            "❌  No refresh_token in .spotify_token.json.\n"
-            "    Re-run scripts/spotify_auth.py to get a new token."
-        )
-    print("  Token expired — refreshing…")
+def _reauth() -> dict:
+    print("  Token expired — re-authenticating (client credentials)…")
+    credentials = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode()).decode()
     r = requests.post(
         TOKEN_URL,
-        data={
-            "grant_type":    "refresh_token",
-            "refresh_token": refresh_token,
-            "client_id":     CLIENT_ID,
+        data={"grant_type": "client_credentials"},
+        headers={
+            "Authorization": f"Basic {credentials}",
+            "Content-Type":  "application/x-www-form-urlencoded",
         },
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
         timeout=15,
     )
     if not r.ok:
-        raise SystemExit(f"❌  Refresh failed: HTTP {r.status_code} — {r.text}")
+        raise SystemExit(f"❌  Re-auth failed: HTTP {r.status_code} — {r.text}")
 
-    new_token = r.json()
-    merged = {
-        **token,
-        **new_token,
+    token = {
+        **r.json(),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "client_id":    CLIENT_ID,
-        "flow":         "pkce",
+        "flow":         "client_credentials",
     }
-    # Spotify may not return a new refresh_token — keep the old one
-    if "refresh_token" not in new_token:
-        merged["refresh_token"] = refresh_token
-
+    TOKEN_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(TOKEN_PATH, "w", encoding="utf-8") as f:
-        json.dump(merged, f, indent=2, ensure_ascii=False)
-    print("  Token refreshed and saved.")
-    return merged
+        json.dump(token, f, indent=2, ensure_ascii=False)
+    print("  Token saved.")
+    return token
 
 
 def _get_access_token() -> str:
     token = _load_token()
     if _is_expired(token):
-        token = _refresh(token)
+        token = _reauth()
     return token["access_token"]
+
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
+
+def safe_int(value):
+    return int(value) if isinstance(value, (int, float)) else None
 
 
 # ── Spotify fetch ────────────────────────────────────────────────────────────
 
 def _fetch_artist(access_token: str) -> dict:
+    print(f"  Endpoint: GET {ARTIST_URL}")
     r = requests.get(
         ARTIST_URL,
         headers={"Authorization": f"Bearer {access_token}"},
@@ -153,8 +156,8 @@ def main() -> None:
 
     print(f"  Fields present in response: {sorted(artist.keys())}")
 
-    followers  = artist.get("followers", {}).get("total", None)
-    popularity = artist.get("popularity", None)
+    followers  = safe_int(artist.get("followers", {}).get("total"))
+    popularity = safe_int(artist.get("popularity"))
     name       = artist.get("name", "iZLET")
 
     if followers is None:
@@ -162,16 +165,19 @@ def main() -> None:
     if popularity is None:
         print("  ⚠️   'popularity' field missing from API response")
 
+    followers_str  = f"{followers:,}"  if isinstance(followers,  int) else "N/A"
+    popularity_str = f"{popularity}"   if isinstance(popularity, int) else "N/A"
+
     print(f"  Artist    : {name}")
-    print(f"  Followers : {followers:,}" if followers is not None else "  Followers : None")
-    print(f"  Popularity: {popularity}/100" if popularity is not None else "  Popularity: None")
+    print(f"  Followers : {followers_str}")
+    print(f"  Popularity: {popularity_str}/100" if isinstance(popularity, int) else f"  Popularity: {popularity_str}")
 
     _update_metrics(followers, popularity)
 
     print(f"\n  ✅  metrics_registry.json updated")
     print(f"      platform   : spotify")
-    print(f"      followers  : {followers:,}")
-    print(f"      popularity : {popularity}")
+    print(f"      followers  : {followers_str}")
+    print(f"      popularity : {popularity_str}")
     print(f"      source     : api_pull")
     print(f"      confidence : high\n")
 
