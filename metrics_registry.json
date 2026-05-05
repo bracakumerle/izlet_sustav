@@ -1,9 +1,23 @@
 {
   "schema_version": "1.0",
   "description": "Unified performance metrics layer za iZLET_sustav. Ne mijenja works_registry ni events_registry — samo ih referencira kroz entity_id.",
-  "platform_enum": ["youtube", "spotify", "facebook", "instagram", "tiktok"],
-  "type_enum": ["video_metrics", "audio_metrics", "social_metrics"],
-  "source_enum": ["manual_snapshot", "api_pull", "unavailable"],
+  "platform_enum": [
+    "youtube",
+    "spotify",
+    "facebook",
+    "instagram",
+    "tiktok"
+  ],
+  "type_enum": [
+    "video_metrics",
+    "audio_metrics",
+    "social_metrics"
+  ],
+  "source_enum": [
+    "manual_snapshot",
+    "api_pull",
+    "unavailable"
+  ],
   "metrics": [
     {
       "entity_id": "izlet",
@@ -22,15 +36,20 @@
     {
       "entity_id": "izlet",
       "platform": "spotify",
-      "type": "audio_metrics",
-      "timestamp": null,
-      "data": {
-        "streams_total": null,
-        "monthly_listeners": null,
-        "followers": null
+      "identity": {
+        "id": "11wCFDSyZy0LfWkgllak6d",
+        "name": "Izlet",
+        "url": "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d"
       },
-      "source": "unavailable",
-      "note": "Spotify for Artists OAuth nije spojen. Manualni unos ili API pull u budućoj fazi."
+      "metrics": {
+        "followers": null,
+        "popularity": null,
+        "provenance": "restricted"
+      },
+      "confidence": "low",
+      "source": "spotify_api",
+      "note": "followers and popularity removed from Spotify Web API Feb 2026 (Developer Mode restriction). Performance metrics via Spotify for Artists CSV export only.",
+      "last_updated": "2026-05-05"
     },
     {
       "entity_id": "izlet",
