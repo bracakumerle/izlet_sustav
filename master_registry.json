@@ -11,7 +11,9 @@
         "deezer": "5054702",
         "discogs": "6610944",
         "youtube_channel_id": "UC8jNEBUrOqCcXqVleV9ccKg",
-        "facebook_page_id": "142089129226973"
+        "facebook_page_id": "142089129226973",
+        "google_business_id": "8283358399340898051",
+        "google_mid": "/g/11bt_5d27r"
       },
       "urls": {
         "website": "https://bracakumerle.com",
@@ -32,9 +34,10 @@
         "tiktok": "https://www.tiktok.com/@bracakumerle",
         "threads": "https://www.threads.net/@bracakumerle",
         "wikipedia_hr": "https://hr.wikipedia.org/wiki/IZLET",
-        "google_search_console": null
+        "google_search_console": null,
+        "google_business_profile": "https://business.google.com/n/8283358399340898051"
       },
-      "url_count": 16
+      "url_count": 17
     },
     "petar_kumerle": {
       "name": "Petar Kumerle",
@@ -105,5 +108,16 @@
     "works": "works_registry.json",
     "events": "events_registry.json",
     "metrics": "metrics_registry.json"
+  },
+  "source_clusters": {
+    "CL-GBP-01": {
+      "name": "Google Business Profile — iZLET",
+      "source": "google_business_profile",
+      "entity_id": "izlet",
+      "google_business_id": "8283358399340898051",
+      "google_mid": "/g/11bt_5d27r",
+      "url": "https://business.google.com/n/8283358399340898051",
+      "added": "2026-05-06"
+    }
   }
 }
