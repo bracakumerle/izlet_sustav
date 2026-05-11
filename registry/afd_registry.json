@@ -49,10 +49,11 @@
     },
     "strategic_state": {
       "phase": "defense",
-      "action_mode": "no-edit / talk-page only",
+      "action_mode": "no-edit / talk-page only — ACTIVE",
       "objective": "consensus KEEP via cumulative notability"
     },
     "article_version": "GPT_v2.0_ultraclean",
+    "afd_talk_argument": "SUBMITTED — 2026-05-12",
     "links": {
       "wikipedia_hr": "https://hr.wikipedia.org/wiki/IZLET",
       "master_registry_entity": "izlet",
