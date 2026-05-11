@@ -44,11 +44,13 @@
       "type": "Person",
       "ids": {
         "wikidata": "Q139595619",
-        "musicbrainz": "9ab299e2"
+        "musicbrainz": "9ab299e2",
+        "discogs": "17042197"
       },
       "urls": {
         "wikidata": "https://www.wikidata.org/wiki/Q139595619",
         "musicbrainz": "https://musicbrainz.org/artist/9ab299e2",
+        "discogs": "https://www.discogs.com/artist/17042197",
         "website": "https://bracakumerle.com/petar",
         "instagram": "https://www.instagram.com/bracakumerle",
         "facebook": "https://www.facebook.com/142089129226973",
@@ -57,7 +59,7 @@
         "threads": "https://www.threads.net/@bracakumerle",
         "wikipedia_hr": null
       },
-      "url_count": 8
+      "url_count": 9
     },
     "toni_kumerle": {
       "name": "Toni Kumerle",

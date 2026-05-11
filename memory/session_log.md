@@ -21,6 +21,8 @@
 | METRICS-FIX-01 | Spotify blok reklasificiran (API deprecated Feb 2026) | done | metrics_registry.json |
 | GBP-01 | GBP identifikatori u master_registry.json | done | master_registry.json + CL-GBP-01 cluster |
 | ENV-FIX-01 | .env uklonjen iz git trackinga | done | .gitignore |
+| PETAR-DISCOGS | Petar Kumerle Discogs ID (17042197) u master_registry | done | master_registry.json petar_kumerle.ids + url |
+| ARCH-2007 | Web arhiva III. gimnazija — potvrda 2007. osnivanja | done | urllib fetch, iso-8859-2, 24.3.2007 članak |
 
 ### Otvorene stavke
 
@@ -32,7 +34,7 @@
 | DATA-005 | MusicBrainz singlovi (11 singlova 2025-26) | P3 | Ručni unos |
 | SEO-002 | Google Rich Results Test | P3 | — |
 | DISCOGS-FIX | Katarza format: ukloniti "CD-ROM" | P3 | Submission note pripremljen |
-| PETAR-DISCOGS | Dodati Petar Kumerle Discogs ID (17042197) u master_registry | P4 | — |
+| HOD2026-CONT | Dodavati daljnje HOD2026 etape u events_registry | P3 | Toni pješači Zagreb→Međugorje |
 
 ### Aktivni registri
 
