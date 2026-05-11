@@ -28,7 +28,7 @@
 
 | ID | Opis | Prioritet | Napomena |
 |----|------|-----------|----------|
-| AUTH-002 | EN Wikipedia objava | P1 | Planned 09.05.2026. — sandbox ready |
+| AUTH-002 | EN Wikipedia objava | P1 | Status UNKNOWN — rok 09.05.2026. prošao, objava nije potvrđena |
 | HOD2026-REG | events_registry.json — hodočašće eventi | P2 | HOD2026_D01 dodaje se u ovoj sesiji |
 | YT-DESC-FIX | YouTube About: "founded in 2009" → "2007" | P2 | Manualno u YouTube Studio |
 | DATA-005 | MusicBrainz singlovi (11 singlova 2025-26) | P3 | Ručni unos |
