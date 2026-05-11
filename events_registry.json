@@ -6,7 +6,8 @@
     "event_type.live_performance",
     "event_type.public_incident",
     "event_type.media_appearance",
-    "event_type.legal_proceeding"
+    "event_type.legal_proceeding",
+    "event_type.pilgrimage_departure"
   ],
   "status_lifecycle": [
     "node.raw",
@@ -14,6 +15,44 @@
     "node.validated"
   ],
   "events": [
+    {
+      "event_id": "HOD2026_D01",
+      "created_at": "2026-05-11",
+      "name": "Polazak — Zagreb (Lučko)",
+      "type": "event_type.pilgrimage_departure",
+      "date": "2026-05-07",
+      "location": {
+        "name": "Lučko",
+        "city": "Zagreb",
+        "country": "Croatia"
+      },
+      "participants": [
+        {
+          "entity_id": "toni_kumerle",
+          "role": "hodočasnik"
+        }
+      ],
+      "related_entities": [
+        {
+          "entity_id": "izlet",
+          "relation": "mentioned_in_media"
+        }
+      ],
+      "sources": [
+        {
+          "type": "media",
+          "name": "Braniteljski forum",
+          "url": "https://portal.braniteljski-forum.com/blog/branitelji/hodocasce-ratnika-tomislav-lucic-i-toni-kumerle-pjesice-iz-zagreba-prema-medjugorju",
+          "date": "2026-05-07"
+        }
+      ],
+      "wikipedia": {
+        "status": "not_applicable",
+        "wikidata_status": "pending",
+        "notes": null
+      },
+      "status": "node.referenced"
+    },
     {
       "event_id": "event_strice_ivane_performance_2025",
       "created_at": "2026-05-04",
