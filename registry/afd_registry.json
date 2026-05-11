@@ -1,0 +1,63 @@
+{
+  "afd_izlet_2026_05_12": {
+    "entity": "iZLET",
+    "context": "Wikipedia HR AfD active",
+    "date_opened": "2026-05-07",
+    "date_updated": "2026-05-12",
+    "state": "borderline_KEEP",
+    "core_evidence": {
+      "primary_event": {
+        "date": "2007-03-23",
+        "source": "III. gimnazija Zagreb archive",
+        "fact_id": "F_ORIGIN_001",
+        "url": "https://web-arhiva.skole.hr/gimnazija-treca-zg/index.html%3Fnews_id=12.html"
+      },
+      "industry_validation": [
+        {
+          "label": "Croatia Records",
+          "release": "CMC Demo 2009.",
+          "year": 2009,
+          "fact_id": "F_CMC_001",
+          "discogs_id": 12309194
+        },
+        {
+          "label": "Dallas Records",
+          "release": "Nikad ne znaš, to je ono...",
+          "year": 2016
+        },
+        {
+          "label": "Dallas Records",
+          "release": "Katarza",
+          "year": 2019
+        }
+      ],
+      "secondary_sources": [
+        "Muzika.hr",
+        "Rockography",
+        "Ziher.hr",
+        "Barikada",
+        "Sound Report",
+        "Mixeta"
+      ],
+      "author_registry": "HDS-ZAMP (Petar & Toni Kumerle)",
+      "continuity": "2007-2025"
+    },
+    "risk_analysis": {
+      "afd_position": "weak KEEP / contested GNG",
+      "primary_risk": "source clustering low-independence",
+      "stability_factor": "no article edits during AfD window"
+    },
+    "strategic_state": {
+      "phase": "defense",
+      "action_mode": "no-edit / talk-page only",
+      "objective": "consensus KEEP via cumulative notability"
+    },
+    "article_version": "GPT_v2.0_ultraclean",
+    "links": {
+      "wikipedia_hr": "https://hr.wikipedia.org/wiki/IZLET",
+      "master_registry_entity": "izlet",
+      "works_registry_refs": ["W_CMC_2009_001"],
+      "fact_canon_refs": ["F_ORIGIN_001", "F_CMC_001"]
+    }
+  }
+}
