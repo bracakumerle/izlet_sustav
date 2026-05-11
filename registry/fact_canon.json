@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "id_namespace": "izlet.facts.canon",
+  "description": "Canonical fact layer — verified, source-backed claims about iZLET / Braća Kumerle. Each fact has a unique ID, classification, statement pair (HR/EN), sources, and verification state.",
+  "facts": [
+    {
+      "fact_id": "F_ORIGIN_001",
+      "canonical_entity": "iZLET",
+      "classification": "FIRST_DOCUMENTED_PUBLIC_PERFORMANCE",
+      "date": "2007-03-23",
+      "statement_hr": "Prvi dokumentirani javni nastup sastava iZLET održan je 23. ožujka 2007. u III. gimnaziji u Zagrebu.",
+      "statement_en": "The first documented public performance of iZLET took place on 23 March 2007 at III Gymnasium in Zagreb.",
+      "participants": ["Petar Kumerle", "Toni Kumerle"],
+      "source": {
+        "type": "SCHOOL_ARCHIVE",
+        "title": "Koncert i predavanje",
+        "author": "Darka Sudarević",
+        "date_published": "2007-03-24",
+        "url": "https://web-arhiva.skole.hr/gimnazija-treca-zg/index.html%3Fnews_id=12.html#mod_news"
+      },
+      "verification_state": "VERIFIED",
+      "delta": 0.62,
+      "cluster_id": "CL-SCHOOL-01"
+    }
+  ]
+}
