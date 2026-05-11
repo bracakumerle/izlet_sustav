@@ -21,6 +21,22 @@
       "verification_state": "VERIFIED",
       "delta": 0.62,
       "cluster_id": "CL-SCHOOL-01"
+    },
+    {
+      "fact_id": "F_CMC_001",
+      "canonical_entity": "iZLET",
+      "classification": "FIRST_PHYSICAL_RELEASE",
+      "date": "2009",
+      "statement_hr": "iZLET je 2009. godine nastupom pjesme 'Ti si čudesna' na kompilaciji CMC Demo 2009. (Croatia Records) ostvario prvi verificirani fizički glazbeni zapis.",
+      "statement_en": "iZLET's track 'Ti Si Čudesna' appeared on the compilation CMC Demo 2009. released by Croatia Records, representing the band's first verified physical release.",
+      "source": {
+        "type": "DISCOGS",
+        "url": "https://www.discogs.com/release/12309194",
+        "discogs_release_id": 12309194
+      },
+      "verification_state": "VERIFIED",
+      "delta": 0.85,
+      "cluster_id": "CL-DISCOGS-01"
     }
   ]
 }

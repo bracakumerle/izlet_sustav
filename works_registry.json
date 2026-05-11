@@ -23,7 +23,7 @@
       "isni": null,
       "ipn": null
     },
-    "total_works": 32,
+    "total_works": 33,
     "completion_fields": [
       "iswc",
       "title_normalized",
@@ -554,6 +554,24 @@
       "wikipedia_eligible": false,
       "media_references": [],
       "notes": null
+    },
+    "W_CMC_2009_001": {
+      "work_id": "W_CMC_2009_001",
+      "title": "Ti Si Čudesna",
+      "type": "single_track_appearance",
+      "release": {
+        "title": "CMC Demo 2009.",
+        "label": "Croatia Records",
+        "cat_no": "CD 5867234",
+        "format": "CD, Compilation",
+        "year": 2009,
+        "track_position": 8,
+        "discogs_release_id": 12309194,
+        "url": "https://www.discogs.com/release/12309194"
+      },
+      "canonical_entity": "iZLET",
+      "verification_state": "VERIFIED",
+      "cluster_id": "CL-DISCOGS-01"
     }
   }
 }
