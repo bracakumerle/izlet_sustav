@@ -37,6 +37,24 @@
       "verification_state": "VERIFIED",
       "delta": 0.85,
       "cluster_id": "CL-DISCOGS-01"
+    },
+    {
+      "fact_id": "F_CMC_2009_VALIDATION",
+      "canonical_entity": "iZLET",
+      "classification": "INDUSTRY_VALIDATION",
+      "date": "2009",
+      "statement_en": "iZLET was selected for inclusion on CMC Demo 2009., a curated compilation released by Croatia Records — establishing pre-debut professional selection status.",
+      "source": {
+        "type": "DISCOGS",
+        "url": "https://www.discogs.com/release/12309194",
+        "discogs_release_id": 12309194,
+        "label": "Croatia Records",
+        "cat_no": "CD 5867234"
+      },
+      "verification_state": "VERIFIED",
+      "delta": 0.78,
+      "cluster_id": "CL-DISCOGS-01",
+      "impact": "establishes pre-debut professional selection status for WP:GNG"
     }
   ]
 }

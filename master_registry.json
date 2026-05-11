@@ -37,7 +37,32 @@
         "google_search_console": null,
         "google_business_profile": "https://business.google.com/n/8283358399340898051"
       },
-      "url_count": 17
+      "url_count": 17,
+      "notability_vector": {
+        "primary": "music_media_secondary_sources",
+        "secondary": "broadcast_airplay",
+        "tertiary": "live_event_archives"
+      },
+      "longitudinal_activity": true,
+      "timeline_anchor": {
+        "start": 2007,
+        "first_release": 2009,
+        "major_label_phase": [2016, 2019],
+        "current": 2026
+      },
+      "wikipedia_survival_rule": {
+        "version": "v2",
+        "prioritize": [
+          "industry_validation",
+          "broadcast_evidence",
+          "longitudinal_continuity"
+        ],
+        "deprioritize": [
+          "interviews",
+          "blog_mentions",
+          "self_referential_citations"
+        ]
+      }
     },
     "petar_kumerle": {
       "name": "Petar Kumerle",
