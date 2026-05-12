@@ -36,13 +36,36 @@
 | DISCOGS-FIX | Katarza format: ukloniti "CD-ROM" | P3 | Submission note pripremljen |
 | HOD2026-CONT | Dodavati daljnje HOD2026 etape u events_registry | P3 | Toni pješači Zagreb→Međugorje |
 
+---
+
+## Sesija 004: 2026-05-12 — Schema hardening + A1 works expansion
+
+| Hash (short) | Timestamp | Event |
+|---|---|---|
+| 2f405c7 | 2026-05-12 17:52:24 +0200 | fix(schema): foundingDate 2007 + correct Apple Music/Deezer IDs + alternateName array[4] |
+| 4959fe2 | 2026-05-12 17:59:47 +0200 | fix(schema): @id + description — canonical KG node |
+| 5c48524 | 2026-05-12 18:03:04 +0200 | fix(schema): image array + logo — visual entity anchoring |
+| 4df5b46 | 2026-05-12 18:15:32 +0200 | feat(works): BKM singles 2025-26 — work graph expansion A1 (total_works 33→44) |
+| 1ea2416 | 2026-05-12 18:24:26 +0200 | chore: remove izlet_sustav_v2 artifacts |
+
+### Novi registri (sesija 004)
+
+| Fajl | Sadržaj |
+|------|---------|
+| registry/fact_canon.json | F_ORIGIN_001 + F_CMC_001 + F_CMC_2009_VALIDATION |
+| registry/afd_registry.json | AfD state snapshot — borderline_KEEP, action_mode ACTIVE |
+| registry/audit_ledger.json | Deterministički provenance graph — E-2026-05-12-001..004 |
+
 ### Aktivni registri
 
 ```
-master_registry.json     — entiteti, ID-ovi, source clusters
-works_registry.json      — 32 ISWC djela, 28 Spotify ID-ova
+master_registry.json     — entiteti, ID-ovi, source clusters, notability_vector, wikipedia_survival_rule v2
+works_registry.json      — 44 works (32 ISWC + W_CMC_2009_001 + 11 BKM singlova)
 events_registry.json     — eventi (live, incidents, hodočašće)
 metrics_registry.json    — YouTube + Spotify + Facebook metrike
+registry/fact_canon.json — 3 canonical facts (F_ORIGIN_001, F_CMC_001, F_CMC_2009_VALIDATION)
+registry/afd_registry.json — Wikipedia HR AfD snapshot
+registry/audit_ledger.json — provenance ledger v1.0
 ```
 
 ### Ključni vanjski ID-ovi
