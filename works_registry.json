@@ -589,7 +589,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "vitez_jure": {
       "rank": 34,
@@ -607,7 +614,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "moj_dinamo": {
       "rank": 35,
@@ -625,7 +639,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "znakovlje_hrvata": {
       "rank": 36,
@@ -643,7 +664,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "vukovarska_brigada_himna": {
       "rank": 37,
@@ -661,7 +689,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "frane_tente": {
       "rank": 38,
@@ -679,7 +714,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "bogdanovacka_kalvarija": {
       "rank": 39,
@@ -697,7 +739,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "bozicna_idila": {
       "rank": 40,
@@ -715,7 +764,14 @@
       "year": 2025,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "isuse_moj": {
       "rank": 41,
@@ -733,7 +789,14 @@
       "year": 2026,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "covjek_moli_boga": {
       "rank": 42,
@@ -751,7 +814,14 @@
       "year": 2026,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": null,
+        "release_id": null,
+        "artist_id": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      }
     },
     "sjever_uz_odsutne": {
       "rank": 43,
@@ -769,7 +839,14 @@
       "year": 2023,
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "musicbrainz": {
+        "recording_id": "87cf4afb-efbf-4627-a8b1-170725fa7807",
+        "release_id": "8b675ac0-7ab0-40e3-b8a1-a2a6c2bab553",
+        "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+        "confidence": 1.0,
+        "match_type": "exact"
+      }
     }
   }
 }
