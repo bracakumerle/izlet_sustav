@@ -1,0 +1,116 @@
+{
+  "ledger_version": "1.0",
+  "system": "izlet_sustav",
+  "source_of_truth": "git",
+  "resolution_policy": "commit-first reconciliation",
+  "generated_at": "2026-05-12T18:24:26+02:00",
+  "entries": [
+    {
+      "entry_id": "E-2026-05-12-001",
+      "timestamp": "2026-05-12T17:52:24+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Authority Construction",
+      "event_type": "schema_patch",
+      "targets": ["index.html"],
+      "changes": [
+        {"field": "foundingDate", "before": null, "after": "2007"},
+        {"field": "foundingLocation", "before": "Hrvatska", "after": "Zagreb, Croatia"},
+        {"field": "sameAs Apple Music", "before": "1234567890", "after": "682224896"},
+        {"field": "sameAs Deezer", "before": "/artist/izlet", "after": "/artist/5054702"},
+        {"field": "alternateName", "before": "string", "after": "array[4]"}
+      ],
+      "commit": {
+        "hash": "2f405c7d5558fa76633df712958d97b9ef262c25",
+        "hash_short": "2f405c7",
+        "message": "fix(schema): foundingDate 2007, foundingLocation Zagreb Croatia, correct Apple Music + Deezer IDs, expand alternateName array"
+      },
+      "dependencies": [],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "schema", "score": 0.6},
+      "notes": "Core entity data correction"
+    },
+    {
+      "entry_id": "E-2026-05-12-002",
+      "timestamp": "2026-05-12T17:59:47+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Authority Construction",
+      "event_type": "schema_patch",
+      "targets": ["index.html"],
+      "changes": [
+        {"field": "@id", "before": null, "after": "https://bracakumerle.com/#musicgroup"},
+        {"field": "description", "before": null, "after": "iZLET (also known as Braća Kumerle) is a Croatian rock band founded in Zagreb in 2007."}
+      ],
+      "commit": {
+        "hash": "4959fe25b4278d44d8c910fc83fe857f59023c65",
+        "hash_short": "4959fe2",
+        "message": "fix(schema): add @id and description to JSON-LD MusicGroup block"
+      },
+      "dependencies": ["E-2026-05-12-001"],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "knowledge_graph", "score": 0.7},
+      "notes": "Canonical node identity + KG-compatible description"
+    },
+    {
+      "entry_id": "E-2026-05-12-003",
+      "timestamp": "2026-05-12T18:03:04+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Authority Construction",
+      "event_type": "schema_patch",
+      "targets": ["index.html"],
+      "changes": [
+        {"field": "image", "before": null, "after": ["https://bracakumerle.com/hero.jpg", "https://bracakumerle.com/live.jpg"]},
+        {"field": "logo", "before": null, "after": "https://bracakumerle.com/logo.png"}
+      ],
+      "commit": {
+        "hash": "5c485245c0076082bb3eafc239d318c52afa053a",
+        "hash_short": "5c48524",
+        "message": "fix(schema): add image array + logo — Patch B entity visual anchoring"
+      },
+      "dependencies": ["E-2026-05-12-002"],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "knowledge_graph", "score": 0.7},
+      "notes": "Visual entity anchoring for KG convergence"
+    },
+    {
+      "entry_id": "E-2026-05-12-004",
+      "timestamp": "2026-05-12T18:15:32+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Registry",
+      "event_type": "registry_update",
+      "targets": ["works_registry.json"],
+      "changes": [
+        {"field": "total_works", "before": 33, "after": 44},
+        {"field": "BKM_singles", "before": null, "after": "rank 33-43 added"}
+      ],
+      "commit": {
+        "hash": "4df5b464f154ca068ec7fb0c006db9e5db1b1d00",
+        "hash_short": "4df5b46",
+        "message": "feat(works): add BKM singles 2025-26 — work graph expansion A1"
+      },
+      "dependencies": [],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "registry", "score": 0.5},
+      "notes": "Work graph expansion — 11 BKM singles"
+    },
+    {
+      "entry_id": "E-2026-05-12-005",
+      "timestamp": "2026-05-12T18:24:26+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Cleanup",
+      "event_type": "repo_cleanup",
+      "targets": ["izlet_sustav_v2/"],
+      "changes": [
+        {"field": "izlet_sustav_v2", "before": "tracked (21 files)", "after": "removed"}
+      ],
+      "commit": {
+        "hash": "1ea24164d9db76d99f5e9c946f06864f257a852c",
+        "hash_short": "1ea2416",
+        "message": "chore: remove izlet_sustav_v2 artifacts"
+      },
+      "dependencies": [],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "repo", "score": 0.2},
+      "notes": "Next.js v2 subfolder removed from tracking — not part of production stack"
+    }
+  ]
+}
