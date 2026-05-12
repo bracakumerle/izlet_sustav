@@ -591,11 +591,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "94dd1837-6977-4937-a02e-b8258b932b2a",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "vitez_jure": {
@@ -616,11 +616,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "807abd53-5d7a-4bfa-ae0b-d0c0ab91fae2",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "moj_dinamo": {
@@ -641,11 +641,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "znakovlje_hrvata": {
@@ -666,11 +666,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "4498971d-8ebe-4c17-87e7-d8d447929180",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "vukovarska_brigada_himna": {
@@ -691,11 +691,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "c6c12002-c671-41ad-a0fd-aed3442614dc",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "frane_tente": {
@@ -716,11 +716,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "0999a678-4586-48c5-a1f1-598ffaa69977",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "bogdanovacka_kalvarija": {
@@ -741,11 +741,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "6b14a4ae-13cf-4fec-aec4-88d1b0a27201",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "bozicna_idila": {
@@ -766,11 +766,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "52686be5-371c-4dd5-907e-da3306ed07c9",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "isuse_moj": {
@@ -791,11 +791,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "c25db041-6d8e-49e7-8953-f8a42e19f2f6",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "covjek_moli_boga": {
@@ -816,11 +816,11 @@
       "media_references": [],
       "notes": null,
       "musicbrainz": {
-        "recording_id": null,
+        "recording_id": "a43cf149-bd70-4b41-a261-ee56604fe390",
         "release_id": null,
         "artist_id": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
+        "confidence": 1.0,
+        "match_type": "exact"
       }
     },
     "sjever_uz_odsutne": {
