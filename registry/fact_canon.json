@@ -20,7 +20,8 @@
       },
       "verification_state": "VERIFIED",
       "delta": 0.62,
-      "cluster_id": "CL-SCHOOL-01"
+      "cluster_id": "CL-SCHOOL-01",
+      "ledger_ref": "E-2026-05-12-006"
     },
     {
       "fact_id": "F_CMC_001",
@@ -36,7 +37,8 @@
       },
       "verification_state": "VERIFIED",
       "delta": 0.85,
-      "cluster_id": "CL-DISCOGS-01"
+      "cluster_id": "CL-DISCOGS-01",
+      "ledger_ref": "E-2026-05-12-007"
     },
     {
       "fact_id": "F_CMC_2009_VALIDATION",
@@ -54,7 +56,8 @@
       "verification_state": "VERIFIED",
       "delta": 0.78,
       "cluster_id": "CL-DISCOGS-01",
-      "impact": "establishes pre-debut professional selection status for WP:GNG"
+      "impact": "establishes pre-debut professional selection status for WP:GNG",
+      "ledger_ref": "E-2026-05-12-008"
     }
   ]
 }

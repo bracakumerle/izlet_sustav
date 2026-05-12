@@ -111,6 +111,69 @@
       "validation": {"status": "verified", "method": "automated"},
       "impact": {"layer": "repo", "score": 0.2},
       "notes": "Next.js v2 subfolder removed from tracking — not part of production stack"
+    },
+    {
+      "entry_id": "E-2026-05-12-006",
+      "timestamp": "2026-05-12T00:08:28+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Registry",
+      "event_type": "registry_update",
+      "targets": ["registry/fact_canon.json"],
+      "changes": [
+        {"field": "fact_id", "before": null, "after": "F_ORIGIN_001"}
+      ],
+      "commit": {
+        "hash": "ce7c7bde47ac7988e57a4af968d084e45770d07d",
+        "hash_short": "ce7c7bd",
+        "message": "feat(canon): add F_ORIGIN_001 — first documented iZLET performance 2007-03-23"
+      },
+      "dependencies": [],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "registry", "score": 0.62},
+      "notes": "First documented iZLET performance 2007 — school archive source"
+    },
+    {
+      "entry_id": "E-2026-05-12-007",
+      "timestamp": "2026-05-12T00:37:14+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Registry",
+      "event_type": "registry_update",
+      "targets": ["registry/fact_canon.json", "works_registry.json"],
+      "changes": [
+        {"field": "fact_id", "before": null, "after": "F_CMC_001"},
+        {"field": "work_id", "before": null, "after": "W_CMC_2009_001"}
+      ],
+      "commit": {
+        "hash": "01919a1822237d4ea9580bda9f08953b30e5e186",
+        "hash_short": "01919a1",
+        "message": "feat(canon+works): add CMC Demo 2009 Ti Si Čudesna — first physical release F_CMC_001"
+      },
+      "dependencies": ["E-2026-05-12-006"],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "registry", "score": 0.85},
+      "notes": "First physical release — Croatia Records CMC Demo 2009, track 8"
+    },
+    {
+      "entry_id": "E-2026-05-12-008",
+      "timestamp": "2026-05-12T01:48:41+02:00",
+      "actor": {"type": "agent", "name": "Claude + Copilot"},
+      "phase": "Registry",
+      "event_type": "registry_update",
+      "targets": ["registry/fact_canon.json", "master_registry.json", "registry/afd_registry.json"],
+      "changes": [
+        {"field": "fact_id", "before": null, "after": "F_CMC_2009_VALIDATION"},
+        {"field": "notability_vector", "before": null, "after": "added to izlet entity"},
+        {"field": "wikipedia_survival_rule", "before": null, "after": "v2"}
+      ],
+      "commit": {
+        "hash": "4663c1f672c47aae2af1fcc5d63f2f09c8a3de10",
+        "hash_short": "4663c1f",
+        "message": "feat(registry): AfD layer update — F_CMC_2009_VALIDATION + entity notability vector + Wikipedia survival rule v2"
+      },
+      "dependencies": ["E-2026-05-12-007"],
+      "validation": {"status": "verified", "method": "automated"},
+      "impact": {"layer": "registry", "score": 0.78},
+      "notes": "Industry validation fact + AfD defense layer — WP:GNG pre-debut professional selection"
     }
   ]
 }
