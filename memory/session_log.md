@@ -68,6 +68,39 @@ registry/afd_registry.json — Wikipedia HR AfD snapshot
 registry/audit_ledger.json — provenance ledger v1.0
 ```
 
+---
+
+## Sesija 005: 2026-05-12 — Site content expansion B + provenance chain
+
+| Hash (short) | Timestamp | Event |
+|---|---|---|
+| ce7c7bd | 2026-05-12 ~02:00 +0200 | feat(canon): F_ORIGIN_001 — first public performance 2007-03-23 |
+| 01919a1 | 2026-05-12 ~02:37 +0200 | feat(canon+works): F_CMC_001 + W_CMC_2009_001 — CMC Demo 2009 |
+| 4663c1f | 2026-05-12 ~03:48 +0200 | feat(registry): AfD layer update — F_CMC_2009_VALIDATION + notability_vector |
+| dc8fbcf7 | 2026-05-12 | feat(registry): audit_ledger.json v1.0 — E-001..E-005 |
+| 0d35cb58 | 2026-05-12 | feat(registry): link fact_canon to audit_ledger — ledger_ref fields + E-006..E-008 |
+| 29889dad | 2026-05-12 | feat(works): C1 MusicBrainz sync — partial (1/11 resolved) |
+| d1644daf | 2026-05-12 | feat(works): C1 complete — 11/11 MBID resolved (manual verified) |
+| e0703180 | 2026-05-12 | chore: C2-A partial — Spotify ISRC coverage limited (regional catalog) |
+| cec86398 | 2026-05-12 | feat(site): add /bio + /diskografija — entity content surface B |
+
+### Novi fajlovi (sesija 005)
+
+| Fajl | Sadržaj |
+|------|---------|
+| bio.html | O bendu stranica — BreadcrumbList JSON-LD, canonical /bio |
+| diskografija.html | Diskografija stranica — studijski albumi, kompilacije, singlovi |
+| _redirects | Netlify rewrites: /bio → /bio.html, /diskografija → /diskografija.html |
+| scripts/mb_sync.py | MusicBrainz sync skripta za rank 33-43 works |
+| scripts/spotify_enrich.py | Spotify ISRC enrichment skripta (ISRC → track_id) |
+
+### Napomene (sesija 005)
+
+- .gitignore: dodano `izlet_sustav_v2/node_modules/` i `izlet_sustav_v2/.next/` — trajno rješenje za 130MB push blocker
+- Spotify ISRC: svi HRA371... kodovi vraćaju None — regionalni katalog nije indeksiran po ISRC-u u Spotify API-ju
+- MusicBrainz: 10/11 MBID-ova dostavljeno ručno (Generalom), 1/11 API resolucijom
+- index.html: dodana Tidal sameAs, O bendu crawlable sekcija, footer nav linkovi (/bio, /diskografija)
+
 ### Ključni vanjski ID-ovi
 
 | Entitet | Platforma | ID |
