@@ -54,7 +54,26 @@
       "isrc": "HRA371600088",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "pernastica": {
       "rank": 2,
@@ -70,7 +89,26 @@
       "isrc": "HRA371200384",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
+      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "zalo": {
       "rank": 3,
@@ -89,7 +127,26 @@
         "MTV Adria rotation 2013",
         "HRT Radio Dubrovnik top lista"
       ],
-      "notes": "MTV Adria rotacija — najjači authority signal od svih 32 djela"
+      "notes": "MTV Adria rotacija — najjači authority signal od svih 32 djela",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "oo_da_sa_krilima": {
       "rank": 4,
@@ -153,7 +210,26 @@
       "isrc": "HRA371400333",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
+      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "ne_zurim_se": {
       "rank": 8,
@@ -169,7 +245,26 @@
       "isrc": "HRA371400523",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
+      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "srebrni_zmaj": {
       "rank": 9,
@@ -201,7 +296,26 @@
       "isrc": "HRA371800851",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "majcin_skut": {
       "rank": 11,
@@ -217,7 +331,26 @@
       "isrc": "HRA371600089",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
+      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "svemir": {
       "rank": 12,
@@ -233,7 +366,26 @@
       "isrc": "HRA371600046",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)"
+      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "imam": {
       "rank": 13,
@@ -249,7 +401,26 @@
       "isrc": "HRA371600084",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)"
+      "notes": "Album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "kako_da_se_smijem": {
       "rank": 14,
@@ -265,7 +436,26 @@
       "isrc": "HRA371600086",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)"
+      "notes": "Album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "nocima_here_i_am": {
       "rank": 15,
@@ -281,7 +471,26 @@
       "isrc": "HRA371600085",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)"
+      "notes": "Album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "topim_se_i_gubim": {
       "rank": 16,
@@ -297,7 +506,26 @@
       "isrc": "HRA371600087",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)"
+      "notes": "Album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "dva_gemista": {
       "rank": 17,
@@ -313,7 +541,26 @@
       "isrc": "HRA371600082",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)"
+      "notes": "Album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "oni_spavaju": {
       "rank": 18,
@@ -329,7 +576,26 @@
       "isrc": "HRA371600083",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)"
+      "notes": "Album Nikad ne znaš (2016)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "osmijeh_je_bitan": {
       "rank": 19,
@@ -345,7 +611,26 @@
       "isrc": "HRA371800589",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "u_svijetu_bajki": {
       "rank": 20,
@@ -361,7 +646,26 @@
       "isrc": "HRA371800598",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Demo era (EL, 2010)"
+      "notes": "Demo era (EL, 2010)",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "caroban_otok": {
       "rank": 21,
@@ -377,7 +681,26 @@
       "isrc": "HRA371800642",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "cast": {
       "rank": 22,
@@ -393,7 +716,26 @@
       "isrc": "HRA371800845",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": "Vjerojatno dio 'Čast i čisti obraz'"
+      "notes": "Vjerojatno dio 'Čast i čisti obraz'",
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "oceana": {
       "rank": 23,
@@ -409,7 +751,26 @@
       "isrc": "HRA371800848",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "ponekad": {
       "rank": 24,
@@ -425,7 +786,26 @@
       "isrc": "HRA371800854",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "poslije_svega": {
       "rank": 25,
@@ -441,7 +821,26 @@
       "isrc": "HRA371800852",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "princeza_tea": {
       "rank": 26,
@@ -457,7 +856,26 @@
       "isrc": "HRA371800853",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "siluete": {
       "rank": 27,
@@ -473,7 +891,26 @@
       "isrc": "HRA371800849",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "tko_si_ti": {
       "rank": 28,
@@ -489,7 +926,26 @@
       "isrc": "HRA371800674",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "uredi_se": {
       "rank": 29,
@@ -505,7 +961,26 @@
       "isrc": "HRA371800846",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "urota_duhova": {
       "rank": 30,
@@ -521,7 +996,26 @@
       "isrc": "HRA371800847",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "zaklopi_moje_oci": {
       "rank": 31,
@@ -537,7 +1031,26 @@
       "isrc": "HRA371800850",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "kokosovo_mlijeko": {
       "rank": 32,
@@ -553,7 +1066,26 @@
       "isrc": "HRA371800820",
       "wikipedia_eligible": false,
       "media_references": [],
-      "notes": null
+      "notes": null,
+      "spotify": {
+        "track_id": null,
+        "album_id": null,
+        "popularity": null,
+        "duration_ms": null,
+        "explicit": null,
+        "confidence": 0.0,
+        "match_type": "manual_required"
+      },
+      "reconciliation": {
+        "spotify_confidence": 0.0,
+        "status": "partial",
+        "entity_state": {
+          "musicbrainz": "confirmed",
+          "spotify": "pending",
+          "discogs": "pending",
+          "youtube": "pending"
+        }
+      }
     },
     "W_CMC_2009_001": {
       "work_id": "W_CMC_2009_001",
