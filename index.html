@@ -341,6 +341,35 @@
       color: #7a7a7a;
     }
 
+    .info-sub {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: clamp(0.82rem, 1.4vw, 0.88rem);
+      line-height: 1.8;
+      color: #505050;
+      margin-top: 1.25rem;
+    }
+
+    .info-link {
+      display: inline-block;
+      margin-top: 1.75rem;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .info-link:hover {
+      border-bottom-color: var(--gold);
+      color: var(--gold2);
+    }
+
     /* ── ENTITY GRAPH ── */
     .entity-graph {
       width: 100%;
@@ -404,6 +433,28 @@
       font-size: 0.7rem;
       letter-spacing: 0.12em;
       color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    footer nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    footer nav a {
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer nav a:hover {
+      color: var(--gold);
     }
 
     /* ── RESPONSIVE ── */
@@ -506,22 +557,17 @@
 
   </div>
 
-  <!-- O BENDU -->
-  <section>
-    <h2>O bendu</h2>
-    <p>iZLET (Braća Kumerle) je hrvatski rock sastav iz Zagreba, aktivan od 2007. godine.</p>
-    <p>Sastav objavljuje autorsku glazbu kroz albume, singlove i tematske projekte povezane s hrvatskom kulturnom, povijesnom i duhovnom baštinom.</p>
-    <p><a href="/bio">Više o bendu →</a></p>
-  </section>
-
   <!-- INFO -->
   <section class="info-section">
     <p class="section-eyebrow">O bendu</p>
     <p class="info-text">
       iZLET su Braća Kumerle — hrvatski rock bend koji spaja energiju živih nastupa
       s autorskim zvukom oblikovanim između Jadrana i kontinenta.
-      Glazba dostupna na svim platformama.
     </p>
+    <p class="info-sub">
+      Autorska glazba kroz albume, singlove i tematske projekte povezane s hrvatskom kulturnom, povijesnom i duhovnom baštinom. Aktivni od 2007.
+    </p>
+    <a class="info-link" href="/bio">Više o bendu →</a>
   </section>
 
   <!-- ENTITY GRAPH -->
@@ -572,6 +618,9 @@
     <nav>
       <a href="/bio">O bendu</a>
       <a href="/diskografija">Diskografija</a>
+      <a href="/video">Video</a>
+      <a href="/arhiva">Arhiva</a>
+      <a href="/kontakt">Kontakt</a>
     </nav>
   </footer>
 
