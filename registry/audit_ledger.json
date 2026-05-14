@@ -174,6 +174,43 @@
       "validation": {"status": "verified", "method": "automated"},
       "impact": {"layer": "registry", "score": 0.78},
       "notes": "Industry validation fact + AfD defense layer — WP:GNG pre-debut professional selection"
+    },
+    {
+      "entry_id": "E-2026-05-13-009",
+      "timestamp": "2026-05-13T00:00:00Z",
+      "actor": {"type": "agent", "name": "Gemini + Claude"},
+      "phase": "Authority Construction",
+      "event_type": "fact_correction",
+      "targets": ["registry/fact_canon.json", "events_registry.json"],
+      "changes": [
+        {
+          "field": "F_ORIGIN_001.date",
+          "before": "2007-03-23",
+          "after": "2007-04-10 (approx)",
+          "reason": "Primary URL dead. Barikada.com surrogate."
+        },
+        {
+          "field": "F_ORIGIN_001.delta",
+          "before": 0.62,
+          "after": 0.55
+        },
+        {
+          "field": "South_Point.year",
+          "before": 2017,
+          "after": 2018,
+          "reason": "Dallas Records video metadata confirmed"
+        }
+      ],
+      "validation": {
+        "status": "verified",
+        "method": "hybrid",
+        "source": "Gemini deep research 2026-05-13"
+      },
+      "impact": {
+        "layer": "registry",
+        "score": 0.6
+      },
+      "notes": "Gemini OSINT verification batch. Muzika.hr tagged as archival loss. Igor Scekic cover art pending verification."
     }
   ]
 }

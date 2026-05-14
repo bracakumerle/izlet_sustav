@@ -195,6 +195,60 @@
         "notes": "COI — ne objavljuje se direktno. Prolazi kroz neutralnog posrednika."
       },
       "status": "node.referenced"
+    },
+    {
+      "event_id": "event_south_point_rocknride_2018",
+      "created_at": "2026-05-13",
+      "name": "South Point Rock'n'ride — festival nastup i nagrada, Konavle",
+      "type": "event_type.live_performance",
+      "date": "2018",
+      "year": 2018,
+      "location": {
+        "name": "South Point Rock'n'ride",
+        "city": "Konavle",
+        "country": "Croatia"
+      },
+      "participants": [
+        {
+          "entity_id": "toni_kumerle",
+          "role": "performer"
+        },
+        {
+          "entity_id": "petar_kumerle",
+          "role": "performer"
+        }
+      ],
+      "related_entities": [
+        {
+          "entity_id": "izlet",
+          "relation": "performing_act"
+        },
+        {
+          "entity_id": "dallas_records",
+          "relation": "label_at_time"
+        }
+      ],
+      "outcome": {
+        "award": "3 dana snimanja u studiju Pavarotti, Mostar",
+        "notes": "Bend je samostalno snimio videospot za singl 'Tko si ti' (2018.) na putovanju, u putopisno-dokumentarnom stilu."
+      },
+      "sources": [
+        {
+          "type": "video_metadata",
+          "name": "Dallas Records — Tko si ti (Official Video)",
+          "url": "https://www.youtube.com/watch?v=NhKx_25-8EE",
+          "date": "2018-09-03",
+          "note": "Dallas Records video metadata confirmed"
+        }
+      ],
+      "verification_state": "VERIFIED",
+      "canonical": true,
+      "wikipedia": {
+        "status": "not_applicable",
+        "wikidata_status": "pending",
+        "notes": null
+      },
+      "status": "node.referenced"
     }
   ]
 }

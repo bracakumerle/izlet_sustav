@@ -7,21 +7,30 @@
       "fact_id": "F_ORIGIN_001",
       "canonical_entity": "iZLET",
       "classification": "FIRST_DOCUMENTED_PUBLIC_PERFORMANCE",
-      "date": "2007-03-23",
-      "statement_hr": "Prvi dokumentirani javni nastup sastava iZLET održan je 23. ožujka 2007. u III. gimnaziji u Zagrebu.",
-      "statement_en": "The first documented public performance of iZLET took place on 23 March 2007 at III Gymnasium in Zagreb.",
+      "date": "2007-04-10",
+      "statement_hr": "Prvi dokumentirani javni nastup sastava iZLET održan je u travnju 2007. u III. gimnaziji u Zagrebu.",
+      "statement_en": "The first documented public performance of iZLET took place in April 2007 at III Gymnasium in Zagreb.",
       "participants": ["Petar Kumerle", "Toni Kumerle"],
       "source": {
         "type": "SCHOOL_ARCHIVE",
         "title": "Koncert i predavanje",
         "author": "Darka Sudarević",
         "date_published": "2007-03-24",
-        "url": "https://web-arhiva.skole.hr/gimnazija-treca-zg/index.html%3Fnews_id=12.html#mod_news"
+        "url": "https://web-arhiva.skole.hr/gimnazija-treca-zg/index.html%3Fnews_id=12.html#mod_news",
+        "surrogate_source": {
+          "type": "MUSIC_MEDIA_REVIEW",
+          "publisher": "Barikada.com",
+          "url": "https://barikada.com/izlet-nikad-ne-znas-to-je-ono/",
+          "date": "2016-10-26",
+          "author": "Dragutin Matošević",
+          "role": "primary surrogate — primarni izvor dead"
+        }
       },
-      "verification_state": "VERIFIED",
-      "delta": 0.62,
+      "verification_state": "CORRECTED",
+      "delta": 0.55,
       "cluster_id": "CL-SCHOOL-01",
-      "ledger_ref": "E-2026-05-12-006"
+      "ledger_ref": "E-2026-05-12-006",
+      "notes": "Primary URL (skole.hr) dead link. Date corrected to 10.04.2007 per Barikada.com review (2016-10-26). Use 'April 2007' in Wikipedia-ready layer."
     },
     {
       "fact_id": "F_CMC_001",
@@ -58,6 +67,24 @@
       "cluster_id": "CL-DISCOGS-01",
       "impact": "establishes pre-debut professional selection status for WP:GNG",
       "ledger_ref": "E-2026-05-12-008"
+    },
+    {
+      "fact_id": "F_MUZIKAHR_SIGCOV_LOSS",
+      "canonical_entity": "iZLET",
+      "classification": "ARCHIVAL_LOSS",
+      "date": "2016",
+      "statement_hr": "Muzika.hr je objavio recenziju albuma 'Nikad ne znaš' (Ispod radara) 2016. URL je trenutno nedostupan (dead link). Sadržaj nije arhiviran u Wayback Machine.",
+      "source": {
+        "type": "DEAD_LINK",
+        "original_url": "https://www.muzika.hr/albumi/izlet-ispod-radara/",
+        "status": "dead",
+        "wayback_checked": true,
+        "wayback_result": "not archived"
+      },
+      "verification_state": "ARCHIVAL_LOSS",
+      "delta": 0.0,
+      "sigcov_classification": "lost_primary",
+      "notes": "Do not use as primary citation. Requires Wayback Machine recovery before Wikipedia use."
     }
   ]
 }
