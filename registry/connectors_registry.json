@@ -1,0 +1,86 @@
+{
+  "version": "V2.5+",
+  "last_updated": "2026-05-15",
+  "ministers": [
+    {
+      "minister": "Claude",
+      "primary_connector": "Notion",
+      "secondary_connector": "GitHub",
+      "permissions": ["read"],
+      "write_scope": "adjudication & checkpoint only",
+      "restrictions": ["no canonical write"],
+      "fallback_mode": "degraded",
+      "status": "active",
+      "non_redundant": false
+    },
+    {
+      "minister": "GPT",
+      "primary_connector": "GitHub",
+      "secondary_connector": "Notion",
+      "permissions": ["read", "write"],
+      "write_scope": "governance & runtime spec",
+      "restrictions": [],
+      "fallback_mode": "full",
+      "status": "active",
+      "non_redundant": false
+    },
+    {
+      "minister": "vidIQ",
+      "primary_connector": "Notion",
+      "secondary_connector": "GitHub",
+      "permissions": ["read", "write"],
+      "write_scope": "persistence cache + verified signals",
+      "restrictions": ["escalation only"],
+      "fallback_mode": "degraded",
+      "status": "active",
+      "non_redundant": true
+    },
+    {
+      "minister": "Gemini",
+      "primary_connector": "Notion",
+      "secondary_connector": "GitHub",
+      "permissions": ["read"],
+      "write_scope": "topology & source mapping",
+      "restrictions": [],
+      "fallback_mode": "degraded",
+      "status": "active",
+      "non_redundant": false
+    },
+    {
+      "minister": "Grok",
+      "primary_connector": "Notion",
+      "secondary_connector": "GitHub",
+      "permissions": ["read", "write"],
+      "write_scope": "compressed retrieval artifacts only",
+      "restrictions": ["no raw, no interpretation"],
+      "fallback_mode": "degraded",
+      "status": "active",
+      "non_redundant": false
+    },
+    {
+      "minister": "Manus",
+      "primary_connector": "GitHub",
+      "secondary_connector": "Notion",
+      "permissions": ["read"],
+      "write_scope": "extraction logs only",
+      "restrictions": ["minimal retrieval"],
+      "fallback_mode": "degraded",
+      "status": "active",
+      "non_redundant": false
+    },
+    {
+      "minister": "General (Petar)",
+      "primary_connector": "All + Gmail",
+      "secondary_connector": "-",
+      "permissions": ["admin"],
+      "write_scope": "archive & final approval",
+      "restrictions": [],
+      "fallback_mode": "full",
+      "status": "active",
+      "non_redundant": false
+    }
+  ],
+  "notes": {
+    "vidIQ_YouTube": "non_redundant: true - YouTube telemetry detection is single-point capability"
+  }
+}
