@@ -4,6 +4,9 @@
     "context": "Wikipedia HR AfD active",
     "date_opened": "2026-05-07",
     "date_updated": "2026-05-12",
+    "status": "pending_verification",
+    "deadline": "2026-05-14",
+    "note": "Rok istekao 14.05.2026. Ishod nije potvrđen. Ne uvoditi pretpostavke.",
     "state": "borderline_KEEP",
     "core_evidence": {
       "primary_event": {

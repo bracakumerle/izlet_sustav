@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "id_namespace": "izlet.signals",
+  "description": "Signal registry — cross-platform authority convergence objects. Each entry is a verified convergence snapshot locked after Kabinet cycle review.",
+  "convergences": [
+    {
+      "convergence_id": "STRICE-IVANE-2025",
+      "type": "cross_platform_authority_convergence",
+      "priority": "P0",
+      "confidence": "high",
+      "layers": ["YT_telemetry", "FB_persistence", "institutional_topology"],
+      "authority_correlation_id": "AUTH-CORR-004-STRICE",
+      "temporal_flags": ["2025-11-29_rijeka_incident", "2025-12-07_tier1_coverage", "diaspora_active"],
+      "verified_by": ["vidIQ", "Manus", "Gemini", "Claude"],
+      "stability_window": "2025-12-07 to 2026-08-05",
+      "next_review": "2026-08-05",
+      "invalidates_if": [
+        "tier1_articles_deleted",
+        "ZAMP_registration_revoked",
+        "confidence_drops_to_low"
+      ],
+      "next_action_hooks": ["EN_Wikipedia_sandbox_update", "Wayback_Machine_archival"],
+      "sources": {
+        "tier1": [
+          "https://www.vecernji.hr/kultura/tko-je-toni-kumerle-covjek-koji-je-gazio-ruze-za-ztve-femicida-1914052",
+          "https://www.glasistre.hr/hrvatska/2025/12/08/pjevac-ustaskih-pjesama-posipa-se-pepelom-nakon-gazenja-ruza-za-zrtve-femicida-moj-cin-nije-bio-ag-1038544",
+          "https://net.hr/danas/vijesti/ruze-za-zrtve-femicida-u-zagrebu-gazio-je-toni-kumerle-094ec3a4-d395-11f0-9a51-9600040c8f8e",
+          "https://www.novilist.hr/novosti/hrvatska/video-oglasio-se-tip-koji-je-gazio-ruze-za-zrtve-femicida-na-jelacicevom-trgu-to-je-bio-performans/"
+        ],
+        "institutional": "https://www.zamp.hr/baza-autora/autor/pregled/133001315",
+        "event_documentation": "https://hrvatski-glasnik.com/izdvojeno/povratak-verbalnog-delikta-progon-brace-kumerle-zbog-izvodenja-pjesme-ive-fabijana/2025/12/22/138016/"
+      },
+      "interpretation": null,
+      "created": "2026-05-15",
+      "cycle": "#004"
+    }
+  ]
+}

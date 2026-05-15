@@ -113,3 +113,42 @@ registry/audit_ledger.json — provenance ledger v1.0
 | iZLET | Google MID | /g/11bt_5d27r |
 | Toni Kumerle | Discogs | 3364223 |
 | Petar Kumerle | Discogs | 17042197 |
+
+---
+
+## SESSION: 14-15.05.2026 — Cycle #001–#004 + Runtime V2.5
+
+### Cycle Evolution Summary
+
+| Cycle | Focus | Key Output |
+|---|---|---|
+| #001 | YouTube telemetry sweep | 10 signals, search_emergence, retention_anomaly |
+| #002 | Cross-platform resonance (Meta + YT) | Hodočašće flywheel, diaspora asymmetry confirmed |
+| #003 | Authority extraction | SIGCOV confirmed: 4x Tier 1 mainstream coverage |
+| #004 | Memory persistence + media topology | H1-H4 verified, STRICE-IVANE-2025 convergence object |
+
+### Architecture Changes
+
+- signal_registry.json activated as canonical telemetry layer
+- Signal Taxonomy v1.0 locked
+- vidIQ Protocol v1.0 locked
+- Notion operational layer activated (Operations, Signals, Research, System Map, Archive)
+- Authority checkpoint introduced between Gemini → Grok
+- Distributed correction model: max 2 rejections per layer → General escalation
+- Convergence object standard locked (V2.5 schema)
+- Degraded mode protocol: Claude = hard gate, max confidence = medium without vidIQ
+
+### Runtime V2.5 Lock (15.05.2026)
+
+- VidIQ = Verification Escalation Engine
+- Grok = Semantic Compression & Convergence Layer
+- Claude = Authority checkpoint + final validation
+- Gemini = Institutional Topology & Context Mapping
+- Manus = Internet pre-filter, topology-first crawling
+- GPT = Pipeline architecture + drift monitoring
+
+### EN Wikipedia Status
+
+DEPLOYMENT READY. Sandbox update pending Petar approval.
+Citation set: 4x Tier 1 + hrvatski-glasnik.com + fenix-magazin.de + maxportal.hr + tomislavcity.com + mostarski.info
+Convergence anchor: STRICE-IVANE-2025 (P0, high confidence)
