@@ -1116,11 +1116,17 @@
       "musicbrainz_recording_id": null,
       "discogs_master_id": null,
       "spotify_track_id": null,
-      "isrc": null,
+      "isrc": "QT6F32539173",
       "label": "Braća Kumerle Music",
       "year": 2025,
       "wikipedia_eligible": false,
-      "media_references": [],
+      "contributors": [
+        {"name": "Rafael Lasić", "role": "saxophone"}
+      ],
+      "visual_production": "Crotradwave",
+      "media_references": [
+        "https://www.hop.com.hr/2025/06/22/krijesovi-lazi-pjesma-koja-razotkriva-moralnu-nakaradnost-partizanske-slobode/"
+      ],
       "notes": null,
       "musicbrainz": {
         "recording_id": "94dd1837-6977-4937-a02e-b8258b932b2a",
@@ -1367,10 +1373,15 @@
       "discogs_master_id": null,
       "spotify_track_id": null,
       "isrc": null,
+      "barcode": "199953974831",
+      "catalog_number": "BKMUSIC001",
       "label": "Braća Kumerle Music",
       "year": 2023,
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "https://portal.braniteljski-forum.com/blog/vijesti/braca-kumerle-izdala-snaznu-poruku-podrske-nova-pjesma-za-bad-blue-boyse-u-grckim-zatvorima",
+        "https://narod.hr/sport/podrska-braca-kumerle-snimili-pjesmu-posvecenu-bad-blue-boysima-zatocenima-u-grckim-zatvorima"
+      ],
       "notes": null,
       "musicbrainz": {
         "recording_id": "87cf4afb-efbf-4627-a8b1-170725fa7807",
