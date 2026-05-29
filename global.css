@@ -1,0 +1,255 @@
+/**
+ * global.css — iZLET / Braća Kumerle
+ * Shared design tokens, typography, nav, and footer components
+ * Version: 1.0 — 2026-05-30
+ *
+ * Usage: <link rel="stylesheet" href="/global.css">
+ * Import fonts separately per page or add to this file.
+ */
+
+/* ─────────────────────────────────────────────
+   GOOGLE FONTS
+───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Raleway:wght@200;300;400;500&display=swap');
+
+
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS
+   Canonical palette: KAB-VIS-001 v1.1
+───────────────────────────────────────────── */
+:root {
+  /* Colour — primary */
+  --bk-plava:           #1a2744;   /* deep blue — primary background */
+  --bk-plava-srednja:   #243460;   /* mid blue */
+  --bk-plava-svjetla:   #2e4080;   /* light blue */
+  --bk-zlatna:          #c87820;   /* flame gold */
+  --bk-zlatna-svijetla: #e8941a;   /* bright gold */
+  --bk-bijela:          #f4f0e8;   /* warm white */
+  --bk-bijela-hladna:   #e8e4dc;   /* cool white */
+  --bk-crna:            #0d0f18;   /* near black */
+
+  /* Colour — text */
+  --bk-tekst:           #2a2620;   /* body text */
+  --bk-tekst-svjetli:   #5a5040;   /* secondary text */
+  --bk-separator:       rgba(200, 120, 32, 0.25);
+
+  /* Legacy dark-theme tokens (index.html / style.css compatibility) */
+  --bg:    #080808;
+  --ink:   #e8e6e1;
+  --gold:  #c8a84b;
+  --gold2: #e8c96b;
+  --dim:   #252525;
+  --muted: #4a4a4a;
+
+  /* Typography */
+  --font-serif:   'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Source Serif 4', Georgia, serif;
+  --font-sans:    'Raleway', system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-xs:  0.4rem;
+  --space-sm:  0.8rem;
+  --space-md:  1.6rem;
+  --space-lg:  3.2rem;
+  --space-xl:  5rem;
+
+  /* Layout */
+  --max-width-content: 800px;
+  --max-width-wide:    1100px;
+}
+
+
+/* ─────────────────────────────────────────────
+   RESET
+───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ─────────────────────────────────────────────
+   SHARED SITE HEADER / NAV
+   Class: .bk-site-header
+───────────────────────────────────────────── */
+.bk-site-header {
+  background-color: var(--bk-plava);
+  padding: 0 2rem;
+  border-bottom: 2px solid var(--bk-zlatna);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.bk-site-header-inner {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.bk-logo {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--bk-bijela);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.bk-logo span {
+  color: var(--bk-zlatna-svijetla);
+}
+
+.bk-site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.bk-site-nav a {
+  color: rgba(244, 240, 232, 0.6);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.bk-site-nav a:hover {
+  color: var(--bk-zlatna-svijetla);
+}
+
+.bk-site-nav a.active {
+  color: var(--bk-zlatna);
+}
+
+.bk-site-nav .nav-separator {
+  color: rgba(200, 120, 32, 0.3);
+  font-size: 0.7rem;
+  user-select: none;
+}
+
+
+/* ─────────────────────────────────────────────
+   SHARED SITE FOOTER
+   Class: .bk-site-footer
+───────────────────────────────────────────── */
+.bk-site-footer {
+  background-color: var(--bk-plava);
+  color: rgba(244, 240, 232, 0.5);
+  padding: 3rem 2rem;
+  border-top: 2px solid var(--bk-zlatna);
+}
+
+.bk-site-footer-inner {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.bk-footer-col-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bk-zlatna);
+  margin-bottom: 1rem;
+}
+
+.bk-footer-col a {
+  display: block;
+  color: rgba(244, 240, 232, 0.5);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s;
+}
+
+.bk-footer-col a:hover {
+  color: var(--bk-bijela);
+}
+
+.bk-footer-bottom {
+  max-width: var(--max-width-wide);
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(200, 120, 32, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bk-footer-bottom-text {
+  font-size: 0.78rem;
+  color: rgba(244, 240, 232, 0.3);
+  letter-spacing: 0.03em;
+}
+
+
+/* ─────────────────────────────────────────────
+   UTILITY CLASSES
+───────────────────────────────────────────── */
+.bk-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bk-zlatna);
+  opacity: 0.9;
+}
+
+.bk-section-number {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bk-zlatna);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.bk-separator-line {
+  border: none;
+  border-top: 1px solid var(--bk-separator);
+  margin: var(--space-lg) 0;
+}
+
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .bk-site-header-inner {
+    height: auto;
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .bk-site-nav {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .bk-site-nav a {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .bk-site-footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
