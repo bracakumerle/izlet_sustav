@@ -152,3 +152,31 @@ registry/audit_ledger.json — provenance ledger v1.0
 DEPLOYMENT READY. Sandbox update pending Petar approval.
 Citation set: 4x Tier 1 + hrvatski-glasnik.com + fenix-magazin.de + maxportal.hr + tomislavcity.com + mostarski.info
 Convergence anchor: STRICE-IVANE-2025 (P0, high confidence)
+
+---
+
+## SESSION: CMP-4 → CMP-8
+
+**Datum:** 18–19.05.2026.
+**Status:** CLOSED — ARCHIVED
+
+**Što je riješeno:**
+
+- Notion semantički groundiran (Root Context Block + Architecture Map)
+- Runtime Context stranica kreirana (L0 orientation layer)
+- iZLET Root Context rewritan
+- ND Root Context dodan
+- HrStud stranica kreirana
+- Continuity vector definiran: Petar = runtime operator između iZLET / ND / HrStud / KABINET
+- Cabinet Substitution Effect identificiran i ograničen
+- PHASE A deployano: 4x YouTube naslovi, opisi (HR+EN), tagovi
+
+**Što ostaje otvoreno:**
+
+- Playlist arhitektura + endscreens
+- External gravity / recommendation graph convergence
+- Documentary authority layer
+
+**Ključni zaključak:**
+KABINET služi iZLET-u — ne obratno.
+Sustav više nije bottleneck. Vanjska gravitacija jest.

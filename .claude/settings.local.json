@@ -4,5 +4,6 @@
       "PowerShell(netlify --version)",
       "Bash(git add *)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true
 }

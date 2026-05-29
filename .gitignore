@@ -3,6 +3,7 @@
 
 # Secrets
 .env
+.mcp.json
 
 # OAuth tokens (contain access + refresh tokens)
 registries/.spotify_token.json
