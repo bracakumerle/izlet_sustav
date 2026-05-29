@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vizualni identitet — iZLET / Braća Kumerle</title>
+  <meta name="description" content="Dokumentacija razvoja vizualnog identiteta i arhivske organizacije projekta iZLET (Braća Kumerle). Documentary Reality Doctrine v2.0.">
+  <meta property="og:title" content="Vizualni identitet — iZLET / Braća Kumerle">
+  <meta property="og:description" content="Dokumentacija razvoja vizualnog identiteta i arhivske organizacije projekta iZLET (Braća Kumerle).">
+  <meta property="og:url" content="https://bracakumerle.com/vizualni-identitet">
+  <link rel="canonical" href="https://bracakumerle.com/vizualni-identitet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Vizualni identitet — iZLET / Braća Kumerle",
+    "url": "https://bracakumerle.com/vizualni-identitet",
+    "description": "Dokumentacija razvoja vizualnog identiteta i arhivske organizacije projekta iZLET (Braća Kumerle). Documentary Reality Doctrine v2.0.",
+    "about": {
+      "@type": "MusicGroup",
+      "name": "iZLET",
+      "alternateName": "Braća Kumerle",
+      "url": "https://bracakumerle.com",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q139595518",
+        "https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f",
+        "https://www.youtube.com/@bracakumerle",
+        "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d"
+      ]
+    },
+    "dateModified": "2026-05-29",
+    "version": "1.0",
+    "inLanguage": "hr"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --plava: #1a2744;
+      --plava-srednja: #243460;
+      --plava-svjetla: #2e4080;
+      --zlatna: #c87820;
+      --zlatna-svijetla: #e8941a;
+      --bijela: #f4f0e8;
+      --bijela-hladna: #e8e4dc;
+      --crna: #0d0f18;
+      --tekst: #2a2620;
+      --tekst-svjetli: #5a5040;
+      --separator: rgba(200, 120, 32, 0.25);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bijela);
+      color: var(--tekst);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 18px;
+    }
+
+    /* HEADER */
+    .site-header {
+      background-color: var(--plava);
+      padding: 0 2rem;
+      border-bottom: 2px solid var(--zlatna);
+    }
+
+    .site-header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .site-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--bijela);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .site-logo span {
+      color: var(--zlatna-svijetla);
+    }
+
+    .site-nav a {
+      color: var(--bijela-hladna);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+
+    .site-nav a:hover {
+      opacity: 1;
+    }
+
+    /* HERO */
+    .hero {
+      background-color: var(--plava);
+      background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(200, 120, 32, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(46, 64, 128, 0.5) 0%, transparent 50%);
+      padding: 5rem 2rem 4rem;
+      border-bottom: 1px solid rgba(200, 120, 32, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--zlatna), transparent);
+    }
+
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--zlatna);
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: var(--bijela);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-title em {
+      color: var(--zlatna-svijetla);
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      color: rgba(244, 240, 232, 0.7);
+      font-size: 1.05rem;
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(244, 240, 232, 0.45);
+    }
+
+    .hero-meta-item strong {
+      color: rgba(244, 240, 232, 0.75);
+      font-weight: 400;
+    }
+
+    /* NAV TOC */
+    .toc {
+      background-color: var(--plava-srednja);
+      border-bottom: 1px solid rgba(200, 120, 32, 0.2);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .toc-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .toc-inner::-webkit-scrollbar { display: none; }
+
+    .toc-link {
+      color: rgba(244, 240, 232, 0.6);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.2rem;
+      white-space: nowrap;
+      transition: color 0.2s;
+      border-right: 1px solid rgba(200, 120, 32, 0.15);
+    }
+
+    .toc-link:last-child { border-right: none; }
+    .toc-link:hover { color: var(--zlatna-svijetla); }
+    .toc-link:first-child { padding-left: 0; }
+
+    /* MAIN LAYOUT */
+    .main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* SEKCIJE */
+    .section {
+      padding: 4.5rem 0;
+      border-bottom: 1px solid var(--bijela-hladna);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-number {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--zlatna);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 600;
+      color: var(--plava);
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-body p {
+      margin-bottom: 1.4rem;
+      color: var(--tekst);
+    }
+
+    .section-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* DOCTRINE BOX */
+    .doctrine-box {
+      background-color: var(--plava);
+      border-left: 3px solid var(--zlatna);
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+      position: relative;
+    }
+
+    .doctrine-box::before {
+      content: '"';
+      position: absolute;
+      top: -0.5rem;
+      left: 2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--zlatna);
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .doctrine-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-style: italic;
+      color: var(--bijela);
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ARHITEKTURA BOX */
+    .architecture-box {
+      background-color: var(--bijela-hladna);
+      border: 1px solid rgba(200, 120, 32, 0.2);
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .architecture-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--zlatna);
+      margin-bottom: 1rem;
+    }
+
+    .architecture-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: center;
+    }
+
+    .arch-item {
+      font-size: 0.88rem;
+      color: var(--plava);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      padding: 0.3rem 0;
+    }
+
+    .arch-arrow {
+      color: var(--zlatna);
+      padding: 0 0.5rem;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* EPOHE */
+    .epochs {
+      margin-top: 2rem;
+    }
+
+    .epoch {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 0;
+      margin-bottom: 0;
+      border-top: 1px solid var(--separator);
+      padding: 2rem 0;
+    }
+
+    .epoch:last-child {
+      border-bottom: 1px solid var(--separator);
+    }
+
+    .epoch-meta {
+      padding-right: 2rem;
+    }
+
+    .epoch-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--plava);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+
+    .epoch-years {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--zlatna);
+      text-transform: uppercase;
+    }
+
+    .epoch-body {
+      border-left: 1px solid var(--separator);
+      padding-left: 2rem;
+    }
+
+    .epoch-desc {
+      font-size: 0.95rem;
+      color: var(--tekst);
+      margin-bottom: 1rem;
+      line-height: 1.65;
+    }
+
+    .epoch-examples {
+      list-style: none;
+    }
+
+    .epoch-examples li {
+      font-size: 0.85rem;
+      color: var(--tekst-svjetli);
+      padding: 0.15rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .epoch-examples li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--zlatna);
+      opacity: 0.6;
+    }
+
+    .epoch-examples em {
+      font-style: italic;
+      color: var(--tekst);
+    }
+
+    /* STAT ROW */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background-color: var(--separator);
+      margin: 2rem 0;
+      border: 1px solid var(--separator);
+    }
+
+    .stat-item {
+      background-color: var(--bijela);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--plava);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--tekst-svjetli);
+    }
+
+    /* FOOTER */
+    .page-footer {
+      background-color: var(--plava);
+      color: rgba(244, 240, 232, 0.5);
+      padding: 3rem 2rem;
+      margin-top: 0;
+      border-top: 2px solid var(--zlatna);
+    }
+
+    .page-footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-col-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--zlatna);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(244, 240, 232, 0.5);
+      text-decoration: none;
+      font-size: 0.88rem;
+      margin-bottom: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--bijela);
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(200, 120, 32, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom-text {
+      font-size: 0.78rem;
+      color: rgba(244, 240, 232, 0.3);
+      letter-spacing: 0.03em;
+    }
+
+    .footer-version {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: rgba(200, 120, 32, 0.5);
+      text-transform: uppercase;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 680px) {
+      .epoch {
+        grid-template-columns: 1fr;
+      }
+
+      .epoch-meta {
+        padding-right: 0;
+        margin-bottom: 1rem;
+      }
+
+      .epoch-body {
+        border-left: none;
+        border-top: 1px solid var(--separator);
+        padding-left: 0;
+        padding-top: 1rem;
+      }
+
+      .stat-row {
+        grid-template-columns: 1fr;
+      }
+
+      .page-footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .toc-link {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      .hero {
+        padding: 3.5rem 1.5rem 3rem;
+      }
+
+      .main {
+        padding: 0 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="https://bracakumerle.com" class="site-logo">i<span>ZLET</span></a>
+      <nav class="site-nav">
+        <a href="https://bracakumerle.com">← Natrag</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">iZLET / Braća Kumerle — Dokumentacija</p>
+      <h1 class="hero-title">Vizualni<br>identitet <em>iZLET-a</em></h1>
+      <p class="hero-subtitle">
+        Razvoj vizualnog identiteta i arhivska organizacija javno dostupnog korpusa projekta iZLET (Braća Kumerle) od 2009. do danas.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><strong>Verzija</strong> 1.0</div>
+        <div class="hero-meta-item"><strong>Ratificirano</strong> 29.05.2026.</div>
+        <div class="hero-meta-item"><strong>Doktrina</strong> Documentary Reality v2.0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Sadržaj">
+    <div class="toc-inner">
+      <a href="#sto-je-izlet" class="toc-link">1. Što je iZLET</a>
+      <a href="#evolucija" class="toc-link">2. Evolucija identiteta</a>
+      <a href="#doktrina" class="toc-link">3. Documentary Doctrine</a>
+      <a href="#youtube" class="toc-link">4. YouTube arhiv</a>
+      <a href="#epohe" class="toc-link">5. Arhivske epohe</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- 1. ŠTO JE IZLET -->
+    <section class="section" id="sto-je-izlet">
+      <span class="section-number">01 — Identitet</span>
+      <h2 class="section-title">Što je iZLET</h2>
+      <div class="section-body">
+        <p>
+          iZLET (Braća Kumerle) hrvatski je glazbeni projekt čiji je javno dokumentirani digitalni trag kontinuirano prisutan od 2009. godine. Tijekom tog razdoblja nastao je korpus autorskih pjesama, videozapisa, koncertnih snimki, studijskih izdanja i arhivskih materijala objavljenih na različitim digitalnim platformama.
+        </p>
+        <p>
+          Projekt je povezan s djelima kao što su <em>Čast</em>, <em>Moj Dinamo</em>, <em>Sjever uz odsutne</em> i <em>Frane Tente</em>, koja predstavljaju neke od najprepoznatljivijih javno dostupnih zapisa unutar arhive.
+        </p>
+        <p>
+          Ova stranica dokumentira razvoj vizualnog identiteta i način na koji je postojeći korpus organiziran, predstavljen i arhiviran kroz vrijeme.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. EVOLUCIJA -->
+    <section class="section" id="evolucija">
+      <span class="section-number">02 — Evolucija</span>
+      <h2 class="section-title">Evolucija vizualnog identiteta (2009–2026)</h2>
+      <div class="section-body">
+        <p>
+          Vizualni identitet projekta nije nastao kao rezultat jednokratnog rebrandiranja, nego kao posljedica višegodišnjeg nakupljanja javno objavljenih materijala.
+        </p>
+        <p>
+          Rani videozapisi i fotografije nastali su u uvjetima ograničenih produkcijskih mogućnosti te predstavljaju najstariji sačuvani sloj digitalne arhive. Tijekom kasnijih godina pojavljuju se profesionalnije produkcije, službeni spotovi, koncertne snimke i diskografski materijali povezani s različitim fazama razvoja projekta.
+        </p>
+        <p>
+          Od 2024. godine vizualni materijali sve više služe organizaciji, klasifikaciji i prezentaciji već postojećeg korpusa. Umjesto uklanjanja starijih sadržaja, arhiva se zadržava i dobiva dodatni kontekst kroz kataloge, registre i tematske cjeline.
+        </p>
+        <p>
+          Trenutni vizualni sustav temelji se na kontinuitetu arhive, jasno označenim epohama i dosljednoj prezentaciji javno dostupnih izvora.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. DOKTRINA -->
+    <section class="section" id="doktrina">
+      <span class="section-number">03 — Doktrina</span>
+      <h2 class="section-title">Documentary Reality Doctrine v2.0</h2>
+      <div class="section-body">
+        <p>
+          Documentary Reality Doctrine predstavlja načelo prema kojem se postojeći zapisi čuvaju i prikazuju u obliku koji omogućuje provjeru njihova nastanka, konteksta i vremenskog slijeda.
+        </p>
+
+        <div class="doctrine-box">
+          <p class="doctrine-quote">
+            "Imperfection must emerge from circumstance, not intention."
+          </p>
+        </div>
+
+        <p>
+          U praksi to znači da se stariji materijali ne uklanjaju zato što više ne odgovaraju aktualnom estetskom ili produkcijskom standardu. Umjesto toga, zadržavaju se kao dio dokumentiranog razvoja projekta.
+        </p>
+        <p>
+          Pristup se temelji na prioritetu provjerljivih zapisa nad interpretacijom i rekonstrukcijom. Arhivski materijali, registri, objavljena izdanja i vanjski izvori imaju prednost pred naknadnim narativnim objašnjenjima.
+        </p>
+        <p>
+          Vizualni identitet stoga nije promatran kao zaseban marketinški sloj, nego kao rezultat javno dokumentiranih događaja, objava i produkcijskih ciklusa.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. YOUTUBE -->
+    <section class="section" id="youtube">
+      <span class="section-number">04 — Arhiv</span>
+      <h2 class="section-title">YouTube kao longitudinalni arhiv</h2>
+      <div class="section-body">
+        <p>
+          YouTube kanal predstavlja najveći javno dostupan video arhiv povezan s projektom iZLET.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat-item">
+            <span class="stat-number">254</span>
+            <span class="stat-label">Javnih videozapisa</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Ratificiranih epoha</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2009</span>
+            <span class="stat-label">Početak arhive</span>
+          </div>
+        </div>
+
+        <p>
+          Stanje arhivskog kataloga na dan 29.05.2026. obuhvaća 254 javno evidentirana videozapisa različitih formata, uključujući službene spotove, koncertne snimke, dokumentarne zapise, diskografske materijale, Shorts sadržaj i arhivske objave.
+        </p>
+
+        <div class="architecture-box">
+          <p class="architecture-label">Javna arhitektura kanala — 29.05.2026.</p>
+          <div class="architecture-flow">
+            <span class="arch-item">Službeni spotovi</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-item">Maksimir Harambaša</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-item">Live Archive</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-item">Katarza</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-item">Diskografija</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-item">Shorts</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-item">Covers</span>
+          </div>
+        </div>
+
+        <p>
+          Takva organizacija omogućuje pregled korpusa prema vrsti sadržaja i povijesnom kontekstu nastanka. Detaljniji pregled dostupan je kroz zaseban YouTube arhivski katalog koji služi kao javni registar video korpusa i referentna točka za identifikaciju pojedinačnih zapisa.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. EPOHE -->
+    <section class="section" id="epohe">
+      <span class="section-number">05 — Epohe</span>
+      <h2 class="section-title">Arhivske epohe</h2>
+      <div class="section-body">
+        <p>
+          Arhiva projekta strukturirana je kroz pet ratificiranih epoha koje služe klasifikaciji javno dostupnog materijala.
+        </p>
+
+        <div class="epochs">
+
+          <div class="epoch">
+            <div class="epoch-meta">
+              <p class="epoch-name">Proto iZLET</p>
+              <p class="epoch-years">2012–2014</p>
+            </div>
+            <div class="epoch-body">
+              <p class="epoch-desc">Razdoblje prvih javno dostupnih autorskih videozapisa i početnih digitalnih tragova projekta.</p>
+              <ul class="epoch-examples">
+                <li><em>Pernastica</em></li>
+                <li><em>Ljeto ide majko</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="epoch">
+            <div class="epoch-meta">
+              <p class="epoch-name">Leteći Majmuni</p>
+              <p class="epoch-years">2014–2016</p>
+            </div>
+            <div class="epoch-body">
+              <p class="epoch-desc">Razdoblje povezano s materijalima nastalim oko albuma <em>Leteći Majmuni</em> i pripadajućih koncertnih aktivnosti.</p>
+              <ul class="epoch-examples">
+                <li><em>Vlak (Live iz Tvornice)</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="epoch">
+            <div class="epoch-meta">
+              <p class="epoch-name">Live Circuit</p>
+              <p class="epoch-years">2016–2019</p>
+            </div>
+            <div class="epoch-body">
+              <p class="epoch-desc">Razdoblje u kojem značajan dio javno dostupnog korpusa proizlazi iz nastupa, koncertnih aktivnosti i povezanih izdanja.</p>
+              <ul class="epoch-examples">
+                <li><em>Pjesma o Grgi</em></li>
+                <li><em>Čast</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="epoch">
+            <div class="epoch-meta">
+              <p class="epoch-name">Marjanska Trilogija</p>
+              <p class="epoch-years">2019–2023</p>
+            </div>
+            <div class="epoch-body">
+              <p class="epoch-desc">Razdoblje povezano s ciklusom radova okupljenih oko Marjanske trilogije te pratećih video izdanja.</p>
+              <ul class="epoch-examples">
+                <li><em>Frane Tente</em></li>
+                <li><em>Nezavisna Država Hrvatska</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="epoch">
+            <div class="epoch-meta">
+              <p class="epoch-name">Documentary Resurgence</p>
+              <p class="epoch-years">2024–</p>
+            </div>
+            <div class="epoch-body">
+              <p class="epoch-desc">Razdoblje obilježeno sustavnom organizacijom arhive, dokumentiranjem postojećeg korpusa i novim autorskim izdanjima.</p>
+              <ul class="epoch-examples">
+                <li><em>Sjever uz odsutne</em></li>
+                <li><em>Moj Dinamo</em></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <div class="footer-col">
+        <p class="footer-col-title">iZLET</p>
+        <a href="https://bracakumerle.com">bracakumerle.com</a>
+        <a href="https://www.youtube.com/@bracakumerle">YouTube @bracakumerle</a>
+        <a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d">Spotify</a>
+        <a href="https://music.apple.com/us/artist/izlet/682224896">Apple Music</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Autoritet</p>
+        <a href="https://www.wikidata.org/wiki/Q139595518">Wikidata Q139595518</a>
+        <a href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f">MusicBrainz</a>
+        <a href="https://www.discogs.com/artist/6610944">Discogs</a>
+        <a href="https://hr.wikipedia.org/wiki/IZLET">Wikipedia HR</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Kontakt</p>
+        <a href="mailto:izletband@gmail.com">izletband@gmail.com</a>
+        <a href="https://www.facebook.com/bracakumerle">Facebook</a>
+        <a href="https://instagram.com/bracakumerle">Instagram</a>
+        <a href="https://tiktok.com/@bracakumerle">TikTok</a>
+      </div>
+    </div>
+    <div class="page-footer-inner">
+      <div class="footer-bottom" style="grid-column: 1/-1;">
+        <p class="footer-bottom-text">© 2026 Braća Kumerle Music. Sva prava pridržana.</p>
+        <p class="footer-version">VISUAL_IDENTITY_AUTHORITY_SPEC v1.0 — Ratificirano 29.05.2026.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
