@@ -1391,5 +1391,20 @@
         "match_type": "exact"
       }
     }
+  },
+  "releases": {
+    "nikad_ne_znas_album": {
+      "title_original": "NIKAD NE ZNAS, TO JE ONO...",
+      "title_normalized": "Nikad ne znaš, to je ono…",
+      "type": "album",
+      "year": 2016,
+      "label": "Dallas Records",
+      "catalog_number": "CD DALLAS 829",
+      "discogs_release_id": null,
+      "musicbrainz_release_id": null,
+      "spotify_album_id": null,
+      "barcode": null,
+      "notes": "[OBSERVED] catalog_number verificiran od Generala 29.05.2026."
+    }
   }
 }
