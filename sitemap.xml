@@ -15,6 +15,30 @@
   <url><loc>https://bracakumerle.com/kontakt</loc>
     <changefreq>yearly</changefreq><priority>0.5</priority>
   </url>
+  <url><loc>https://bracakumerle.com/vizualni-identitet</loc>
+    <changefreq>yearly</changefreq><priority>0.8</priority>
+  </url>
+  <url><loc>https://bracakumerle.com/pjesme/zalo</loc>
+    <changefreq>yearly</changefreq><priority>0.9</priority>
+  </url>
+  <url><loc>https://bracakumerle.com/pjesme/cast</loc>
+    <changefreq>yearly</changefreq><priority>0.9</priority>
+  </url>
+  <url><loc>https://bracakumerle.com/pjesme/frane-tente</loc>
+    <changefreq>yearly</changefreq><priority>0.9</priority>
+  </url>
+  <url><loc>https://bracakumerle.com/pjesme/sjever-uz-odsutne</loc>
+    <changefreq>yearly</changefreq><priority>0.9</priority>
+  </url>
+  <url><loc>https://bracakumerle.com/pjesme/moj-dinamo</loc>
+    <changefreq>yearly</changefreq><priority>0.9</priority>
+  </url>
+  <url><loc>https://bracakumerle.com/pjesme/krijesovi-lazi</loc>
+    <changefreq>yearly</changefreq><priority>0.9</priority>
+  </url>
+  <url><loc>https://bracakumerle.com/pjesme/u-svijetu-bajki</loc>
+    <changefreq>yearly</changefreq><priority>0.9</priority>
+  </url>
   <url><loc>https://bracakumerle.com/arhiva</loc>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
