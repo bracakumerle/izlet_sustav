@@ -29,8 +29,8 @@
 - [x] genius.com — Sjever uz odsutne
 - [x] genius.com — Čast
 - [x] genius.com — Žalo
-- [ ] tekstovi-pjesama.com — Žalo
-- [ ] tekstovi-pjesama.com — Čast
+- [x] tekstovi.net — Žalo
+- [x] tekstovi.net — Čast + Moj Dinamo + Sjever uz odsutne + Frane Tente
 - [ ] musixmatch.com — sve 5 (claim artist profil)
 
 ### Registry Platforms (UGC, bez urednika)
@@ -57,4 +57,5 @@
 ---
 
 *Review: 13.06.2026.*
+
 
