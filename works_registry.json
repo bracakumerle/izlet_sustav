@@ -1497,11 +1497,21 @@
                                                  "catalog_number":  "BL2361431",
                                                  "upc":  "3614971838301",
                                                  "track_count":  13,
-                                                 "discogs_release_id":  null,
                                                  "musicbrainz_release_id":  null,
                                                  "spotify_album_id":  "6hT2KjY5IqE6e3wqSmNJyB",
                                                  "barcode":  null,
-                                                 "notes":  "[RATIFIED] catalog_number=BL2361431 verificiran od Generala 29.05.2026. Prethodni unos CD DALLAS 829 zamijenjen verificiranim brojem. UPC i Spotify album ID verificirani 29.05.2026."
-                                             }
+                                                 "notes":  "[RATIFIED] catalog_number=BL2361431 verificiran od Generala 29.05.2026. Prethodni unos CD DALLAS 829 zamijenjen verificiranim brojem. UPC i Spotify album ID verificirani 29.05.2026.",
+                                                 "discogs_release_id":  "12898284"
+                                             },
+                     "katarza_album":  {
+                                           "title_normalized":  "Katarza",
+                                           "type":  "album",
+                                           "year":  2019,
+                                           "label":  "Dallas Records",
+                                           "catalog_number":  "CD DALLAS 895",
+                                           "discogs_release_id":  "35923165",
+                                           "spotify_album_id":  null,
+                                           "notes":  "Verificiran Discogs r35923165"
+                                       }
                  }
 }
