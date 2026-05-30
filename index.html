@@ -26,43 +26,82 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Raleway:wght@200;300;400;500&display=swap"></noscript>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "@id": "https://bracakumerle.com/#musicgroup",
-    "name": "iZLET",
-    "description": "iZLET (also known as Braća Kumerle) is a Croatian rock band founded in Zagreb in 2007.",
-    "image": [
-      "https://bracakumerle.com/hero.jpg",
-      "https://bracakumerle.com/live.jpg"
-    ],
-    "logo": "https://bracakumerle.com/logo.png",
-    "alternateName": [
-      "Braća Kumerle",
-      "iZlet",
-      "Izlet",
-      "Braca Kumerle"
-    ],
-    "url": "https://bracakumerle.com",
-    "genre": "Rock",
-    "foundingDate": "2007",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Zagreb, Croatia"
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "@id": "https://bracakumerle.com/#izlet-musicgroup",
+  "name": "iZLET",
+  "alternateName": ["Braća Kumerle", "Braca Kumerle", "Izlet", "iZlet"],
+  "description": "Independent Croatian rock band from Zagreb, founded in 2007 by brothers Toni Kumerle and Petar Kumerle. Released under independent label Braća Kumerle Music.",
+  "url": "https://bracakumerle.com",
+  "logo": "https://bracakumerle.com/logo.png",
+  "image": [
+    "https://bracakumerle.com/hero.jpg",
+    "https://bracakumerle.com/live.jpg"
+  ],
+  "foundingDate": "2007",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Zagreb",
+    "addressCountry": "HR"
+  },
+  "genre": ["Rock", "Indie Rock", "Croatian Rock"],
+  "member": [
+    {
+      "@type": "OrganizationRole",
+      "member": {
+        "@type": "Person",
+        "name": "Toni Kumerle",
+        "nationality": "Croatian",
+        "sameAs": "https://www.wikidata.org/wiki/Q139595627"
+      },
+      "roleName": "Musician",
+      "startDate": "2007"
     },
-    "sameAs": [
-      "https://www.wikidata.org/wiki/Q139595518",
-      "https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f",
-      "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d",
-      "https://www.youtube.com/@bracakumerle",
-      "https://www.youtube.com/channel/UC8jNEBUrOqCcXqVleV9ccKg",
-      "https://www.facebook.com/bracakumerle",
-      "https://music.apple.com/us/artist/izlet/682224896",
-      "https://www.deezer.com/artist/5054702",
-      "https://tidal.com/artist/5080072"
-    ]
-  }
-  </script>
+    {
+      "@type": "OrganizationRole",
+      "member": {
+        "@type": "Person",
+        "name": "Petar Kumerle",
+        "nationality": "Croatian",
+        "sameAs": "https://www.wikidata.org/wiki/Q139595619"
+      },
+      "roleName": "Musician",
+      "startDate": "2007"
+    }
+  ],
+  "album": [
+    {
+      "@type": "MusicAlbum",
+      "name": "Nikad ne znaš, to je ono…",
+      "datePublished": "2016",
+      "byArtist": { "@id": "https://bracakumerle.com/#izlet-musicgroup" }
+    },
+    {
+      "@type": "MusicAlbum",
+      "name": "Katarza",
+      "datePublished": "2019",
+      "byArtist": { "@id": "https://bracakumerle.com/#izlet-musicgroup" }
+    }
+  ],
+  "record": {
+    "@type": "MusicLabel",
+    "name": "Braća Kumerle Music",
+    "sameAs": "https://www.discogs.com/label/4368922"
+  },
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q139595518",
+    "https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f",
+    "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d",
+    "https://music.apple.com/hr/artist/izlet/682224896",
+    "https://www.discogs.com/artist/6610944",
+    "https://www.tidal.com/artist/5080072",
+    "https://hr.wikipedia.org/wiki/IZLET",
+    "https://www.youtube.com/channel/UC8jNEBUrOqCcXqVleV9ccKg",
+    "https://www.deezer.com/artist/5054702"
+  ]
+}
+</script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -639,5 +678,6 @@
 
 </body>
 </html>
+
 
 
