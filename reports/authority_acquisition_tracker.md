@@ -1,4 +1,4 @@
-# Authority Acquisition Tracker
+﻿# Authority Acquisition Tracker
 
 **STATUS:** ACTIVE  
 **SPRINT:** #1 — External Authority Injection  
@@ -24,11 +24,11 @@
 
 ### UGC Platforms (radimo sami, bez urednika)
 
-- [ ] genius.com — Frane Tente
-- [ ] genius.com — Moj Dinamo
-- [ ] genius.com — Sjever uz odsutne
-- [ ] genius.com — Čast
-- [ ] genius.com — Žalo
+- [x] genius.com — Frane Tente
+- [x] genius.com — Moj Dinamo
+- [x] genius.com — Sjever uz odsutne
+- [x] genius.com — Čast
+- [x] genius.com — Žalo
 - [ ] tekstovi-pjesama.com — Žalo
 - [ ] tekstovi-pjesama.com — Čast
 - [ ] musixmatch.com — sve 5 (claim artist profil)
@@ -57,3 +57,4 @@
 ---
 
 *Review: 13.06.2026.*
+
