@@ -156,7 +156,8 @@
                                "youtube_id":  "Tz5gZiFe4dU",
                                "musicbrainz":  {
                                                    "recording_id":  "8b46c318-95d8-4470-acf2-f20d10996e50",
-                                                   "confidence":  1
+                                                   "confidence":  1,
+                                                   "work_id":  "8f40f1f9-7316-451c-84fb-f26357541d81"
                                                }
                            },
                   "oo_da_sa_krilima":  {
@@ -788,7 +789,8 @@
                                                   },
                                "musicbrainz":  {
                                                    "recording_id":  "c11545fd-982a-44b9-916f-ab5231c376be",
-                                                   "confidence":  1
+                                                   "confidence":  1,
+                                                   "work_id":  "dd92f195-757b-4411-8959-9d2cbe9f796b"
                                                }
                            },
                   "oceana":  {
@@ -1265,7 +1267,8 @@
                                                          "release_id":  null,
                                                          "artist_id":  null,
                                                          "confidence":  1.0,
-                                                         "match_type":  "exact"
+                                                         "match_type":  "exact",
+                                                         "work_id":  "d89204a8-e68d-42e6-b719-8be781132800"
                                                      },
                                      "youtube_id":  "xp-f5vjciCk"
                                  },
@@ -1349,7 +1352,8 @@
                                                           "release_id":  null,
                                                           "artist_id":  null,
                                                           "confidence":  1.0,
-                                                          "match_type":  "exact"
+                                                          "match_type":  "exact",
+                                                          "work_id":  "48601b97-cff8-4346-af89-987de31bcfa1"
                                                       },
                                       "youtube_id":  "sAWssQ-lNtk",
                                       "spotify_track":  "1Vg4lIa8nKwoJGgsJt0X99"
@@ -1489,7 +1493,8 @@
                                                                 "release_id":  "8b675ac0-7ab0-40e3-b8a1-a2a6c2bab553",
                                                                 "artist_id":  "b973e6f2-c282-473a-b2fb-ffb4466b312f",
                                                                 "confidence":  1.0,
-                                                                "match_type":  "exact"
+                                                                "match_type":  "exact",
+                                                                "work_id":  "7d41efc4-76e3-4b5b-80ed-ffddddbb0cd0"
                                                             },
                                             "youtube_id":  "o02z8L8gOn0"
                                         }
