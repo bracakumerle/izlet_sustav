@@ -139,3 +139,59 @@ Sve je riješeno. Jedino što podiže authority su **vanjski, neovisni, indeksir
 
 *Generirano: 30.05.2026. — Claude (Ministar Autoriteta)*  
 *Sljedeći review: 30.06.2026. — mjeriti promjenu u External Mentions %*
+
+---
+
+## Kabinet Intelligence — 30.05.2026.
+
+### Grok — Authority Ranking (Work-Level Score 0-100)
+
+| Rang | Pjesma | Score | Ključni razlog |
+|---|---|---|---|
+| 1 | Frane Tente | 86 | Historijska tema + Wikipedia osoba + mainstream tagovi + streaming |
+| 2 | Moj Dinamo | 79 | BBB ekosustav + 70K YT views + Shazam + discovery potencijal |
+| 3 | Sjever uz odsutne | 73 | BBB trag + navijački portali + jasna tematska gustina |
+| 4 | Čast | 64 | Portali postoje ali duplicirani PR sadržaj |
+| 5 | Žalo | 57 | Samo Ziher intervju kao relevantan medijski spomen |
+
+**Sistemski gap (Grok):** Vanjski izvori pokrivaju **temu**, ne **pjesmu kao glazbeno djelo**.
+
+---
+
+### Perplexity — Top 5 Acquisition Targets (Priority Matrix)
+
+| Prioritet | Target | Pjesma | ROI razlog |
+|---|---|---|---|
+| 1 | hr.wikipedia.org/wiki/Frane_Tente | Frane Tente | Enciklopedijska work-level citacija → EN Wikipedia chain |
+| 2 | genius.com (novi profil) | Sve | Work-level registracija → Wikidata import |
+| 3 | barikada.com (novi članak) | Čast / Žalo | Jedini neovisni glazbeni glas koji ih je citirao |
+| 4 | badblueboys.hr (novi unos) | Moj Dinamo / Sjever | Primarna zajednica za obje navijačke himne |
+| 5 | index.hr ili jutarnji.hr | Frane Tente | Mainstream DA diversifikacija |
+
+---
+
+### Gemini — Authority Gap Map
+
+| Pjesma | Trenutno | Nedostaje |
+|---|---|---|
+| Frane Tente | YouTube, Spotify, Wikipedia (osoba), mainstream tag | Genius lyrics, akademski citat (Hrčak), kulturni portal koji veže osobu → pjesmu |
+| Moj Dinamo | YouTube 70K, Spotify, Shazam, Wikipedia | BBB portal citat, sportski medij, lyrics platform |
+| Sjever uz odsutne | YouTube, Spotify, Wikipedia, braniteljski portali | Neovisna glazbena recenzija, lyrics platform |
+| Žalo | YouTube, Wikipedia, Ziher (jedino) | Druga glazbena recenzija, lokalni dalmatinski medij, Genius/Musixmatch |
+| Čast | YouTube, Wikipedia album, Lika Club (PR) | Strukturirana recenzija, analiza (ne vijest), lyrics |
+
+---
+
+## Operativni zaključak
+
+**Pet URL-ova koji najviše dižu cijeli sustav (konsenzus Perplexity + Grok):**
+
+1. **Wikipedia HR — Frane_Tente** — jedan rečenični spomen u sekciji "u kulturi"
+2. **Genius.com** — lyrics profil za Žalo + Čast (minimalno)
+3. **Barikada.com** — novi članak (recenzija Katarze ili retrospektiva)
+4. **badblueboys.hr** — nova stranica za Moj Dinamo
+5. **index.hr / jutarnji.hr** — kulturni/sportski tekst s eksplicitnim iZLET spominjanjem
+
+**Važno:** Nijedna od ovih 5 akcija ne zahtijeva novo deployanje koda.  
+Sve su content/community akcije.
+
