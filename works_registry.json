@@ -1501,7 +1501,36 @@
                                                             },
                                             "youtube_id":  "o02z8L8gOn0",
                                             "spotify_track":  "546tgpxlqS3GsLPEo13BP2"
-                                        }
+                                        },
+                  "strice_ivane_cover":  {
+                                             "rank":  null,
+                                             "type":  "cover",
+                                             "title_original":  "STRIČE IVANE",
+                                             "title_normalized":  "Striče Ivane",
+                                             "original_work_iswc":  "T-900.869.775-4",
+                                             "isrc":  null,
+                                             "iswc":  null,
+                                             "label":  null,
+                                             "year":  2025,
+                                             "wikipedia_eligible":  false,
+                                             "event_reference":  "event_strice_ivane_performance_2025",
+                                             "youtube_references":  [
+                                                                        "S04QjTS23KU",
+                                                                        "zOVPy32dfIg",
+                                                                        "3wsqpwuWEMM",
+                                                                        "l4g11KCitN0"
+                                                                    ],
+                                             "media_references":  [
+                                                                      "ART023",
+                                                                      "ART024",
+                                                                      "ART025",
+                                                                      "ART026",
+                                                                      "ART027",
+                                                                      "ART028",
+                                                                      "ART029"
+                                                                  ],
+                                             "notes":  "Cover originalne domovinske himne. Braća Kumerle nisu autori originala. Registry unos kreira se radi zatvaranja broken reference u events_registry (event_strice_ivane_performance_2025)."
+                                         }
               },
     "releases":  {
                      "nikad_ne_znas_album":  {
