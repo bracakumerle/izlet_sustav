@@ -158,7 +158,8 @@
                                                    "recording_id":  "8b46c318-95d8-4470-acf2-f20d10996e50",
                                                    "confidence":  1,
                                                    "work_id":  "8f40f1f9-7316-451c-84fb-f26357541d81"
-                                               }
+                                               },
+                               "spotify_track":  "1OqLa2wkxlt0KDsdGzcoZ0"
                            },
                   "oo_da_sa_krilima":  {
                                            "rank":  4,
@@ -791,7 +792,8 @@
                                                    "recording_id":  "c11545fd-982a-44b9-916f-ab5231c376be",
                                                    "confidence":  1,
                                                    "work_id":  "dd92f195-757b-4411-8959-9d2cbe9f796b"
-                                               }
+                                               },
+                               "spotify_track":  "6xjlYNlucQ1KK5Xh9VgMqM"
                            },
                   "oceana":  {
                                  "rank":  23,
@@ -1270,7 +1272,8 @@
                                                          "match_type":  "exact",
                                                          "work_id":  "d89204a8-e68d-42e6-b719-8be781132800"
                                                      },
-                                     "youtube_id":  "xp-f5vjciCk"
+                                     "youtube_id":  "xp-f5vjciCk",
+                                     "spotify_track":  "5gfjKvC0yxasJd0hafXTwx"
                                  },
                   "znakovlje_hrvata":  {
                                            "rank":  36,
@@ -1496,7 +1499,8 @@
                                                                 "match_type":  "exact",
                                                                 "work_id":  "7d41efc4-76e3-4b5b-80ed-ffddddbb0cd0"
                                                             },
-                                            "youtube_id":  "o02z8L8gOn0"
+                                            "youtube_id":  "o02z8L8gOn0",
+                                            "spotify_track":  "546tgpxlqS3GsLPEo13BP2"
                                         }
               },
     "releases":  {
