@@ -1,1433 +1,1505 @@
-{
-  "meta": {
-    "registry_version": "1.0",
-    "created": "2026-05-04",
-    "source": "ISWCNet / CISAC via HDS-ZAMP",
-    "creators": {
-      "petar_kumerle": {
-        "ipi_name_number": "00772816513",
-        "affiliation": "HDS-ZAMP",
-        "wikidata_qid": "Q139595619",
-        "zamp_member_id": "154058675"
-      },
-      "toni_kumerle": {
-        "ipi_name_number": "00638706326",
-        "affiliation": "HDS-ZAMP",
-        "wikidata_qid": "Q139595627",
-        "zamp_member_id": "153938259"
-      }
-    },
-    "performer": {
-      "name": "IZLET",
-      "type": "GRUPA",
-      "isni": null,
-      "ipn": null
-    },
-    "total_works": 44,
-    "completion_fields": [
-      "iswc",
-      "title_normalized",
-      "agency_work_code_zamp",
-      "wikidata_qid",
-      "musicbrainz_work_id",
-      "musicbrainz_recording_id",
-      "discogs_master_id",
-      "spotify_track_id",
-      "isrc",
-      "wikipedia_eligible",
-      "media_references",
-      "notes"
-    ]
-  },
-  "works": {
-    "ti_si_cudesna": {
-      "rank": 1,
-      "iswc": "T-911.739.887-5",
-      "title_original": "TI SI CUDESNA",
-      "title_normalized": "Ti si čudesna",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "3aqsGyAU8uZ7gLJLRIsR06",
-      "isrc": "HRA371600088",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "pernastica": {
-      "rank": 2,
-      "iswc": "T-910.770.479-0",
-      "title_original": "PERNASTICA",
-      "title_normalized": "Pernastica",
-      "agency_work_code_zamp": "00000154417019",
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "297oh7P3lMdaaHwKGJofe5",
-      "isrc": "HRA371200384",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "zalo": {
-      "rank": 3,
-      "iswc": "T-914.228.446-6",
-      "title_original": "ZALO",
-      "title_normalized": "Žalo",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "1OqLa2wkxlt0KDsdGzcoZ0",
-      "isrc": "HRA371300115",
-      "wikipedia_eligible": true,
-      "media_references": [
-        "MTV Adria rotation 2013",
-        "HRT Radio Dubrovnik top lista"
-      ],
-      "notes": "MTV Adria rotacija — najjači authority signal od svih 32 djela",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "oo_da_sa_krilima": {
-      "rank": 4,
-      "iswc": "T-916.520.632-6",
-      "title_original": "OO DA, SA KRILIMA",
-      "title_normalized": "Oo da, sa krilima",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "demo/unreleased — nije dostupno na Spotifyu"
-    },
-    "sreo_sam_te": {
-      "rank": 5,
-      "iswc": "T-916.520.640-6",
-      "title_original": "SREO SAM TE",
-      "title_normalized": "Sreo sam te",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "demo/unreleased — nije dostupno na Spotifyu"
-    },
-    "tranu": {
-      "rank": 6,
-      "iswc": "T-916.520.643-9",
-      "title_original": "TRANU",
-      "title_normalized": "Tranu",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "demo/unreleased — nije dostupno na Spotifyu"
-    },
-    "masa": {
-      "rank": 7,
-      "iswc": "T-916.786.735-8",
-      "title_original": "MASA",
-      "title_normalized": "Maša",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "32rBh69oUY9VdNrLI83uwk",
-      "isrc": "HRA371400333",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "ne_zurim_se": {
-      "rank": 8,
-      "iswc": "T-916.786.864-6",
-      "title_original": "NE ZURIM SE",
-      "title_normalized": "Ne žurim se",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "7CaHN36I9TE7yCAQyZEFsl",
-      "isrc": "HRA371400523",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "srebrni_zmaj": {
-      "rank": 9,
-      "iswc": "T-916.787.266-4",
-      "title_original": "SREBRNI ZMAJ",
-      "title_normalized": "Srebrni zmaj",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "demo/unreleased — nije dostupno na Spotifyu"
-    },
-    "zasto_sutim": {
-      "rank": 10,
-      "iswc": "T-916.787.674-6",
-      "title_original": "ZASTO SUTIM",
-      "title_normalized": "Zašto šutim",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "1UG0hZAJfmZhi99rVXnQh9",
-      "isrc": "HRA371800851",
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART004"
-      ],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "majcin_skut": {
-      "rank": 11,
-      "iswc": "T-920.388.176-9",
-      "title_original": "MAJCIN SKUT",
-      "title_normalized": "Majčin skut",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "0SesSNZyYJYsGxETJUTDmK",
-      "isrc": "HRA371600089",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "svemir": {
-      "rank": 12,
-      "iswc": "T-920.388.279-5",
-      "title_original": "SVEMIR",
-      "title_normalized": "Svemir",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "2A1DDrt0F8PQddvplKWy28",
-      "isrc": "HRA371600046",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Dallas Records singl; album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "imam": {
-      "rank": 13,
-      "iswc": "T-921.432.111-6",
-      "title_original": "IMAM",
-      "title_normalized": "Imam",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "7HBUjyQSVHRkjvfsVAW4D2",
-      "isrc": "HRA371600084",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "kako_da_se_smijem": {
-      "rank": 14,
-      "iswc": "T-921.432.243-7",
-      "title_original": "KAKO DA SE SMIJEM",
-      "title_normalized": "Kako da se smijem",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "1vVheT9TKNU8IojyaQ3fwr",
-      "isrc": "HRA371600086",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "nocima_here_i_am": {
-      "rank": 15,
-      "iswc": "T-921.432.734-1",
-      "title_original": "NOCIMA - HERE I AM",
-      "title_normalized": "Noćima (Here I Am)",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "1DdVjkk6JBJfri0DDVq8Gt",
-      "isrc": "HRA371600085",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "topim_se_i_gubim": {
-      "rank": 16,
-      "iswc": "T-921.433.541-8",
-      "title_original": "TOPIM SE I GUBIM",
-      "title_normalized": "Topim se i gubim se",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "5MSCzS8vYk7BSfx0AeDitg",
-      "isrc": "HRA371600087",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "dva_gemista": {
-      "rank": 17,
-      "iswc": "T-921.445.688-9",
-      "title_original": "DVA GEMISTA",
-      "title_normalized": "Dva gemišta",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "2HMaqDJgaqDM5bEghmaQKj",
-      "isrc": "HRA371600082",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "oni_spavaju": {
-      "rank": 18,
-      "iswc": "T-921.445.718-8",
-      "title_original": "ONI SPAVAJU",
-      "title_normalized": "Oni spavaju",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "5bYJa4KDWnm4yDDJQyrTTC",
-      "isrc": "HRA371600083",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": "Album Nikad ne znaš (2016)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "osmijeh_je_bitan": {
-      "rank": 19,
-      "iswc": "T-928.132.235-8",
-      "title_original": "OSMIJEH JE BITAN",
-      "title_normalized": "Osmijeh je bitan",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "6OvDRJkl8hcvuKv2kL40nb",
-      "isrc": "HRA371800589",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "u_svijetu_bajki": {
-      "rank": 20,
-      "iswc": "T-928.512.491-6",
-      "title_original": "U SVIJETU BAJKI",
-      "title_normalized": "U svijetu bajki",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "2eZOUlMECJSMsfymyDEadO",
-      "isrc": "HRA371800598",
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART003",
-        "ART008"
-      ],
-      "notes": "Demo era (EL, 2010)",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "caroban_otok": {
-      "rank": 21,
-      "iswc": "T-931.111.744-9",
-      "title_original": "CAROBAN OTOK",
-      "title_normalized": "Čaroban otok",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "38Bnf0zNXSHX96AWjHCEee",
-      "isrc": "HRA371800642",
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART005"
-      ],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "cast": {
-      "rank": 22,
-      "iswc": "T-931.111.745-0",
-      "title_original": "CAST",
-      "title_normalized": "Čast",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "6xjlYNlucQ1KK5Xh9VgMqM",
-      "isrc": "HRA371800845",
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART011"
-      ],
-      "notes": "Vjerojatno dio 'Čast i čisti obraz'",
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "oceana": {
-      "rank": 23,
-      "iswc": "T-931.111.773-4",
-      "title_original": "OCEANA",
-      "title_normalized": "Oceana",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "2pGECWf2zVWk4eVGjHlJd1",
-      "isrc": "HRA371800848",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "ponekad": {
-      "rank": 24,
-      "iswc": "T-931.111.777-8",
-      "title_original": "PONEKAD",
-      "title_normalized": "Ponekad",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "5zlg2YGG8znxRfZLCp5t8T",
-      "isrc": "HRA371800854",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "poslije_svega": {
-      "rank": 25,
-      "iswc": "T-931.111.778-9",
-      "title_original": "POSLIJE SVEGA",
-      "title_normalized": "Poslije svega",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "3zHeeqt3JopIvnJ0SUD8JS",
-      "isrc": "HRA371800852",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "princeza_tea": {
-      "rank": 26,
-      "iswc": "T-931.111.779-0",
-      "title_original": "PRINCEZA TEA",
-      "title_normalized": "Princeza Tea",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "57MTsMpliXxB7zcjnV2E3Y",
-      "isrc": "HRA371800853",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "siluete": {
-      "rank": 27,
-      "iswc": "T-931.111.785-8",
-      "title_original": "SILUETE",
-      "title_normalized": "Siluete",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "4cPuVizRajTD6tUTc25jBI",
-      "isrc": "HRA371800849",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "tko_si_ti": {
-      "rank": 28,
-      "iswc": "T-931.111.796-1",
-      "title_original": "TKO SI TI",
-      "title_normalized": "Tko si ti",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "1pMYqxkam2FRmLhenM5kcE",
-      "isrc": "HRA371800674",
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART006"
-      ],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "uredi_se": {
-      "rank": 29,
-      "iswc": "T-931.111.799-4",
-      "title_original": "UREDI SE",
-      "title_normalized": "Uredi se",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "4yWTJzOtL5xZcUNp13XggK",
-      "isrc": "HRA371800846",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "urota_duhova": {
-      "rank": 30,
-      "iswc": "T-931.111.800-0",
-      "title_original": "UROTA DUHOVA",
-      "title_normalized": "Urota duhova",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "4ig34nM7rIdmpaVZseI5ht",
-      "isrc": "HRA371800847",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "zaklopi_moje_oci": {
-      "rank": 31,
-      "iswc": "T-931.111.805-5",
-      "title_original": "ZAKLOPI MOJE OCI",
-      "title_normalized": "Zaklopi moje oči",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "1fkGMfaLZUpHSuYPsxWNU4",
-      "isrc": "HRA371800850",
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "kokosovo_mlijeko": {
-      "rank": 32,
-      "iswc": "T-931.209.030-5",
-      "title_original": "KOKOSOVO MLIJEKO",
-      "title_normalized": "Kokosovo mlijeko",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": "3zdlj3GR8qaKGWjOi7wRzI",
-      "isrc": "HRA371800820",
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART010"
-      ],
-      "notes": null,
-      "spotify": {
-        "track_id": null,
-        "album_id": null,
-        "popularity": null,
-        "duration_ms": null,
-        "explicit": null,
-        "confidence": 0.0,
-        "match_type": "manual_required"
-      },
-      "reconciliation": {
-        "spotify_confidence": 0.0,
-        "status": "partial",
-        "entity_state": {
-          "musicbrainz": "confirmed",
-          "spotify": "pending",
-          "discogs": "pending",
-          "youtube": "pending"
-        }
-      }
-    },
-    "W_CMC_2009_001": {
-      "work_id": "W_CMC_2009_001",
-      "title": "Ti Si Čudesna",
-      "type": "single_track_appearance",
-      "release": {
-        "title": "CMC Demo 2009.",
-        "label": "Croatia Records",
-        "cat_no": "CD 5867234",
-        "format": "CD, Compilation",
-        "year": 2009,
-        "track_position": 8,
-        "discogs_release_id": 12309194,
-        "url": "https://www.discogs.com/release/12309194"
-      },
-      "canonical_entity": "iZLET",
-      "verification_state": "VERIFIED",
-      "cluster_id": "CL-DISCOGS-01"
-    },
-    "krijesovi_lazi": {
-      "rank": 33,
-      "iswc": null,
-      "title_original": "KRIJESOVI LAŽI",
-      "title_normalized": "Krijesovi laži",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": "QT6F32539173",
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "contributors": [
-        {"name": "Rafael Lasić", "role": "saxophone"}
-      ],
-      "visual_production": "Crotradwave",
-      "media_references": [
-        "https://www.hop.com.hr/2025/06/22/krijesovi-lazi-pjesma-koja-razotkriva-moralnu-nakaradnost-partizanske-slobode/"
-      ],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "94dd1837-6977-4937-a02e-b8258b932b2a",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "vitez_jure": {
-      "rank": 34,
-      "iswc": null,
-      "title_original": "VITEZ JURE",
-      "title_normalized": "Vitez Jure",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "807abd53-5d7a-4bfa-ae0b-d0c0ab91fae2",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "moj_dinamo": {
-      "rank": 35,
-      "iswc": null,
-      "title_original": "MOJ DINAMO",
-      "title_normalized": "Moj Dinamo",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART017",
-        "ART018"
-      ],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "znakovlje_hrvata": {
-      "rank": 36,
-      "iswc": null,
-      "title_original": "ZNAKOVLJE HRVATA",
-      "title_normalized": "Znakovlje Hrvata",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "4498971d-8ebe-4c17-87e7-d8d447929180",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "vukovarska_brigada_himna": {
-      "rank": 37,
-      "iswc": null,
-      "title_original": "124. VUKOVARSKA BRIGADA HIMNA",
-      "title_normalized": "124. Vukovarska brigada himna",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "c6c12002-c671-41ad-a0fd-aed3442614dc",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "frane_tente": {
-      "rank": 38,
-      "iswc": null,
-      "title_original": "FRANE TENTE",
-      "title_normalized": "Frane Tente",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "media_references": [
-        "ART012",
-        "ART013",
-        "ART014"
-      ],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "0999a678-4586-48c5-a1f1-598ffaa69977",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "bogdanovacka_kalvarija": {
-      "rank": 39,
-      "iswc": null,
-      "title_original": "BOGDANOVAČKA KALVARIJA",
-      "title_normalized": "Bogdanovačka kalvarija",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "6b14a4ae-13cf-4fec-aec4-88d1b0a27201",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "bozicna_idila": {
-      "rank": 40,
-      "iswc": null,
-      "title_original": "BOŽIĆNA IDILA",
-      "title_normalized": "Božićna idila",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2025,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "52686be5-371c-4dd5-907e-da3306ed07c9",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "isuse_moj": {
-      "rank": 41,
-      "iswc": null,
-      "title_original": "ISUSE MOJ",
-      "title_normalized": "Isuse moj",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2026,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "c25db041-6d8e-49e7-8953-f8a42e19f2f6",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "covjek_moli_boga": {
-      "rank": 42,
-      "iswc": null,
-      "title_original": "ČOVJEK MOLI BOGA",
-      "title_normalized": "Čovjek moli Boga",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "label": "Braća Kumerle Music",
-      "year": 2026,
-      "wikipedia_eligible": false,
-      "media_references": [],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "a43cf149-bd70-4b41-a261-ee56604fe390",
-        "release_id": null,
-        "artist_id": null,
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    },
-    "sjever_uz_odsutne": {
-      "rank": 43,
-      "iswc": null,
-      "title_original": "SJEVER UZ ODSUTNE",
-      "title_normalized": "Sjever uz odsutne",
-      "agency_work_code_zamp": null,
-      "wikidata_qid": null,
-      "musicbrainz_work_id": null,
-      "musicbrainz_recording_id": null,
-      "discogs_master_id": null,
-      "spotify_track_id": null,
-      "isrc": null,
-      "barcode": "199953974831",
-      "catalog_number": "BKMUSIC001",
-      "label": "Braća Kumerle Music",
-      "year": 2023,
-      "wikipedia_eligible": false,
-      "media_references": [
-        "https://portal.braniteljski-forum.com/blog/vijesti/braca-kumerle-izdala-snaznu-poruku-podrske-nova-pjesma-za-bad-blue-boyse-u-grckim-zatvorima",
-        "https://narod.hr/sport/podrska-braca-kumerle-snimili-pjesmu-posvecenu-bad-blue-boysima-zatocenima-u-grckim-zatvorima"
-      ],
-      "notes": null,
-      "musicbrainz": {
-        "recording_id": "87cf4afb-efbf-4627-a8b1-170725fa7807",
-        "release_id": "8b675ac0-7ab0-40e3-b8a1-a2a6c2bab553",
-        "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
-        "confidence": 1.0,
-        "match_type": "exact"
-      }
-    }
-  },
-  "releases": {
-    "nikad_ne_znas_album": {
-      "title_original": "NIKAD NE ZNAS, TO JE ONO...",
-      "title_normalized": "Nikad ne znaš, to je ono…",
-      "type": "album",
-      "year": 2016,
-      "release_date": "2016-06-01",
-      "label": "Dallas Records",
-      "catalog_number": "BL2361431",
-      "upc": "3614971838301",
-      "track_count": 13,
-      "discogs_release_id": null,
-      "musicbrainz_release_id": null,
-      "spotify_album_id": "6hT2KjY5IqE6e3wqSmNJyB",
-      "barcode": null,
-      "notes": "[RATIFIED] catalog_number=BL2361431 verificiran od Generala 29.05.2026. Prethodni unos CD DALLAS 829 zamijenjen verificiranim brojem. UPC i Spotify album ID verificirani 29.05.2026."
-    }
-  }
+﻿{
+    "meta":  {
+                 "registry_version":  "1.0",
+                 "created":  "2026-05-04",
+                 "source":  "ISWCNet / CISAC via HDS-ZAMP",
+                 "creators":  {
+                                  "petar_kumerle":  {
+                                                        "ipi_name_number":  "00772816513",
+                                                        "affiliation":  "HDS-ZAMP",
+                                                        "wikidata_qid":  "Q139595619",
+                                                        "zamp_member_id":  "154058675"
+                                                    },
+                                  "toni_kumerle":  {
+                                                       "ipi_name_number":  "00638706326",
+                                                       "affiliation":  "HDS-ZAMP",
+                                                       "wikidata_qid":  "Q139595627",
+                                                       "zamp_member_id":  "153938259"
+                                                   }
+                              },
+                 "performer":  {
+                                   "name":  "IZLET",
+                                   "type":  "GRUPA",
+                                   "isni":  null,
+                                   "ipn":  null
+                               },
+                 "total_works":  44,
+                 "completion_fields":  [
+                                           "iswc",
+                                           "title_normalized",
+                                           "agency_work_code_zamp",
+                                           "wikidata_qid",
+                                           "musicbrainz_work_id",
+                                           "musicbrainz_recording_id",
+                                           "discogs_master_id",
+                                           "spotify_track_id",
+                                           "isrc",
+                                           "wikipedia_eligible",
+                                           "media_references",
+                                           "notes"
+                                       ]
+             },
+    "works":  {
+                  "ti_si_cudesna":  {
+                                        "rank":  1,
+                                        "iswc":  "T-911.739.887-5",
+                                        "title_original":  "TI SI CUDESNA",
+                                        "title_normalized":  "Ti si čudesna",
+                                        "agency_work_code_zamp":  null,
+                                        "wikidata_qid":  null,
+                                        "musicbrainz_work_id":  null,
+                                        "musicbrainz_recording_id":  null,
+                                        "discogs_master_id":  null,
+                                        "spotify_track_id":  "3aqsGyAU8uZ7gLJLRIsR06",
+                                        "isrc":  "HRA371600088",
+                                        "wikipedia_eligible":  false,
+                                        "media_references":  [
+
+                                                             ],
+                                        "notes":  null,
+                                        "spotify":  {
+                                                        "track_id":  null,
+                                                        "album_id":  null,
+                                                        "popularity":  null,
+                                                        "duration_ms":  null,
+                                                        "explicit":  null,
+                                                        "confidence":  0.0,
+                                                        "match_type":  "manual_required"
+                                                    },
+                                        "reconciliation":  {
+                                                               "spotify_confidence":  0.0,
+                                                               "status":  "partial",
+                                                               "entity_state":  {
+                                                                                    "musicbrainz":  "confirmed",
+                                                                                    "spotify":  "pending",
+                                                                                    "discogs":  "pending",
+                                                                                    "youtube":  "pending"
+                                                                                }
+                                                           }
+                                    },
+                  "pernastica":  {
+                                     "rank":  2,
+                                     "iswc":  "T-910.770.479-0",
+                                     "title_original":  "PERNASTICA",
+                                     "title_normalized":  "Pernastica",
+                                     "agency_work_code_zamp":  "00000154417019",
+                                     "wikidata_qid":  null,
+                                     "musicbrainz_work_id":  null,
+                                     "musicbrainz_recording_id":  null,
+                                     "discogs_master_id":  null,
+                                     "spotify_track_id":  "297oh7P3lMdaaHwKGJofe5",
+                                     "isrc":  "HRA371200384",
+                                     "wikipedia_eligible":  false,
+                                     "media_references":  [
+
+                                                          ],
+                                     "notes":  "Dallas Records singl; album Nikad ne znaš (2016)",
+                                     "spotify":  {
+                                                     "track_id":  null,
+                                                     "album_id":  null,
+                                                     "popularity":  null,
+                                                     "duration_ms":  null,
+                                                     "explicit":  null,
+                                                     "confidence":  0.0,
+                                                     "match_type":  "manual_required"
+                                                 },
+                                     "reconciliation":  {
+                                                            "spotify_confidence":  0.0,
+                                                            "status":  "partial",
+                                                            "entity_state":  {
+                                                                                 "musicbrainz":  "confirmed",
+                                                                                 "spotify":  "pending",
+                                                                                 "discogs":  "pending",
+                                                                                 "youtube":  "pending"
+                                                                             }
+                                                        }
+                                 },
+                  "zalo":  {
+                               "rank":  3,
+                               "iswc":  "T-914.228.446-6",
+                               "title_original":  "ZALO",
+                               "title_normalized":  "Žalo",
+                               "agency_work_code_zamp":  null,
+                               "wikidata_qid":  null,
+                               "musicbrainz_work_id":  null,
+                               "musicbrainz_recording_id":  null,
+                               "discogs_master_id":  null,
+                               "spotify_track_id":  "1OqLa2wkxlt0KDsdGzcoZ0",
+                               "isrc":  "HRA371300115",
+                               "wikipedia_eligible":  true,
+                               "media_references":  [
+                                                        "MTV Adria rotation 2013",
+                                                        "HRT Radio Dubrovnik top lista"
+                                                    ],
+                               "notes":  "MTV Adria rotacija — najjači authority signal od svih 32 djela",
+                               "spotify":  {
+                                               "track_id":  null,
+                                               "album_id":  null,
+                                               "popularity":  null,
+                                               "duration_ms":  null,
+                                               "explicit":  null,
+                                               "confidence":  0.0,
+                                               "match_type":  "manual_required"
+                                           },
+                               "reconciliation":  {
+                                                      "spotify_confidence":  0.0,
+                                                      "status":  "partial",
+                                                      "entity_state":  {
+                                                                           "musicbrainz":  "confirmed",
+                                                                           "spotify":  "pending",
+                                                                           "discogs":  "pending",
+                                                                           "youtube":  "pending"
+                                                                       }
+                                                  },
+                               "youtube_id":  "Tz5gZiFe4dU"
+                           },
+                  "oo_da_sa_krilima":  {
+                                           "rank":  4,
+                                           "iswc":  "T-916.520.632-6",
+                                           "title_original":  "OO DA, SA KRILIMA",
+                                           "title_normalized":  "Oo da, sa krilima",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  null,
+                                           "isrc":  null,
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+
+                                                                ],
+                                           "notes":  "demo/unreleased — nije dostupno na Spotifyu"
+                                       },
+                  "sreo_sam_te":  {
+                                      "rank":  5,
+                                      "iswc":  "T-916.520.640-6",
+                                      "title_original":  "SREO SAM TE",
+                                      "title_normalized":  "Sreo sam te",
+                                      "agency_work_code_zamp":  null,
+                                      "wikidata_qid":  null,
+                                      "musicbrainz_work_id":  null,
+                                      "musicbrainz_recording_id":  null,
+                                      "discogs_master_id":  null,
+                                      "spotify_track_id":  null,
+                                      "isrc":  null,
+                                      "wikipedia_eligible":  false,
+                                      "media_references":  [
+
+                                                           ],
+                                      "notes":  "demo/unreleased — nije dostupno na Spotifyu"
+                                  },
+                  "tranu":  {
+                                "rank":  6,
+                                "iswc":  "T-916.520.643-9",
+                                "title_original":  "TRANU",
+                                "title_normalized":  "Tranu",
+                                "agency_work_code_zamp":  null,
+                                "wikidata_qid":  null,
+                                "musicbrainz_work_id":  null,
+                                "musicbrainz_recording_id":  null,
+                                "discogs_master_id":  null,
+                                "spotify_track_id":  null,
+                                "isrc":  null,
+                                "wikipedia_eligible":  false,
+                                "media_references":  [
+
+                                                     ],
+                                "notes":  "demo/unreleased — nije dostupno na Spotifyu"
+                            },
+                  "masa":  {
+                               "rank":  7,
+                               "iswc":  "T-916.786.735-8",
+                               "title_original":  "MASA",
+                               "title_normalized":  "Maša",
+                               "agency_work_code_zamp":  null,
+                               "wikidata_qid":  null,
+                               "musicbrainz_work_id":  null,
+                               "musicbrainz_recording_id":  null,
+                               "discogs_master_id":  null,
+                               "spotify_track_id":  "32rBh69oUY9VdNrLI83uwk",
+                               "isrc":  "HRA371400333",
+                               "wikipedia_eligible":  false,
+                               "media_references":  [
+
+                                                    ],
+                               "notes":  "Dallas Records singl; album Nikad ne znaš (2016)",
+                               "spotify":  {
+                                               "track_id":  null,
+                                               "album_id":  null,
+                                               "popularity":  null,
+                                               "duration_ms":  null,
+                                               "explicit":  null,
+                                               "confidence":  0.0,
+                                               "match_type":  "manual_required"
+                                           },
+                               "reconciliation":  {
+                                                      "spotify_confidence":  0.0,
+                                                      "status":  "partial",
+                                                      "entity_state":  {
+                                                                           "musicbrainz":  "confirmed",
+                                                                           "spotify":  "pending",
+                                                                           "discogs":  "pending",
+                                                                           "youtube":  "pending"
+                                                                       }
+                                                  }
+                           },
+                  "ne_zurim_se":  {
+                                      "rank":  8,
+                                      "iswc":  "T-916.786.864-6",
+                                      "title_original":  "NE ZURIM SE",
+                                      "title_normalized":  "Ne žurim se",
+                                      "agency_work_code_zamp":  null,
+                                      "wikidata_qid":  null,
+                                      "musicbrainz_work_id":  null,
+                                      "musicbrainz_recording_id":  null,
+                                      "discogs_master_id":  null,
+                                      "spotify_track_id":  "7CaHN36I9TE7yCAQyZEFsl",
+                                      "isrc":  "HRA371400523",
+                                      "wikipedia_eligible":  false,
+                                      "media_references":  [
+
+                                                           ],
+                                      "notes":  "Dallas Records singl; album Nikad ne znaš (2016)",
+                                      "spotify":  {
+                                                      "track_id":  null,
+                                                      "album_id":  null,
+                                                      "popularity":  null,
+                                                      "duration_ms":  null,
+                                                      "explicit":  null,
+                                                      "confidence":  0.0,
+                                                      "match_type":  "manual_required"
+                                                  },
+                                      "reconciliation":  {
+                                                             "spotify_confidence":  0.0,
+                                                             "status":  "partial",
+                                                             "entity_state":  {
+                                                                                  "musicbrainz":  "confirmed",
+                                                                                  "spotify":  "pending",
+                                                                                  "discogs":  "pending",
+                                                                                  "youtube":  "pending"
+                                                                              }
+                                                         }
+                                  },
+                  "srebrni_zmaj":  {
+                                       "rank":  9,
+                                       "iswc":  "T-916.787.266-4",
+                                       "title_original":  "SREBRNI ZMAJ",
+                                       "title_normalized":  "Srebrni zmaj",
+                                       "agency_work_code_zamp":  null,
+                                       "wikidata_qid":  null,
+                                       "musicbrainz_work_id":  null,
+                                       "musicbrainz_recording_id":  null,
+                                       "discogs_master_id":  null,
+                                       "spotify_track_id":  null,
+                                       "isrc":  null,
+                                       "wikipedia_eligible":  false,
+                                       "media_references":  [
+
+                                                            ],
+                                       "notes":  "demo/unreleased — nije dostupno na Spotifyu"
+                                   },
+                  "zasto_sutim":  {
+                                      "rank":  10,
+                                      "iswc":  "T-916.787.674-6",
+                                      "title_original":  "ZASTO SUTIM",
+                                      "title_normalized":  "Zašto šutim",
+                                      "agency_work_code_zamp":  null,
+                                      "wikidata_qid":  null,
+                                      "musicbrainz_work_id":  null,
+                                      "musicbrainz_recording_id":  null,
+                                      "discogs_master_id":  null,
+                                      "spotify_track_id":  "1UG0hZAJfmZhi99rVXnQh9",
+                                      "isrc":  "HRA371800851",
+                                      "wikipedia_eligible":  false,
+                                      "media_references":  [
+                                                               "ART004"
+                                                           ],
+                                      "notes":  null,
+                                      "spotify":  {
+                                                      "track_id":  null,
+                                                      "album_id":  null,
+                                                      "popularity":  null,
+                                                      "duration_ms":  null,
+                                                      "explicit":  null,
+                                                      "confidence":  0.0,
+                                                      "match_type":  "manual_required"
+                                                  },
+                                      "reconciliation":  {
+                                                             "spotify_confidence":  0.0,
+                                                             "status":  "partial",
+                                                             "entity_state":  {
+                                                                                  "musicbrainz":  "confirmed",
+                                                                                  "spotify":  "pending",
+                                                                                  "discogs":  "pending",
+                                                                                  "youtube":  "pending"
+                                                                              }
+                                                         }
+                                  },
+                  "majcin_skut":  {
+                                      "rank":  11,
+                                      "iswc":  "T-920.388.176-9",
+                                      "title_original":  "MAJCIN SKUT",
+                                      "title_normalized":  "Majčin skut",
+                                      "agency_work_code_zamp":  null,
+                                      "wikidata_qid":  null,
+                                      "musicbrainz_work_id":  null,
+                                      "musicbrainz_recording_id":  null,
+                                      "discogs_master_id":  null,
+                                      "spotify_track_id":  "0SesSNZyYJYsGxETJUTDmK",
+                                      "isrc":  "HRA371600089",
+                                      "wikipedia_eligible":  false,
+                                      "media_references":  [
+
+                                                           ],
+                                      "notes":  "Dallas Records singl; album Nikad ne znaš (2016)",
+                                      "spotify":  {
+                                                      "track_id":  null,
+                                                      "album_id":  null,
+                                                      "popularity":  null,
+                                                      "duration_ms":  null,
+                                                      "explicit":  null,
+                                                      "confidence":  0.0,
+                                                      "match_type":  "manual_required"
+                                                  },
+                                      "reconciliation":  {
+                                                             "spotify_confidence":  0.0,
+                                                             "status":  "partial",
+                                                             "entity_state":  {
+                                                                                  "musicbrainz":  "confirmed",
+                                                                                  "spotify":  "pending",
+                                                                                  "discogs":  "pending",
+                                                                                  "youtube":  "pending"
+                                                                              }
+                                                         }
+                                  },
+                  "svemir":  {
+                                 "rank":  12,
+                                 "iswc":  "T-920.388.279-5",
+                                 "title_original":  "SVEMIR",
+                                 "title_normalized":  "Svemir",
+                                 "agency_work_code_zamp":  null,
+                                 "wikidata_qid":  null,
+                                 "musicbrainz_work_id":  null,
+                                 "musicbrainz_recording_id":  null,
+                                 "discogs_master_id":  null,
+                                 "spotify_track_id":  "2A1DDrt0F8PQddvplKWy28",
+                                 "isrc":  "HRA371600046",
+                                 "wikipedia_eligible":  false,
+                                 "media_references":  [
+
+                                                      ],
+                                 "notes":  "Dallas Records singl; album Nikad ne znaš (2016)",
+                                 "spotify":  {
+                                                 "track_id":  null,
+                                                 "album_id":  null,
+                                                 "popularity":  null,
+                                                 "duration_ms":  null,
+                                                 "explicit":  null,
+                                                 "confidence":  0.0,
+                                                 "match_type":  "manual_required"
+                                             },
+                                 "reconciliation":  {
+                                                        "spotify_confidence":  0.0,
+                                                        "status":  "partial",
+                                                        "entity_state":  {
+                                                                             "musicbrainz":  "confirmed",
+                                                                             "spotify":  "pending",
+                                                                             "discogs":  "pending",
+                                                                             "youtube":  "pending"
+                                                                         }
+                                                    }
+                             },
+                  "imam":  {
+                               "rank":  13,
+                               "iswc":  "T-921.432.111-6",
+                               "title_original":  "IMAM",
+                               "title_normalized":  "Imam",
+                               "agency_work_code_zamp":  null,
+                               "wikidata_qid":  null,
+                               "musicbrainz_work_id":  null,
+                               "musicbrainz_recording_id":  null,
+                               "discogs_master_id":  null,
+                               "spotify_track_id":  "7HBUjyQSVHRkjvfsVAW4D2",
+                               "isrc":  "HRA371600084",
+                               "wikipedia_eligible":  false,
+                               "media_references":  [
+
+                                                    ],
+                               "notes":  "Album Nikad ne znaš (2016)",
+                               "spotify":  {
+                                               "track_id":  null,
+                                               "album_id":  null,
+                                               "popularity":  null,
+                                               "duration_ms":  null,
+                                               "explicit":  null,
+                                               "confidence":  0.0,
+                                               "match_type":  "manual_required"
+                                           },
+                               "reconciliation":  {
+                                                      "spotify_confidence":  0.0,
+                                                      "status":  "partial",
+                                                      "entity_state":  {
+                                                                           "musicbrainz":  "confirmed",
+                                                                           "spotify":  "pending",
+                                                                           "discogs":  "pending",
+                                                                           "youtube":  "pending"
+                                                                       }
+                                                  }
+                           },
+                  "kako_da_se_smijem":  {
+                                            "rank":  14,
+                                            "iswc":  "T-921.432.243-7",
+                                            "title_original":  "KAKO DA SE SMIJEM",
+                                            "title_normalized":  "Kako da se smijem",
+                                            "agency_work_code_zamp":  null,
+                                            "wikidata_qid":  null,
+                                            "musicbrainz_work_id":  null,
+                                            "musicbrainz_recording_id":  null,
+                                            "discogs_master_id":  null,
+                                            "spotify_track_id":  "1vVheT9TKNU8IojyaQ3fwr",
+                                            "isrc":  "HRA371600086",
+                                            "wikipedia_eligible":  false,
+                                            "media_references":  [
+
+                                                                 ],
+                                            "notes":  "Album Nikad ne znaš (2016)",
+                                            "spotify":  {
+                                                            "track_id":  null,
+                                                            "album_id":  null,
+                                                            "popularity":  null,
+                                                            "duration_ms":  null,
+                                                            "explicit":  null,
+                                                            "confidence":  0.0,
+                                                            "match_type":  "manual_required"
+                                                        },
+                                            "reconciliation":  {
+                                                                   "spotify_confidence":  0.0,
+                                                                   "status":  "partial",
+                                                                   "entity_state":  {
+                                                                                        "musicbrainz":  "confirmed",
+                                                                                        "spotify":  "pending",
+                                                                                        "discogs":  "pending",
+                                                                                        "youtube":  "pending"
+                                                                                    }
+                                                               }
+                                        },
+                  "nocima_here_i_am":  {
+                                           "rank":  15,
+                                           "iswc":  "T-921.432.734-1",
+                                           "title_original":  "NOCIMA - HERE I AM",
+                                           "title_normalized":  "Noćima (Here I Am)",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  "1DdVjkk6JBJfri0DDVq8Gt",
+                                           "isrc":  "HRA371600085",
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+
+                                                                ],
+                                           "notes":  "Album Nikad ne znaš (2016)",
+                                           "spotify":  {
+                                                           "track_id":  null,
+                                                           "album_id":  null,
+                                                           "popularity":  null,
+                                                           "duration_ms":  null,
+                                                           "explicit":  null,
+                                                           "confidence":  0.0,
+                                                           "match_type":  "manual_required"
+                                                       },
+                                           "reconciliation":  {
+                                                                  "spotify_confidence":  0.0,
+                                                                  "status":  "partial",
+                                                                  "entity_state":  {
+                                                                                       "musicbrainz":  "confirmed",
+                                                                                       "spotify":  "pending",
+                                                                                       "discogs":  "pending",
+                                                                                       "youtube":  "pending"
+                                                                                   }
+                                                              }
+                                       },
+                  "topim_se_i_gubim":  {
+                                           "rank":  16,
+                                           "iswc":  "T-921.433.541-8",
+                                           "title_original":  "TOPIM SE I GUBIM",
+                                           "title_normalized":  "Topim se i gubim se",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  "5MSCzS8vYk7BSfx0AeDitg",
+                                           "isrc":  "HRA371600087",
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+
+                                                                ],
+                                           "notes":  "Album Nikad ne znaš (2016)",
+                                           "spotify":  {
+                                                           "track_id":  null,
+                                                           "album_id":  null,
+                                                           "popularity":  null,
+                                                           "duration_ms":  null,
+                                                           "explicit":  null,
+                                                           "confidence":  0.0,
+                                                           "match_type":  "manual_required"
+                                                       },
+                                           "reconciliation":  {
+                                                                  "spotify_confidence":  0.0,
+                                                                  "status":  "partial",
+                                                                  "entity_state":  {
+                                                                                       "musicbrainz":  "confirmed",
+                                                                                       "spotify":  "pending",
+                                                                                       "discogs":  "pending",
+                                                                                       "youtube":  "pending"
+                                                                                   }
+                                                              }
+                                       },
+                  "dva_gemista":  {
+                                      "rank":  17,
+                                      "iswc":  "T-921.445.688-9",
+                                      "title_original":  "DVA GEMISTA",
+                                      "title_normalized":  "Dva gemišta",
+                                      "agency_work_code_zamp":  null,
+                                      "wikidata_qid":  null,
+                                      "musicbrainz_work_id":  null,
+                                      "musicbrainz_recording_id":  null,
+                                      "discogs_master_id":  null,
+                                      "spotify_track_id":  "2HMaqDJgaqDM5bEghmaQKj",
+                                      "isrc":  "HRA371600082",
+                                      "wikipedia_eligible":  false,
+                                      "media_references":  [
+
+                                                           ],
+                                      "notes":  "Album Nikad ne znaš (2016)",
+                                      "spotify":  {
+                                                      "track_id":  null,
+                                                      "album_id":  null,
+                                                      "popularity":  null,
+                                                      "duration_ms":  null,
+                                                      "explicit":  null,
+                                                      "confidence":  0.0,
+                                                      "match_type":  "manual_required"
+                                                  },
+                                      "reconciliation":  {
+                                                             "spotify_confidence":  0.0,
+                                                             "status":  "partial",
+                                                             "entity_state":  {
+                                                                                  "musicbrainz":  "confirmed",
+                                                                                  "spotify":  "pending",
+                                                                                  "discogs":  "pending",
+                                                                                  "youtube":  "pending"
+                                                                              }
+                                                         }
+                                  },
+                  "oni_spavaju":  {
+                                      "rank":  18,
+                                      "iswc":  "T-921.445.718-8",
+                                      "title_original":  "ONI SPAVAJU",
+                                      "title_normalized":  "Oni spavaju",
+                                      "agency_work_code_zamp":  null,
+                                      "wikidata_qid":  null,
+                                      "musicbrainz_work_id":  null,
+                                      "musicbrainz_recording_id":  null,
+                                      "discogs_master_id":  null,
+                                      "spotify_track_id":  "5bYJa4KDWnm4yDDJQyrTTC",
+                                      "isrc":  "HRA371600083",
+                                      "wikipedia_eligible":  false,
+                                      "media_references":  [
+
+                                                           ],
+                                      "notes":  "Album Nikad ne znaš (2016)",
+                                      "spotify":  {
+                                                      "track_id":  null,
+                                                      "album_id":  null,
+                                                      "popularity":  null,
+                                                      "duration_ms":  null,
+                                                      "explicit":  null,
+                                                      "confidence":  0.0,
+                                                      "match_type":  "manual_required"
+                                                  },
+                                      "reconciliation":  {
+                                                             "spotify_confidence":  0.0,
+                                                             "status":  "partial",
+                                                             "entity_state":  {
+                                                                                  "musicbrainz":  "confirmed",
+                                                                                  "spotify":  "pending",
+                                                                                  "discogs":  "pending",
+                                                                                  "youtube":  "pending"
+                                                                              }
+                                                         }
+                                  },
+                  "osmijeh_je_bitan":  {
+                                           "rank":  19,
+                                           "iswc":  "T-928.132.235-8",
+                                           "title_original":  "OSMIJEH JE BITAN",
+                                           "title_normalized":  "Osmijeh je bitan",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  "6OvDRJkl8hcvuKv2kL40nb",
+                                           "isrc":  "HRA371800589",
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+
+                                                                ],
+                                           "notes":  null,
+                                           "spotify":  {
+                                                           "track_id":  null,
+                                                           "album_id":  null,
+                                                           "popularity":  null,
+                                                           "duration_ms":  null,
+                                                           "explicit":  null,
+                                                           "confidence":  0.0,
+                                                           "match_type":  "manual_required"
+                                                       },
+                                           "reconciliation":  {
+                                                                  "spotify_confidence":  0.0,
+                                                                  "status":  "partial",
+                                                                  "entity_state":  {
+                                                                                       "musicbrainz":  "confirmed",
+                                                                                       "spotify":  "pending",
+                                                                                       "discogs":  "pending",
+                                                                                       "youtube":  "pending"
+                                                                                   }
+                                                              }
+                                       },
+                  "u_svijetu_bajki":  {
+                                          "rank":  20,
+                                          "iswc":  "T-928.512.491-6",
+                                          "title_original":  "U SVIJETU BAJKI",
+                                          "title_normalized":  "U svijetu bajki",
+                                          "agency_work_code_zamp":  null,
+                                          "wikidata_qid":  null,
+                                          "musicbrainz_work_id":  null,
+                                          "musicbrainz_recording_id":  null,
+                                          "discogs_master_id":  null,
+                                          "spotify_track_id":  "2eZOUlMECJSMsfymyDEadO",
+                                          "isrc":  "HRA371800598",
+                                          "wikipedia_eligible":  false,
+                                          "media_references":  [
+                                                                   "ART003",
+                                                                   "ART008"
+                                                               ],
+                                          "notes":  "Demo era (EL, 2010)",
+                                          "spotify":  {
+                                                          "track_id":  null,
+                                                          "album_id":  null,
+                                                          "popularity":  null,
+                                                          "duration_ms":  null,
+                                                          "explicit":  null,
+                                                          "confidence":  0.0,
+                                                          "match_type":  "manual_required"
+                                                      },
+                                          "reconciliation":  {
+                                                                 "spotify_confidence":  0.0,
+                                                                 "status":  "partial",
+                                                                 "entity_state":  {
+                                                                                      "musicbrainz":  "confirmed",
+                                                                                      "spotify":  "pending",
+                                                                                      "discogs":  "pending",
+                                                                                      "youtube":  "pending"
+                                                                                  }
+                                                             }
+                                      },
+                  "caroban_otok":  {
+                                       "rank":  21,
+                                       "iswc":  "T-931.111.744-9",
+                                       "title_original":  "CAROBAN OTOK",
+                                       "title_normalized":  "Čaroban otok",
+                                       "agency_work_code_zamp":  null,
+                                       "wikidata_qid":  null,
+                                       "musicbrainz_work_id":  null,
+                                       "musicbrainz_recording_id":  null,
+                                       "discogs_master_id":  null,
+                                       "spotify_track_id":  "38Bnf0zNXSHX96AWjHCEee",
+                                       "isrc":  "HRA371800642",
+                                       "wikipedia_eligible":  false,
+                                       "media_references":  [
+                                                                "ART005"
+                                                            ],
+                                       "notes":  null,
+                                       "spotify":  {
+                                                       "track_id":  null,
+                                                       "album_id":  null,
+                                                       "popularity":  null,
+                                                       "duration_ms":  null,
+                                                       "explicit":  null,
+                                                       "confidence":  0.0,
+                                                       "match_type":  "manual_required"
+                                                   },
+                                       "reconciliation":  {
+                                                              "spotify_confidence":  0.0,
+                                                              "status":  "partial",
+                                                              "entity_state":  {
+                                                                                   "musicbrainz":  "confirmed",
+                                                                                   "spotify":  "pending",
+                                                                                   "discogs":  "pending",
+                                                                                   "youtube":  "pending"
+                                                                               }
+                                                          }
+                                   },
+                  "cast":  {
+                               "rank":  22,
+                               "iswc":  "T-931.111.745-0",
+                               "title_original":  "CAST",
+                               "title_normalized":  "Čast",
+                               "agency_work_code_zamp":  null,
+                               "wikidata_qid":  null,
+                               "musicbrainz_work_id":  null,
+                               "musicbrainz_recording_id":  null,
+                               "discogs_master_id":  null,
+                               "spotify_track_id":  "6xjlYNlucQ1KK5Xh9VgMqM",
+                               "isrc":  "HRA371800845",
+                               "wikipedia_eligible":  false,
+                               "media_references":  [
+                                                        "ART011"
+                                                    ],
+                               "notes":  "Vjerojatno dio \u0027Čast i čisti obraz\u0027",
+                               "spotify":  {
+                                               "track_id":  null,
+                                               "album_id":  null,
+                                               "popularity":  null,
+                                               "duration_ms":  null,
+                                               "explicit":  null,
+                                               "confidence":  0.0,
+                                               "match_type":  "manual_required"
+                                           },
+                               "reconciliation":  {
+                                                      "spotify_confidence":  0.0,
+                                                      "status":  "partial",
+                                                      "entity_state":  {
+                                                                           "musicbrainz":  "confirmed",
+                                                                           "spotify":  "pending",
+                                                                           "discogs":  "pending",
+                                                                           "youtube":  "pending"
+                                                                       }
+                                                  }
+                           },
+                  "oceana":  {
+                                 "rank":  23,
+                                 "iswc":  "T-931.111.773-4",
+                                 "title_original":  "OCEANA",
+                                 "title_normalized":  "Oceana",
+                                 "agency_work_code_zamp":  null,
+                                 "wikidata_qid":  null,
+                                 "musicbrainz_work_id":  null,
+                                 "musicbrainz_recording_id":  null,
+                                 "discogs_master_id":  null,
+                                 "spotify_track_id":  "2pGECWf2zVWk4eVGjHlJd1",
+                                 "isrc":  "HRA371800848",
+                                 "wikipedia_eligible":  false,
+                                 "media_references":  [
+
+                                                      ],
+                                 "notes":  null,
+                                 "spotify":  {
+                                                 "track_id":  null,
+                                                 "album_id":  null,
+                                                 "popularity":  null,
+                                                 "duration_ms":  null,
+                                                 "explicit":  null,
+                                                 "confidence":  0.0,
+                                                 "match_type":  "manual_required"
+                                             },
+                                 "reconciliation":  {
+                                                        "spotify_confidence":  0.0,
+                                                        "status":  "partial",
+                                                        "entity_state":  {
+                                                                             "musicbrainz":  "confirmed",
+                                                                             "spotify":  "pending",
+                                                                             "discogs":  "pending",
+                                                                             "youtube":  "pending"
+                                                                         }
+                                                    }
+                             },
+                  "ponekad":  {
+                                  "rank":  24,
+                                  "iswc":  "T-931.111.777-8",
+                                  "title_original":  "PONEKAD",
+                                  "title_normalized":  "Ponekad",
+                                  "agency_work_code_zamp":  null,
+                                  "wikidata_qid":  null,
+                                  "musicbrainz_work_id":  null,
+                                  "musicbrainz_recording_id":  null,
+                                  "discogs_master_id":  null,
+                                  "spotify_track_id":  "5zlg2YGG8znxRfZLCp5t8T",
+                                  "isrc":  "HRA371800854",
+                                  "wikipedia_eligible":  false,
+                                  "media_references":  [
+
+                                                       ],
+                                  "notes":  null,
+                                  "spotify":  {
+                                                  "track_id":  null,
+                                                  "album_id":  null,
+                                                  "popularity":  null,
+                                                  "duration_ms":  null,
+                                                  "explicit":  null,
+                                                  "confidence":  0.0,
+                                                  "match_type":  "manual_required"
+                                              },
+                                  "reconciliation":  {
+                                                         "spotify_confidence":  0.0,
+                                                         "status":  "partial",
+                                                         "entity_state":  {
+                                                                              "musicbrainz":  "confirmed",
+                                                                              "spotify":  "pending",
+                                                                              "discogs":  "pending",
+                                                                              "youtube":  "pending"
+                                                                          }
+                                                     }
+                              },
+                  "poslije_svega":  {
+                                        "rank":  25,
+                                        "iswc":  "T-931.111.778-9",
+                                        "title_original":  "POSLIJE SVEGA",
+                                        "title_normalized":  "Poslije svega",
+                                        "agency_work_code_zamp":  null,
+                                        "wikidata_qid":  null,
+                                        "musicbrainz_work_id":  null,
+                                        "musicbrainz_recording_id":  null,
+                                        "discogs_master_id":  null,
+                                        "spotify_track_id":  "3zHeeqt3JopIvnJ0SUD8JS",
+                                        "isrc":  "HRA371800852",
+                                        "wikipedia_eligible":  false,
+                                        "media_references":  [
+
+                                                             ],
+                                        "notes":  null,
+                                        "spotify":  {
+                                                        "track_id":  null,
+                                                        "album_id":  null,
+                                                        "popularity":  null,
+                                                        "duration_ms":  null,
+                                                        "explicit":  null,
+                                                        "confidence":  0.0,
+                                                        "match_type":  "manual_required"
+                                                    },
+                                        "reconciliation":  {
+                                                               "spotify_confidence":  0.0,
+                                                               "status":  "partial",
+                                                               "entity_state":  {
+                                                                                    "musicbrainz":  "confirmed",
+                                                                                    "spotify":  "pending",
+                                                                                    "discogs":  "pending",
+                                                                                    "youtube":  "pending"
+                                                                                }
+                                                           }
+                                    },
+                  "princeza_tea":  {
+                                       "rank":  26,
+                                       "iswc":  "T-931.111.779-0",
+                                       "title_original":  "PRINCEZA TEA",
+                                       "title_normalized":  "Princeza Tea",
+                                       "agency_work_code_zamp":  null,
+                                       "wikidata_qid":  null,
+                                       "musicbrainz_work_id":  null,
+                                       "musicbrainz_recording_id":  null,
+                                       "discogs_master_id":  null,
+                                       "spotify_track_id":  "57MTsMpliXxB7zcjnV2E3Y",
+                                       "isrc":  "HRA371800853",
+                                       "wikipedia_eligible":  false,
+                                       "media_references":  [
+
+                                                            ],
+                                       "notes":  null,
+                                       "spotify":  {
+                                                       "track_id":  null,
+                                                       "album_id":  null,
+                                                       "popularity":  null,
+                                                       "duration_ms":  null,
+                                                       "explicit":  null,
+                                                       "confidence":  0.0,
+                                                       "match_type":  "manual_required"
+                                                   },
+                                       "reconciliation":  {
+                                                              "spotify_confidence":  0.0,
+                                                              "status":  "partial",
+                                                              "entity_state":  {
+                                                                                   "musicbrainz":  "confirmed",
+                                                                                   "spotify":  "pending",
+                                                                                   "discogs":  "pending",
+                                                                                   "youtube":  "pending"
+                                                                               }
+                                                          }
+                                   },
+                  "siluete":  {
+                                  "rank":  27,
+                                  "iswc":  "T-931.111.785-8",
+                                  "title_original":  "SILUETE",
+                                  "title_normalized":  "Siluete",
+                                  "agency_work_code_zamp":  null,
+                                  "wikidata_qid":  null,
+                                  "musicbrainz_work_id":  null,
+                                  "musicbrainz_recording_id":  null,
+                                  "discogs_master_id":  null,
+                                  "spotify_track_id":  "4cPuVizRajTD6tUTc25jBI",
+                                  "isrc":  "HRA371800849",
+                                  "wikipedia_eligible":  false,
+                                  "media_references":  [
+
+                                                       ],
+                                  "notes":  null,
+                                  "spotify":  {
+                                                  "track_id":  null,
+                                                  "album_id":  null,
+                                                  "popularity":  null,
+                                                  "duration_ms":  null,
+                                                  "explicit":  null,
+                                                  "confidence":  0.0,
+                                                  "match_type":  "manual_required"
+                                              },
+                                  "reconciliation":  {
+                                                         "spotify_confidence":  0.0,
+                                                         "status":  "partial",
+                                                         "entity_state":  {
+                                                                              "musicbrainz":  "confirmed",
+                                                                              "spotify":  "pending",
+                                                                              "discogs":  "pending",
+                                                                              "youtube":  "pending"
+                                                                          }
+                                                     }
+                              },
+                  "tko_si_ti":  {
+                                    "rank":  28,
+                                    "iswc":  "T-931.111.796-1",
+                                    "title_original":  "TKO SI TI",
+                                    "title_normalized":  "Tko si ti",
+                                    "agency_work_code_zamp":  null,
+                                    "wikidata_qid":  null,
+                                    "musicbrainz_work_id":  null,
+                                    "musicbrainz_recording_id":  null,
+                                    "discogs_master_id":  null,
+                                    "spotify_track_id":  "1pMYqxkam2FRmLhenM5kcE",
+                                    "isrc":  "HRA371800674",
+                                    "wikipedia_eligible":  false,
+                                    "media_references":  [
+                                                             "ART006"
+                                                         ],
+                                    "notes":  null,
+                                    "spotify":  {
+                                                    "track_id":  null,
+                                                    "album_id":  null,
+                                                    "popularity":  null,
+                                                    "duration_ms":  null,
+                                                    "explicit":  null,
+                                                    "confidence":  0.0,
+                                                    "match_type":  "manual_required"
+                                                },
+                                    "reconciliation":  {
+                                                           "spotify_confidence":  0.0,
+                                                           "status":  "partial",
+                                                           "entity_state":  {
+                                                                                "musicbrainz":  "confirmed",
+                                                                                "spotify":  "pending",
+                                                                                "discogs":  "pending",
+                                                                                "youtube":  "pending"
+                                                                            }
+                                                       }
+                                },
+                  "uredi_se":  {
+                                   "rank":  29,
+                                   "iswc":  "T-931.111.799-4",
+                                   "title_original":  "UREDI SE",
+                                   "title_normalized":  "Uredi se",
+                                   "agency_work_code_zamp":  null,
+                                   "wikidata_qid":  null,
+                                   "musicbrainz_work_id":  null,
+                                   "musicbrainz_recording_id":  null,
+                                   "discogs_master_id":  null,
+                                   "spotify_track_id":  "4yWTJzOtL5xZcUNp13XggK",
+                                   "isrc":  "HRA371800846",
+                                   "wikipedia_eligible":  false,
+                                   "media_references":  [
+
+                                                        ],
+                                   "notes":  null,
+                                   "spotify":  {
+                                                   "track_id":  null,
+                                                   "album_id":  null,
+                                                   "popularity":  null,
+                                                   "duration_ms":  null,
+                                                   "explicit":  null,
+                                                   "confidence":  0.0,
+                                                   "match_type":  "manual_required"
+                                               },
+                                   "reconciliation":  {
+                                                          "spotify_confidence":  0.0,
+                                                          "status":  "partial",
+                                                          "entity_state":  {
+                                                                               "musicbrainz":  "confirmed",
+                                                                               "spotify":  "pending",
+                                                                               "discogs":  "pending",
+                                                                               "youtube":  "pending"
+                                                                           }
+                                                      }
+                               },
+                  "urota_duhova":  {
+                                       "rank":  30,
+                                       "iswc":  "T-931.111.800-0",
+                                       "title_original":  "UROTA DUHOVA",
+                                       "title_normalized":  "Urota duhova",
+                                       "agency_work_code_zamp":  null,
+                                       "wikidata_qid":  null,
+                                       "musicbrainz_work_id":  null,
+                                       "musicbrainz_recording_id":  null,
+                                       "discogs_master_id":  null,
+                                       "spotify_track_id":  "4ig34nM7rIdmpaVZseI5ht",
+                                       "isrc":  "HRA371800847",
+                                       "wikipedia_eligible":  false,
+                                       "media_references":  [
+
+                                                            ],
+                                       "notes":  null,
+                                       "spotify":  {
+                                                       "track_id":  null,
+                                                       "album_id":  null,
+                                                       "popularity":  null,
+                                                       "duration_ms":  null,
+                                                       "explicit":  null,
+                                                       "confidence":  0.0,
+                                                       "match_type":  "manual_required"
+                                                   },
+                                       "reconciliation":  {
+                                                              "spotify_confidence":  0.0,
+                                                              "status":  "partial",
+                                                              "entity_state":  {
+                                                                                   "musicbrainz":  "confirmed",
+                                                                                   "spotify":  "pending",
+                                                                                   "discogs":  "pending",
+                                                                                   "youtube":  "pending"
+                                                                               }
+                                                          }
+                                   },
+                  "zaklopi_moje_oci":  {
+                                           "rank":  31,
+                                           "iswc":  "T-931.111.805-5",
+                                           "title_original":  "ZAKLOPI MOJE OCI",
+                                           "title_normalized":  "Zaklopi moje oči",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  "1fkGMfaLZUpHSuYPsxWNU4",
+                                           "isrc":  "HRA371800850",
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+
+                                                                ],
+                                           "notes":  null,
+                                           "spotify":  {
+                                                           "track_id":  null,
+                                                           "album_id":  null,
+                                                           "popularity":  null,
+                                                           "duration_ms":  null,
+                                                           "explicit":  null,
+                                                           "confidence":  0.0,
+                                                           "match_type":  "manual_required"
+                                                       },
+                                           "reconciliation":  {
+                                                                  "spotify_confidence":  0.0,
+                                                                  "status":  "partial",
+                                                                  "entity_state":  {
+                                                                                       "musicbrainz":  "confirmed",
+                                                                                       "spotify":  "pending",
+                                                                                       "discogs":  "pending",
+                                                                                       "youtube":  "pending"
+                                                                                   }
+                                                              }
+                                       },
+                  "kokosovo_mlijeko":  {
+                                           "rank":  32,
+                                           "iswc":  "T-931.209.030-5",
+                                           "title_original":  "KOKOSOVO MLIJEKO",
+                                           "title_normalized":  "Kokosovo mlijeko",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  "3zdlj3GR8qaKGWjOi7wRzI",
+                                           "isrc":  "HRA371800820",
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+                                                                    "ART010"
+                                                                ],
+                                           "notes":  null,
+                                           "spotify":  {
+                                                           "track_id":  null,
+                                                           "album_id":  null,
+                                                           "popularity":  null,
+                                                           "duration_ms":  null,
+                                                           "explicit":  null,
+                                                           "confidence":  0.0,
+                                                           "match_type":  "manual_required"
+                                                       },
+                                           "reconciliation":  {
+                                                                  "spotify_confidence":  0.0,
+                                                                  "status":  "partial",
+                                                                  "entity_state":  {
+                                                                                       "musicbrainz":  "confirmed",
+                                                                                       "spotify":  "pending",
+                                                                                       "discogs":  "pending",
+                                                                                       "youtube":  "pending"
+                                                                                   }
+                                                              }
+                                       },
+                  "W_CMC_2009_001":  {
+                                         "work_id":  "W_CMC_2009_001",
+                                         "title":  "Ti Si Čudesna",
+                                         "type":  "single_track_appearance",
+                                         "release":  {
+                                                         "title":  "CMC Demo 2009.",
+                                                         "label":  "Croatia Records",
+                                                         "cat_no":  "CD 5867234",
+                                                         "format":  "CD, Compilation",
+                                                         "year":  2009,
+                                                         "track_position":  8,
+                                                         "discogs_release_id":  12309194,
+                                                         "url":  "https://www.discogs.com/release/12309194"
+                                                     },
+                                         "canonical_entity":  "iZLET",
+                                         "verification_state":  "VERIFIED",
+                                         "cluster_id":  "CL-DISCOGS-01"
+                                     },
+                  "krijesovi_lazi":  {
+                                         "rank":  33,
+                                         "iswc":  null,
+                                         "title_original":  "KRIJESOVI LAŽI",
+                                         "title_normalized":  "Krijesovi laži",
+                                         "agency_work_code_zamp":  null,
+                                         "wikidata_qid":  null,
+                                         "musicbrainz_work_id":  null,
+                                         "musicbrainz_recording_id":  null,
+                                         "discogs_master_id":  null,
+                                         "spotify_track_id":  null,
+                                         "isrc":  "QT6F32539173",
+                                         "label":  "Braća Kumerle Music",
+                                         "year":  2025,
+                                         "wikipedia_eligible":  false,
+                                         "contributors":  [
+                                                              {
+                                                                  "name":  "Rafael Lasić",
+                                                                  "role":  "saxophone"
+                                                              }
+                                                          ],
+                                         "visual_production":  "Crotradwave",
+                                         "media_references":  [
+                                                                  "https://www.hop.com.hr/2025/06/22/krijesovi-lazi-pjesma-koja-razotkriva-moralnu-nakaradnost-partizanske-slobode/"
+                                                              ],
+                                         "notes":  null,
+                                         "musicbrainz":  {
+                                                             "recording_id":  "94dd1837-6977-4937-a02e-b8258b932b2a",
+                                                             "release_id":  null,
+                                                             "artist_id":  null,
+                                                             "confidence":  1.0,
+                                                             "match_type":  "exact"
+                                                         }
+                                     },
+                  "vitez_jure":  {
+                                     "rank":  34,
+                                     "iswc":  null,
+                                     "title_original":  "VITEZ JURE",
+                                     "title_normalized":  "Vitez Jure",
+                                     "agency_work_code_zamp":  null,
+                                     "wikidata_qid":  null,
+                                     "musicbrainz_work_id":  null,
+                                     "musicbrainz_recording_id":  null,
+                                     "discogs_master_id":  null,
+                                     "spotify_track_id":  null,
+                                     "isrc":  null,
+                                     "label":  "Braća Kumerle Music",
+                                     "year":  2025,
+                                     "wikipedia_eligible":  false,
+                                     "media_references":  [
+
+                                                          ],
+                                     "notes":  null,
+                                     "musicbrainz":  {
+                                                         "recording_id":  "807abd53-5d7a-4bfa-ae0b-d0c0ab91fae2",
+                                                         "release_id":  null,
+                                                         "artist_id":  null,
+                                                         "confidence":  1.0,
+                                                         "match_type":  "exact"
+                                                     }
+                                 },
+                  "moj_dinamo":  {
+                                     "rank":  35,
+                                     "iswc":  null,
+                                     "title_original":  "MOJ DINAMO",
+                                     "title_normalized":  "Moj Dinamo",
+                                     "agency_work_code_zamp":  null,
+                                     "wikidata_qid":  null,
+                                     "musicbrainz_work_id":  null,
+                                     "musicbrainz_recording_id":  null,
+                                     "discogs_master_id":  null,
+                                     "spotify_track_id":  null,
+                                     "isrc":  null,
+                                     "label":  "Braća Kumerle Music",
+                                     "year":  2025,
+                                     "wikipedia_eligible":  false,
+                                     "media_references":  [
+                                                              "ART017",
+                                                              "ART018"
+                                                          ],
+                                     "notes":  null,
+                                     "musicbrainz":  {
+                                                         "recording_id":  "08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6",
+                                                         "release_id":  null,
+                                                         "artist_id":  null,
+                                                         "confidence":  1.0,
+                                                         "match_type":  "exact"
+                                                     },
+                                     "youtube_id":  "xp-f5vjciCk"
+                                 },
+                  "znakovlje_hrvata":  {
+                                           "rank":  36,
+                                           "iswc":  null,
+                                           "title_original":  "ZNAKOVLJE HRVATA",
+                                           "title_normalized":  "Znakovlje Hrvata",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  null,
+                                           "isrc":  null,
+                                           "label":  "Braća Kumerle Music",
+                                           "year":  2025,
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+
+                                                                ],
+                                           "notes":  null,
+                                           "musicbrainz":  {
+                                                               "recording_id":  "4498971d-8ebe-4c17-87e7-d8d447929180",
+                                                               "release_id":  null,
+                                                               "artist_id":  null,
+                                                               "confidence":  1.0,
+                                                               "match_type":  "exact"
+                                                           }
+                                       },
+                  "vukovarska_brigada_himna":  {
+                                                   "rank":  37,
+                                                   "iswc":  null,
+                                                   "title_original":  "124. VUKOVARSKA BRIGADA HIMNA",
+                                                   "title_normalized":  "124. Vukovarska brigada himna",
+                                                   "agency_work_code_zamp":  null,
+                                                   "wikidata_qid":  null,
+                                                   "musicbrainz_work_id":  null,
+                                                   "musicbrainz_recording_id":  null,
+                                                   "discogs_master_id":  null,
+                                                   "spotify_track_id":  null,
+                                                   "isrc":  null,
+                                                   "label":  "Braća Kumerle Music",
+                                                   "year":  2025,
+                                                   "wikipedia_eligible":  false,
+                                                   "media_references":  [
+
+                                                                        ],
+                                                   "notes":  null,
+                                                   "musicbrainz":  {
+                                                                       "recording_id":  "c6c12002-c671-41ad-a0fd-aed3442614dc",
+                                                                       "release_id":  null,
+                                                                       "artist_id":  null,
+                                                                       "confidence":  1.0,
+                                                                       "match_type":  "exact"
+                                                                   }
+                                               },
+                  "frane_tente":  {
+                                      "rank":  38,
+                                      "iswc":  null,
+                                      "title_original":  "FRANE TENTE",
+                                      "title_normalized":  "Frane Tente",
+                                      "agency_work_code_zamp":  null,
+                                      "wikidata_qid":  null,
+                                      "musicbrainz_work_id":  null,
+                                      "musicbrainz_recording_id":  null,
+                                      "discogs_master_id":  null,
+                                      "spotify_track_id":  null,
+                                      "isrc":  null,
+                                      "label":  "Braća Kumerle Music",
+                                      "year":  2025,
+                                      "wikipedia_eligible":  false,
+                                      "media_references":  [
+                                                               "ART012",
+                                                               "ART013",
+                                                               "ART014"
+                                                           ],
+                                      "notes":  null,
+                                      "musicbrainz":  {
+                                                          "recording_id":  "0999a678-4586-48c5-a1f1-598ffaa69977",
+                                                          "release_id":  null,
+                                                          "artist_id":  null,
+                                                          "confidence":  1.0,
+                                                          "match_type":  "exact"
+                                                      },
+                                      "youtube_id":  "sAWssQ-lNtk",
+                                      "spotify_track":  "1Vg4lIa8nKwoJGgsJt0X99"
+                                  },
+                  "bogdanovacka_kalvarija":  {
+                                                 "rank":  39,
+                                                 "iswc":  null,
+                                                 "title_original":  "BOGDANOVAČKA KALVARIJA",
+                                                 "title_normalized":  "Bogdanovačka kalvarija",
+                                                 "agency_work_code_zamp":  null,
+                                                 "wikidata_qid":  null,
+                                                 "musicbrainz_work_id":  null,
+                                                 "musicbrainz_recording_id":  null,
+                                                 "discogs_master_id":  null,
+                                                 "spotify_track_id":  null,
+                                                 "isrc":  null,
+                                                 "label":  "Braća Kumerle Music",
+                                                 "year":  2025,
+                                                 "wikipedia_eligible":  false,
+                                                 "media_references":  [
+
+                                                                      ],
+                                                 "notes":  null,
+                                                 "musicbrainz":  {
+                                                                     "recording_id":  "6b14a4ae-13cf-4fec-aec4-88d1b0a27201",
+                                                                     "release_id":  null,
+                                                                     "artist_id":  null,
+                                                                     "confidence":  1.0,
+                                                                     "match_type":  "exact"
+                                                                 }
+                                             },
+                  "bozicna_idila":  {
+                                        "rank":  40,
+                                        "iswc":  null,
+                                        "title_original":  "BOŽIĆNA IDILA",
+                                        "title_normalized":  "Božićna idila",
+                                        "agency_work_code_zamp":  null,
+                                        "wikidata_qid":  null,
+                                        "musicbrainz_work_id":  null,
+                                        "musicbrainz_recording_id":  null,
+                                        "discogs_master_id":  null,
+                                        "spotify_track_id":  null,
+                                        "isrc":  null,
+                                        "label":  "Braća Kumerle Music",
+                                        "year":  2025,
+                                        "wikipedia_eligible":  false,
+                                        "media_references":  [
+
+                                                             ],
+                                        "notes":  null,
+                                        "musicbrainz":  {
+                                                            "recording_id":  "52686be5-371c-4dd5-907e-da3306ed07c9",
+                                                            "release_id":  null,
+                                                            "artist_id":  null,
+                                                            "confidence":  1.0,
+                                                            "match_type":  "exact"
+                                                        }
+                                    },
+                  "isuse_moj":  {
+                                    "rank":  41,
+                                    "iswc":  null,
+                                    "title_original":  "ISUSE MOJ",
+                                    "title_normalized":  "Isuse moj",
+                                    "agency_work_code_zamp":  null,
+                                    "wikidata_qid":  null,
+                                    "musicbrainz_work_id":  null,
+                                    "musicbrainz_recording_id":  null,
+                                    "discogs_master_id":  null,
+                                    "spotify_track_id":  null,
+                                    "isrc":  null,
+                                    "label":  "Braća Kumerle Music",
+                                    "year":  2026,
+                                    "wikipedia_eligible":  false,
+                                    "media_references":  [
+
+                                                         ],
+                                    "notes":  null,
+                                    "musicbrainz":  {
+                                                        "recording_id":  "c25db041-6d8e-49e7-8953-f8a42e19f2f6",
+                                                        "release_id":  null,
+                                                        "artist_id":  null,
+                                                        "confidence":  1.0,
+                                                        "match_type":  "exact"
+                                                    }
+                                },
+                  "covjek_moli_boga":  {
+                                           "rank":  42,
+                                           "iswc":  null,
+                                           "title_original":  "ČOVJEK MOLI BOGA",
+                                           "title_normalized":  "Čovjek moli Boga",
+                                           "agency_work_code_zamp":  null,
+                                           "wikidata_qid":  null,
+                                           "musicbrainz_work_id":  null,
+                                           "musicbrainz_recording_id":  null,
+                                           "discogs_master_id":  null,
+                                           "spotify_track_id":  null,
+                                           "isrc":  null,
+                                           "label":  "Braća Kumerle Music",
+                                           "year":  2026,
+                                           "wikipedia_eligible":  false,
+                                           "media_references":  [
+
+                                                                ],
+                                           "notes":  null,
+                                           "musicbrainz":  {
+                                                               "recording_id":  "a43cf149-bd70-4b41-a261-ee56604fe390",
+                                                               "release_id":  null,
+                                                               "artist_id":  null,
+                                                               "confidence":  1.0,
+                                                               "match_type":  "exact"
+                                                           }
+                                       },
+                  "sjever_uz_odsutne":  {
+                                            "rank":  43,
+                                            "iswc":  null,
+                                            "title_original":  "SJEVER UZ ODSUTNE",
+                                            "title_normalized":  "Sjever uz odsutne",
+                                            "agency_work_code_zamp":  null,
+                                            "wikidata_qid":  null,
+                                            "musicbrainz_work_id":  null,
+                                            "musicbrainz_recording_id":  null,
+                                            "discogs_master_id":  null,
+                                            "spotify_track_id":  null,
+                                            "isrc":  null,
+                                            "barcode":  "199953974831",
+                                            "catalog_number":  "BKMUSIC001",
+                                            "label":  "Braća Kumerle Music",
+                                            "year":  2023,
+                                            "wikipedia_eligible":  false,
+                                            "media_references":  [
+                                                                     "https://portal.braniteljski-forum.com/blog/vijesti/braca-kumerle-izdala-snaznu-poruku-podrske-nova-pjesma-za-bad-blue-boyse-u-grckim-zatvorima",
+                                                                     "https://narod.hr/sport/podrska-braca-kumerle-snimili-pjesmu-posvecenu-bad-blue-boysima-zatocenima-u-grckim-zatvorima"
+                                                                 ],
+                                            "notes":  null,
+                                            "musicbrainz":  {
+                                                                "recording_id":  "87cf4afb-efbf-4627-a8b1-170725fa7807",
+                                                                "release_id":  "8b675ac0-7ab0-40e3-b8a1-a2a6c2bab553",
+                                                                "artist_id":  "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                                                                "confidence":  1.0,
+                                                                "match_type":  "exact"
+                                                            },
+                                            "youtube_id":  "o02z8L8gOn0"
+                                        }
+              },
+    "releases":  {
+                     "nikad_ne_znas_album":  {
+                                                 "title_original":  "NIKAD NE ZNAS, TO JE ONO...",
+                                                 "title_normalized":  "Nikad ne znaš, to je ono…",
+                                                 "type":  "album",
+                                                 "year":  2016,
+                                                 "release_date":  "2016-06-01",
+                                                 "label":  "Dallas Records",
+                                                 "catalog_number":  "BL2361431",
+                                                 "upc":  "3614971838301",
+                                                 "track_count":  13,
+                                                 "discogs_release_id":  null,
+                                                 "musicbrainz_release_id":  null,
+                                                 "spotify_album_id":  "6hT2KjY5IqE6e3wqSmNJyB",
+                                                 "barcode":  null,
+                                                 "notes":  "[RATIFIED] catalog_number=BL2361431 verificiran od Generala 29.05.2026. Prethodni unos CD DALLAS 829 zamijenjen verificiranim brojem. UPC i Spotify album ID verificirani 29.05.2026."
+                                             }
+                 }
 }
