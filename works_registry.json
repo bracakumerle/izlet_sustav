@@ -125,7 +125,7 @@
                                "musicbrainz_recording_id":  null,
                                "discogs_master_id":  null,
                                "spotify_track_id":  "1OqLa2wkxlt0KDsdGzcoZ0",
-                               "isrc":  "HRA371300115",
+                               "isrc":  "SIA4Z1800048",
                                "wikipedia_eligible":  true,
                                "media_references":  [
                                                         "ART001",
@@ -153,7 +153,11 @@
                                                                            "youtube":  "pending"
                                                                        }
                                                   },
-                               "youtube_id":  "Tz5gZiFe4dU"
+                               "youtube_id":  "Tz5gZiFe4dU",
+                               "musicbrainz":  {
+                                                   "recording_id":  "8b46c318-95d8-4470-acf2-f20d10996e50",
+                                                   "confidence":  1
+                                               }
                            },
                   "oo_da_sa_krilima":  {
                                            "rank":  4,
@@ -781,7 +785,11 @@
                                                                            "discogs":  "pending",
                                                                            "youtube":  "pending"
                                                                        }
-                                                  }
+                                                  },
+                               "musicbrainz":  {
+                                                   "recording_id":  "c11545fd-982a-44b9-916f-ab5231c376be",
+                                                   "confidence":  1
+                                               }
                            },
                   "oceana":  {
                                  "rank":  23,
@@ -1243,7 +1251,7 @@
                                      "musicbrainz_recording_id":  null,
                                      "discogs_master_id":  null,
                                      "spotify_track_id":  null,
-                                     "isrc":  null,
+                                     "isrc":  "QT6F32530626",
                                      "label":  "Braća Kumerle Music",
                                      "year":  2025,
                                      "wikipedia_eligible":  false,
@@ -1326,7 +1334,7 @@
                                       "musicbrainz_recording_id":  null,
                                       "discogs_master_id":  null,
                                       "spotify_track_id":  null,
-                                      "isrc":  null,
+                                      "isrc":  "QT6F32536381",
                                       "label":  "Braća Kumerle Music",
                                       "year":  2025,
                                       "wikipedia_eligible":  false,
