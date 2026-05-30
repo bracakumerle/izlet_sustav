@@ -295,7 +295,9 @@
       "spotify_track_id": "1UG0hZAJfmZhi99rVXnQh9",
       "isrc": "HRA371800851",
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART004"
+      ],
       "notes": null,
       "spotify": {
         "track_id": null,
@@ -645,7 +647,10 @@
       "spotify_track_id": "2eZOUlMECJSMsfymyDEadO",
       "isrc": "HRA371800598",
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART003",
+        "ART008"
+      ],
       "notes": "Demo era (EL, 2010)",
       "spotify": {
         "track_id": null,
@@ -680,7 +685,9 @@
       "spotify_track_id": "38Bnf0zNXSHX96AWjHCEee",
       "isrc": "HRA371800642",
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART005"
+      ],
       "notes": null,
       "spotify": {
         "track_id": null,
@@ -715,7 +722,9 @@
       "spotify_track_id": "6xjlYNlucQ1KK5Xh9VgMqM",
       "isrc": "HRA371800845",
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART011"
+      ],
       "notes": "Vjerojatno dio 'Čast i čisti obraz'",
       "spotify": {
         "track_id": null,
@@ -925,7 +934,9 @@
       "spotify_track_id": "1pMYqxkam2FRmLhenM5kcE",
       "isrc": "HRA371800674",
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART006"
+      ],
       "notes": null,
       "spotify": {
         "track_id": null,
@@ -1065,7 +1076,9 @@
       "spotify_track_id": "3zdlj3GR8qaKGWjOi7wRzI",
       "isrc": "HRA371800820",
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART010"
+      ],
       "notes": null,
       "spotify": {
         "track_id": null,
@@ -1176,7 +1189,10 @@
       "label": "Braća Kumerle Music",
       "year": 2025,
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART017",
+        "ART018"
+      ],
       "notes": null,
       "musicbrainz": {
         "recording_id": "08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6",
@@ -1251,7 +1267,11 @@
       "label": "Braća Kumerle Music",
       "year": 2025,
       "wikipedia_eligible": false,
-      "media_references": [],
+      "media_references": [
+        "ART012",
+        "ART013",
+        "ART014"
+      ],
       "notes": null,
       "musicbrainz": {
         "recording_id": "0999a678-4586-48c5-a1f1-598ffaa69977",
