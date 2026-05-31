@@ -1,254 +1,327 @@
-{
-  "schema_version": "1.0",
-  "id_namespace": "izlet.events",
-  "description": "Registry događaja vezanih uz iZLET / Braća Kumerle ekosustav. Odvojeno od works_registry.json — eventi su vremenski ograničeni, works su statični artefakti.",
-  "event_types": [
-    "event_type.live_performance",
-    "event_type.public_incident",
-    "event_type.media_appearance",
-    "event_type.legal_proceeding",
-    "event_type.pilgrimage_departure"
-  ],
-  "status_lifecycle": [
-    "node.raw",
-    "node.referenced",
-    "node.validated"
-  ],
-  "events": [
-    {
-      "event_id": "HOD2026_D01",
-      "created_at": "2026-05-11",
-      "name": "Polazak — Zagreb (Lučko)",
-      "type": "event_type.pilgrimage_departure",
-      "date": "2026-05-07",
-      "location": {
-        "name": "Lučko",
-        "city": "Zagreb",
-        "country": "Croatia"
-      },
-      "participants": [
-        {
-          "entity_id": "toni_kumerle",
-          "role": "hodočasnik"
-        }
-      ],
-      "related_entities": [
-        {
-          "entity_id": "izlet",
-          "relation": "mentioned_in_media"
-        }
-      ],
-      "sources": [
-        {
-          "type": "media",
-          "name": "Braniteljski forum",
-          "url": "https://portal.braniteljski-forum.com/blog/branitelji/hodocasce-ratnika-tomislav-lucic-i-toni-kumerle-pjesice-iz-zagreba-prema-medjugorju",
-          "date": "2026-05-07"
-        }
-      ],
-      "wikipedia": {
-        "status": "not_applicable",
-        "wikidata_status": "pending",
-        "notes": null
-      },
-      "status": "node.referenced"
-    },
-    {
-      "event_id": "event_strice_ivane_performance_2025",
-      "created_at": "2026-05-04",
-      "name": "Striče Ivane — javna izvedba na Trgu bana Jelačića",
-      "type": "event_type.live_performance",
-      "date": "2025-11-15",
-      "location": {
-        "name": "Trg bana Josipa Jelačića",
-        "city": "Zagreb",
-        "country": "Croatia"
-      },
-      "participants": [
-        {
-          "entity_id": "toni_kumerle",
-          "role": "performer"
-        },
-        {
-          "entity_id": "petar_kumerle",
-          "role": "performer"
-        }
-      ],
-      "related_works": [
-        {
-          "work_id": "strice_ivane_cover",
-          "relation": "performed"
-        }
-      ],
-      "related_entities": [
-        {
-          "entity_id": "izlet",
-          "relation": "performing_act"
-        },
-        {
-          "entity_id": "braca_kumerle",
-          "relation": "performing_act"
-        }
-      ],
-      "metrics": {
-        "youtube_views": 70000,
-        "facebook_views_estimated_min": 150000,
-        "facebook_views_estimated_max": 300000
-      },
-      "sources": [
-        {
-          "type": "media",
-          "name": "Dalmacija Danas",
-          "url": null,
-          "date": "2025-11-15"
-        },
-        {
-          "type": "media",
-          "name": "Tjedno",
-          "url": "https://www.tjedno.hr/13100758-2/",
-          "date": "2025-11-15"
-        },
-        {
-          "type": "media",
-          "name": "Hercegovina.in",
-          "url": "https://hercegovina.in/video-himna-hvo-a-izvedena-na-glavnom-zagrebackom-trgu/",
-          "date": "2025-11-25"
-        },
-        {
-          "type": "media",
-          "name": "HOP portal",
-          "url": null,
-          "date": "2025-11-15"
-        }
-      ],
-      "wikipedia": {
-        "status": "candidate",
-        "wikidata_status": "pending",
-        "notes": "Viralni event — potrebna stabilizacija izvora prije Wikipedia objave"
-      },
-      "status": "node.referenced"
-    },
-    {
-      "event_id": "event_gazenje_ruza_2025",
-      "created_at": "2026-05-04",
-      "name": "Gaženje ruža u Zagrebu",
-      "type": "event_type.public_incident",
-      "date": "2025-12-06",
-      "location": {
-        "name": "Trg bana Josipa Jelačića",
-        "city": "Zagreb",
-        "country": "Croatia"
-      },
-      "participants": [
-        {
-          "entity_id": "toni_kumerle",
-          "role": "involved_person"
-        }
-      ],
-      "related_entities": [
-        {
-          "entity_id": "izlet",
-          "relation": "mentioned_in_media"
-        },
-        {
-          "entity_id": "braca_kumerle",
-          "relation": "mentioned_in_media"
-        }
-      ],
-      "sources": [
-        {
-          "type": "media",
-          "name": "Index.hr",
-          "url": "https://www.index.hr/vijesti/clanak/policija-prijavila-muskarca-koji-je-gazio-ruze-u-zagrebu-evo-za-sto-ga-terete/2738582.aspx",
-          "date": "2025-12-09"
-        },
-        {
-          "type": "media",
-          "name": "Dnevnik.hr",
-          "url": "https://dnevnik.hr/vijesti/hrvatska/prijavljen-muskarac-koji-je-na-zagrebackom-trgu-gazio-ruze-za-ubijene-zene---951027.html",
-          "date": "2025-12-09"
-        },
-        {
-          "type": "media",
-          "name": "Istra24",
-          "url": "https://www.istra24.hr/crna-kronika/nakon-sto-je-zgrozio-javnost-policija-prijavila-tonija-kumerlea-muskarca-koji-je-gazio-ruze-za-zrtve-femicida",
-          "date": "2025-12-09"
-        },
-        {
-          "type": "factcheck",
-          "name": "Faktograf.hr",
-          "url": "https://faktograf.hr/2026/03/20/ni-napad-na-policajku-a-ni-gazenje-ruza-na-trgu-policija-i-sudstvo-nisu-kvalificirali-kao-femicid/",
-          "date": "2026-03-20"
-        }
-      ],
-      "legal": {
-        "classification": "misdemeanor",
-        "jurisdiction": "HR",
-        "law": "Zakon o prekršajima protiv javnog reda i mira, čl. 6",
-        "status": "charged",
-        "note": "Optužni prijedlog podnesen nadležnom sudu"
-      },
-      "wikipedia": {
-        "status": "archived_draft",
-        "wikidata_status": "pending",
-        "draft_location": "wikipedia/arhiva/gazenje_ruza_zagreb_2025.wikitext",
-        "notes": "COI — ne objavljuje se direktno. Prolazi kroz neutralnog posrednika."
-      },
-      "status": "node.referenced"
-    },
-    {
-      "event_id": "event_south_point_rocknride_2018",
-      "created_at": "2026-05-13",
-      "name": "South Point Rock'n'ride — festival nastup i nagrada, Konavle",
-      "type": "event_type.live_performance",
-      "date": "2018",
-      "year": 2018,
-      "location": {
-        "name": "South Point Rock'n'ride",
-        "city": "Konavle",
-        "country": "Croatia"
-      },
-      "participants": [
-        {
-          "entity_id": "toni_kumerle",
-          "role": "performer"
-        },
-        {
-          "entity_id": "petar_kumerle",
-          "role": "performer"
-        }
-      ],
-      "related_entities": [
-        {
-          "entity_id": "izlet",
-          "relation": "performing_act"
-        },
-        {
-          "entity_id": "dallas_records",
-          "relation": "label_at_time"
-        }
-      ],
-      "outcome": {
-        "award": "3 dana snimanja u studiju Pavarotti, Mostar",
-        "notes": "Bend je samostalno snimio videospot za singl 'Tko si ti' (2018.) na putovanju, u putopisno-dokumentarnom stilu."
-      },
-      "sources": [
-        {
-          "type": "video_metadata",
-          "name": "Dallas Records — Tko si ti (Official Video)",
-          "url": "https://www.youtube.com/watch?v=NhKx_25-8EE",
-          "date": "2018-09-03",
-          "note": "Dallas Records video metadata confirmed"
-        }
-      ],
-      "verification_state": "VERIFIED",
-      "canonical": true,
-      "wikipedia": {
-        "status": "not_applicable",
-        "wikidata_status": "pending",
-        "notes": null
-      },
-      "status": "node.referenced"
-    }
-  ]
+﻿{
+    "schema_version":  "1.0",
+    "id_namespace":  "izlet.events",
+    "description":  "Registry događaja vezanih uz iZLET / Braća Kumerle ekosustav. Odvojeno od works_registry.json — eventi su vremenski ograničeni, works su statični artefakti.",
+    "event_types":  [
+                        "event_type.live_performance",
+                        "event_type.public_incident",
+                        "event_type.media_appearance",
+                        "event_type.legal_proceeding",
+                        "event_type.pilgrimage_departure"
+                    ],
+    "status_lifecycle":  [
+                             "node.raw",
+                             "node.referenced",
+                             "node.validated"
+                         ],
+    "events":  [
+                   {
+                       "event_id":  "HOD2026_D01",
+                       "created_at":  "2026-05-11",
+                       "name":  "Polazak — Zagreb (Lučko)",
+                       "type":  "event_type.pilgrimage_departure",
+                       "date":  "2026-05-07",
+                       "location":  {
+                                        "name":  "Lučko",
+                                        "city":  "Zagreb",
+                                        "country":  "Croatia"
+                                    },
+                       "participants":  [
+                                            {
+                                                "entity_id":  "toni_kumerle",
+                                                "role":  "hodočasnik"
+                                            }
+                                        ],
+                       "related_entities":  [
+                                                {
+                                                    "entity_id":  "izlet",
+                                                    "relation":  "mentioned_in_media"
+                                                }
+                                            ],
+                       "sources":  [
+                                       {
+                                           "type":  "media",
+                                           "name":  "Braniteljski forum",
+                                           "url":  "https://portal.braniteljski-forum.com/blog/branitelji/hodocasce-ratnika-tomislav-lucic-i-toni-kumerle-pjesice-iz-zagreba-prema-medjugorju",
+                                           "date":  "2026-05-07"
+                                       }
+                                   ],
+                       "wikipedia":  {
+                                         "status":  "not_applicable",
+                                         "wikidata_status":  "pending",
+                                         "notes":  null
+                                     },
+                       "status":  "node.referenced"
+                   },
+                   {
+                       "event_id":  "event_strice_ivane_performance_2025",
+                       "created_at":  "2026-05-04",
+                       "name":  "Striče Ivane — javna izvedba na Trgu bana Jelačića",
+                       "type":  "event_type.live_performance",
+                       "date":  "2025-11-15",
+                       "location":  {
+                                        "name":  "Trg bana Josipa Jelačića",
+                                        "city":  "Zagreb",
+                                        "country":  "Croatia"
+                                    },
+                       "participants":  [
+                                            {
+                                                "entity_id":  "toni_kumerle",
+                                                "role":  "performer"
+                                            },
+                                            {
+                                                "entity_id":  "petar_kumerle",
+                                                "role":  "performer"
+                                            }
+                                        ],
+                       "related_works":  [
+                                             {
+                                                 "work_id":  "strice_ivane_cover",
+                                                 "relation":  "performed"
+                                             }
+                                         ],
+                       "related_entities":  [
+                                                {
+                                                    "entity_id":  "izlet",
+                                                    "relation":  "performing_act"
+                                                },
+                                                {
+                                                    "entity_id":  "braca_kumerle",
+                                                    "relation":  "performing_act"
+                                                }
+                                            ],
+                       "metrics":  {
+                                       "youtube_views":  70000,
+                                       "facebook_views_estimated_min":  150000,
+                                       "facebook_views_estimated_max":  300000
+                                   },
+                       "sources":  [
+                                       {
+                                           "type":  "media",
+                                           "name":  "Dalmacija Danas",
+                                           "url":  null,
+                                           "date":  "2025-11-15"
+                                       },
+                                       {
+                                           "type":  "media",
+                                           "name":  "Tjedno",
+                                           "url":  "https://www.tjedno.hr/13100758-2/",
+                                           "date":  "2025-11-15"
+                                       },
+                                       {
+                                           "type":  "media",
+                                           "name":  "Hercegovina.in",
+                                           "url":  "https://hercegovina.in/video-himna-hvo-a-izvedena-na-glavnom-zagrebackom-trgu/",
+                                           "date":  "2025-11-25"
+                                       },
+                                       {
+                                           "type":  "media",
+                                           "name":  "HOP portal",
+                                           "url":  null,
+                                           "date":  "2025-11-15"
+                                       }
+                                   ],
+                       "wikipedia":  {
+                                         "status":  "candidate",
+                                         "wikidata_status":  "pending",
+                                         "notes":  "Viralni event — potrebna stabilizacija izvora prije Wikipedia objave"
+                                     },
+                       "status":  "node.referenced"
+                   },
+                   {
+                       "event_id":  "event_gazenje_ruza_2025",
+                       "created_at":  "2026-05-04",
+                       "name":  "Gaženje ruža u Zagrebu",
+                       "type":  "event_type.public_incident",
+                       "date":  "2025-12-06",
+                       "location":  {
+                                        "name":  "Trg bana Josipa Jelačića",
+                                        "city":  "Zagreb",
+                                        "country":  "Croatia"
+                                    },
+                       "participants":  [
+                                            {
+                                                "entity_id":  "toni_kumerle",
+                                                "role":  "involved_person"
+                                            }
+                                        ],
+                       "related_entities":  [
+                                                {
+                                                    "entity_id":  "izlet",
+                                                    "relation":  "mentioned_in_media"
+                                                },
+                                                {
+                                                    "entity_id":  "braca_kumerle",
+                                                    "relation":  "mentioned_in_media"
+                                                }
+                                            ],
+                       "sources":  [
+                                       {
+                                           "type":  "media",
+                                           "name":  "Index.hr",
+                                           "url":  "https://www.index.hr/vijesti/clanak/policija-prijavila-muskarca-koji-je-gazio-ruze-u-zagrebu-evo-za-sto-ga-terete/2738582.aspx",
+                                           "date":  "2025-12-09"
+                                       },
+                                       {
+                                           "type":  "media",
+                                           "name":  "Dnevnik.hr",
+                                           "url":  "https://dnevnik.hr/vijesti/hrvatska/prijavljen-muskarac-koji-je-na-zagrebackom-trgu-gazio-ruze-za-ubijene-zene---951027.html",
+                                           "date":  "2025-12-09"
+                                       },
+                                       {
+                                           "type":  "media",
+                                           "name":  "Istra24",
+                                           "url":  "https://www.istra24.hr/crna-kronika/nakon-sto-je-zgrozio-javnost-policija-prijavila-tonija-kumerlea-muskarca-koji-je-gazio-ruze-za-zrtve-femicida",
+                                           "date":  "2025-12-09"
+                                       },
+                                       {
+                                           "type":  "factcheck",
+                                           "name":  "Faktograf.hr",
+                                           "url":  "https://faktograf.hr/2026/03/20/ni-napad-na-policajku-a-ni-gazenje-ruza-na-trgu-policija-i-sudstvo-nisu-kvalificirali-kao-femicid/",
+                                           "date":  "2026-03-20"
+                                       }
+                                   ],
+                       "legal":  {
+                                     "classification":  "misdemeanor",
+                                     "jurisdiction":  "HR",
+                                     "law":  "Zakon o prekršajima protiv javnog reda i mira, čl. 6",
+                                     "status":  "charged",
+                                     "note":  "Optužni prijedlog podnesen nadležnom sudu"
+                                 },
+                       "wikipedia":  {
+                                         "status":  "archived_draft",
+                                         "wikidata_status":  "pending",
+                                         "draft_location":  "wikipedia/arhiva/gazenje_ruza_zagreb_2025.wikitext",
+                                         "notes":  "COI — ne objavljuje se direktno. Prolazi kroz neutralnog posrednika."
+                                     },
+                       "status":  "node.referenced"
+                   },
+                   {
+                       "event_id":  "event_south_point_rocknride_2018",
+                       "created_at":  "2026-05-13",
+                       "name":  "South Point Rock\u0027n\u0027ride — festival nastup i nagrada, Konavle",
+                       "type":  "event_type.live_performance",
+                       "date":  "2018",
+                       "year":  2018,
+                       "location":  {
+                                        "name":  "South Point Rock\u0027n\u0027ride",
+                                        "city":  "Konavle",
+                                        "country":  "Croatia"
+                                    },
+                       "participants":  [
+                                            {
+                                                "entity_id":  "toni_kumerle",
+                                                "role":  "performer"
+                                            },
+                                            {
+                                                "entity_id":  "petar_kumerle",
+                                                "role":  "performer"
+                                            }
+                                        ],
+                       "related_entities":  [
+                                                {
+                                                    "entity_id":  "izlet",
+                                                    "relation":  "performing_act"
+                                                },
+                                                {
+                                                    "entity_id":  "dallas_records",
+                                                    "relation":  "label_at_time"
+                                                }
+                                            ],
+                       "outcome":  {
+                                       "award":  "3 dana snimanja u studiju Pavarotti, Mostar",
+                                       "notes":  "Bend je samostalno snimio videospot za singl \u0027Tko si ti\u0027 (2018.) na putovanju, u putopisno-dokumentarnom stilu."
+                                   },
+                       "sources":  [
+                                       {
+                                           "type":  "video_metadata",
+                                           "name":  "Dallas Records — Tko si ti (Official Video)",
+                                           "url":  "https://www.youtube.com/watch?v=NhKx_25-8EE",
+                                           "date":  "2018-09-03",
+                                           "note":  "Dallas Records video metadata confirmed"
+                                       }
+                                   ],
+                       "verification_state":  "VERIFIED",
+                       "canonical":  true,
+                       "wikipedia":  {
+                                         "status":  "not_applicable",
+                                         "wikidata_status":  "pending",
+                                         "notes":  null
+                                     },
+                       "status":  "node.referenced"
+                   },
+                   {
+                       "event_id":  "event_aquarius_brucosijada_pmf_2010",
+                       "created_at":  "2026-05-31",
+                       "name":  "Brucošijada PMF-a — Aquarius club, Zagreb",
+                       "type":  "event_type.live_performance",
+                       "date":  "2010-12-10",
+                       "year":  2010,
+                       "location":  {
+                                        "name":  "Aquarius club",
+                                        "city":  "Zagreb",
+                                        "country":  "Croatia"
+                                    },
+                       "participants":  [
+                                            {
+                                                "entity_id":  "toni_kumerle",
+                                                "role":  "performer"
+                                            },
+                                            {
+                                                "entity_id":  "petar_kumerle",
+                                                "role":  "performer"
+                                            }
+                                        ],
+                       "related_entities":  [
+                                                {
+                                                    "entity_id":  "izlet",
+                                                    "relation":  "performing_act"
+                                                }
+                                            ],
+                       "setlist":  [
+                                       {
+                                           "song":  "Šoram snjegovića",
+                                           "isrc":  null,
+                                           "note":  "confirmed via YouTube live recording"
+                                       }
+                                   ],
+                       "outcome":  {
+                                       "notes":  "Live snimka objavljena na YouTube kanalu @bracakumerle na godišnjicu nastupa, 10.12.2018. Video naslov: \u0027iZLET - Šoram snjegovića (live @ Aquarius, Zagreb) | Brucošijada PMF-a, 10.12.2010.\u0027"
+                                   },
+                       "sources":  [
+                                       {
+                                           "type":  "youtube_live_recording",
+                                           "name":  "iZLET - Šoram snjegovića (live @ Aquarius, Zagreb)",
+                                           "url":  "https://youtu.be/LW0Om2bBluc",
+                                           "date":  "2018-12-10",
+                                           "note":  "Upload date 10.12.2018, nastup 10.12.2010."
+                                       },
+                                       {
+                                           "type":  "media_article",
+                                           "name":  "Brucošijada PMF-a u Aquariusu — Brija.com",
+                                           "url":  "https://www.brija.com/brucosijada-pmf-a-u-aquariusu/",
+                                           "date":  "2010-12-07",
+                                           "note":  "Najava nastupa, treći party medijski izvor, potvrđuje datum i lokaciju"
+                                       }
+                                   ],
+                       "youtube_metadata":  {
+                                                "video_id":  "LW0Om2bBluc",
+                                                "title":  "iZLET - Šoram snjegovića (live @ Aquarius, Zagreb) | Brucošijada PMF-a, 10.12.2010.",
+                                                "tags":  "iZLET, Braća Kumerle, Šoram snjegovića, hrvatska glazba, hrvatski rock, live nastup, Aquarius Zagreb, Zagreb, brucošijada, PMF Zagreb, rock glazba, zimska pjesma, live muzika, hrvatska rock scena, Toni Kumerle, Petar Kumerle, indie rock, rock bend, koncert Zagreb",
+                                                "epoch":  "Proto iZLET (2009-2014)"
+                                            },
+                       "setlist_fm":  {
+                                          "status":  "pending",
+                                          "note":  "Unos planiran — Aquarius Zagreb, 10.12.2010."
+                                      },
+                       "verification_state":  "VERIFIED",
+                       "canonical":  true,
+                       "wikipedia":  {
+                                         "status":  "not_applicable",
+                                         "wikidata_status":  "not_applicable",
+                                         "notes":  null
+                                     },
+                       "status":  "node.referenced"
+                   }
+               ]
 }
