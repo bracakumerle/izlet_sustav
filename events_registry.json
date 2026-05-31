@@ -322,6 +322,64 @@
                                          "notes":  null
                                      },
                        "status":  "node.referenced"
+                   },
+                   {
+                       "event_id":  "event_sax_zagreb_2010",
+                       "created_at":  "2026-05-31",
+                       "name":  "iZLET live @ Sax!, Zagreb",
+                       "type":  "event_type.live_performance",
+                       "date":  "2010-03-24",
+                       "year":  2010,
+                       "location":  {
+                                        "name":  "Sax!",
+                                        "city":  "Zagreb",
+                                        "country":  "Croatia"
+                                    },
+                       "participants":  [
+                                            {
+                                                "entity_id":  "toni_kumerle",
+                                                "role":  "performer"
+                                            },
+                                            {
+                                                "entity_id":  "petar_kumerle",
+                                                "role":  "performer"
+                                            }
+                                        ],
+                       "related_entities":  [
+                                                {
+                                                    "entity_id":  "izlet",
+                                                    "relation":  "performing_act"
+                                                }
+                                            ],
+                       "setlist":  [
+                                       {
+                                           "song":  "Urota duhova",
+                                           "isrc":  null,
+                                           "note":  "confirmed via private YouTube recording"
+                                       }
+                                   ],
+                       "sources":  [
+                                       {
+                                           "type":  "youtube_private_recording",
+                                           "name":  "iZLET live @ Sax! Zagreb, 2010. (privatni video)",
+                                           "url":  null,
+                                           "date":  "2010-03-24",
+                                           "note":  "Privatni YouTube video, vlasnik: bracakumerle"
+                                       }
+                                   ],
+                       "setlist_fm":  {
+                                          "status":  "added",
+                                          "url":  "https://www.setlist.fm/setlists/izlet-139d116d.html",
+                                          "note":  "Unos kreiran 2026-05-31"
+                                      },
+                       "verification_state":  "VERIFIED",
+                       "canonical":  true,
+                       "wikipedia":  {
+                                         "status":  "not_applicable",
+                                         "wikidata_status":  "not_applicable",
+                                         "notes":  null
+                                     },
+                       "status":  "node.referenced"
                    }
                ]
 }
