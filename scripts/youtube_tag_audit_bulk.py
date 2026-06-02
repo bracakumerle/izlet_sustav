@@ -44,14 +44,47 @@ SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
 # Tags to remove from ALL videos (global blacklist)
 GLOBAL_REMOVE = [
+    # geo/brand signal
     "zds",
     "ex yu",
     "ex-yu",
     "balkanska glazba",
     "balkanski rock",
-    "muzika",           # srpski/BiH spelling — krivi geo signal
+    "balkanski punk",
+    "ex yu rock",
+    "ex yu punk",
+    "#balkanskisvijet",
+    # muzika — srpski/BiH spelling variants
+    "muzika",
     "muzika hrvatska",
+    "hrvatska muzika",
+    "narodna muzika",
+    "live muzika",
+    "duhovna muzika",
+    "balkanska muzika",
+    "muzika 2023",
+    "muzika na javi",
+    "muzika sa balkana",
+    "muzika za party",
+    "muzika za uživanje",
+    "pop muzika",
+    "striming muzika",
+    "muzika nova",
+    "muzika za opuštanje",
+    "alternativna muzika",
+    "kontemporarna muzika",
     "patriotska muzika",
+    # YouTube auto-generated tags
+    "(musical artist)",
+    "(musical group)",
+    "(musical recording)",
+    "(musical genre)",
+    "musical journey",
+    "musical exploration",
+    "musical analysis",
+    "musical artistry",
+    "musical tribute",
+    "fete de la musique",
 ]
 
 # Tags to remove from videos that are NOT Thompson covers/performances
@@ -95,7 +128,7 @@ REMOVE_TAGS_EXPLICIT = [
     "stanko šarić", "poglavnik pavelić", "poglavnik ante pavelić",
     "kvaternik poglavnik", "ustaški poglavnik",
 ]
-REMOVE_KEYWORDS = ["ustash", "ustasa", "ustase", "poglavni", "ndh", "pavelić", "kvaternik"]
+REMOVE_KEYWORDS = ["ustash", "ustasa", "ustase", "poglavni", "ndh", "pavelić", "kvaternik", "(musical"]
 
 # ── AUTH ──────────────────────────────────────────────────────────────────────
 
@@ -185,13 +218,14 @@ def compute_tag_diff(video_id, title, existing_tags):
             continue
         kept.append(tag)
 
-    # Add canonical tags if missing
+    # Add canonical tags only if there is room (under 25 kept tags after removes)
     added = []
-    existing_lower = [t.lower() for t in kept]
-    for canonical in CANONICAL_ADD:
-        if canonical.lower() not in existing_lower:
-            kept.append(canonical)
-            added.append(canonical)
+    if len(kept) < 25:
+        existing_lower = [t.lower() for t in kept]
+        for canonical in CANONICAL_ADD:
+            if canonical.lower() not in existing_lower:
+                kept.append(canonical)
+                added.append(canonical)
 
     return {
         "video_id": video_id,

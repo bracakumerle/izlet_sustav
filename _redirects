@@ -9,6 +9,9 @@
 /video     /video.html     200
 /kontakt   /kontakt.html   200
 /vizualni-identitet    /vizualni-identitet.html    200
+/en/               /en/index.html              200
+/en/biography/     /en/biography/index.html    200
+/en/discography/   /en/discography/index.html  200
 /*             /index.html    200
 
 /pjesme/zalo    /pjesme/zalo.html    200
