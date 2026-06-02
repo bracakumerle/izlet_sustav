@@ -1,0 +1,31 @@
+url,fond,naziv_entiteta,canonical_entity_id,schema_tip,godina,status,identifikatori,sameAs_count,napomena
+/,Root,iZLET,hub:homepage,MusicGroup,2016,Live,WD:Q139595627; WD:Q139595619; WD:Q139595518; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:11wCFDSyZy0LfWkgllak6d,12,
+/arhiva,Root,Arhiva,hub:arhiva,WebPage,2007,Live,,0,
+/bio,Root,O bendu,hub:bio,AboutPage,2007,Live,WD:Q139595518; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f,0,
+/bkm,Root,Braća Kumerle Music,hub:bkm,Organization,,Stub,Discogs:4368922,0,Label entity; no HTML
+/diskografija,Root,Diskografija,hub:diskografija,CollectionPage,2009,Live,SP:11wCFDSyZy0LfWkgllak6d,0,
+/en/,Root,iZLET,hub:en,WebPage,2007,Live,WD:Q139595518; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:11wCFDSyZy0LfWkgllak6d,4,
+/en/biography/,Root,About,hub:biography,AboutPage,2007,Live,WD:Q139595518; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f,0,
+/en/discography/,Root,Discography,hub:discography,CollectionPage,2016,Live,SP:11wCFDSyZy0LfWkgllak6d,0,
+/kontakt,Root,Kontakt,hub:kontakt,WebPage,2026,Live,SP:11wCFDSyZy0LfWkgllak6d,0,
+/video,Root,Video,hub:video,WebPage,2009,Live,,0,
+/vizualni-identitet,Root,Vizualni identitet,hub:vizualni_identitet,AboutPage,2026,Live,WD:Q139595518; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:11wCFDSyZy0LfWkgllak6d,5,
+/arhiva/ti-si-cudesna,Songs,Ti si čudesna,work:ti_si_cudesna,MusicRecording,2009,Stub,ISRC:HRA371600088; SP:3aqsGyAU8uZ7gLJLRIsR06,0,CMC Demo 2009; highest authority_score=80
+/pjesme/cast,Songs,Čast,work:cast,MusicRecording,2019,Live,ISRC:HRA371800845; WD:Q139595518; MB:c11545fd-982a-44b9-916f-ab5231c376be; MB:dd92f195-757b-4411-8959-9d2cbe9f796b; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:6xjlYNlucQ1KK5Xh9VgMqM,5,
+/pjesme/frane-tente,Songs,Frane Tente,work:frane_tente,MusicRecording,2020,Live,ISRC:QT6F32536381; WD:Q139595518; MB:0999a678-4586-48c5-a1f1-598ffaa69977; MB:48601b97-cff8-4346-af89-987de31bcfa1; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:1Vg4lIa8nKwoJGgsJt0X99,10,
+/pjesme/isuse-moj,Songs,Isuse moj,work:isuse_moj,MusicRecording,2026,Stub,,0,BKM singl 2026
+/pjesme/krijesovi-lazi,Songs,Krijesovi laži,work:krijesovi_lazi,MusicRecording,2025,Live,ISRC:QT6F32539173; WD:Q139595518; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; MB:94dd1837-6977-4937-a02e-b8258b932b2a; SP:11wCFDSyZy0LfWkgllak6d,3,
+/pjesme/moj-dinamo,Songs,Moj Dinamo,work:moj_dinamo,MusicRecording,2024,Live,ISRC:QT6F32530626; WD:Q139595518; MB:08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6; MB:d89204a8-e68d-42e6-b719-8be781132800; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:5gfjKvC0yxasJd0hafXTwx,10,
+/pjesme/sjever-uz-odsutne,Songs,Sjever uz odsutne,work:sjever_uz_odsutne,MusicRecording,2023,Live,ISRC:QT6EX2529331; WD:Q139595518; MB:87cf4afb-efbf-4627-a8b1-170725fa7807; MB:7d41efc4-76e3-4b5b-80ed-ffddddbb0cd0; MB:8b675ac0-7ab0-40e3-b8a1-a2a6c2bab553; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f,10,
+/pjesme/strice-ivane,Songs,Striče Ivane,work:strice_ivane,MusicRecording,2025,Live,,0,
+/pjesme/u-svijetu-bajki,Songs,U svijetu bajki,work:u_svijetu_bajki,MusicRecording,2019,Live,ISRC:HRA371800598; WD:Q139595518; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:2eZOUlMECJSMsfymyDEadO; SP:11wCFDSyZy0LfWkgllak6d,3,
+/pjesme/vitez-jure,Songs,Vitez Jure,work:vitez_jure,MusicRecording,2025,Stub,MB:807abd53,0,BKM singl; MB recording confirmed
+/pjesme/zalo,Songs,Žalo,work:zalo,MusicRecording,2016,Live,WD:Q139595518; MB:8b46c318-95d8-4470-acf2-f20d10996e50; MB:8f40f1f9-7316-451c-84fb-f26357541d81; MB:b973e6f2-c282-473a-b2fb-ffb4466b312f; SP:1OqLa2wkxlt0KDsdGzcoZ0; SP:6hT2KjY5IqE6e3wqSmNJyB,5,
+/pjesme/znakovlje-hrvata,Songs,Znakovlje Hrvata,work:znakovlje_hrvata,MusicRecording,2021,Stub,MB:multiple refs,0,"High corpus score, multiple YT refs"
+/arhiva/cmc-demo-2009,Releases,CMC Demo 2009.,release:cmc_demo_2009,MusicAlbum,2009,Live,,0,
+/arhiva/dallas-records-era,Releases,Dallas Records era (2016.,release:dallas_records_era,MusicAlbum,2016,Live,,0,
+/arhiva/katarza-2019,Releases,Katarza,release:katarza,MusicAlbum,2019,Stub,Discogs:35923165,0,Dallas Records album; Discogs ID in works_registry
+/arhiva/leteci-majmuni-2012,Releases,Leteći majmuni (2012.),release:leteci_majmuni_2012,MusicAlbum,2012,Live,,0,
+/arhiva/nikad-ne-znas-2016,Releases,"Nikad ne znaš, to je ono…",release:nikad_ne_znas,MusicAlbum,2016,Stub,Discogs:12898284,0,Dallas Records album; in JSON-LD na index.html
+/petar,People,Petar Kumerle,person:petar_kumerle,Person,,Stub,WD:Q139595619; MB:9ab299e2; Discogs:17042197,0,Linked from master_registry; no HTML
+/toni,People,Toni Kumerle,person:toni_kumerle,Person,,Stub,WD:Q139595627; MB:b134ce50,0,Linked from master_registry; no HTML
