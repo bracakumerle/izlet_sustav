@@ -1,0 +1,41 @@
+works_census_v2.csv — Summary
+========================================
+
+Total rows:             204
+
+By triage_class:
+  WORK           79
+  COVER          2
+  PERFORMANCE    2
+  MEDIA          121
+
+By confidence:
+  confirmed    82
+  probable     122
+  possible     0
+
+WORK detail:
+  confirmed:  78
+  probable:   1
+
+Coverage (WORK confirmed / 90): 78 / 90 = 87%
+
+By year (WORK confirmed):
+  2009: 1
+  2010: 1
+  2011: 1
+  2012: 7
+  2013: 2
+  2016: 15
+  2017: 2
+  2018: 4
+  2019: 18
+  2020: 4
+  2021: 13
+  2022: 4
+  2023: 2
+  2024: 2
+  2025: 2
+
+Earliest WORK confirmed: Ti Si ?udesna (2009)
+Latest WORK confirmed:   Krijesovi La?i (2025)
