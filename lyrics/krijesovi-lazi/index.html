@@ -62,30 +62,73 @@
     }
   ]
   </script>
+  <link rel="stylesheet" href="/global.css">
+  <style>
+  .bk-lyrics-hero {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--bk-separator);
+    margin-bottom: 2rem;
+  }
+  .bk-lyrics-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bk-tekst-svjetli);
+    margin-bottom: 0.5rem;
+  }
+  .bk-lyrics-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--bk-tekst);
+    margin-bottom: 0.5rem;
+  }
+  .bk-lyrics-meta {
+    font-size: 0.95rem;
+    color: var(--bk-tekst-svjetli);
+    margin-bottom: 0.25rem;
+  }
+  .bk-lyrics-recording-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--bk-zlatna);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bk-zlatna);
+  }
+  </style>
 </head>
 <body>
 
-  <nav>
-    <a href="https://bracakumerle.com/">iZLET</a> |
-    <a href="https://bracakumerle.com/bio">O bendu</a> |
-    <a href="https://bracakumerle.com/diskografija">Diskografija</a> |
-    <a href="https://bracakumerle.com/arhiva">Arhiva</a>
-  </nav>
+  <header class="bk-site-header">
+    <div class="bk-site-header-inner">
+      <a href="https://bracakumerle.com" class="bk-logo">i<span>ZLET</span></a>
+      <nav class="bk-site-nav" aria-label="Glavna navigacija">
+        <a href="https://bracakumerle.com">Početna</a>
+        <span class="nav-separator">·</span>
+        <a href="https://bracakumerle.com/diskografija">Diskografija</a>
+        <span class="nav-separator">·</span>
+        <a href="https://bracakumerle.com/lyrics/" class="active">Tekstovi</a>
+        <span class="nav-separator">·</span>
+        <a href="https://bracakumerle.com/video">Video</a>
+        <span class="nav-separator">·</span>
+        <a href="https://bracakumerle.com/vizualni-identitet">Vizualni identitet</a>
+        <span class="nav-separator">·</span>
+        <a href="https://bracakumerle.com/kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-  <main>
+  <main class="main">
 
-    <header>
-      <h1>Krijesovi laži</h1>
-      <p>
-        <a href="https://bracakumerle.com/#izlet-musicgroup">iZLET</a> (Braća Kumerle) ·
-        <time datetime="2025">2025</time>
-      </p>
-      <p>
-        Autori:
-        <a href="https://bracakumerle.com/people/toni-kumerle">Toni Kumerle</a>,
-        <a href="https://bracakumerle.com/people/petar-kumerle">Petar Kumerle</a>
-      </p>
-    </header>
+    <div class="bk-lyrics-hero">
+      <p class="bk-lyrics-label">Tekst pjesme</p>
+      <h1 class="bk-lyrics-title">Krijesovi laži</h1>
+      <p class="bk-lyrics-meta">2025 · iZLET (Braća Kumerle)</p>
+      <p class="bk-lyrics-meta">Autori: Toni Kumerle, Petar Kumerle</p>
+      <a href="/pjesme/krijesovi-lazi" class="bk-lyrics-recording-link">
+        → Snimka i metapodaci
+      </a>
+    </div>
 
     <section>
       <h2>Tekst</h2>
@@ -188,12 +231,32 @@ A pamćenje naše gori još jače od njihovih - krijesova</em></p>
 
   </main>
 
-  <footer>
-    <p>© 2026 iZLET – Braća Kumerle |
-      <a href="https://bracakumerle.com/">Početna</a> |
-      <a href="https://bracakumerle.com/diskografija">Diskografija</a> |
-      <a href="https://bracakumerle.com/lyrics/">Lyrics</a>
-    </p>
+  <footer class="bk-site-footer">
+    <div class="bk-site-footer-inner">
+      <div class="bk-footer-col">
+        <p class="bk-footer-col-title">iZLET</p>
+        <a href="https://bracakumerle.com/diskografija">Diskografija</a>
+        <a href="https://bracakumerle.com/lyrics/">Tekstovi</a>
+        <a href="https://bracakumerle.com/video">Video</a>
+        <a href="https://bracakumerle.com/bio">O bendu</a>
+        <a href="https://bracakumerle.com/vizualni-identitet">Vizualni identitet</a>
+      </div>
+      <div class="bk-footer-col">
+        <p class="bk-footer-col-title">Vanjski registri</p>
+        <a href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Wikidata</a>
+        <a href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">MusicBrainz</a>
+        <a href="https://www.discogs.com/artist/6610944" target="_blank" rel="noopener">Discogs</a>
+        <a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">Spotify</a>
+      </div>
+      <div class="bk-footer-col">
+        <p class="bk-footer-col-title">Kontakt</p>
+        <a href="mailto:izletband@gmail.com">izletband@gmail.com</a>
+        <a href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">@bracakumerle</a>
+      </div>
+    </div>
+    <div class="bk-footer-bottom">
+      <span class="bk-footer-bottom-text">© Braća Kumerle · Zagreb · 2026.</span>
+    </div>
   </footer>
 
 </body>

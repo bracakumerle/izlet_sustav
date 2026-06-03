@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "PowerShell(netlify --version)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(curl -s https://bracakumerle.com/pjesme/krijesovi-lazi)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "PowerShell($env:PATH = \"C:\\\\Users\\\\petar\\\\AppData\\\\Roaming\\\\npm;\" + $env:PATH; netlify.cmd deploy --prod --dir=. --site=b42b6c4b-70cf-4449-a1f4-cff74782b622 2>&1)"
     ]
   },
   "enableAllProjectMcpServers": true
