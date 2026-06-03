@@ -1,9 +1,10 @@
 ﻿slug,title,corpus,work_type,status,lyrics_url,music_url,lyrics_authors,isrc,wikidata_id,first_release_year,source_verified,indexed,last_modified,notes
 moj-dinamo,Moj Dinamo,BK,lyrics,live,/lyrics/moj-dinamo/,/pjesme/moj-dinamo/,Toni Kumerle;Petar Kumerle;Marcelo,QT6F32530626,,2024,YES,YES,2026-06-03,kanonski tekst uspostavljen
-krijesovi-lazi,Krijesovi laži,BK,lyrics,planned,,/pjesme/krijesovi-lazi/,Toni Kumerle;Petar Kumerle,QT6F32539173,,2025,NO,NO,,
+krijesovi-lazi,Krijesovi laži,BK,lyrics,draft,/lyrics/krijesovi-lazi/,/pjesme/krijesovi-lazi/,Toni Kumerle;Petar Kumerle,QT6F32539173,,2025,YES,NO,2026-06-03,
 frane-tente,Frane Tente,BK,lyrics,planned,,/pjesme/frane-tente/,Toni Kumerle;Petar Kumerle,QT6F32536381,,2025,NO,NO,,originalna verzija 2020; nova snimka 2025
 sjever-uz-odsutne,Sjever uz odsutne,BK,lyrics,planned,,/pjesme/sjever-uz-odsutne/,Toni Kumerle;Petar Kumerle,QT6EX2529331,,2023,NO,NO,,ISRC poznat; prvi BKM release
 znakovlje-hrvata,Znakovlje Hrvata,BK,lyrics,planned,,,Toni Kumerle;Petar Kumerle,,,2025,NO,NO,,ISRC nije potvrđen
 cast,Čast,BK,lyrics,planned,,/pjesme/cast/,Toni Kumerle;Petar Kumerle,HRA371800845,,2018,YES,UNKNOWN,2026-06-03,
 zalo,Žalo,BK,lyrics,planned,,/pjesme/zalo/,Toni Kumerle;Petar Kumerle,SIA4Z1800048,,2013,YES,UNKNOWN,2026-06-03,
 isuse-moj,Isuse moj,BK,lyrics,planned,,/pjesme/isuse-moj/,Toni Kumerle;Petar Kumerle,,,2026,YES,UNKNOWN,2026-06-03,
+
