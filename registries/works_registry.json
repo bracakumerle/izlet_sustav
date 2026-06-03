@@ -1,0 +1,1189 @@
+{
+  "meta": {
+    "generated": "2026-06-04",
+    "source": "works_census_v2.csv",
+    "total_works": 76,
+    "confirmed": 76,
+    "probable": 0
+  },
+  "works": [
+    {
+      "slug": "ti-si-cudesna",
+      "title": "Ti Si Čudesna",
+      "year": "2009",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "Hl_FpyiuK4k",
+        "Kh6tcDe0Zug"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | orig.2009 CMC Demo Discogs 12309194 | YT:Hl_FpyiuK4k | YT:Kh6tcDe0Zug"
+    },
+    {
+      "slug": "ljeto-u-maximiru",
+      "title": "Ljeto u Maximiru",
+      "year": "2010",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "Ri0cJPe72uc"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=Ri0cJPe72uc | Spot/Official Video"
+    },
+    {
+      "slug": "spasi-me",
+      "title": "Spasi me",
+      "year": "2011",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "hhLKTaqshvE"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:hhLKTaqshvE | yt=hhLKTaqshvE | Spot/Official Video"
+    },
+    {
+      "slug": "ljeto-ide-majko",
+      "title": "Ljeto Ide Majko",
+      "year": "2012",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "9lDdkKGzAwI",
+        "YRZ9NpV6LMs"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:YRZ9NpV6LMs | YT:9lDdkKGzAwI | yt=YRZ9NpV6LMs | feat. Damir Dinjar"
+    },
+    {
+      "slug": "roadrunner",
+      "title": "Roadrunner",
+      "year": "2012",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "1NBy512CpaM",
+        "3ti5apKeDEg"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:1NBy512CpaM | YT:3ti5apKeDEg | yt=1NBy512CpaM | ft. Grgo Savic"
+    },
+    {
+      "slug": "ludi-gadovi",
+      "title": "Ludi Gadovi",
+      "year": "2012",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "LPsDeZYTXxs"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:LPsDeZYTXxs | yt=LPsDeZYTXxs | feat. Grgo Savic & Niksa Ersek"
+    },
+    {
+      "slug": "mozda-su-u-sumi",
+      "title": "Možda Su U Šumi",
+      "year": "2012",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "j_oPnn2_iUI"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:j_oPnn2_iUI | yt=j_oPnn2_iUI | feat. Grgo Savic"
+    },
+    {
+      "slug": "zetovac",
+      "title": "Zetovac",
+      "year": "2012",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "WryChY9304U"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:WryChY9304U | yt=WryChY9304U | ft. 3 Gosta | Satiricna oda ZET radniku"
+    },
+    {
+      "slug": "nemam-ni-jednog-prijatelja-policajca",
+      "title": "Nemam ni jednog prijatelja policajca",
+      "year": "2012",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "FYYSZX601uw"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=FYYSZX601uw | feat. Ante Cash"
+    },
+    {
+      "slug": "zalo",
+      "title": "Žalo",
+      "year": "2013",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "HrpRU2tpg2I",
+        "hviyXdTsKLM"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | first confirmed 2013 Dallas Promo Sampler Discogs 25236337 | YT:HrpRU2tpg2I | YT:hviyXdTsKLM"
+    },
+    {
+      "slug": "oo-da-sa-krilima",
+      "title": "Oo da sa krilima",
+      "year": "2013",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "cX1TgmIcM1M"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:cX1TgmIcM1M | yt=cX1TgmIcM1M | Spot/Official Video"
+    },
+    {
+      "slug": "pernastica",
+      "title": "Pernastica",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "HMMNfD9h_Bo",
+        "jTwfvrf9SoM"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:jTwfvrf9SoM | YT:HMMNfD9h_Bo"
+    },
+    {
+      "slug": "dva-gemista",
+      "title": "Dva Gemišta",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "uYzk4ENyt4E"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:uYzk4ENyt4E"
+    },
+    {
+      "slug": "oni-spavaju",
+      "title": "Oni Spavaju",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "xA0FRa4rTBM"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:xA0FRa4rTBM"
+    },
+    {
+      "slug": "svemir",
+      "title": "Svemir",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "HHNCp38peXg",
+        "IURMl2MYTJQ"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:HHNCp38peXg | YT:IURMl2MYTJQ"
+    },
+    {
+      "slug": "imam",
+      "title": "Imam",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "FbneOhWS86M"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:FbneOhWS86M"
+    },
+    {
+      "slug": "ne-zurim",
+      "title": "Ne Žurim",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "9UEfK9UCgVo",
+        "CIOTzxONSqw",
+        "kreXyG3eH7o"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:9UEfK9UCgVo | YT:CIOTzxONSqw | YT:kreXyG3eH7o"
+    },
+    {
+      "slug": "nocima-here-i-am",
+      "title": "Noćima (Here I Am)",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284"
+    },
+    {
+      "slug": "kako-da-se-smijem",
+      "title": "Kako Da Se Smijem",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "-UapiR1cfhw"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:-UapiR1cfhw"
+    },
+    {
+      "slug": "masa",
+      "title": "Maša",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "XXQ-Bdmx7_0"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:XXQ-Bdmx7_0"
+    },
+    {
+      "slug": "topim-se-i-gubim-se",
+      "title": "Topim Se I Gubim Se",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "WLSAwgXKFpQ"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:WLSAwgXKFpQ"
+    },
+    {
+      "slug": "majcin-skut",
+      "title": "Majčin Skut",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "3ZGoz2pm8ug",
+        "LryxvBJBUuU",
+        "pp3jWW1gad8"
+      ],
+      "isrc": null,
+      "discogs_release_id": "12898284",
+      "notes_raw": "Nikad Ne Znas To Je Ono | Discogs 12898284 | YT:LryxvBJBUuU | YT:pp3jWW1gad8 | YT:3ZGoz2pm8ug"
+    },
+    {
+      "slug": "udri-veslom",
+      "title": "Udri veslom",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "4VEgzZOOz0I"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:4VEgzZOOz0I | yt=4VEgzZOOz0I | narudzba/commission"
+    },
+    {
+      "slug": "i-migranti",
+      "title": "i Migranti",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "saci9JTd0Kk"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:saci9JTd0Kk | yt=saci9JTd0Kk | Zavrsni dio Marjanske trilogije"
+    },
+    {
+      "slug": "susjedova-vila",
+      "title": "Susjedova vila",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "vXlovhrX1lI"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:vXlovhrX1lI | yt=vXlovhrX1lI"
+    },
+    {
+      "slug": "celavi-skembici",
+      "title": "Ćelavi škembići",
+      "year": "2016",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "OXbbZ3siV2o"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:OXbbZ3siV2o | yt=OXbbZ3siV2o"
+    },
+    {
+      "slug": "sadanji-trenutak",
+      "title": "Sadašnji Trenutak",
+      "year": "2017",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "570Z7nd9DnM"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=570Z7nd9DnM | Spot/Official Video"
+    },
+    {
+      "slug": "mon-ami",
+      "title": "Mon Ami",
+      "year": "2017",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "i3kU-6rPVFU"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=i3kU-6rPVFU | live @ Route 66 Zagreb"
+    },
+    {
+      "slug": "nema-mjesta",
+      "title": "Nema Mjesta",
+      "year": "2018",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "i3OD34eJkb0"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35924701",
+      "notes_raw": "Hitchtone Music | Discogs 35924701 | YT:i3OD34eJkb0"
+    },
+    {
+      "slug": "obale-se-tope",
+      "title": "Obale se tope",
+      "year": "2018",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "NOd5DcwBB-w"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:NOd5DcwBB-w | yt=NOd5DcwBB-w"
+    },
+    {
+      "slug": "tuzni-odlazak",
+      "title": "Tužni odlazak",
+      "year": "2018",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "AzIAgVPLglo"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:AzIAgVPLglo | yt=AzIAgVPLglo | Spot/Official Video"
+    },
+    {
+      "slug": "soram-snjevovica",
+      "title": "Šoram snjegovića",
+      "year": "2018",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "LW0Om2bBluc"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=LW0Om2bBluc | live @ Aquarius Zagreb"
+    },
+    {
+      "slug": "cast",
+      "title": "Čast",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [
+        "Honour"
+      ],
+      "youtube_ids": [
+        "1gPfgO3daPk",
+        "K90ntS9oIEM",
+        "V8Jw0Letyyo",
+        "pwUEL73aQ4U"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:V8Jw0Letyyo | YT:pwUEL73aQ4U | YT:K90ntS9oIEM | YT:1gPfgO3daPk | alternate_title=Honour | yt=1gPfgO3daPk|K90ntS9oIEM"
+    },
+    {
+      "slug": "u-svijetu-bajki",
+      "title": "U svijetu bajki",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "6JKQ2dUaADs",
+        "u_V9dF2kqv0"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:6JKQ2dUaADs | YT:u_V9dF2kqv0"
+    },
+    {
+      "slug": "uredi-se",
+      "title": "Uredi se",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "qED4w7e6b_8"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:qED4w7e6b_8"
+    },
+    {
+      "slug": "tko-si-ti",
+      "title": "Tko si ti",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "1PbmjHqVu-s",
+        "Bb1gP-nI_iI"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:Bb1gP-nI_iI | YT:1PbmjHqVu-s"
+    },
+    {
+      "slug": "urota-duhova",
+      "title": "Urota duhova",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "doTeB1CQGEE",
+        "sXMkh_JFJbk"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:doTeB1CQGEE | YT:sXMkh_JFJbk"
+    },
+    {
+      "slug": "oceana",
+      "title": "Oceana",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "v8CPTyqaWQ0"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:v8CPTyqaWQ0"
+    },
+    {
+      "slug": "siluete",
+      "title": "Siluete",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "xTKPFeNEtl4"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:xTKPFeNEtl4"
+    },
+    {
+      "slug": "zaklopi-moje-oci",
+      "title": "Zaklopi moje oči",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "QKr3uo8vIe8"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:QKr3uo8vIe8"
+    },
+    {
+      "slug": "zasto-sutim",
+      "title": "Zašto šutim",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "EwO_scny9dc",
+        "VTkmEP4YEw8"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:EwO_scny9dc | YT:VTkmEP4YEw8"
+    },
+    {
+      "slug": "caroban-otok",
+      "title": "Čaroban otok",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "isEGgQ8Eyic"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:isEGgQ8Eyic"
+    },
+    {
+      "slug": "poslije-svega",
+      "title": "Poslije svega",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "wE5qzHgG10I"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:wE5qzHgG10I"
+    },
+    {
+      "slug": "princeza-tea",
+      "title": "Princeza Tea",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "KbjXcqMWfgg",
+        "_caCQpzyALk",
+        "cRsWjRp07u4"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:KbjXcqMWfgg | YT:_caCQpzyALk | YT:cRsWjRp07u4"
+    },
+    {
+      "slug": "ponekad",
+      "title": "Ponekad",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "KfdFt9k58uU"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:KfdFt9k58uU"
+    },
+    {
+      "slug": "kokosovo-mlijeko",
+      "title": "Kokosovo mlijeko",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "GJdfwimiOsQ"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:GJdfwimiOsQ"
+    },
+    {
+      "slug": "osmijeh-je-bitan",
+      "title": "Osmijeh je bitan",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "Axscpf6ak7I",
+        "Rj6nTT66lsY"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923165",
+      "notes_raw": "Katarza | Discogs 35923165 | YT:Rj6nTT66lsY | YT:Axscpf6ak7I"
+    },
+    {
+      "slug": "hrabrost",
+      "title": "Hrabrost",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "ARk01HV2ic8"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:ARk01HV2ic8 | yt=ARk01HV2ic8"
+    },
+    {
+      "slug": "gori-oluja",
+      "title": "Gori Oluja",
+      "year": "2019",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "QeNd7IbWGRY"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=QeNd7IbWGRY | feat. Marko Juric"
+    },
+    {
+      "slug": "frane-tente",
+      "title": "Frane Tente",
+      "year": "2020",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "CkHiMqkQdSk",
+        "JL4bPYCSyGM",
+        "fXSbyF5TO1s",
+        "p0rajJ_DghQ",
+        "sAWssQ-lNtk"
+      ],
+      "isrc": "QT6F32536381",
+      "discogs_release_id": "35923390",
+      "notes_raw": "Braća Kumerle Music | Discogs 35923390 | ISRC QT6F32536381, UPC 199951817604, orig.2020, rel.2025-11-22 | YT:CkHiMqkQdSk | YT:JL4bPYCSyGM | YT:fXSbyF5TO1s | YT:p0rajJ_DghQ | YT:sAWssQ-lNtk"
+    },
+    {
+      "slug": "bogdanovacka-kalvarija",
+      "title": "Bogdanovačka Kalvarija",
+      "year": "2020",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "SNlx6WMI-pA"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923474",
+      "notes_raw": "Braća Kumerle Music | Discogs 35923474 | YT:SNlx6WMI-pA"
+    },
+    {
+      "slug": "isuse-moj",
+      "title": "Isuse moj",
+      "year": "2020",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "EVdW9pZ6xck"
+      ],
+      "isrc": null,
+      "discogs_release_id": "37224108",
+      "notes_raw": "Braća Kumerle Music | Discogs 37224108 | YT:EVdW9pZ6xck"
+    },
+    {
+      "slug": "tvoja-njedra",
+      "title": "Tvoja njedra",
+      "year": "2020",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "mnm1PQdDBCA"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:mnm1PQdDBCA | yt=mnm1PQdDBCA | Spot/Official Video"
+    },
+    {
+      "slug": "vitez-jure",
+      "title": "Vitez Jure",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "35VtHrOkcaQ"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923378",
+      "notes_raw": "Braća Kumerle Music | Discogs 35923378 | YT:35VtHrOkcaQ"
+    },
+    {
+      "slug": "znakovlje-hrvata",
+      "title": "Znakovlje Hrvata",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "0z3kNr5bITg",
+        "AltC9RZWsd4",
+        "JxlaB1BZ6O0",
+        "TlyDYvqyjzc",
+        "cpqf7xFdjCs",
+        "eiGY0X8aF3I",
+        "fEvehiE_Guo",
+        "hPuyDO1fRaY"
+      ],
+      "isrc": "QZ6PP2514425",
+      "discogs_release_id": "35923459",
+      "notes_raw": "Braća Kumerle Music | Discogs 35923459 | ISRC QZ6PP2514425, UPC 199943222911, orig.2021, rel.2025-12-14 | YT:0z3kNr5bITg | YT:fEvehiE_Guo | YT:TlyDYvqyjzc | YT:JxlaB1BZ6O0 | YT:eiGY0X8aF3I | YT:cpqf7xFdjCs | YT:hPuyDO1fRaY | YT:AltC9RZWsd4"
+    },
+    {
+      "slug": "124-vukovarska-brigada-himna",
+      "title": "124. Vukovarska Brigada Himna",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [],
+      "isrc": null,
+      "discogs_release_id": "35923504",
+      "notes_raw": "Braća Kumerle Music | Discogs 35923504"
+    },
+    {
+      "slug": "hrvatski-trolist",
+      "title": "Hrvatski Trolist",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "ggKfXgO-tqI"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:ggKfXgO-tqI | yt=ggKfXgO-tqI"
+    },
+    {
+      "slug": "neka-slatko-boli",
+      "title": "Neka slatko boli",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "hx0FveDZWXw"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:hx0FveDZWXw | yt=hx0FveDZWXw | puni naslov: Neka slatko boli (Ljubav lijeci sve)"
+    },
+    {
+      "slug": "tvoje-je-pitanje-totalno-suvisno",
+      "title": "Tvoje je pitanje totalno suvišno",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "TdmNgEb4Dy8"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:TdmNgEb4Dy8 | yt=TdmNgEb4Dy8"
+    },
+    {
+      "slug": "konji-od-zada",
+      "title": "Konji od žada",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "RIMjp8vhOcE"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:RIMjp8vhOcE | yt=RIMjp8vhOcE"
+    },
+    {
+      "slug": "dozivljaj",
+      "title": "Doživljaj",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "0VvUpR_IMIY"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:0VvUpR_IMIY | yt=0VvUpR_IMIY"
+    },
+    {
+      "slug": "autori-nalaze-smisao",
+      "title": "Autori nalaze smisao",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "z8WtJjLURDc"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:z8WtJjLURDc | yt=z8WtJjLURDc"
+    },
+    {
+      "slug": "postoji-samo-jedan-bog",
+      "title": "Postoji samo jedan Bog",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [
+        "There is only one God"
+      ],
+      "youtube_ids": [
+        "l811vDOLeIw"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=l811vDOLeIw | alternate_title=There is only one God | YT:l811vDOLeIw"
+    },
+    {
+      "slug": "oltar-spasa",
+      "title": "Oltar spasa",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [
+        "Altar of salvation"
+      ],
+      "youtube_ids": [
+        "3gkz1TgqFpU"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=3gkz1TgqFpU | alternate_title=Altar of salvation | YT:3gkz1TgqFpU"
+    },
+    {
+      "slug": "koza-u-velegradu",
+      "title": "Koza u velegradu",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "WzluO7jci3k"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:WzluO7jci3k | yt=WzluO7jci3k"
+    },
+    {
+      "slug": "samo-tamo",
+      "title": "Samo tamo",
+      "year": "2021",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "-yytBsUO7vg"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:-yytBsUO7vg | yt=-yytBsUO7vg | Spot/Official Video"
+    },
+    {
+      "slug": "covjek-moli-boga",
+      "title": "Čovjek moli Boga",
+      "year": "2022",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "6m4huc6E1-c"
+      ],
+      "isrc": null,
+      "discogs_release_id": "37223433",
+      "notes_raw": "Braća Kumerle Music | Discogs 37223433 | YT:6m4huc6E1-c"
+    },
+    {
+      "slug": "dotepenci",
+      "title": "Dotepenci",
+      "year": "2022",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "6btrsbTtJeM"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:6btrsbTtJeM | yt=6btrsbTtJeM"
+    },
+    {
+      "slug": "pod-ovim-nebom",
+      "title": "Pod ovim nebom",
+      "year": "2022",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "c50YNCfEveM"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:c50YNCfEveM | yt=c50YNCfEveM | Spot/Official Video"
+    },
+    {
+      "slug": "dzomba",
+      "title": "Džomba",
+      "year": "2022",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "CScTvW2KtMI"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:CScTvW2KtMI | yt=CScTvW2KtMI | Spot/Official Video"
+    },
+    {
+      "slug": "sjever-uz-odsutne",
+      "title": "Sjever uz odsutne",
+      "year": "2023",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "o02z8L8gOn0"
+      ],
+      "isrc": "QT6EX2529331",
+      "discogs_release_id": "35920849",
+      "notes_raw": "Braća Kumerle Music | Discogs 35920849 | ISRC QT6EX2529331, UPC 199953974831, orig.2023, rel.2025-11-15 | YT:o02z8L8gOn0"
+    },
+    {
+      "slug": "bozicna-idila",
+      "title": "Božićna Idila",
+      "year": "2023",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "58jdX24weGE"
+      ],
+      "isrc": null,
+      "discogs_release_id": "37224165",
+      "notes_raw": "Braća Kumerle Music | Discogs 37224165 | YT:58jdX24weGE"
+    },
+    {
+      "slug": "moj-dinamo",
+      "title": "Moj Dinamo",
+      "year": "2024",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "Lr_3YjBUHrw",
+        "xp-f5vjciCk"
+      ],
+      "isrc": null,
+      "discogs_release_id": "35923336",
+      "notes_raw": "Braća Kumerle Music | Discogs 35923336 | YT:Lr_3YjBUHrw | YT:xp-f5vjciCk"
+    },
+    {
+      "slug": "igraj-donna",
+      "title": "Igraj Donna",
+      "year": "2024",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "IwSwfLdVwEM"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "YT:IwSwfLdVwEM | yt=IwSwfLdVwEM | Spot/Official Video"
+    },
+    {
+      "slug": "krijesovi-lazi",
+      "title": "Krijesovi Laži",
+      "year": "2025",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "discogs",
+      "alternate_titles": [
+        "Bonfires of Lies"
+      ],
+      "youtube_ids": [
+        "1qQR8e0Me4g",
+        "95DeP4Jo1NI",
+        "gk5AHkbyLVU"
+      ],
+      "isrc": "QT6F32539173",
+      "discogs_release_id": "35923438",
+      "notes_raw": "Braća Kumerle Music | Discogs 35923438 | ISRC QT6F32539173, UPC 199951813477, rel.2025-11-22 | YT:95DeP4Jo1NI | YT:gk5AHkbyLVU | YT:1qQR8e0Me4g | alternate_title=Bonfires of Lies | yt=gk5AHkbyLVU"
+    },
+    {
+      "slug": "cast-postenje-i-cisti-obraz",
+      "title": "Čast poštenje i čisti obraz",
+      "year": "2025",
+      "work_type": "song",
+      "status": "confirmed",
+      "primary_source": "youtube_corpus",
+      "alternate_titles": [],
+      "youtube_ids": [
+        "V8Jw0Letyyo"
+      ],
+      "isrc": null,
+      "discogs_release_id": null,
+      "notes_raw": "yt=V8Jw0Letyyo | Autorska pjesma / Live"
+    }
+  ]
+}
