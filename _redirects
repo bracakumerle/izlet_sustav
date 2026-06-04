@@ -1,43 +1,54 @@
-/robots.txt    /robots.txt    200
-/sitemap.xml   /sitemap.xml   200
-/bio              /bio.html           200
-/diskografija     /diskografija.html  200
+# Corpus URL aliases — /pjesme/* → /lyrics/*
+/pjesme/zalo                    /lyrics/zalo                    301
+/pjesme/cast                    /lyrics/cast                    301
+/pjesme/krijesovi-lazi          /lyrics/krijesovi-lazi          301
+/pjesme/sjever-uz-odsutne       /lyrics/sjever-uz-odsutne       301
+/pjesme/frane-tente             /lyrics/frane-tente             301
+/pjesme/znakovlje-hrvata        /lyrics/znakovlje-hrvata        301
+/pjesme/moj-dinamo              /lyrics/moj-dinamo              301
+/pjesme/isuse-moj               /lyrics/isuse-moj               301
+/pjesme/vitez-jure              /lyrics/vitez-jure              301
+/pjesme/bogdanovacka-kalvarija  /lyrics/bogdanovacka-kalvarija  301
+/pjesme/bozicna-idila           /lyrics/bozicna-idila           301
+/pjesme/masa                    /lyrics/masa                    301
+/pjesme/pernastica              /lyrics/pernastica              301
+/pjesme/u-svijetu-bajki         /lyrics/u-svijetu-bajki         301
+/pjesme/strice-ivane            /lyrics/strice-ivane            301
+/pjesme/covjek-moli-boga        /lyrics/covjek-moli-boga        301
+
+# Page rewrites — pretty URLs
+/bio                  /bio.html                200
+/diskografija         /diskografija.html       200
+/video                /video.html              200
+/kontakt              /kontakt.html            200
+/vizualni-identitet   /vizualni-identitet.html 200
+
+# Arhiva
 /arhiva                        /arhiva/index.html                  200
 /arhiva/cmc-demo-2009          /arhiva/cmc-demo-2009.html          200
 /arhiva/leteci-majmuni-2012    /arhiva/leteci-majmuni-2012.html    200
 /arhiva/dallas-records-era     /arhiva/dallas-records-era.html     200
-/video     /video.html     200
-/kontakt   /kontakt.html   200
-/vizualni-identitet    /vizualni-identitet.html    200
+
+# English mirror
 /en/               /en/index.html              200
 /en/biography/     /en/biography/index.html    200
 /en/discography/   /en/discography/index.html  200
+
+# People
 /people/petar-kumerle/   /people/petar-kumerle/index.html   200
 /people/toni-kumerle/    /people/toni-kumerle/index.html    200
-/*             /index.html    200
 
-/pjesme/zalo    /pjesme/zalo.html    200
-
-/pjesme/frane-tente    /pjesme/frane-tente.html    200
-
-/pjesme/sjever-uz-odsutne    /pjesme/sjever-uz-odsutne.html    200
-
-/pjesme/moj-dinamo    /pjesme/moj-dinamo.html    200
-
-/pjesme/cast    /pjesme/cast.html    200
-
-/pjesme/krijesovi-lazi    /pjesme/krijesovi-lazi.html    200
-
-/pjesme/u-svijetu-bajki    /pjesme/u-svijetu-bajki.html    200
-
+# Lyrics subpages
 /lyrics/moj-dinamo         /lyrics/moj-dinamo/index.html         200
-
 /lyrics/krijesovi-lazi     /lyrics/krijesovi-lazi/index.html     200
-
 /lyrics/frane-tente        /lyrics/frane-tente/index.html        200
-
 /lyrics/sjever-uz-odsutne  /lyrics/sjever-uz-odsutne/index.html  200
-
 /lyrics/znakovlje-hrvata   /lyrics/znakovlje-hrvata/index.html   200
+/lyrics                    /lyrics/index.html                    200
 
-/lyrics  /lyrics/index.html  200
+# Static files — mora biti prije SPA catch-all
+/robots.txt    /robots.txt    200
+/sitemap.xml   /sitemap.xml   200
+
+# SPA catch-all
+/*             /index.html    200
