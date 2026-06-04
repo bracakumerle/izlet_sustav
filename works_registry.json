@@ -54,7 +54,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "3171c330-2543-4fe7-8a0d-24c13161ae17",
             "discogs_master_id": null,
             "spotify_track_id": "3aqsGyAU8uZ7gLJLRIsR06",
             "isrc": "HRA371600088",
@@ -79,6 +79,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "3171c330-2543-4fe7-8a0d-24c13161ae17",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "pernastica": {
@@ -89,7 +97,7 @@
             "agency_work_code_zamp": "00000154417019",
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "cdc1bc6a-b0ec-4d81-9c4a-9eb9c2692817",
             "discogs_master_id": null,
             "spotify_track_id": "297oh7P3lMdaaHwKGJofe5",
             "isrc": "HRA371200384",
@@ -114,6 +122,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "cdc1bc6a-b0ec-4d81-9c4a-9eb9c2692817",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "zalo": {
@@ -123,8 +139,8 @@
             "title_normalized": "Žalo",
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
-            "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_work_id": "8f40f1f9-7316-451c-84fb-f26357541d81",
+            "musicbrainz_recording_id": "8b46c318-95d8-4470-acf2-f20d10996e50",
             "discogs_master_id": null,
             "spotify_track_id": "1OqLa2wkxlt0KDsdGzcoZ0",
             "isrc": "SIA4Z1800048",
@@ -177,7 +193,15 @@
             "isrc": null,
             "wikipedia_eligible": false,
             "media_references": [],
-            "notes": "demo/unreleased — nije dostupno na Spotifyu"
+            "notes": "demo/unreleased — nije dostupno na Spotifyu",
+            "musicbrainz": {
+                "recording_id": null,
+                "work_id": null,
+                "release_id": null,
+                "artist_id": null,
+                "confidence": 0.0,
+                "match_type": "manual_required"
+            }
         },
         "sreo_sam_te": {
             "rank": 5,
@@ -193,7 +217,15 @@
             "isrc": null,
             "wikipedia_eligible": false,
             "media_references": [],
-            "notes": "demo/unreleased — nije dostupno na Spotifyu"
+            "notes": "demo/unreleased — nije dostupno na Spotifyu",
+            "musicbrainz": {
+                "recording_id": null,
+                "work_id": null,
+                "release_id": null,
+                "artist_id": null,
+                "confidence": 0.0,
+                "match_type": "manual_required"
+            }
         },
         "tranu": {
             "rank": 6,
@@ -209,7 +241,15 @@
             "isrc": null,
             "wikipedia_eligible": false,
             "media_references": [],
-            "notes": "demo/unreleased — nije dostupno na Spotifyu"
+            "notes": "demo/unreleased — nije dostupno na Spotifyu",
+            "musicbrainz": {
+                "recording_id": null,
+                "work_id": null,
+                "release_id": null,
+                "artist_id": null,
+                "confidence": 0.0,
+                "match_type": "manual_required"
+            }
         },
         "masa": {
             "rank": 7,
@@ -219,7 +259,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "4df50866-fe13-48f4-afb7-7f2c5ac5efba",
             "discogs_master_id": null,
             "spotify_track_id": "32rBh69oUY9VdNrLI83uwk",
             "isrc": "HRA371400333",
@@ -244,6 +284,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "4df50866-fe13-48f4-afb7-7f2c5ac5efba",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "ne_zurim_se": {
@@ -279,6 +327,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": null,
+                "work_id": null,
+                "release_id": null,
+                "artist_id": null,
+                "confidence": 0.0,
+                "match_type": "manual_required"
             }
         },
         "srebrni_zmaj": {
@@ -295,7 +351,15 @@
             "isrc": null,
             "wikipedia_eligible": false,
             "media_references": [],
-            "notes": "demo/unreleased — nije dostupno na Spotifyu"
+            "notes": "demo/unreleased — nije dostupno na Spotifyu",
+            "musicbrainz": {
+                "recording_id": null,
+                "work_id": null,
+                "release_id": null,
+                "artist_id": null,
+                "confidence": 0.0,
+                "match_type": "manual_required"
+            }
         },
         "zasto_sutim": {
             "rank": 10,
@@ -305,7 +369,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "374ae819-1734-4220-9814-b53e1eb6aa9b",
             "discogs_master_id": null,
             "spotify_track_id": "1UG0hZAJfmZhi99rVXnQh9",
             "isrc": "HRA371800851",
@@ -332,6 +396,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "374ae819-1734-4220-9814-b53e1eb6aa9b",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "majcin_skut": {
@@ -342,7 +414,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "12b10e3b-2cbb-4068-bbc9-56e7182e7a82",
             "discogs_master_id": null,
             "spotify_track_id": "0SesSNZyYJYsGxETJUTDmK",
             "isrc": "HRA371600089",
@@ -367,6 +439,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "12b10e3b-2cbb-4068-bbc9-56e7182e7a82",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "svemir": {
@@ -377,7 +457,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "9619900b-84dc-40f2-a2ff-888c8f8cfcdd",
             "discogs_master_id": null,
             "spotify_track_id": "2A1DDrt0F8PQddvplKWy28",
             "isrc": "HRA371600046",
@@ -402,6 +482,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "9619900b-84dc-40f2-a2ff-888c8f8cfcdd",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "imam": {
@@ -412,7 +500,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "563f75b4-bb12-4c8c-87ae-3cc188fe3ce5",
             "discogs_master_id": null,
             "spotify_track_id": "7HBUjyQSVHRkjvfsVAW4D2",
             "isrc": "HRA371600084",
@@ -437,6 +525,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "563f75b4-bb12-4c8c-87ae-3cc188fe3ce5",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "kako_da_se_smijem": {
@@ -447,7 +543,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "88d51955-de06-4df0-ba8c-e5b2b81704e7",
             "discogs_master_id": null,
             "spotify_track_id": "1vVheT9TKNU8IojyaQ3fwr",
             "isrc": "HRA371600086",
@@ -472,6 +568,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "88d51955-de06-4df0-ba8c-e5b2b81704e7",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "nocima_here_i_am": {
@@ -482,7 +586,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "6b8f6f5f-f7bc-41a8-bbb4-91653f21a90e",
             "discogs_master_id": null,
             "spotify_track_id": "1DdVjkk6JBJfri0DDVq8Gt",
             "isrc": "HRA371600085",
@@ -507,6 +611,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "6b8f6f5f-f7bc-41a8-bbb4-91653f21a90e",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "topim_se_i_gubim": {
@@ -517,7 +629,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "e7ad5317-584a-404b-8358-6394ad49ad8f",
             "discogs_master_id": null,
             "spotify_track_id": "5MSCzS8vYk7BSfx0AeDitg",
             "isrc": "HRA371600087",
@@ -542,6 +654,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "e7ad5317-584a-404b-8358-6394ad49ad8f",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "dva_gemista": {
@@ -552,7 +672,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "ec21a39b-f8f7-4936-bc95-ed5dfd8d5829",
             "discogs_master_id": null,
             "spotify_track_id": "2HMaqDJgaqDM5bEghmaQKj",
             "isrc": "HRA371600082",
@@ -577,6 +697,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "ec21a39b-f8f7-4936-bc95-ed5dfd8d5829",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "oni_spavaju": {
@@ -587,7 +715,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "cb36241c-8c9b-4a73-bbe6-9c7d838c2934",
             "discogs_master_id": null,
             "spotify_track_id": "5bYJa4KDWnm4yDDJQyrTTC",
             "isrc": "HRA371600083",
@@ -612,6 +740,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "cb36241c-8c9b-4a73-bbe6-9c7d838c2934",
+                "work_id": null,
+                "release_id": "30ca12ac-2e5f-454c-b39f-b37f5e74598d",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "osmijeh_je_bitan": {
@@ -622,7 +758,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "247bb381-9b46-40aa-b5bc-929be70ab534",
             "discogs_master_id": null,
             "spotify_track_id": "6OvDRJkl8hcvuKv2kL40nb",
             "isrc": "HRA371800589",
@@ -647,6 +783,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "247bb381-9b46-40aa-b5bc-929be70ab534",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "u_svijetu_bajki": {
@@ -657,7 +801,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "93525962-b260-4fed-8405-a40fb4f13733",
             "discogs_master_id": null,
             "spotify_track_id": "2eZOUlMECJSMsfymyDEadO",
             "isrc": "HRA371800598",
@@ -685,6 +829,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "93525962-b260-4fed-8405-a40fb4f13733",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "caroban_otok": {
@@ -695,7 +847,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "66cb882f-9e31-4386-931b-803ccea5abc4",
             "discogs_master_id": null,
             "spotify_track_id": "38Bnf0zNXSHX96AWjHCEee",
             "isrc": "HRA371800642",
@@ -722,6 +874,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "66cb882f-9e31-4386-931b-803ccea5abc4",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "cast": {
@@ -731,8 +891,8 @@
             "title_normalized": "Čast",
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
-            "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_work_id": "dd92f195-757b-4411-8959-9d2cbe9f796b",
+            "musicbrainz_recording_id": "c11545fd-982a-44b9-916f-ab5231c376be",
             "discogs_master_id": null,
             "spotify_track_id": "6xjlYNlucQ1KK5Xh9VgMqM",
             "isrc": "HRA371800845",
@@ -775,7 +935,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "546f6e21-7875-4067-b61c-cf533133ae3f",
             "discogs_master_id": null,
             "spotify_track_id": "2pGECWf2zVWk4eVGjHlJd1",
             "isrc": "HRA371800848",
@@ -800,6 +960,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "546f6e21-7875-4067-b61c-cf533133ae3f",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "ponekad": {
@@ -810,7 +978,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "4bb6b6bc-a497-4109-972f-c916e1b196b7",
             "discogs_master_id": null,
             "spotify_track_id": "5zlg2YGG8znxRfZLCp5t8T",
             "isrc": "HRA371800854",
@@ -835,6 +1003,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "4bb6b6bc-a497-4109-972f-c916e1b196b7",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "poslije_svega": {
@@ -845,7 +1021,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "e59efd8d-e467-4d45-a673-487192fc5c6f",
             "discogs_master_id": null,
             "spotify_track_id": "3zHeeqt3JopIvnJ0SUD8JS",
             "isrc": "HRA371800852",
@@ -870,6 +1046,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "e59efd8d-e467-4d45-a673-487192fc5c6f",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "princeza_tea": {
@@ -880,7 +1064,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "89043cf0-918c-4f4e-90fe-637564b5a9d5",
             "discogs_master_id": null,
             "spotify_track_id": "57MTsMpliXxB7zcjnV2E3Y",
             "isrc": "HRA371800853",
@@ -905,6 +1089,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "89043cf0-918c-4f4e-90fe-637564b5a9d5",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "siluete": {
@@ -915,7 +1107,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "9fba8aab-a10f-444b-9949-75071488d42b",
             "discogs_master_id": null,
             "spotify_track_id": "4cPuVizRajTD6tUTc25jBI",
             "isrc": "HRA371800849",
@@ -940,6 +1132,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "9fba8aab-a10f-444b-9949-75071488d42b",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "tko_si_ti": {
@@ -950,7 +1150,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "d6e4207c-5ea0-48ea-8fd2-f93eaffb3681",
             "discogs_master_id": null,
             "spotify_track_id": "1pMYqxkam2FRmLhenM5kcE",
             "isrc": "HRA371800674",
@@ -977,6 +1177,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "d6e4207c-5ea0-48ea-8fd2-f93eaffb3681",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "uredi_se": {
@@ -987,7 +1195,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "4a911066-4107-41ae-b067-471a718b1f92",
             "discogs_master_id": null,
             "spotify_track_id": "4yWTJzOtL5xZcUNp13XggK",
             "isrc": "HRA371800846",
@@ -1012,6 +1220,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "4a911066-4107-41ae-b067-471a718b1f92",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "urota_duhova": {
@@ -1022,7 +1238,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "bfabd2b6-7034-4f1d-adac-35b2fc8628bd",
             "discogs_master_id": null,
             "spotify_track_id": "4ig34nM7rIdmpaVZseI5ht",
             "isrc": "HRA371800847",
@@ -1047,6 +1263,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "bfabd2b6-7034-4f1d-adac-35b2fc8628bd",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "zaklopi_moje_oci": {
@@ -1057,7 +1281,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "28bdb8b2-b195-48a2-9723-e52f41364cd5",
             "discogs_master_id": null,
             "spotify_track_id": "1fkGMfaLZUpHSuYPsxWNU4",
             "isrc": "HRA371800850",
@@ -1082,6 +1306,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "28bdb8b2-b195-48a2-9723-e52f41364cd5",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "kokosovo_mlijeko": {
@@ -1092,7 +1324,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "fab1a643-7c4d-45be-ba9e-c2b8817c82ac",
             "discogs_master_id": null,
             "spotify_track_id": "3zdlj3GR8qaKGWjOi7wRzI",
             "isrc": "HRA371800820",
@@ -1119,6 +1351,14 @@
                     "discogs": "pending",
                     "youtube": "pending"
                 }
+            },
+            "musicbrainz": {
+                "recording_id": "fab1a643-7c4d-45be-ba9e-c2b8817c82ac",
+                "work_id": null,
+                "release_id": "acf6cb47-3ea4-48fa-a28d-6bf91dc8f717",
+                "artist_id": "b973e6f2-c282-473a-b2fb-ffb4466b312f",
+                "confidence": 1.0,
+                "match_type": "exact"
             }
         },
         "W_CMC_2009_001": {
@@ -1147,7 +1387,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "94dd1837-6977-4937-a02e-b8258b932b2a",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": "QT6F32539173",
@@ -1181,7 +1421,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "807abd53-5d7a-4bfa-ae0b-d0c0ab91fae2",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
@@ -1205,8 +1445,8 @@
             "title_normalized": "Moj Dinamo",
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
-            "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_work_id": "d89204a8-e68d-42e6-b719-8be781132800",
+            "musicbrainz_recording_id": "08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": "QT6F32530626",
@@ -1237,7 +1477,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "4498971d-8ebe-4c17-87e7-d8d447929180",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
@@ -1262,7 +1502,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "c6c12002-c671-41ad-a0fd-aed3442614dc",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
@@ -1286,8 +1526,8 @@
             "title_normalized": "Frane Tente",
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
-            "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_work_id": "48601b97-cff8-4346-af89-987de31bcfa1",
+            "musicbrainz_recording_id": "0999a678-4586-48c5-a1f1-598ffaa69977",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": "QT6F32536381",
@@ -1319,7 +1559,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "6b14a4ae-13cf-4fec-aec4-88d1b0a27201",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
@@ -1344,7 +1584,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "52686be5-371c-4dd5-907e-da3306ed07c9",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
@@ -1369,7 +1609,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "c25db041-6d8e-49e7-8953-f8a42e19f2f6",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
@@ -1394,7 +1634,7 @@
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
             "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_recording_id": "a43cf149-bd70-4b41-a261-ee56604fe390",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
@@ -1418,8 +1658,8 @@
             "title_normalized": "Sjever uz odsutne",
             "agency_work_code_zamp": null,
             "wikidata_qid": null,
-            "musicbrainz_work_id": null,
-            "musicbrainz_recording_id": null,
+            "musicbrainz_work_id": "7d41efc4-76e3-4b5b-80ed-ffddddbb0cd0",
+            "musicbrainz_recording_id": "87cf4afb-efbf-4627-a8b1-170725fa7807",
             "discogs_master_id": null,
             "spotify_track_id": null,
             "isrc": null,
