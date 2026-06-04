@@ -16,7 +16,7 @@
 | D | `branch_create` | ✅ PASS | `benchmark/test-d-workflow` |
 | D | `create_file_on_branch` | ✅ PASS | `benchmark/test_d_result.md` |
 | D | `pull_request_create` | ✅ PASS | PR #1 |
-| — | `update_file` (correct SHA) | ⬜ PROBABLE | nije testirano |
+| E | `update_file` (correct SHA) | ✅ PASS | GitHub Write Test #002 |
 | — | `delete_file` | ⬜ UNVERIFIED | nije testirano |
 | — | `merge_execution` | ⬜ UNVERIFIED | nije testirano |
 | — | `conflict_resolution` | ⬜ UNVERIFIED | nije testirano |
@@ -35,7 +35,7 @@ PERPLEXITY_GITHUB_CONNECTOR:
 
   repository_mutation:
     create_file: VERIFIED
-    update_file: PROBABLE
+    update_file: VERIFIED
     delete_file: UNVERIFIED
 
   consistency_controls:
@@ -81,7 +81,7 @@ Domain A — Claude Code:
 
 Domain B — Perplexity:
   GitHub REST API (remote)
-  verified: read, create, branch, PR, stale_sha_protection
+  verified: read, create, branch, PR, stale_sha_protection, update_file
 
 Domain C — GPT:
   audit + cross-verification
@@ -117,8 +117,21 @@ PR_1:
 
 ---
 
+## Perplexity Notion Write — naknadno dodan
+
+| Test | Result | Page ID |
+|---|---|---|
+| TEST-NOTION-WRITE-001 | ✅ VERIFIED | 37528908-2d7e-81c8-9081-ecf61799dab2 |
+| TEST-NOTION-WRITE-002 | ✅ VERIFIED | 37528908-2d7e-8177-b1e0-e779f7d2fb5f |
+
+**Verification method:** create → return page_id → fetch(page_id) → content match confirmed  
+**Timestamp:** 2026-06-04T18:40 CEST  
+**GitHub Write #002 SHA:** [this commit]
+
+---
+
 ## Sljedeći koraci (opcionalno)
 
-1. `update_file(correct_SHA)` — zatvoriti positive path test
+1. ~~`update_file(correct_SHA)` — zatvoriti positive path test~~ ✅ DONE (GitHub Write #002)
 2. Ažurirati Notion: Kabinet arhitektura → dodati execution domain model
 3. Zatvoriti PR #1 nakon potvrde da je ovaj dokument na mainu
