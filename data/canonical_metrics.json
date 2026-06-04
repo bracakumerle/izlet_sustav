@@ -1,7 +1,7 @@
 {
-  "_generated_at": "2026-06-04T10:30:36.161886+00:00",
+  "_generated_at": "2026-06-04T10:46:55.821072+00:00",
   "_source": "works_registry.json",
-  "_source_commit": "4ca0714d",
+  "_source_commit": "ef74248a",
   "_regen": "python3 _build/make_canonical_metrics.py",
   "_warning": "Machine-generated. Do not edit manually. Regenerate from works_registry.json.",
   "counts": {
@@ -38,9 +38,9 @@
       "pct": 63.6
     },
     "musicbrainz_recording_id": {
-      "filled": 13,
+      "filled": 38,
       "denominator": 44,
-      "pct": 29.5
+      "pct": 86.4
     },
     "musicbrainz_work_id": {
       "filled": 5,

@@ -1,7 +1,7 @@
 # CANONICAL STATE
 **Generated:** 2026-06-04  
 **Source:** `works_registry.json`  
-**Commit:** `4ca0714d`  
+**Commit:** `ef74248a`  
 **Ratified by:** General (Petar Kumerle)  
 
 ---
@@ -30,7 +30,7 @@
 | ISWC | 32 | 44 | 72.7% | `███████████████░░░░░` |
 | ISRC | 31 | 44 | 70.5% | `██████████████░░░░░░` |
 | Spotify track ID | 28 | 44 | 63.6% | `█████████████░░░░░░░` |
-| MusicBrainz recording ID | 13 | 44 | 29.5% | `██████░░░░░░░░░░░░░░` |
+| MusicBrainz recording ID | 38 | 44 | 86.4% | `█████████████████░░░` |
 | MusicBrainz work ID | 5 | 44 | 11.4% | `██░░░░░░░░░░░░░░░░░░` |
 | Discogs master ID | 0 | 44 | 0.0% | `░░░░░░░░░░░░░░░░░░░░` |
 | Wikidata QID | 0 | 44 | 0.0% | `░░░░░░░░░░░░░░░░░░░░` |
