@@ -6,7 +6,15 @@
       "Bash(curl -s https://bracakumerle.com/pjesme/krijesovi-lazi)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "PowerShell($env:PATH = \"C:\\\\Users\\\\petar\\\\AppData\\\\Roaming\\\\npm;\" + $env:PATH; netlify.cmd deploy --prod --dir=. --site=b42b6c4b-70cf-4449-a1f4-cff74782b622 2>&1)"
+      "PowerShell($env:PATH = \"C:\\\\Users\\\\petar\\\\AppData\\\\Roaming\\\\npm;\" + $env:PATH; netlify.cmd deploy --prod --dir=. --site=b42b6c4b-70cf-4449-a1f4-cff74782b622 2>&1)",
+      "Bash(curl -s https://bracakumerle.com/lyrics/krijesovi-lazi/)",
+      "PowerShell(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\petar\\\\OneDrive\\\\Desktop\\\\izlet_sustav\\\\reports\" -Force)",
+      "Bash(curl -s -H \"Authorization: Discogs token=UjQmmczHNvWUckLZZvzMEhizgfidVVBZAxoATMpm\" -H \"User-Agent: izlet_sustav/1.0 +https://bracakumerle.com\" \"https://api.discogs.com/artists/6610944/releases?sort=year&sort_order=asc&per_page=100\")",
+      "Bash(curl -s -H \"Authorization: Discogs token=UjQmmczHNvWUckLZZvzMEhizgfidVVBZAxoATMpm\" -H \"User-Agent: izlet_sustav/1.0 +https://bracakumerle.com\" \"https://api.discogs.com/releases/12898284\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(t.get\\('position',''\\),t.get\\('title',''\\),t.get\\('duration',''\\)\\) for t in d['tracklist']]\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\petar\\Downloads"
     ]
   },
   "enableAllProjectMcpServers": true

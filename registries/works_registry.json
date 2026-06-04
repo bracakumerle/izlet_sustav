@@ -4,7 +4,22 @@
     "source": "works_census_v2.csv",
     "total_works": 76,
     "confirmed": 76,
-    "probable": 0
+    "probable": 0,
+    "registry_role": "DERIVED_CANDIDATE",
+    "canonical_reference": "works_registry.json",
+    "reconciliation_status": "PENDING",
+    "reconciliation_method": [
+      "title_match (done)",
+      "alternate_title_match (pending)",
+      "isrc_match (pending)",
+      "manual_conflict_review (pending)"
+    ],
+    "ratification_status": "PROVISIONAL",
+    "candidate_count_estimate": 37,
+    "canonical_not_in_census_estimate": 5,
+    "provisional_note": "37/5 are audit findings from normalized primary-title join only. Not ratified metrics.",
+    "ratified_by": "General (Petar Kumerle)",
+    "ratified_date": "2026-06-04"
   },
   "works": [
     {
