@@ -22,7 +22,15 @@
   <meta property="og:description" content="Hrvatski rock bend. Slušaj sada." />
   <meta property="og:type" content="music.musician" />
   <meta property="og:url" content="https://bracakumerle.com" />
+  <meta property="og:image" content="https://bracakumerle.com/assets/hero/hero-desktop.webp" />
+  <meta property="og:image:width" content="2048" />
+  <meta property="og:image:height" content="731" />
+  <meta property="og:image:alt" content="Braća Kumerle na Marjanskim stepenicama, Split — foto Lili Žaneta" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://bracakumerle.com/assets/hero/hero-desktop.webp" />
 
+  <link rel="preload" as="image" href="/assets/hero/hero-desktop.webp" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="/assets/hero/hero-mobile.webp" media="(max-width: 768px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Raleway:wght@200;300;400;500&display=swap">
@@ -129,6 +137,17 @@
       font-family: var(--sans);
       font-weight: 300;
       min-height: 100vh;
+    }
+
+    /* ── HERO PHOTO ── */
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
     }
 
     /* ── HERO ── */
@@ -513,7 +532,19 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <picture>
+      <source media="(max-width: 768px)" srcset="/assets/hero/hero-mobile.webp" type="image/webp">
+      <source media="(min-width: 769px)" srcset="/assets/hero/hero-desktop.webp" type="image/webp">
+      <img
+        src="/assets/hero/hero-desktop.webp"
+        alt="Braća Kumerle na Marjanskim stepenicama, Split — foto Lili Žaneta"
+        class="hero-photo"
+        loading="eager"
+        decoding="async"
+        width="2048"
+        height="731"
+      >
+    </picture>
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
