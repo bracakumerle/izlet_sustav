@@ -1,255 +1,128 @@
-﻿<!DOCTYPE html>
-<html lang="hr">
+<!DOCTYPE html>
+<html lang="hr" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="/global.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moj Dinamo — iZLET / Braća Kumerle</title>
-  <meta name="description" content="Glazbeno djelo Moj Dinamo — iZLET (Braća Kumerle). Braća Kumerle Music, 2024. MusicBrainz recording verificiran.">
-  <meta name="author" content="Braća Kumerle">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://bracakumerle.com/pjesme/moj-dinamo">
-  <meta property="og:title" content="Moj Dinamo — iZLET / Braća Kumerle">
-  <meta property="og:description" content="Glazbeno djelo Moj Dinamo — iZLET (Braća Kumerle). Braća Kumerle Music, 2024.">
-  <meta property="og:url" content="https://bracakumerle.com/pjesme/moj-dinamo">
-  <meta property="og:type" content="music.song">
-  <meta property="og:site_name" content="Braća Kumerle">
-  <meta property="og:locale" content="hr_HR">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Moj Dinamo — iZLET / Braća Kumerle">
-  <meta name="twitter:description" content="Glazbeno djelo Moj Dinamo — iZLET (Braća Kumerle). Braća Kumerle Music, 2024.">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicRecording",
-    "name": "Moj Dinamo",
-    "byArtist": {
-      "@type": "MusicGroup",
-      "name": "iZLET",
-      "alternateName": "Braća Kumerle",
-      "url": "https://bracakumerle.com",
-      "sameAs": ["https://musicbrainz.org/recording/08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6","https://musicbrainz.org/work/d89204a8-e68d-42e6-b719-8be781132800","https://genius.com/Izlet-moj-dinamo-lyrics","https://www.youtube.com/watch?v=xp-f5vjciCk","https://open.spotify.com/track/5gfjKvC0yxasJd0hafXTwx"]
-    },
-    "recordingOf": {
-      "@type": "MusicComposition",
-      "name": "Moj Dinamo",
-      "composer": [
-        { "@type": "Person", "name": "Toni Kumerle" },
-        { "@type": "Person", "name": "Petar Kumerle" }
-      ]
-    },
-    "datePublished": "2024",
-    "inLanguage": "hr",
-    "url": "https://bracakumerle.com/pjesme/moj-dinamo",
-    "sameAs": ["https://musicbrainz.org/recording/08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6","https://musicbrainz.org/work/d89204a8-e68d-42e6-b719-8be781132800","https://genius.com/Izlet-moj-dinamo-lyrics","https://www.youtube.com/watch?v=xp-f5vjciCk","https://open.spotify.com/track/5gfjKvC0yxasJd0hafXTwx"]
-  }
-  </script>
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Moj Dinamo — iZLET | Braća Kumerle</title>
+  <meta name="description" content="Moj Dinamo — iZLET (Braća Kumerle). Braća Kumerle Music, 2024."/>
+  <link rel="canonical" href="https://bracakumerle.com/pjesme/moj-dinamo"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/bkm-v3.css"/>
   <style>
-    body { background-color: var(--bk-bijela); color: var(--bk-tekst); font-family: var(--font-body); font-weight: 300; line-height: 1.75; font-size: 17px; }
-    .hero { background-color: var(--bk-plava); background-image: radial-gradient(ellipse at 20% 50%, rgba(200, 120, 32, 0.08) 0%, transparent 60%); padding: 4rem 2rem 3.5rem; border-bottom: 1px solid rgba(200, 120, 32, 0.3); }
-    .hero-inner { max-width: var(--max-width-wide); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: end; }
-    .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bk-zlatna); margin-bottom: 1rem; }
-    .hero-title { font-family: var(--font-serif); font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 400; font-style: italic; color: var(--bk-bijela); line-height: 1.05; margin-bottom: 1rem; }
-    .hero-subtitle { color: rgba(244, 240, 232, 0.6); font-size: 0.95rem; }
-    .hero-id { text-align: right; }
-    .id-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(200, 120, 32, 0.6); margin-bottom: 0.3rem; }
-    .id-value { font-size: 0.78rem; color: var(--bk-zlatna); font-family: monospace; }
-    .main { max-width: var(--max-width-wide); margin: 0 auto; padding: 3.5rem 2rem 4rem; display: grid; grid-template-columns: 1fr 300px; gap: 4rem; }
-    .section { margin-bottom: 3rem; }
-    .section-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bk-zlatna); margin-bottom: 1rem; display: block; }
-    .section-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--bk-plava); margin-bottom: 1.2rem; }
-    .section p { margin-bottom: 1rem; }
-    .section p:last-child { margin-bottom: 0; }
-    .data-table { width: 100%; border-collapse: collapse; }
-    .data-table tr { border-bottom: 1px solid var(--bk-separator); }
-    .data-table tr:last-child { border-bottom: none; }
-    .data-table td { padding: 0.7rem 0; font-size: 0.9rem; vertical-align: top; }
-    .data-table td:first-child { color: var(--bk-tekst-svjetli); font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; width: 140px; padding-right: 1rem; }
-    .data-table a { color: var(--bk-plava); text-decoration: none; border-bottom: 1px solid var(--bk-separator); }
-    .data-table a:hover { color: var(--bk-zlatna); }
-    .tag-id { font-family: monospace; font-size: 0.82rem; background: var(--bk-bijela-hladna); padding: 0.15rem 0.5rem; }
-    .null-value { color: var(--bk-tekst-svjetli); font-style: italic; font-size: 0.85rem; }
-    .verified { display: inline-block; font-size: 0.7rem; color: var(--bk-zlatna); letter-spacing: 0.1em; text-transform: uppercase; margin-left: 0.5rem; }
-    .sidebar-card { background: var(--bk-plava); padding: 1.8rem; margin-bottom: 1.5rem; }
-    .sidebar-card-title { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bk-zlatna); margin-bottom: 1.2rem; }
-    .sidebar-card a { display: block; color: rgba(244, 240, 232, 0.7); text-decoration: none; font-size: 0.88rem; padding: 0.4rem 0; border-bottom: 1px solid rgba(200, 120, 32, 0.1); transition: color 0.2s; }
-    .sidebar-card a:last-child { border-bottom: none; }
-    .sidebar-card a:hover { color: var(--bk-zlatna-svijetla); }
-    .sidebar-card-light { background: var(--bk-bijela-hladna); border: 1px solid var(--bk-separator); padding: 1.5rem 1.8rem; margin-bottom: 1.5rem; }
-    .sidebar-card-light .sidebar-card-title { color: var(--bk-zlatna); }
-    .media-item { padding: 0.6rem 0; border-bottom: 1px solid var(--bk-separator); }
-    .media-item:last-child { border-bottom: none; }
-    .media-source { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bk-zlatna); margin-bottom: 0.1rem; }
-    .media-title { font-size: 0.85rem; }
-    .media-title a { color: var(--bk-tekst); text-decoration: none; border-bottom: 1px solid var(--bk-separator); }
-    .media-title a:hover { color: var(--bk-zlatna); }
-    .media-date { font-size: 0.75rem; color: var(--bk-tekst-svjetli); }
-    @media (max-width: 720px) { .main { grid-template-columns: 1fr; gap: 2rem; } .hero-inner { grid-template-columns: 1fr; } .hero-id { text-align: left; } }
+    .pg{padding:clamp(2.5rem,7vw,5rem) 0 clamp(2rem,5vw,4rem)}
+    .pt{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.9rem,1.1rem + 2.2vw,3.2rem);line-height:1.02;margin-bottom:1rem}
+    .pt em{font-style:italic;color:var(--c-p)}
+    .psub{max-width:58ch;color:var(--c-muted);font-size:clamp(.85rem,.78rem + .35vw,1rem)}
+    .prose h2{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.45rem,1.1rem + 1.1vw,2.1rem);margin:2rem 0 1rem;line-height:1.1}
+    .prose h3{font-size:clamp(1.1rem,1rem + .6vw,1.45rem);font-weight:600;margin:1.5rem 0 .75rem}
+    .prose p{color:var(--c-muted);line-height:1.8;margin-bottom:1.25rem;max-width:70ch}
+    .prose ul{display:grid;gap:.5rem;margin-bottom:1.25rem;padding-left:1rem}
+    .prose ul li{color:var(--c-muted);font-size:clamp(.85rem,.78rem + .35vw,1rem);list-style:none;padding-left:1.25rem;position:relative}
+    .prose ul li:before{content:"—";position:absolute;left:0;color:var(--c-p)}
+    .prose a{color:var(--c-p);border-bottom:1px solid var(--c-p-hl)}
+    .prose a:hover{border-color:var(--c-p)}
+    .prose table{width:100%;border-collapse:collapse;margin-bottom:1.5rem;font-size:clamp(.7rem,.65rem + .25vw,.82rem)}
+    .prose td,.prose th{padding:.5rem .75rem;border:1px solid var(--c-border);text-align:left}
+    .prose th{background:var(--c-offset);font-weight:600}
+    .ytg{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+    .yta{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:var(--c-surf);border:1px solid var(--c-border);border-radius:1rem;font-size:clamp(.85rem,.78rem + .35vw,1rem);font-weight:500;transition:all 200ms cubic-bezier(.16,1,.3,1)}
+    .yta:hover{border-color:var(--c-p);background:var(--c-offset)}
+    .yta .ar{color:var(--c-p)}
+    .bc{padding:.75rem 0;border-bottom:1px solid var(--c-border);font-size:clamp(.7rem,.65rem + .25vw,.82rem);color:var(--c-muted);display:flex;gap:.5rem;flex-wrap:wrap}
+    .bc a{color:var(--c-muted)}.bc a:hover{color:var(--c-p)}.bc .sep{color:var(--c-faint)}.bc .cur{color:var(--c-text)}
+    .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+    .info-card{padding:1.25rem;background:var(--c-surf);border:1px solid var(--c-border);border-radius:1rem}
+    .info-card h4{font-size:clamp(.7rem,.65rem + .25vw,.82rem);letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.5rem}
+    .info-card p{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.1rem,1rem + .6vw,1.45rem);color:var(--c-text);margin:0}
+    @media(max-width:640px){.ytg,.info-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-
-  <header class="bk-site-header">
-    <div class="bk-site-header-inner">
-      <a href="https://bracakumerle.com" class="bk-logo">i<span>ZLET</span></a>
-      <nav class="bk-site-nav" aria-label="Glavna navigacija">
-        <a href="https://bracakumerle.com">Početna</a>
-        <span class="nav-separator">·</span>
-        <a href="https://bracakumerle.com/diskografija" class="active">Diskografija</a>
-        <span class="nav-separator">·</span>
-        <a href="https://bracakumerle.com/lyrics/">Tekstovi</a>
-        <span class="nav-separator">·</span>
-        <a href="https://bracakumerle.com/video">Video</a>
-        <span class="nav-separator">·</span>
-        <a href="https://bracakumerle.com/vizualni-identitet">Vizualni identitet</a>
-        <span class="nav-separator">·</span>
-        <a href="https://bracakumerle.com/kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <p class="hero-eyebrow">iZLET / Braća Kumerle — Glazbeno djelo</p>
-        <h1 class="hero-title">Moj Dinamo</h1>
-        <p class="hero-subtitle">Braća Kumerle Music · 2024.</p>
-      </div>
-      <div class="hero-id">
-        <p class="id-label">MusicBrainz</p>
-        <p class="id-value">08a4c06f</p>
-      </div>
-    </div>
-  </section>
-
-  <main class="main">
-    <div class="content">
-
-      <section class="section">
-        <span class="section-label">01 — Osnovni podaci</span>
-        <table class="data-table">
-          <tr><td>Naziv</td><td>Moj Dinamo</td></tr>
-          <tr><td>Izvođač</td><td>iZLET (Braća Kumerle)</td></tr>
-          <tr><td>Autori</td><td>Toni Kumerle, Petar Kumerle</td></tr>
-          <tr><td>Izdavač</td><td>Braća Kumerle Music</td></tr>
-          <tr><td>Godina objave</td><td>2024.</td></tr>
-          <tr><td>Jezik</td><td>Hrvatski</td></tr>
-          <tr><td>ISRC</td><td><span class="tag-id">QT6F32530626</span></td></tr>
-          <tr><td>ISWC</td><td><span class="null-value">Nije dostupno</span></td></tr>
-        </table>
-      </section>
-
-      <section class="section">
-        <span class="section-label">02 — Kontekst objave</span>
-        <h2 class="section-title">Kontekst objave</h2>
-        <p>
-          Moj Dinamo glazbeno je djelo projekta iZLET (Braća Kumerle) objavljeno u ožujku 2024. Singl je navijačka pjesma posvećena GNK Dinamo Zagreb.
-        </p>
-        <p>
-          Objava je pratila medijska pokrivenost na sportskim i navijačkim portalima. Singl je objavljen pod labelom Braća Kumerle Music.
-        </p>
-      </section>
-
-      <section class="section">
-        <span class="section-label">03 — Registri i identifikatori</span>
-        <h2 class="section-title">Registri i identifikatori</h2>
-        <table class="data-table">
-          <tr><td>ISRC</td><td><span class="tag-id">QT6F32530626</span></td></tr>
-          <tr><td>ISWC</td><td><span class="null-value">Nije dostupno</span></td></tr>
-          <tr>
-            <td>MB Recording</td>
-            <td>
-              <a href="https://musicbrainz.org/recording/08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6" target="_blank" rel="noopener"><span class="tag-id">08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6</span></a>
-              <span class="verified">✓</span>
-            </td>
-          </tr>
-          <tr><td>MB Release</td><td><span class="null-value">Nije dostupno</span></td></tr>
-          <tr><td>Wikidata</td><td><span class="null-value">Nije dostupno</span></td></tr>
-          <tr><td>Izvođač (WD)</td><td><a href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Q139595518 (iZLET)</a></td></tr>
-          <tr><td>Izvođač (MB)</td><td><a href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">b973e6f2 (iZLET)</a></td></tr>
-          <tr><td>YouTube</td><td><a href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">@bracakumerle</a></td></tr>
-        </table>
-      </section>
-
-      <section class="section">
-        <span class="section-label">04 — Arhivski položaj</span>
-        <h2 class="section-title">Arhivski položaj</h2>
-        <p>
-          Moj Dinamo pripada epohi <strong>Documentary Resurgence (2024–)</strong> — fazi karakteriziranoj sustavnom organizacijom arhive i novim autorskim izdanjima pod Braća Kumerle Music labelom.
-        </p>
-      </section>
-
-    </div>
-
-    <aside>
-      <div class="sidebar-card-light">
-        <p class="sidebar-card-title">Medijske reference</p>
-        <div class="media-item">
-          <p class="media-source">HOP.com.hr</p>
-          <p class="media-title"><a href="https://www.hop.com.hr/2024/03/14/braca-kumerle-snimili-pjesmu-o-dinamu/" target="_blank" rel="noopener">Braća Kumerle snimili pjesmu o Dinamu</a></p>
-          <p class="media-date">14. ožujka 2024.</p>
-        </div>
-        <div class="media-item">
-          <p class="media-source">Zagreb.info</p>
-          <p class="media-title"><a href="https://www.zagreb.info/sport/decki-s-maksimira-snimili-novi-navijacki-hit-za-dinamo-poslusajte-sto-bi-se-moglo-oriti-na-stadionu/614255/" target="_blank" rel="noopener">Dečki s Maksimira snimili novi navijački hit za Dinamo</a></p>
-          <p class="media-date">21. ožujka 2024.</p>
-        </div>
-      </div>
-
-      <div class="sidebar-card">
-        <p class="sidebar-card-title">Slušaj</p>
-        <a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">YouTube — official video (2024.)</a><a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">Spotify — iZLET</a><a href="https://music.apple.com/us/artist/izlet/682224896" target="_blank" rel="noopener">Apple Music</a>
-        <a href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">YouTube @bracakumerle</a>
-      </div>
-
-      <div class="sidebar-card-light">
-        <p class="sidebar-card-title">Više o projektu</p>
-        <a href="https://bracakumerle.com">bracakumerle.com</a>
-        <a href="https://bracakumerle.com/diskografija">Diskografija</a>
-        <a href="https://bracakumerle.com/vizualni-identitet">Vizualni identitet</a>
-        <a href="https://musicbrainz.org/recording/08a4c06f-f83f-4d88-ac3a-b3ac6160d7d6" target="_blank" rel="noopener">MusicBrainz recording</a>
-        <a href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Wikidata Q139595518</a>
-      </div>
-    </aside>
-
-  <div class="lyrics-link">
-    <a href="/lyrics/moj-dinamo/">📄 Pročitaj tekst pjesme →</a>
+<a href="#main" style="position:absolute;left:-9999px">Preskoči</a>
+<header class="bkm-header">
+  <div class="bkm-container bkm-topbar">
+    <a href="/" class="bkm-brand"><span class="bkm-brand-sub">Braća Kumerle</span><span class="bkm-brand-name">iZLET</span></a>
+    <nav class="bkm-nav" aria-label="Glavna navigacija"><ul>
+      <li><a class="bkm-nl" href="/#glazba">Glazba</a></li>
+      <li><a class="bkm-nl" href="/bio.html">O bendu</a></li>
+      <li><a class="bkm-nl" href="/diskografija.html">Diskografija</a></li>
+      <li><a class="bkm-nl" href="/lyrics/">Tekstovi</a></li>
+      <li><a class="bkm-nl" href="/video.html">Video</a></li>
+      <li><a class="bkm-nl" href="/arhiva/">Arhiva</a></li>
+      <li><a class="bkm-nl" href="/kontakt.html">Kontakt</a></li>
+    </ul></nav>
+    <button class="bkm-theme-btn" data-theme-toggle aria-label="Tema">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
   </div>
-
-  </main>
-
-  <footer class="bk-site-footer">
-    <div class="bk-site-footer-inner">
-      <div class="bk-footer-col">
-        <p class="bk-footer-col-title">iZLET</p>
-        <a href="https://bracakumerle.com/diskografija">Diskografija</a>
-        <a href="https://bracakumerle.com/video">Video</a>
-        <a href="https://bracakumerle.com/bio">O bendu</a>
-        <a href="https://bracakumerle.com/vizualni-identitet">Vizualni identitet</a>
-      </div>
-      <div class="bk-footer-col">
-        <p class="bk-footer-col-title">Vanjski registri</p>
-        <a href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Wikidata</a>
-        <a href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">MusicBrainz</a>
-        <a href="https://www.discogs.com/artist/6610944" target="_blank" rel="noopener">Discogs</a>
-        <a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">Spotify</a>
-      </div>
-      <div class="bk-footer-col">
-        <p class="bk-footer-col-title">Kontakt</p>
-        <a href="mailto:izletband@gmail.com">izletband@gmail.com</a>
-        <a href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">@bracakumerle</a>
+</header>
+<main id='main'>
+<div class="bkm-container">
+    <nav class="bc" aria-label="Breadcrumb"><a href="/">Početna</a><span class="sep">›</span><a href="/lyrics/">Tekstovi</a><span class="sep">›</span><span class="cur">Moj Dinamo</span></nav>
+    <div class="pg">
+      <div class="bkm-page-eyebrow">Pjesma</div>
+      <h1 class="pt">Moj Dinamo</h1>
+      <p class="psub">iZLET (Braća Kumerle) · Braća Kumerle Music · 2024</p>
+    </div>
+    <div class="prose">
+      <div class="info-grid">
+        <div class="info-card"><h4>Izvođač</h4><p>iZLET (Braća Kumerle)</p></div>
+        <div class="info-card"><h4>Godina</h4><p>2024</p></div>
+        <div class="info-card"><h4>Label</h4><p>Braća Kumerle Music</p></div>
+        <div class="info-card"><h4>ISRC</h4><p>QT6F32530626</p></div>
+        
+        <div class="info-card"><h4>Autori</h4><p>Toni Kumerle, Petar Kumerle</p></div>
       </div>
     </div>
-    <div class="bk-footer-bottom">
-      <span class="bk-footer-bottom-text">© Braća Kumerle · Zagreb · 2026.</span>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem"><a class="bkm-btn bkm-btn-s" href="/lyrics/moj-dinamo/">Tekst pjesme →</a><a class="bkm-btn bkm-btn-s" href="/lyrics/">← Tekstovi</a><a class="bkm-btn bkm-btn-s" href="/diskografija.html">Diskografija</a></div>
     </div>
-  </footer>
-
+</main>
+<footer class="bkm-footer">
+  <div class="bkm-container">
+    <div class="bkm-footer-grid">
+      <div><h4>Stranice</h4><div class="bkm-footer-links">
+        <a class="bkm-footer-link" href="/bio.html">O bendu</a>
+        <a class="bkm-footer-link" href="/diskografija.html">Diskografija</a>
+        <a class="bkm-footer-link" href="/video.html">Video</a>
+        <a class="bkm-footer-link" href="/arhiva/">Arhiva</a>
+        <a class="bkm-footer-link" href="/lyrics/">Tekstovi</a>
+        <a class="bkm-footer-link" href="/kontakt.html">Kontakt</a>
+        <a class="bkm-footer-link" href="/vizualni-identitet.html">Vizualni identitet</a>
+      </div></div>
+      <div><h4>Streaming</h4><div class="bkm-footer-links">
+        <a class="bkm-footer-link" href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">Spotify</a>
+        <a class="bkm-footer-link" href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">YouTube</a>
+        <a class="bkm-footer-link" href="https://music.apple.com/gb/artist/izlet/682224896" target="_blank" rel="noopener">Apple Music</a>
+        <a class="bkm-footer-link" href="https://www.deezer.com/hr/artist/5054702" target="_blank" rel="noopener">Deezer</a>
+        <a class="bkm-footer-link" href="https://tidal.com/artist/5080072" target="_blank" rel="noopener">Tidal</a>
+      </div></div>
+      <div><h4>Entitetski identifikatori</h4><div class="bkm-entity-row">
+        <a class="bkm-entity-badge" href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Wikidata Q139595518</a>
+        <a class="bkm-entity-badge" href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">MusicBrainz</a>
+        <a class="bkm-entity-badge" href="https://www.discogs.com/artist/6610944" target="_blank" rel="noopener">Discogs</a>
+        <a class="bkm-entity-badge" href="https://hr.wikipedia.org/wiki/IZLET" target="_blank" rel="noopener">Wikipedia HR</a>
+      </div></div>
+    </div>
+    <div class="bkm-footer-bottom">
+      <span>© 2026 iZLET — Braća Kumerle. Sva prava pridržana.</span>
+      <span>Zagreb · HR · od 2007.</span>
+    </div>
+  </div>
+</footer>
+<script>
+(() => {
+  const root = document.documentElement, btn = document.querySelector("[data-theme-toggle]");
+  if(!btn) return;
+  let t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  root.setAttribute("data-theme", t);
+  const icon = () => btn.innerHTML = t==="dark"
+    ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+    : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  icon();
+  btn.addEventListener("click", () => { t=t==="dark"?"light":"dark"; root.setAttribute("data-theme",t); icon(); });
+})();
+</script>
 </body>
 </html>
-
-
-
-
