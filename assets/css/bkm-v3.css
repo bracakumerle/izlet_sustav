@@ -4,7 +4,7 @@
    Instrument Serif + Work Sans Â· teal #016068
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+/* Google Fonts loaded via <link> in HTML head — not here */
 
 :root {
   --text-xs: clamp(.7rem, .65rem + .25vw, .82rem);
@@ -184,4 +184,5 @@ ul { list-style: none; padding: 0 }
   .bkm-corpus-grid { grid-template-columns: 1fr 1fr }
   .bkm-footer-bottom { flex-direction: column; gap: var(--space-2) }
 }
+
 
