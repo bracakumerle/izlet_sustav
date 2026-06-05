@@ -1,127 +1,159 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="hr" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Diskografija — iZLET | Braća Kumerle</title>
-  <meta name="description" content="Kompletna diskografija iZLET (Braća Kumerle): studijski albumi, kompilacije i singlovi od 2009. do danas.">
-  <link rel="canonical" href="https://bracakumerle.com/diskografija">
-  <link rel="alternate" hreflang="hr" href="https://bracakumerle.com/diskografija">
-  <link rel="alternate" hreflang="en" href="https://bracakumerle.com/en/discography/">
-  <link rel="alternate" hreflang="x-default" href="https://bracakumerle.com/">
-  <meta property="og:title" content="Diskografija — iZLET | Braća Kumerle">
-  <meta property="og:description" content="Kompletna diskografija iZLET (Braća Kumerle): studijski albumi, kompilacije i singlovi od 2009. do danas.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bracakumerle.com/diskografija">
-  <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Početna", "item": "https://bracakumerle.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Diskografija", "item": "https://bracakumerle.com/diskografija" }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://bracakumerle.com/diskografija#page",
-    "url": "https://bracakumerle.com/diskografija",
-    "name": "Diskografija — iZLET | Braća Kumerle",
-    "about": {
-      "@id": "https://bracakumerle.com/#izlet-musicgroup"
-    },
-    "inLanguage": "hr"
-  }
-]
-  </script>
+  <meta name="description" content="Kompletna diskografija iZLET (Braća Kumerle) — albumi, singlovi, demo era."/>
+  <link rel="canonical" href="https://bracakumerle.com/diskografija"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/bkm-v3.css"/>
+  <style>
+    .pg{padding:clamp(2.5rem,7vw,5rem) 0 clamp(2rem,5vw,4rem)}
+    .pt{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.9rem,1.1rem + 2.2vw,3.2rem);line-height:1.02;margin-bottom:1rem}
+    .pt em{font-style:italic;color:var(--c-p)}
+    .psub{max-width:58ch;color:var(--c-muted);font-size:clamp(.85rem,.78rem + .35vw,1rem)}
+    .prose h2{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.45rem,1.1rem + 1.1vw,2.1rem);margin:2rem 0 1rem;line-height:1.1}
+    .prose h3{font-size:clamp(1.1rem,1rem + .6vw,1.45rem);font-weight:600;margin:1.5rem 0 .75rem}
+    .prose p{color:var(--c-muted);line-height:1.8;margin-bottom:1.25rem;max-width:70ch}
+    .prose ul{display:grid;gap:.5rem;margin-bottom:1.25rem;padding-left:1rem}
+    .prose ul li{color:var(--c-muted);font-size:clamp(.85rem,.78rem + .35vw,1rem);list-style:none;padding-left:1.25rem;position:relative}
+    .prose ul li:before{content:"—";position:absolute;left:0;color:var(--c-p)}
+    .prose a{color:var(--c-p);border-bottom:1px solid var(--c-p-hl)}
+    .prose a:hover{border-color:var(--c-p)}
+    .prose table{width:100%;border-collapse:collapse;margin-bottom:1.5rem;font-size:clamp(.7rem,.65rem + .25vw,.82rem)}
+    .prose td,.prose th{padding:.5rem .75rem;border:1px solid var(--c-border);text-align:left}
+    .prose th{background:var(--c-offset);font-weight:600}
+    .ytg{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+    .yta{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:var(--c-surf);border:1px solid var(--c-border);border-radius:1rem;font-size:clamp(.85rem,.78rem + .35vw,1rem);font-weight:500;transition:all 200ms cubic-bezier(.16,1,.3,1)}
+    .yta:hover{border-color:var(--c-p);background:var(--c-offset)}
+    .yta .ar{color:var(--c-p)}
+    .bc{padding:.75rem 0;border-bottom:1px solid var(--c-border);font-size:clamp(.7rem,.65rem + .25vw,.82rem);color:var(--c-muted);display:flex;gap:.5rem;flex-wrap:wrap}
+    .bc a{color:var(--c-muted)}.bc a:hover{color:var(--c-p)}.bc .sep{color:var(--c-faint)}.bc .cur{color:var(--c-text)}
+    .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+    .info-card{padding:1.25rem;background:var(--c-surf);border:1px solid var(--c-border);border-radius:1rem}
+    .info-card h4{font-size:clamp(.7rem,.65rem + .25vw,.82rem);letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.5rem}
+    .info-card p{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.1rem,1rem + .6vw,1.45rem);color:var(--c-text);margin:0}
+    @media(max-width:640px){.ytg,.info-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/">iZLET</a> |
-      <a href="/bio">O bendu</a> |
-      <a href="/diskografija">Diskografija</a> |
-      <a href="/lyrics/">Tekstovi</a> |
-      <a href="/arhiva">Arhiva</a> |
-      <a href="/video">Video</a> |
-      <a href="/kontakt">Kontakt</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Diskografija</h1>
-
-    <section>
+<a href="#main" style="position:absolute;left:-9999px">Preskoči</a>
+<header class="bkm-header">
+  <div class="bkm-container bkm-topbar">
+    <a href="/" class="bkm-brand"><span class="bkm-brand-sub">Braća Kumerle</span><span class="bkm-brand-name">iZLET</span></a>
+    <nav class="bkm-nav" aria-label="Glavna navigacija"><ul>
+      <li><a class="bkm-nl" href="/#glazba">Glazba</a></li>
+      <li><a class="bkm-nl" href="/bio.html">O bendu</a></li>
+      <li><a class="bkm-nl" href="/diskografija.html">Diskografija</a></li>
+      <li><a class="bkm-nl" href="/lyrics/">Tekstovi</a></li>
+      <li><a class="bkm-nl" href="/video.html">Video</a></li>
+      <li><a class="bkm-nl" href="/arhiva/">Arhiva</a></li>
+      <li><a class="bkm-nl" href="/kontakt.html">Kontakt</a></li>
+    </ul></nav>
+    <button class="bkm-theme-btn" data-theme-toggle aria-label="Tema">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+<main id='main'>
+<div class="bkm-container">
+    <nav class="bc" aria-label="Breadcrumb"><a href="/">Početna</a><span class="sep">›</span><span class="cur">Diskografija</span></nav>
+    <div class="pg">
+      <div class="bkm-page-eyebrow">Diskografija</div>
+      <h1 class="pt">Kompletna <em>diskografija</em></h1>
+      <p class="psub">Albumi, singlovi i demo era iZLET (Braća Kumerle) od 2007.</p>
+    </div>
+    <div class="prose">
       <h2>Studijski albumi</h2>
-
-      <article>
-        <h3>Leteći majmuni (2012.)</h3>
-        <p>Izdavač: Neovisno izdanje<br>
-        Format: Digital</p>
-        <p><a href="/arhiva/leteci-majmuni-2012">Više →</a></p>
-      </article>
-
-      <article>
-        <h3>Nikad ne znaš, to je ono... (2016)</h3>
-        <p>Izdavač: Dallas Records<br>
-        Format: CD / Digital</p>
-        <p><a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" rel="noopener">Slušaj na Spotifyu →</a></p>
-      </article>
-
-      <article>
-        <h3>Katarza (2019)</h3>
-        <p>Izdavač: Dallas Records<br>
-        Format: CD / Digital</p>
-        <p><a href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" rel="noopener">Slušaj na Spotifyu →</a></p>
-      </article>
-    </section>
-
-    <section>
-      <h2>Kompilacije</h2>
-
-      <article>
-        <h3>CMC Demo 2009. (2009)</h3>
-        <p>Izdavač: Croatia Records<br>
-        Pjesma: "Ti si čudesna" (track 8)<br>
-        Kat. br.: CD 5867234</p>
-        <p><a href="https://www.discogs.com/release/12309194" rel="noopener">Discogs →</a> &nbsp; <a href="/arhiva/cmc-demo-2009">Više →</a></p>
-      </article>
-    </section>
-
-    <section>
-      <h2>Singlovi — Braća Kumerle Music (2023–2026)</h2>
+      <div class="info-grid">
+        <div class="info-card"><h4>2016 · Dallas Records</h4><p>Nikad ne znaš, to je ono…</p></div>
+        <div class="info-card"><h4>2019 · Dallas Records</h4><p>Katarza</p></div>
+      </div>
+      <h3>Nikad ne znaš, to je ono… (2016)</h3>
+      <p>Debitantski studijski album. 13 pjesama. Objavljeno u izdanju Dallas Recordsa.</p>
       <ul>
-        <li><a href="/pjesme/sjever-uz-odsutne">Sjever uz odsutne (2023) →</a></li>
-        <li><a href="/pjesme/moj-dinamo">Moj Dinamo (2024) →</a></li>
-        <li><a href="/pjesme/krijesovi-lazi">Krijesovi laži (2025) →</a></li>
-        <li>Vitez Jure (2025)</li>
-        <li><a href="/pjesme/znakovlje-hrvata">Znakovlje Hrvata (2025) →</a></li>
-        <li>124. Vukovarska brigada himna (2025)</li>
-        <li><a href="/pjesme/frane-tente">Frane Tente — nova snimka (2025) →</a></li>
-        <li>Bogdanovačka kalvarija (2025)</li>
-        <li>Božićna idila (2025)</li>
-        <li>Isuse moj (2026)</li>
-        <li>Čovjek moli Boga (2026)</li>
+        <li>Pernastica</li><li>Dva gemišta</li><li>Oni spavaju</li><li>Svemir</li>
+        <li>Imam</li><li>Ne žurim</li><li>Noćima (Here I Am)</li><li>Kako da se smijem</li>
+        <li>Maša</li><li>Topim se i gubim se</li><li>Ti si čudesna</li><li>Majčin skut</li>
+        <li><a href="/lyrics/zalo/">Žalo</a></li>
       </ul>
-    </section>
-
-    <section>
-      <h2>Singlovi — Dallas Records era (2013–2020)</h2>
+      <h3>Katarza (2019)</h3>
+      <p>Drugi studijski album. Objavljeno u izdanju Dallas Recordsa.</p>
       <ul>
-        <li><a href="/pjesme/zalo">Žalo (2013) →</a></li>
-        <li>Svemir (2016)</li>
-        <li>Majčin skut (2017)</li>
-        <li>Osmijeh je bitan (2018)</li>
-        <li>Tko si ti (2018)</li>
-        <li>Nema mjesta (2018)</li>
-        <li>Frane Tente — originalna verzija (2020)</li>
+        <li><a href="/lyrics/cast/">Čast</a></li>
+        <li>Tko si ti</li><li>Osmijeh je bitan</li><li>Nema mjesta</li>
       </ul>
-    </section>
-  </main>
-  <footer>
-    <p>© 2026 iZLET – Braća Kumerle | <a href="/">Početna</a> | <a href="/bio">O bendu</a></p>
-  </footer>
+      <h2>Braća Kumerle Music · 2023–</h2>
+      <p>Neovisna era singlova pod vlastitim labelom Braća Kumerle Music, distribucija putem DistroKid.</p>
+      <ul>
+        <li><a href="/lyrics/sjever-uz-odsutne/">Sjever uz odsutne</a> · 2023 · ISRC QT6EX2529331</li>
+        <li><a href="/lyrics/moj-dinamo/">Moj Dinamo</a> · 2024</li>
+        <li><a href="/lyrics/krijesovi-lazi/">Krijesovi laži</a> · 2025 · ISRC QT6F32539173</li>
+        <li><a href="/lyrics/vitez-jure/">Vitez Jure</a> · 2025</li>
+        <li><a href="/lyrics/znakovlje-hrvata/">Znakovlje Hrvata</a> · 2025 · ISRC QZ6PP2514425</li>
+        <li><a href="/lyrics/bogdanovacka-kalvarija/">Bogdanovačka kalvarija</a> · 2025</li>
+        <li><a href="/lyrics/frane-tente/">Frane Tente</a> · 2025 · ISRC QT6F32536381</li>
+        <li><a href="/lyrics/bozicna-idila/">Božićna idila</a> · 2025</li>
+        <li><a href="/lyrics/isuse-moj/">Isuse moj</a> · 2026</li>
+        <li><a href="/lyrics/covjek-moli-boga/">Čovjek moli Boga</a> · 2026</li>
+      </ul>
+      <h2>Demo era · 2007–2015</h2>
+      <p>Sedam demo izdanja. CMC Demo 2009. na Croatia Records kompilaciji.</p>
+      <ul>
+        <li>Leteći majmuni (2012) · Elektronium Production Studios</li>
+        <li>Singlovi: Žalo, Maša, Pernastica, Svemir, Ti si čudesna</li>
+      </ul>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem"><a class="bkm-btn bkm-btn-s" href="/">← Početna</a><a class="bkm-btn bkm-btn-s" href="/lyrics/">Tekstovi</a><a class="bkm-btn bkm-btn-s" href="/arhiva/">Arhiva</a></div>
+    </div>
+</main>
+<footer class="bkm-footer">
+  <div class="bkm-container">
+    <div class="bkm-footer-grid">
+      <div><h4>Stranice</h4><div class="bkm-footer-links">
+        <a class="bkm-footer-link" href="/bio.html">O bendu</a>
+        <a class="bkm-footer-link" href="/diskografija.html">Diskografija</a>
+        <a class="bkm-footer-link" href="/video.html">Video</a>
+        <a class="bkm-footer-link" href="/arhiva/">Arhiva</a>
+        <a class="bkm-footer-link" href="/lyrics/">Tekstovi</a>
+        <a class="bkm-footer-link" href="/kontakt.html">Kontakt</a>
+        <a class="bkm-footer-link" href="/vizualni-identitet.html">Vizualni identitet</a>
+      </div></div>
+      <div><h4>Streaming</h4><div class="bkm-footer-links">
+        <a class="bkm-footer-link" href="https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d" target="_blank" rel="noopener">Spotify</a>
+        <a class="bkm-footer-link" href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">YouTube</a>
+        <a class="bkm-footer-link" href="https://music.apple.com/gb/artist/izlet/682224896" target="_blank" rel="noopener">Apple Music</a>
+        <a class="bkm-footer-link" href="https://www.deezer.com/hr/artist/5054702" target="_blank" rel="noopener">Deezer</a>
+        <a class="bkm-footer-link" href="https://tidal.com/artist/5080072" target="_blank" rel="noopener">Tidal</a>
+      </div></div>
+      <div><h4>Entitetski identifikatori</h4><div class="bkm-entity-row">
+        <a class="bkm-entity-badge" href="https://www.wikidata.org/wiki/Q139595518" target="_blank" rel="noopener">Wikidata Q139595518</a>
+        <a class="bkm-entity-badge" href="https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f" target="_blank" rel="noopener">MusicBrainz</a>
+        <a class="bkm-entity-badge" href="https://www.discogs.com/artist/6610944" target="_blank" rel="noopener">Discogs</a>
+        <a class="bkm-entity-badge" href="https://hr.wikipedia.org/wiki/IZLET" target="_blank" rel="noopener">Wikipedia HR</a>
+      </div></div>
+    </div>
+    <div class="bkm-footer-bottom">
+      <span>© 2026 iZLET — Braća Kumerle. Sva prava pridržana.</span>
+      <span>Zagreb · HR · od 2007.</span>
+    </div>
+  </div>
+</footer>
+<script>
+(() => {
+  const root = document.documentElement, btn = document.querySelector("[data-theme-toggle]");
+  if(!btn) return;
+  let t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  root.setAttribute("data-theme", t);
+  const icon = () => btn.innerHTML = t==="dark"
+    ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+    : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  icon();
+  btn.addEventListener("click", () => { t=t==="dark"?"light":"dark"; root.setAttribute("data-theme",t); icon(); });
+})();
+</script>
 </body>
 </html>
