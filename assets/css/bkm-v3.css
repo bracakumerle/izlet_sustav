@@ -1,7 +1,7 @@
-/* ============================================
+﻿/* ============================================
    BKM Design System v3
-   bracakumerle.com — canonical CSS
-   Instrument Serif + Work Sans · teal #016068
+   bracakumerle.com â€” canonical CSS
+   Instrument Serif + Work Sans Â· teal #016068
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap');
@@ -58,7 +58,7 @@
   --shadow-lg: 0 24px 56px rgba(0,0,0,.5);
 }
 
-/* ── RESET ── */
+/* â”€â”€ RESET â”€â”€ */
 *, :before, :after { box-sizing: border-box }
 html { scroll-behavior: smooth }
 body, h1, h2, h3, h4, p, figure, ul, ol { margin: 0 }
@@ -69,12 +69,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 ul { list-style: none; padding: 0 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } *, *:before, *:after { transition: none !important } }
 
-/* ── LAYOUT ── */
+/* â”€â”€ LAYOUT â”€â”€ */
 .bkm-container { width: min(calc(100% - 2rem), var(--content)); margin-inline: auto }
 .bkm-skip { position: absolute; left: -9999px }
 .bkm-skip:focus { left: 1rem; top: 1rem; background: var(--c-p); color: var(--c-inv); padding: .6rem 1rem; border-radius: var(--radius-md); z-index: 200 }
 
-/* ── HEADER / NAV ── */
+/* â”€â”€ HEADER / NAV â”€â”€ */
 .bkm-header {
   position: sticky; top: 0; z-index: 50;
   background: color-mix(in srgb, var(--c-bg) 82%, transparent);
@@ -96,7 +96,7 @@ ul { list-style: none; padding: 0 }
 .bkm-nl.active { color: var(--c-text) }
 .bkm-theme-btn { width: 2.8rem; height: 2.8rem; border-radius: 50%; display: grid; place-items: center; background: var(--c-surf); border: 1px solid var(--c-border) }
 
-/* ── BREADCRUMB ── */
+/* â”€â”€ BREADCRUMB â”€â”€ */
 .bkm-breadcrumb {
   padding: var(--space-3) 0;
   border-bottom: 1px solid var(--c-border);
@@ -109,14 +109,14 @@ ul { list-style: none; padding: 0 }
 .bkm-breadcrumb .sep { color: var(--c-faint) }
 .bkm-breadcrumb .current { color: var(--c-text) }
 
-/* ── PAGE HERO (podstranice) ── */
+/* â”€â”€ PAGE HERO (podstranice) â”€â”€ */
 .bkm-page-hero { padding: clamp(var(--space-10), 7vw, var(--space-20)) 0 clamp(var(--space-8), 5vw, var(--space-16)) }
 .bkm-page-eyebrow { font-size: var(--text-xs); letter-spacing: .16em; text-transform: uppercase; color: var(--c-muted); margin-bottom: var(--space-3) }
 .bkm-page-title { font-family: var(--font-d); font-size: var(--text-2xl); line-height: 1.02; margin-bottom: var(--space-4) }
 .bkm-page-title em { font-style: italic; color: var(--c-p) }
 .bkm-page-sub { max-width: 58ch; color: var(--c-muted); font-size: var(--text-base) }
 
-/* ── UTILS ── */
+/* â”€â”€ UTILS â”€â”€ */
 .bkm-eyebrow { font-size: var(--text-xs); letter-spacing: .16em; text-transform: uppercase; color: var(--c-muted); margin-bottom: var(--space-3) }
 .bkm-card { background: var(--c-surf); border: 1px solid var(--c-border); border-radius: var(--radius-2xl); box-shadow: var(--shadow-sm) }
 .bkm-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .85rem 1.35rem; border-radius: var(--radius-full); font-size: var(--text-sm); border: 1px solid transparent; transition: all var(--ease); font-weight: 500 }
@@ -128,44 +128,44 @@ ul { list-style: none; padding: 0 }
 .bkm-chip-row { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4) }
 .bkm-divider { height: 1px; background: var(--c-border); margin: var(--space-6) 0 }
 
-/* ── CONTENT SECTION ── */
+/* â”€â”€ CONTENT SECTION â”€â”€ */
 .bkm-section { padding-block: clamp(var(--space-10), 7vw, var(--space-20)) }
 .bkm-sec-head { display: flex; justify-content: space-between; gap: var(--space-4); align-items: end; margin-bottom: var(--space-8) }
 .bkm-sec-head h2 { font-family: var(--font-d); font-size: var(--text-2xl); line-height: 1.02 }
 .bkm-sec-sub { max-width: 46ch; color: var(--c-muted); font-size: var(--text-sm) }
 
-/* ── PROSE (bio, tekstovi) ── */
+/* â”€â”€ PROSE (bio, tekstovi) â”€â”€ */
 .bkm-prose { max-width: 70ch }
 .bkm-prose h2 { font-family: var(--font-d); font-size: var(--text-xl); margin: var(--space-8) 0 var(--space-4); line-height: 1.1 }
 .bkm-prose h3 { font-size: var(--text-lg); font-weight: 600; margin: var(--space-6) 0 var(--space-3) }
 .bkm-prose p { color: var(--c-muted); line-height: 1.8; margin-bottom: var(--space-5) }
 .bkm-prose ul { display: grid; gap: var(--space-2); margin-bottom: var(--space-5) }
 .bkm-prose ul li { color: var(--c-muted); padding-left: var(--space-5); position: relative; font-size: var(--text-sm) }
-.bkm-prose ul li:before { content: "—"; position: absolute; left: 0; color: var(--c-p) }
+.bkm-prose ul li:before { content: "â€”"; position: absolute; left: 0; color: var(--c-p) }
 .bkm-prose a { color: var(--c-p); border-bottom: 1px solid var(--c-p-hl) }
 .bkm-prose a:hover { border-color: var(--c-p) }
 
-/* ── LYRICS ── */
+/* â”€â”€ LYRICS â”€â”€ */
 .bkm-lyrics-meta { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-8) }
 .bkm-lyrics-meta-item { font-size: var(--text-xs); color: var(--c-muted) }
 .bkm-lyrics-meta-item strong { color: var(--c-text); font-weight: 600 }
-.bkm-lyrics-body { font-size: var(--text-base); line-height: 2; white-space: pre-line; color: var(--c-text); max-width: 58ch }
+.bkm-lyrics-body { font-size: var(--text-base); line-height: 1.5; white-space: pre-line; color: var(--c-text); max-width: 58ch }
 .bkm-lyrics-stanza { margin-bottom: var(--space-6) }
 .bkm-lyrics-label { font-size: var(--text-xs); letter-spacing: .12em; text-transform: uppercase; color: var(--c-p); margin-bottom: var(--space-2); font-weight: 600 }
 
-/* ── CORPUS GRID (lyrics index, diskografija) ── */
+/* â”€â”€ CORPUS GRID (lyrics index, diskografija) â”€â”€ */
 .bkm-corpus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4) }
 .bkm-corpus-card { padding: var(--space-5); transition: all var(--ease) }
 .bkm-corpus-card:hover { border-color: var(--c-p); box-shadow: var(--shadow-sm) }
 .bkm-corpus-card h3 { font-family: var(--font-d); font-size: var(--text-lg); margin-bottom: var(--space-2) }
 .bkm-corpus-card p { font-size: var(--text-sm); color: var(--c-muted) }
 
-/* ── ENTITY LINKS ── */
+/* â”€â”€ ENTITY LINKS â”€â”€ */
 .bkm-entity-row { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-6) }
 .bkm-entity-badge { font-size: var(--text-xs); padding: .35rem .75rem; border-radius: var(--radius-full); background: var(--c-offset); color: var(--c-muted); border: 1px solid var(--c-border); transition: all var(--ease) }
 .bkm-entity-badge:hover { border-color: var(--c-p); color: var(--c-p) }
 
-/* ── FOOTER ── */
+/* â”€â”€ FOOTER â”€â”€ */
 .bkm-footer { padding: var(--space-10) 0 var(--space-16); border-top: 1px solid var(--c-border) }
 .bkm-footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-8) }
 .bkm-footer h4 { font-size: var(--text-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--c-muted); margin-bottom: var(--space-4) }
@@ -174,7 +174,7 @@ ul { list-style: none; padding: 0 }
 .bkm-footer-link:hover { color: var(--c-p) }
 .bkm-footer-bottom { margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--c-border); display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--c-faint) }
 
-/* ── RESPONSIVE ── */
+/* â”€â”€ RESPONSIVE â”€â”€ */
 @media (max-width: 960px) {
   .bkm-corpus-grid { grid-template-columns: repeat(2, 1fr) }
   .bkm-footer-grid { grid-template-columns: 1fr }
@@ -184,3 +184,4 @@ ul { list-style: none; padding: 0 }
   .bkm-corpus-grid { grid-template-columns: 1fr 1fr }
   .bkm-footer-bottom { flex-direction: column; gap: var(--space-2) }
 }
+
