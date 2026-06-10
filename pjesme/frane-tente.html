@@ -36,8 +36,28 @@
     .info-card{padding:1.25rem;background:var(--c-surf);border:1px solid var(--c-border);border-radius:1rem}
     .info-card h4{font-size:clamp(.7rem,.65rem + .25vw,.82rem);letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.5rem}
     .info-card p{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.1rem,1rem + .6vw,1.45rem);color:var(--c-text);margin:0}
+    .video-embed{position:relative;width:100%;padding-top:56.25%;margin:1.5rem 0 2rem;border-radius:1rem;overflow:hidden;background:var(--c-surf);border:1px solid var(--c-border)}
+    .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     @media(max-width:640px){.ytg,.info-grid{grid-template-columns:1fr}}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": "https://bracakumerle.com/pjesme/frane-tente#video",
+    "name": "iZLET — Frane Tente | Pjesma o domoljubu",
+    "description": "Službeni video za pjesmu \"Frane Tente\" (iZLET, Braća Kumerle Music, 2020) — posveta hrvatskom domoljubu Frani Tenti.",
+    "thumbnailUrl": ["https://i.ytimg.com/vi/sAWssQ-lNtk/maxresdefault.jpg"],
+    "uploadDate": "2020-05-13T17:00:32Z",
+    "duration": "PT5M9S",
+    "embedUrl": "https://www.youtube.com/embed/sAWssQ-lNtk",
+    "contentUrl": "https://www.youtube.com/watch?v=sAWssQ-lNtk",
+    "inLanguage": "hr",
+    "isFamilyFriendly": true,
+    "creator": {"@id": "https://bracakumerle.com/entity/izlet"},
+    "about": {"@id": "https://bracakumerle.com/lyrics/frane-tente#composition"}
+  }
+  </script>
 </head>
 <body>
 <a href="#main" style="position:absolute;left:-9999px">Preskoči</a>
@@ -72,8 +92,12 @@
         <div class="info-card"><h4>Godina</h4><p>2020</p></div>
         <div class="info-card"><h4>Label</h4><p>Braća Kumerle Music</p></div>
         <div class="info-card"><h4>ISRC</h4><p>QT6F32536381</p></div>
-        
+
         <div class="info-card"><h4>Autori</h4><p>Toni Kumerle, Petar Kumerle</p></div>
+      </div>
+      <h2>Video</h2>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/sAWssQ-lNtk" title="iZLET — Frane Tente | Pjesma o domoljubu" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem"><a class="bkm-btn bkm-btn-s" href="/lyrics/frane-tente/">Tekst pjesme →</a><a class="bkm-btn bkm-btn-s" href="/lyrics/">← Tekstovi</a><a class="bkm-btn bkm-btn-s" href="/diskografija.html">Diskografija</a></div>
