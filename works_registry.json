@@ -1662,17 +1662,19 @@
             "musicbrainz_recording_id": "87cf4afb-efbf-4627-a8b1-170725fa7807",
             "discogs_master_id": null,
             "spotify_track_id": null,
-            "isrc": null,
+            "isrc": "QT6EX2529331",
             "barcode": "199953974831",
             "catalog_number": "BKMUSIC001",
             "label": "Braća Kumerle Music",
-            "year": 2023,
+            "year": 2025,
+            "composition_year": 2023,
+            "release_date": "2025-11-15",
             "wikipedia_eligible": false,
             "media_references": [
                 "https://portal.braniteljski-forum.com/blog/vijesti/braca-kumerle-izdala-snaznu-poruku-podrske-nova-pjesma-za-bad-blue-boyse-u-grckim-zatvorima",
                 "https://narod.hr/sport/podrska-braca-kumerle-snimili-pjesmu-posvecenu-bad-blue-boysima-zatocenima-u-grckim-zatvorima"
             ],
-            "notes": null,
+            "notes": "Skladano 2023. Objavljeno tek 15.11.2025. na DistroKidu zajedno s ostalim BKM singlovima (UPC 199953974831, ISRC QT6EX2529331), label Braća Kumerle Music. 'year' = godina objave (usklađeno s ostalim BKM singlovima rank 33-42); 'composition_year' = godina nastanka. Prije transicije/BKM ere (2020-2024 / 2025-) pjesma nije bila objavljena ni pod jednim labelom.",
             "musicbrainz": {
                 "recording_id": "87cf4afb-efbf-4627-a8b1-170725fa7807",
                 "release_id": "8b675ac0-7ab0-40e3-b8a1-a2a6c2bab553",
