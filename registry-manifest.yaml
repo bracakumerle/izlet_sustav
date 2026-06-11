@@ -1,0 +1,48 @@
+version: 1.0
+
+precedence:
+
+  identity:
+    - docs/identity-canon.md
+
+  works:
+    - works_registry.json
+
+  events:
+    - events_registry.json
+
+  facts:
+    - registry/fact_canon.json
+
+  derived:
+    - registries/works_registry.json
+    - registries/entity_url_registry_v1.csv
+    - registries/lyrics_corpus_registry.csv
+    - reports/*
+    - census/*
+    - exports/*
+
+rules:
+
+  repo_wins: true
+  ratification_required: true
+  derived_layers_are_noncanonical: true
+  csv_layers_are_generated: true
+
+change_policy:
+
+  canonical_change_requires:
+    - explicit_confirmation
+
+generation:
+
+  csv:
+    source_of_truth: json
+
+  reports:
+    derived_only: true
+
+notes:
+
+  - External authorities (Wikidata, MusicBrainz, Discogs) are validation layers, not canonical truth.
+  - LLM outputs, audits and discussions are derivative operational artifacts.
