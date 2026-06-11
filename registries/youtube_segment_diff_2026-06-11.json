@@ -1,0 +1,763 @@
+{
+  "generated": "2026-06-11",
+  "mode": "DRY_RUN",
+  "source_csv": "vidIQ CSV export for iZLET 2026-06-11.csv",
+  "doctrine": "reports/yt_reach_classification_2026-06-11.md",
+  "summary": {
+    "videos": 247,
+    "with_changes": 42,
+    "removals": 50,
+    "additions": 101,
+    "title_changes": 5,
+    "unclassified": 196
+  },
+  "diffs": [
+    {
+      "video_id": "zOVPy32dfIg",
+      "title": "Striče Ivane – Braća Kumerle | Live @ Trg bana Jelačića",
+      "class": "mrvelj_cover",
+      "views": 349583,
+      "tags_remove": [],
+      "tags_add": [
+        "Croatian music",
+        "Ivo Fabijan Mrvelj",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "-S2B0VGQg7A",
+      "title": "Braća Kumerle – Striče Igore Zrinja! 🇭🇷 #Zagreb",
+      "class": "mrvelj_cover",
+      "views": 148553,
+      "tags_remove": [],
+      "tags_add": [
+        "Ivo Fabijan Mrvelj",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "-HafWnih0bo",
+      "title": "Braća Kumerle - Ravnoteža | (Thompson) Hipodrom LIVE",
+      "class": "thompson_cover",
+      "views": 136052,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music",
+        "Thompson cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "_jUXsiMeyiM",
+      "title": "Braća Kumerle – Ivo Mrvelj | HRT Otvoreno",
+      "class": "media_tv",
+      "views": 130781,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "3wsqpwuWEMM",
+      "title": "Braća Kumerle – Striče Ivane | Uživo @ Korzo, Rijeka",
+      "class": "mrvelj_cover",
+      "views": 124706,
+      "tags_remove": [],
+      "tags_add": [
+        "Ivo Fabijan Mrvelj",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "j-_-WfKcuYs",
+      "title": "Bijeli Križ Bile - Opomena Koja Ne Smije Biti Zaboravljena 🕊️🇭🇷 | Thompson",
+      "class": "event_bg_thompson",
+      "views": 112876,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Braća Kumerle",
+        "hrvatska glazba",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "o02z8L8gOn0",
+      "title": "iZLET - Sjever Uz Odsutne | OFFICIAL VIDEO",
+      "class": "autorska",
+      "views": 92410,
+      "tags_remove": [
+        {
+          "tag": "hos",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "hrvatska himna",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [],
+      "title_change": null
+    },
+    {
+      "video_id": "8gyj7YRXQ7E",
+      "title": "Kralj Tomislav - Himna O Prvom Hrvatskom Kralju 👑🇭🇷",
+      "class": "event_bg_thompson",
+      "views": 83570,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "S04QjTS23KU",
+      "title": "Braća Kumerle — Striče Ivane (Ivo Fabijan Mrvelj) | LIVE Zagreb 2025",
+      "class": "mrvelj_cover",
+      "views": 73789,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "ZnBhOdwZTWg",
+      "title": "Kralj Tomislav - Thompson Cover LIVE Split Riva 🇭🇷⚔️ | Braća Kumerle",
+      "class": "thompson_cover",
+      "views": 59604,
+      "tags_remove": [],
+      "tags_add": [
+        "Braća Kumerle",
+        "hrvatska glazba"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "mNgJvvb8kEw",
+      "title": "Hrvatska Je Tvoja - Nikom Ne Daj Nju 🇭🇷 | Thompson Cover | Braća Kumerle",
+      "class": "thompson_cover",
+      "views": 59453,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "hrvatska glazba",
+        "Croatian music",
+        "Thompson cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "35VtHrOkcaQ",
+      "title": "iZLET - Vitez Jure | Pjesma o XIX. Bojna HOS Gospić",
+      "class": "autorska",
+      "views": 58256,
+      "tags_remove": [
+        {
+          "tag": "bitka za vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "branitelji",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "domoljubne pjesme",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "hos",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "hrvatska himna",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [],
+      "title_change": {
+        "current": "iZLET - Vitez Jure | Pjesma o XIX. Bojna HOS Gospić",
+        "proposed": "iZLET - Vitez Jure | OFFICIAL VIDEO",
+        "confidence": "confirmed"
+      }
+    },
+    {
+      "video_id": "LieYqy3N2mg",
+      "title": "Braća Kumerle - Rasti da je braniš kad ti stari ode",
+      "class": "event_bg_thompson",
+      "views": 55042,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "npMipRAT_9s",
+      "title": "Braća Kumerle — Ne varaj me (Thompson) | LIVE",
+      "class": "thompson_cover",
+      "views": 42924,
+      "tags_remove": [],
+      "tags_add": [
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "KGnfJ1HZQDk",
+      "title": "Za svakog Hrvata koji je daleko od kuće 🇭🇷 #croatia #emotion",
+      "class": "mrvelj_cover",
+      "views": 38478,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "WCFpIPXpXJc",
+      "title": "Braća Kumerle — Pjesma o Grgi (Ivo Fabijan Mrvelj) | LIVE",
+      "class": "mrvelj_cover",
+      "views": 36254,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "fhTIwiJGbyA",
+      "title": "124 Brigada - Heroji Koji Su Branili Hrvatsku 🇭🇷 | Domovinski Rat",
+      "class": "autorska",
+      "views": 23113,
+      "tags_remove": [
+        {
+          "tag": "1991",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "bitka za vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "branitelji",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "domoljubne pjesme",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "domovinski rat",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "heroji vukovara",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "hrvatska himna",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "obrana vukovara",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "oluja",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "rat u hrvatskoj",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "ratne pjesme",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "vukovar 1991",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [
+        "iZLET",
+        "hrvatska glazba",
+        "hrvatski rock",
+        "Croatian rock"
+      ],
+      "title_change": {
+        "current": "124 Brigada - Heroji Koji Su Branili Hrvatsku 🇭🇷 | Domovinski Rat",
+        "proposed": "iZLET - Himna 124. Vukovarska Brigada | #shorts",
+        "confidence": "confirmed"
+      }
+    },
+    {
+      "video_id": "UkH_QsSmK5s",
+      "title": "Neće Pasti Srednja Bosna - Moćna Domoljubna Himna HVO 🇭🇷⚔️ | Braća Kumerle",
+      "class": "other_cover",
+      "views": 21369,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "hrvatska glazba",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "Pi3-Lw2-K4U",
+      "title": "VLOG 3: Šta nam mogu dušmani? Ništa! 🇭🇷 Ravnoteža Thomspona | Rukometni Heroji & Braća Kum",
+      "class": "event_bg_thompson",
+      "views": 19326,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Braća Kumerle",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "96kmdxOyeL4",
+      "title": "Braća Kumerle — Bojna Čavoglave (Marko Perković Thompson) | LIVE",
+      "class": "thompson_cover",
+      "views": 18662,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "lrb4J1DOy9g",
+      "title": "Braća Kumerle — Kad sklopim oči (Ivo Fabijan Mrvelj) | LIVE",
+      "class": "mrvelj_cover",
+      "views": 18180,
+      "tags_remove": [],
+      "tags_add": [
+        "hrvatska glazba",
+        "Croatian music",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "gk5AHkbyLVU",
+      "title": "iZLET — Krijesovi laži | Official Video",
+      "class": "autorska",
+      "views": 13613,
+      "tags_remove": [
+        {
+          "tag": "hrvatski branitelji",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [
+        "iZLET"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "f5GlQJPSWtM",
+      "title": "HVO Nas Vodi - Moćna Domoljubna Himna Mostar 🇭🇷",
+      "class": "other_cover",
+      "views": 13390,
+      "tags_remove": [],
+      "tags_add": [
+        "hrvatska glazba",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "0z3kNr5bITg",
+      "title": "Znakovlje Hrvata LIVE Split Riva - Domoljubna Himna Koja Ujedinjuje Hrvate 🇭🇷 | Braća Kume",
+      "class": "autorska",
+      "views": 12626,
+      "tags_remove": [
+        {
+          "tag": "domoljublje",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "domoljubne pjesme",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "domovinski rat",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "hos",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [
+        "Croatian rock"
+      ],
+      "title_change": {
+        "current": "Znakovlje Hrvata LIVE Split Riva - Domoljubna Himna Koja Ujedinjuje Hrvate 🇭🇷 | Braća Kumerle iZLET",
+        "proposed": "iZLET - Znakovlje Hrvata | LIVE Split Riva",
+        "confidence": "confirmed"
+      }
+    },
+    {
+      "video_id": "CJ2hgubiQo4",
+      "title": "Bogdanovci moji 🇭🇷🕊 | HOS-ovac Ivica Jurčan – ratna pjesma iz 1991. #shorts #vukovar",
+      "class": "autorska",
+      "views": 8600,
+      "tags_remove": [
+        {
+          "tag": "Vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "HOS",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "obrana Vukovara",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "Domovinski rat",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "hrvatski branitelji",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "1991",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [
+        "iZLET",
+        "hrvatska glazba",
+        "Croatian music",
+        "hrvatski rock",
+        "Croatian rock"
+      ],
+      "title_change": {
+        "current": "Bogdanovci moji 🇭🇷🕊 | HOS-ovac Ivica Jurčan – ratna pjesma iz 1991. #shorts #vukovar",
+        "proposed": "iZLET - Bogdanovačka Kalvarija (feat. Ivica Jurčan) | #shorts",
+        "confidence": "confirmed"
+      }
+    },
+    {
+      "video_id": "l4g11KCitN0",
+      "title": "Braća Kumerle — Striče Ivane (Ivo Fabijan Mrvelj) | LIVE NK Špansko 2025",
+      "class": "mrvelj_cover",
+      "views": 6759,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music",
+        "Ivo Fabijan Mrvelj",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "TwXdxN0iMbI",
+      "title": "Himna 124. Vukovarska Brigada 🎖️🇭🇷 | Braća Kumerle (Official Video)",
+      "class": "autorska",
+      "views": 6716,
+      "tags_remove": [
+        {
+          "tag": "vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "1991",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "hos",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "bitka za vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "vukovar 1991",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "heroji vukovara",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [
+        "iZLET",
+        "hrvatska glazba",
+        "Croatian music",
+        "hrvatski rock",
+        "Croatian rock"
+      ],
+      "title_change": {
+        "current": "Himna 124. Vukovarska Brigada 🎖️🇭🇷 | Braća Kumerle (Official Video)",
+        "proposed": "iZLET - Himna 124. Vukovarska Brigada | OFFICIAL VIDEO",
+        "confidence": "confirmed"
+      }
+    },
+    {
+      "video_id": "HiRoEUn42L0",
+      "title": "Braća Kumerle — Ako ne znaš šta je bilo (Thompson) | LIVE Split 2025",
+      "class": "thompson_cover",
+      "views": 5585,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "SNlx6WMI-pA",
+      "title": "iZLET — Bogdanovačka Kalvarija (feat. Ivica Jurčan) | Official Video",
+      "class": "autorska",
+      "views": 5336,
+      "tags_remove": [
+        {
+          "tag": "HOS",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "Vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "bitka za vukovar",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "branitelji",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "domoljubne pjesme",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "domovinski rat",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "heroji vukovara",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "ratne pjesme",
+          "reason": "tier2_reach_term_on_catalog"
+        },
+        {
+          "tag": "vukovar 1991",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [],
+      "title_change": null
+    },
+    {
+      "video_id": "xBe2DxeEJFA",
+      "title": "Pjevaj sokole pjesmu pobjede!#hrvatska #fyp #sinj #markoperkovicthompson #mpt #europe #rav",
+      "class": "event_bg_thompson",
+      "views": 3752,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "P0lshsQhP1A",
+      "title": "Striče Ivane kod partizanskog spomenika U Metkoviću",
+      "class": "mrvelj_cover",
+      "views": 2996,
+      "tags_remove": [],
+      "tags_add": [
+        "Ivo Fabijan Mrvelj",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "QeNd7IbWGRY",
+      "title": "Braća Kumerle — Gori Oluja (Marko Jurič / Elvis Presley) | LIVE feat. Marko Jurič",
+      "class": "other_cover",
+      "views": 2514,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "hrvatska glazba",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "Uwewyw2emqg",
+      "title": "Braća Kumerle — Ako ne znaš šta je bilo (Thompson) | LIVE Imotski 2025",
+      "class": "thompson_cover",
+      "views": 1887,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "hrvatska glazba",
+        "Croatian music",
+        "Thompson cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "4VEgzZOOz0I",
+      "title": "iZLET - Himna Veslačkog Kluba Zagreb | Braća Kumerle",
+      "class": "autorska",
+      "views": 1581,
+      "tags_remove": [
+        {
+          "tag": "domoljublje",
+          "reason": "tier2_reach_term_on_catalog"
+        }
+      ],
+      "tags_add": [
+        "Croatian music",
+        "hrvatski rock",
+        "Croatian rock"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "1PVKpbWW1Vs",
+      "title": "Braća Kumerle — Kreni Gardo (Ivo Fabijan Mrvelj) | LIVE",
+      "class": "mrvelj_cover",
+      "views": 1327,
+      "tags_remove": [],
+      "tags_add": [
+        "Croatian music",
+        "Mrvelj cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "Sdf4FHGYqy0",
+      "title": "Čavoglave solo – Thompson live #braćakumerle #shorts 🇭🇷",
+      "class": "thompson_cover",
+      "views": 1270,
+      "tags_remove": [],
+      "tags_add": [
+        "hrvatska glazba",
+        "Croatian music",
+        "Thompson cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "FYYSZX601uw",
+      "title": "iZLET feat. Ante Cash - Nemam Ni Jednog Prijatelja Policajca",
+      "class": "autorska",
+      "views": 538,
+      "tags_remove": [],
+      "tags_add": [
+        "hrvatska glazba",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "LZ34ypDnMu4",
+      "title": "VLOG 4 Braća Kumerle: Ako ne znaš šta je bilo! 🇭🇷🙋🏻‍♂️🖤 #HRVATSKA",
+      "class": "event_bg_thompson",
+      "views": 527,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Braća Kumerle",
+        "hrvatska glazba",
+        "Croatian music"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "KKBGFRHw418",
+      "title": "Braća Kumerle – Ako ne znaš šta je bilo 🇭🇷 | Domoljubna pjesma uživo (Split, 2025)",
+      "class": "thompson_cover",
+      "views": 518,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music",
+        "Thompson cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "KzN79Bwybl0",
+      "title": "Braća Kumerle – Ako ne znaš šta je bilo | Domoljubna pjesma uživo 🇭🇷 (Kaštel Lukšić 2025)",
+      "class": "thompson_cover",
+      "views": 447,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Croatian music",
+        "Thompson cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "OwEUWi9tAag",
+      "title": "Braća Kumerle - Ako ne znaš šta je bilo | HKD Napredak, Zagreb 19.3.2025. LIVE 🇭🇷",
+      "class": "thompson_cover",
+      "views": 387,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Thompson cover"
+      ],
+      "title_change": null
+    },
+    {
+      "video_id": "JPP811Gd6qc",
+      "title": "Braća Kumerle - Ako ne znaš šta je bilo | Društveni centar Sesvete 24.4.2025. LIVE 🇭🇷",
+      "class": "thompson_cover",
+      "views": 263,
+      "tags_remove": [],
+      "tags_add": [
+        "iZLET",
+        "Thompson cover"
+      ],
+      "title_change": null
+    }
+  ]
+}
