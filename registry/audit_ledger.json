@@ -211,6 +211,43 @@
         "score": 0.6
       },
       "notes": "Gemini OSINT verification batch. Muzika.hr tagged as archival loss. Igor Scekic cover art pending verification."
+    },
+    {
+      "entry_id": "E-2026-06-11-010",
+      "timestamp": "2026-06-11T00:00:00Z",
+      "actor": {"type": "agent", "name": "Claude"},
+      "phase": "Chronology Decree",
+      "event_type": "fact_correction",
+      "targets": ["registry/fact_canon.json"],
+      "changes": [
+        {
+          "field": "F_ORIGIN_001.date",
+          "before": "2007-04-10 (approx)",
+          "after": "2007-03-23",
+          "reason": "Reverts E-2026-05-13-009. Chronology decree (Petar+Toni, 2026-06-11) reaffirms first_performance = 2007-03-23, consistent with primary source.date_published (2007-03-24). 04-10 hypothesis (Barikada.com 2016 surrogate) rejected as unsupported and retained as superseded_hypotheses entry."
+        },
+        {
+          "field": "F_ORIGIN_001.delta",
+          "before": 0.55,
+          "after": 0.62,
+          "reason": "Restores pre-E-2026-05-13-009 confidence score now that 03-23 is re-confirmed against decree."
+        },
+        {
+          "field": "F_ORIGIN_001.verification_state",
+          "before": "CORRECTED",
+          "after": "VERIFIED"
+        }
+      ],
+      "validation": {
+        "status": "verified",
+        "method": "explicit_confirmation",
+        "source": "Chronology decree session, 2026-06-11 (registry-manifest.yaml change_policy.canonical_change_requires=explicit_confirmation)"
+      },
+      "impact": {
+        "layer": "registry",
+        "score": 0.62
+      },
+      "notes": "Does not touch South_Point.year (2017->2018) from E-2026-05-13-009, which is unrelated and unaffected by the chronology decree."
     }
   ]
 }
