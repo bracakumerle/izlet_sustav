@@ -1,0 +1,104 @@
+{
+  "name": "vidiq_outliers",
+  "description": "Find viral, breakout, and overperforming YouTube videos — videos getting significantly more views than their channel's average. Use this when someone asks for: viral videos, breakout hits, hidden gems, or videos blowing up, or when they want outliers from a specific creator or set of competitor channels (pass their channel IDs via `channelIds`). Returns a breakout score showing how much each video exceeds its channel's typical performance.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "keyword": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Search keyword to find outlier videos by title. Optional when `channelIds` is provided."
+      },
+      "channelIds": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minItems": 1,
+        "description": "Restrict results to one or more YouTube channels. Each entry may be a channel ID (UC...), a handle (@MrBeast or MrBeast), or a channel URL — handles and URLs are resolved to channel IDs automatically. Useful for finding outliers from a specific creator or a set of competitor channels. May be combined with `keyword`. At least one of `keyword` or `channelIds` must be supplied."
+      },
+      "contentType": {
+        "type": "string",
+        "enum": [
+          "all",
+          "long",
+          "short"
+        ],
+        "default": "all",
+        "description": "Filter by content type"
+      },
+      "minOutlierScore": {
+        "type": "number",
+        "description": "Minimum outlier score"
+      },
+      "minSubscribers": {
+        "type": "integer",
+        "description": "Minimum channel subscribers"
+      },
+      "maxSubscribers": {
+        "type": "integer",
+        "description": "Maximum channel subscribers"
+      },
+      "minViews": {
+        "type": "integer",
+        "description": "Minimum video views"
+      },
+      "maxViews": {
+        "type": "integer",
+        "description": "Maximum video views"
+      },
+      "minVph": {
+        "type": "number",
+        "description": "Minimum views per hour"
+      },
+      "minEngagementRate": {
+        "type": "number",
+        "description": "Minimum engagement rate"
+      },
+      "publishedWithin": {
+        "type": "string",
+        "enum": [
+          "thisWeek",
+          "thisMonth",
+          "threeMonths",
+          "sixMonths",
+          "oneYear",
+          "allTime"
+        ],
+        "description": "Filter by publish date"
+      },
+      "channelCountry": {
+        "type": "string",
+        "description": "Filter by channel country"
+      },
+      "trendCategories": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Filter by trend category IDs (e.g. reaction, tier_list, mukbang). Use vidiq_trend_categories to list all available categories."
+      },
+      "sort": {
+        "type": "string",
+        "enum": [
+          "breakoutScore",
+          "publishedAt",
+          "viewCount",
+          "vph",
+          "score"
+        ],
+        "description": "Sort field (defaults to score)"
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "default": 20,
+        "description": "Number of results to return"
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

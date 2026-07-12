@@ -1,0 +1,37 @@
+{
+  "name": "vidiq_update_competitors",
+  "description": "Follow or unfollow competitor channels for one of the user's own YouTube channels.\n\n- youtubeChannelId must be a channel the user has authorized (call vidiq_user_channels to discover).\n- follow / unfollow are arrays of YouTube channel IDs — they must not overlap; at least one must be non-empty.\n- Plan-based caps apply. Adding above the cap fails. Returns the resulting tracked-competitors list (channel IDs only).\n\nExample arguments: { \"youtubeChannelId\": \"UCowner123\", \"follow\": [\"UCcompA\"], \"unfollow\": [] }\n\nCost: 0 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "youtubeChannelId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube channel ID (starts with 'UC', e.g. 'UCabc123') of one of the user's own authorized channels. Call vidiq_user_channels first if unknown."
+      },
+      "follow": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "default": [],
+        "description": "Array of YouTube channel IDs to start tracking as competitors, e.g. [\"UCabc123\",\"UCdef456\"]."
+      },
+      "unfollow": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "default": [],
+        "description": "Array of YouTube channel IDs to stop tracking, e.g. [\"UCabc123\"]."
+      }
+    },
+    "required": [
+      "youtubeChannelId"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

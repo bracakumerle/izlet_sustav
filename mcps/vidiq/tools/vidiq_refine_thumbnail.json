@@ -1,0 +1,55 @@
+{
+  "name": "vidiq_refine_thumbnail",
+  "description": "Change or improve a YouTube thumbnail by describing what you want in plain words.\n\nGive it the thumbnail to change (sourceThumbnail) and say what to change (instructions) — for example \"make the text bigger\" or \"change the background to a football stadium\".\nYou get back the updated thumbnail (shown right here) plus a link to it.\n\nCost: 22 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "sourceThumbnail": {
+        "type": "string",
+        "format": "uri",
+        "description": "Link to the thumbnail you want to change. Usually a thumbnail you just made with vidiq_generate_thumbnail, but any thumbnail image link works."
+      },
+      "instructions": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "description": "What you want changed, in plain words — for example 'make the background darker' or 'make the face bigger'. Describe the change, not the whole picture."
+      },
+      "originalConcept": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "description": "Optional. A short description of what the original thumbnail shows. Helps keep the result on-topic. If left out, your instructions are used."
+      },
+      "videoId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional. The YouTube video this thumbnail is for."
+      },
+      "subjectImage": {
+        "type": "string",
+        "format": "uri",
+        "description": "Optional. Link to a photo of the person who should be the main face in the thumbnail."
+      },
+      "referenceImages": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        },
+        "maxItems": 10,
+        "description": "Optional. Links to other thumbnails whose style you'd like to copy (up to 10)."
+      },
+      "mask": {
+        "type": "string",
+        "description": "Optional. To change only one area and leave the rest untouched, provide a base64 image that marks the area to change."
+      }
+    },
+    "required": [
+      "sourceThumbnail",
+      "instructions"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

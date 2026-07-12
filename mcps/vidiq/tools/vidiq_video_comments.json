@@ -1,0 +1,37 @@
+{
+  "name": "vidiq_video_comments",
+  "description": "Get YouTube comment threads for a video or channel, including replies.\n\nProvide exactly one of videoId or channelId.\n\nUse this tool to:\n- Understand audience sentiment and reactions to a video\n- Find common questions or feedback themes in comments\n- Browse recent comments across an entire channel\n- Identify the most liked or discussed comments\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube video ID (e.g. 'dQw4w9WgXcQ'). Provide either videoId or channelId."
+      },
+      "channelId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube channel ID, handle (e.g. '@MrBeast'), or channel URL. Provide either videoId or channelId."
+      },
+      "order": {
+        "type": "string",
+        "enum": [
+          "time",
+          "relevance"
+        ],
+        "default": "relevance",
+        "description": "Sort order: 'relevance' (top comments) or 'time' (newest first)"
+      },
+      "maxResult": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "default": 20,
+        "description": "Number of comment threads to return (1–100)"
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

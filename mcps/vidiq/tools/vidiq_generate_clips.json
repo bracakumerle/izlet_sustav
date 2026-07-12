@@ -1,0 +1,48 @@
+{
+  "name": "vidiq_generate_clips",
+  "description": "Turn a long video into short, vertical clips.\n\nProvide either a YouTube link (videoUrl) or an already-hosted file (uploadedVideoUrl + videoDuration + videoFilename). Optionally steer selection with a prompt and set clipDuration.\nThis runs asynchronously: it returns an `mcpJobId` immediately — poll `vidiq_job_poll` with that id until it is \"completed\" to get the clips. If generation fails, that poll refunds the credits.\n\nCredits are charged per minute of source video on submit and automatically refunded if generation fails.\n\nCost: 9 credit(s) per minute of source video (rounded up).",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "YouTube video URL to clip. Provide this OR uploadedVideoUrl, not both. Duration is fetched automatically."
+      },
+      "uploadedVideoUrl": {
+        "type": "string",
+        "format": "uri",
+        "description": "URL of an already-hosted video file (http/https/gs) to clip. Requires videoDuration and videoFilename."
+      },
+      "videoDuration": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Source video length in seconds. Required when using uploadedVideoUrl."
+      },
+      "videoFilename": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Original filename of the uploaded video. Required when using uploadedVideoUrl."
+      },
+      "prompt": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "description": "Optional. What to focus on when picking moments, e.g. 'funniest parts'."
+      },
+      "clipDuration": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 120,
+        "description": "Optional. Target length of each clip in seconds (0–120)."
+      },
+      "videoLanguage": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional. Language code of the spoken audio, used for captions/transcription."
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

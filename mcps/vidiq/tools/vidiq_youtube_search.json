@@ -1,0 +1,171 @@
+{
+  "name": "vidiq_youtube_search",
+  "description": "Search all of YouTube for videos, channels, or playlists matching a query, with optional filters (topic, region, publish date, duration, channel). Use this when someone asks to \"find videos about X\", \"search YouTube for Y\", \"find channels about Z\", or wants results for a specific keyword.\n\nUnlike vidiq_trending_videos (which returns what's hot right now) and vidiq_outliers (which finds videos over-performing relative to their channel), this is a general keyword search across the whole catalog. It returns raw YouTube search results, NOT keyword metrics — for search volume/competition use keyword research instead.\n\nUse this tool to:\n- Find videos, channels, or playlists by keyword (set 'type')\n- Narrow results by topic, region, publish-date window, and (for videos) duration, definition (HD), or live/upcoming event type\n- Search within a single channel by passing 'channelId'\n- Sort by relevance, recency ('date'), or popularity ('viewCount')\n\nFilters marked \"Video only\" require type='video'.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Free-text search query (e.g. 'minecraft redstone tutorial')"
+      },
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "video",
+            "channel",
+            "playlist"
+          ]
+        },
+        "minItems": 1,
+        "default": [
+          "video",
+          "channel",
+          "playlist"
+        ],
+        "description": "Kinds of result to return — any combination of video, channel, playlist. Defaults to all three. The video-only filters require type to be exactly ['video']."
+      },
+      "order": {
+        "type": "string",
+        "enum": [
+          "relevance",
+          "date",
+          "viewCount",
+          "rating",
+          "title",
+          "videoCount"
+        ],
+        "default": "relevance",
+        "description": "Sort order. 'date' = newest, 'viewCount' = most viewed, 'videoCount' = channels with most videos."
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 10,
+        "description": "Number of results to return"
+      },
+      "publishedAfter": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Only results published after this RFC 3339 timestamp (e.g. '2026-01-01T00:00:00Z')"
+      },
+      "publishedBefore": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Only results published before this RFC 3339 timestamp"
+      },
+      "channelId": {
+        "type": "string",
+        "description": "Restrict the search to a single channel's content"
+      },
+      "regionCode": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "description": "ISO 3166-1 alpha-2 region code to localize results (e.g. 'US', 'DE')"
+      },
+      "topic": {
+        "type": "string",
+        "enum": [
+          "music",
+          "christianMusic",
+          "classicalMusic",
+          "country",
+          "electronicMusic",
+          "hipHopMusic",
+          "independentMusic",
+          "jazz",
+          "musicOfAsia",
+          "musicOfLatinAmerica",
+          "popMusic",
+          "reggae",
+          "rhythmAndBlues",
+          "rockMusic",
+          "soulMusic",
+          "gaming",
+          "actionGame",
+          "actionAdventureGame",
+          "casualGame",
+          "musicVideoGame",
+          "puzzleVideoGame",
+          "racingVideoGame",
+          "rolePlayingVideoGame",
+          "simulationVideoGame",
+          "sportsGame",
+          "strategyVideoGame",
+          "sports",
+          "americanFootball",
+          "baseball",
+          "basketball",
+          "boxing",
+          "cricket",
+          "football",
+          "golf",
+          "iceHockey",
+          "mixedMartialArts",
+          "motorsport",
+          "tennis",
+          "volleyball",
+          "entertainment",
+          "humor",
+          "movies",
+          "performingArts",
+          "professionalWrestling",
+          "tvShows",
+          "lifestyle",
+          "fashion",
+          "fitness",
+          "food",
+          "hobby",
+          "pets",
+          "beauty",
+          "technology",
+          "tourism",
+          "vehicles",
+          "society",
+          "business",
+          "health",
+          "military",
+          "politics",
+          "religion",
+          "knowledge"
+        ],
+        "description": "Restrict to a topic category (e.g. 'gaming', 'music', 'technology')"
+      },
+      "videoDuration": {
+        "type": "string",
+        "enum": [
+          "short",
+          "medium",
+          "long"
+        ],
+        "description": "Length: short (<4min), medium (4-20min), long (>20min). Video only."
+      },
+      "videoDefinition": {
+        "type": "string",
+        "enum": [
+          "high",
+          "standard"
+        ],
+        "description": "Resolution: 'high' (HD) or 'standard' (SD). Video only."
+      },
+      "eventType": {
+        "type": "string",
+        "enum": [
+          "live",
+          "upcoming",
+          "completed"
+        ],
+        "description": "Live broadcasts: 'live', 'upcoming', or 'completed'. Video only."
+      }
+    },
+    "required": [
+      "query"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

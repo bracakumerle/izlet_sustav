@@ -1,0 +1,39 @@
+{
+  "name": "vidiq_generate_broll",
+  "description": "Find free stock B-roll video clips.\n\nProvide a search query (optionally orientation and min/max duration filters).\nReturns up to 4 clips with a direct mp4 link, a preview image, dimensions, and the\nphotographer credit. Attribution is required: always credit the photographer and\nlink back to the source page when using a clip.\n\nCost: 1 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200,
+        "description": "Search term for the stock B-roll footage, e.g. 'city skyline at night'."
+      },
+      "orientation": {
+        "type": "string",
+        "enum": [
+          "landscape",
+          "portrait",
+          "square"
+        ],
+        "description": "Optional orientation filter. Use 'portrait' for Shorts/Reels, 'landscape' otherwise."
+      },
+      "minDurationSeconds": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Optional minimum clip duration in seconds."
+      },
+      "maxDurationSeconds": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Optional maximum clip duration in seconds."
+      }
+    },
+    "required": [
+      "query"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

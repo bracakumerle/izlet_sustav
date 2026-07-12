@@ -1,0 +1,97 @@
+{
+  "name": "vidiq_channel_analytics",
+  "description": "Get YouTube Analytics data for a channel you own — views, watch time, subscribers gained, likes, comments, and more.\n\nSupports flexible date ranges, metric selection, and dimensional breakdowns (by day, country, device type, traffic source, etc.).\n\nUse this tool to:\n- Analyze channel performance over a specific time period\n- Break down metrics by day, country, device type, or traffic source\n- Track subscriber growth, view counts, and engagement trends\n- Compare performance across different dimensions\n\nNote: Only available for channels authorized to your account.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "channelId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube channel ID (e.g. 'UCX6OQ3DkcsbYNE6H8uQQuVA') or handle (e.g. '@MrBeast')"
+      },
+      "startDate": {
+        "type": "string",
+        "format": "date",
+        "description": "Start date (YYYY-MM-DD). Defaults to 28 days ago"
+      },
+      "endDate": {
+        "type": "string",
+        "format": "date",
+        "description": "End date (YYYY-MM-DD). Defaults to today"
+      },
+      "metrics": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "views",
+            "estimatedMinutesWatched",
+            "averageViewPercentage",
+            "averageViewDuration",
+            "viewerPercentage",
+            "estimatedRevenue",
+            "subscribersGained",
+            "subscribersLost",
+            "likes",
+            "dislikes",
+            "comments",
+            "audienceWatchRatio",
+            "relativeRetentionPerformance",
+            "totalSegmentImpressions",
+            "estimatedAdRevenue",
+            "estimatedRedPartnerRevenue",
+            "grossRevenue",
+            "cpm",
+            "adImpressions",
+            "monetizedPlaybacks",
+            "playbackBasedCpm",
+            "annotationClickThroughRate"
+          ]
+        },
+        "minItems": 1,
+        "description": "Metrics to retrieve. Defaults to views, estimatedMinutesWatched, subscribersGained, likes, comments"
+      },
+      "dimensions": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "deviceType",
+            "country",
+            "video",
+            "channel",
+            "insightPlaybackLocationType",
+            "insightPlaybackLocationDetail",
+            "insightTrafficSourceDetail",
+            "insightTrafficSourceType",
+            "month",
+            "day",
+            "creatorContentType",
+            "subscribedStatus",
+            "gender",
+            "ageGroup",
+            "elapsedVideoTimeRatio"
+          ]
+        },
+        "description": "Dimensions to break down by (e.g. 'day', 'country', 'deviceType')"
+      },
+      "maxResults": {
+        "type": "integer",
+        "exclusiveMinimum": 0,
+        "description": "Maximum number of rows to return"
+      },
+      "filters": {
+        "type": "string",
+        "description": "Filter expression (e.g. 'video==dQw4w9WgXcQ', 'country==US')"
+      },
+      "sort": {
+        "description": "Sort field, prefix with '-' for descending (e.g. '-views')"
+      }
+    },
+    "required": [
+      "channelId"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

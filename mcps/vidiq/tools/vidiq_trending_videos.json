@@ -1,0 +1,78 @@
+{
+  "name": "vidiq_trending_videos",
+  "description": "Find YouTube videos that are trending right now — gaining views rapidly based on views-per-hour velocity. Use this when someone asks: what's trending, what's hot right now, popular videos this week, or fastest-growing videos. Unlike vidiq_outliers (which measures performance vs channel average), trending measures absolute velocity — high VPH regardless of channel size.\n\nUse this tool to discover:\n- Videos that are trending right now on YouTube\n- Trending content in specific niches via title search\n- High-performing videos filtered by views per hour, engagement, or subscriber range\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoFormat": {
+        "type": "string",
+        "enum": [
+          "long",
+          "short"
+        ],
+        "description": "Video format: 'long' for regular videos, 'short' for YouTube Shorts"
+      },
+      "titleQuery": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Search query to filter by video title (semantic search)"
+      },
+      "subscriberCountMin": {
+        "type": "integer",
+        "description": "Minimum channel subscriber count"
+      },
+      "subscriberCountMax": {
+        "type": "integer",
+        "description": "Maximum channel subscriber count"
+      },
+      "viewCountMin": {
+        "type": "integer",
+        "description": "Minimum video view count"
+      },
+      "vphMin": {
+        "type": "number",
+        "description": "Minimum views per hour"
+      },
+      "channelCountry": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "description": "Filter by channel country (2-letter code, e.g. 'US')"
+      },
+      "videoPublishedAfter": {
+        "type": "string",
+        "format": "date",
+        "description": "Only videos published after this date (YYYY-MM-DD)"
+      },
+      "videoPublishedBefore": {
+        "type": "string",
+        "format": "date",
+        "description": "Only videos published before this date (YYYY-MM-DD)"
+      },
+      "sortBy": {
+        "type": "string",
+        "enum": [
+          "relevance",
+          "vph",
+          "viewCount",
+          "engagementRate",
+          "videoPublishedAt"
+        ],
+        "default": "relevance",
+        "description": "Sort field"
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 10,
+        "description": "Number of results"
+      }
+    },
+    "required": [
+      "videoFormat"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

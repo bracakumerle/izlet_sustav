@@ -1,0 +1,36 @@
+{
+  "name": "vidiq_score_title",
+  "description": "Score a YouTube video title for click-through-rate potential. Returns a score (0-100) indicating how compelling and clickable the title is. Use this to compare title variations and pick the best-performing option.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The title text to score"
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "long",
+          "short"
+        ],
+        "description": "Video format: long-form or short-form"
+      },
+      "videoId": {
+        "type": "string",
+        "description": "YouTube video ID (improves scoring accuracy)"
+      },
+      "channelId": {
+        "type": "string",
+        "description": "YouTube channel ID (improves scoring accuracy)"
+      }
+    },
+    "required": [
+      "title",
+      "type"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

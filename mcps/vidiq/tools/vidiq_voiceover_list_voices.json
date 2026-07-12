@@ -1,0 +1,10 @@
+{
+  "name": "vidiq_voiceover_list_voices",
+  "description": "List the available voiceover voices.\n\nReturns each voice's id, name, category, description, and an optional audio preview URL.\nThe user's own cloned/designed voices have isCustom=true and are listed first; prefer\nthem when the user asks for \"my voice\". Use the returned voiceId with vidiq_voiceover_generate.\n\nCost: 0 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

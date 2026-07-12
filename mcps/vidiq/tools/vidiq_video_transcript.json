@@ -1,0 +1,23 @@
+{
+  "name": "vidiq_video_transcript",
+  "description": "Get the full transcript (captions) of a YouTube video.\n\nUse this tool to:\n- Analyze what a video talks about without watching it\n- Extract key topics, quotes, or timestamps from a video\n- Compare content across multiple videos by reading their transcripts\n- Research video content for SEO or content strategy purposes\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube video ID (e.g. 'dQw4w9WgXcQ')"
+      },
+      "language": {
+        "type": "string",
+        "description": "Language code for the transcript (e.g. 'en', 'es')"
+      }
+    },
+    "required": [
+      "videoId"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

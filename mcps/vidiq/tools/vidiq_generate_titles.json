@@ -1,0 +1,78 @@
+{
+  "name": "vidiq_generate_titles",
+  "description": "Generate scored YouTube title suggestions.\n\nProvide at least one of `videoId`, `title`, or `description`. With\nonly `videoId`, the current title/description are fetched from YouTube.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube video ID (e.g. 'dQw4w9WgXcQ'). When provided, the tool fetches the current title/description from yt-proxy to ground generation. Optional when title and/or description are supplied directly."
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500,
+        "description": "Current/working video title. When omitted but videoId is provided, fetched from yt-proxy. Caller-supplied value takes precedence."
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 5000,
+        "description": "Current video description. When omitted but videoId is provided, fetched from yt-proxy. Caller-supplied value takes precedence."
+      },
+      "numTitles": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 10,
+        "description": "How many title candidates to generate (default: 3)"
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "long",
+          "short"
+        ],
+        "description": "Video format hint. Affects the generation prompt and scoring rubric. When omitted, upstream infers from duration and otherwise treats the video as long-form."
+      },
+      "language": {
+        "type": "string",
+        "pattern": "^[a-z]{2,3}(?:-[a-z]{2,4})?$",
+        "description": "Target language for generated titles and the analysis pass (e.g. 'en', 'pt-BR'). Defaults to English when omitted."
+      },
+      "regionCode": {
+        "type": "string",
+        "pattern": "^[a-z]{2}$",
+        "description": "2-letter ISO country code (e.g. 'US', 'BR'). Normalized to uppercase. Used by upstream when fetching competitive context."
+      },
+      "scoreThreshold": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 80,
+        "description": "Return only suggestions with score >= threshold. Thresholds above 70 on long-form videos may legitimately yield no results, and the filter applies before the numTitles top-K slice (so the response may contain fewer items than numTitles)."
+      },
+      "previousTitles": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "maxItems": 20,
+        "description": "Recent titles from the same channel. Used by upstream to reduce repetition and improve novelty. Capped at 20 entries x 200 chars; duplicates removed."
+      },
+      "competitorTitles": {
+        "$ref": "#/properties/previousTitles",
+        "description": "Seed titles for the competitive context block. When provided, upstream skips its Outliers lookup and uses these directly — useful for deterministic output or when the caller already has a curated competitor set. Capped at 20 entries x 200 chars; duplicates removed."
+      },
+      "analysisSummary": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000,
+        "description": "Pre-computed analysis summary. When provided, upstream skips its own analysis pass (transcript/frames → Gemini) and uses this directly. Useful when chaining after a tool that already produced video understanding. Capped at 4000 chars."
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

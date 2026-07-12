@@ -1,0 +1,19 @@
+{
+  "name": "vidiq_ig_profile",
+  "description": "Fetch public Instagram profile by handle: bio, follower/following counts, post count, verification, external URL, with the profile picture returned inline.\n\nDO NOT USE FOR:\n- Profile search/discovery — you must already have a handle.\n- Reels — use `vidiq_ig_profile_reels` (up to 6, popularity-sorted, no pagination).\n- Stories, Highlights, IGTV, private-account data.\n- Engagement-rate or growth analytics — snapshot only.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "handle": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Instagram handle (with or without leading @). 1-30 chars; letters/digits/dot/underscore."
+      }
+    },
+    "required": [
+      "handle"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

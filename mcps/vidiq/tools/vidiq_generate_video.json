@@ -1,0 +1,81 @@
+{
+  "name": "vidiq_generate_video",
+  "description": "Generate a short video from a text prompt.\n\nPick a model (default sora-2), resolution and duration valid for that model, then describe the video in prompt. Optionally steer with an aspectRatio, seed image-to-video with startFrameB64/endFrameB64, or remix an existing result with remixVideoId/remixProjectId.\nThis runs asynchronously: it returns an `mcpJobId` immediately — poll `vidiq_job_poll` with that id until it is \"completed\" to get the video URL. If generation fails, that poll refunds the credits.\n\nCredits are charged on submit and automatically refunded if generation fails.\n\nCost: scales with duration (seconds) × the model's per-second rate × 20 credits, quoted exactly at submit.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "prompt": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000,
+        "description": "What the video should depict (1–4000 chars)."
+      },
+      "model": {
+        "type": "string",
+        "enum": [
+          "sora-2",
+          "sora-2-pro",
+          "veo-3.1",
+          "veo-3.1-fast",
+          "veo-3.1-lite",
+          "kling-3",
+          "kling-3-pro",
+          "seedance-1-5-pro",
+          "seedance-2",
+          "seedance-2-fast"
+        ],
+        "default": "sora-2",
+        "description": "Generation model. Each model allows specific durations/resolutions."
+      },
+      "resolution": {
+        "type": "string",
+        "enum": [
+          "720p",
+          "1080p",
+          "1024p"
+        ],
+        "description": "Output resolution. Must be valid for the chosen model (e.g. sora-2 → 720p)."
+      },
+      "duration": {
+        "type": "integer",
+        "exclusiveMinimum": 0,
+        "description": "Clip length in seconds. Must be a valid duration for the model (e.g. sora-2 → 4/8/12)."
+      },
+      "aspectRatio": {
+        "type": "string",
+        "enum": [
+          "9:16",
+          "16:9"
+        ],
+        "description": "Optional. Frame aspect ratio; defaults per-model when omitted."
+      },
+      "remixVideoId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional. Remix an existing generated video by id. Mutually exclusive with remixProjectId and image frames."
+      },
+      "remixProjectId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional. Remix an existing project by id. Mutually exclusive with remixVideoId and image frames."
+      },
+      "startFrameB64": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional. Base64 first frame for image-to-video (JPEG/PNG/WebP, ≤10MB). A data: prefix is stripped server-side."
+      },
+      "endFrameB64": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Optional. Base64 last frame (JPEG/PNG/WebP, ≤10MB). Not supported for Sora models."
+      }
+    },
+    "required": [
+      "prompt",
+      "resolution",
+      "duration"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

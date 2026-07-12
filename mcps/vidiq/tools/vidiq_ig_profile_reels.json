@@ -1,0 +1,19 @@
+{
+  "name": "vidiq_ig_profile_reels",
+  "description": "Fetch a creator's reels by handle: shortcode, caption, play/like/comment counts, duration, timestamp, with each reel's cover returned inline as an image. Returns up to 6 reels drawn from recent activity, sorted by play count (popularity-first within the returned set, not strictly newest). Feeds shortcodes into `vidiq_ig_reel_watch`.\n\nDO NOT USE FOR:\n- More than 6 reels, or pagination — not supported.\n- Strict newest-first ordering — sort is popularity within recent activity.\n- Image posts, carousels, Stories.\n- Cross-creator or topic search — use `vidiq_ig_outlier_reels_search` (cannot filter by handle).\n- Critiquing reel content — use `vidiq_ig_reel_watch`.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "handle": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Instagram handle (with or without leading @). 1-30 chars; letters/digits/dot/underscore."
+      }
+    },
+    "required": [
+      "handle"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "vidiq_get_channels_by_ids",
+  "description": "Get detailed information about YouTube channels by their IDs.\n\nUse this tool to:\n- Look up channel metadata (title, description, country) for one or more channels\n- Get subscriber counts, view counts, and video counts\n- Retrieve channel tags and topic categories\n- Check channel thumbnails\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "channelIds": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "description": "YouTube channel ID"
+        },
+        "minItems": 1,
+        "maxItems": 50,
+        "description": "List of YouTube channel IDs to look up"
+      }
+    },
+    "required": [
+      "channelIds"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

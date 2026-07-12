@@ -1,0 +1,24 @@
+{
+  "name": "vidiq_ig_reel_watch",
+  "description": "Watch an Instagram reel and return its cover image inline plus a markdown critique. Default rates Stop / Gap / Momentum / Feeling / Reach (Strong/Moderate/Weak) with bulleted reasoning, transcript (if speech), and numbered Top Improvements.\n\nPrefer the default `prompt` — it's the tuned production critique and matches almost every reel-analysis intent. Override only for genuinely different jobs (transcript-only, single-aspect questions).\n\nDO NOT USE FOR:\n- Image posts or carousels — video reels only.\n- Multiple reels per call — call in parallel to compare.\n- Private or audience-restricted reels — return a typed error; don't retry.\n\nCost: 10 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "reel": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Instagram reel shortcode (e.g. 'C9zX1aBcD2E') or full URL (https://www.instagram.com/reel/<shortcode>/ or /p/<shortcode>/). URLs are normalised to the bare shortcode."
+      },
+      "prompt": {
+        "type": "string",
+        "maxLength": 2000,
+        "description": "Optional custom instruction. **Prefer omitting** — the default Five Forces critique is the tuned production prompt and is right for almost every reel-analysis task. Override only for genuinely different jobs (transcript-only, single-aspect questions, non-critique walkthroughs). Markdown output regardless — do not ask for JSON."
+      }
+    },
+    "required": [
+      "reel"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

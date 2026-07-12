@@ -1,0 +1,19 @@
+{
+  "name": "vidiq_list_competitors",
+  "description": "List the YouTube channels the user is tracking as competitors of one of their own channels.\n\nReturns only channel IDs. To get titles, thumbnails, subscriber counts, etc., pass the IDs to vidiq_get_channels_by_ids.\n\nThe youtubeChannelId must be a channel the user has authorized — use vidiq_user_channels to discover them.\n\nCost: 0 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "youtubeChannelId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube channel ID (e.g. 'UCxxxxxxxxxxxxxxxxxxxxxx') of one of the user's own authorized channels. Use vidiq_user_channels first if you don't know which channels the user owns."
+      }
+    },
+    "required": [
+      "youtubeChannelId"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

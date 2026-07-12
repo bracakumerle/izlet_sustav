@@ -1,0 +1,24 @@
+{
+  "name": "vidiq_keyword_research",
+  "description": "Research YouTube keywords to find search volume, competition, and related keyword opportunities. This tool returns keyword metrics, NOT videos. To find actual videos, use vidiq_outliers or vidiq_trending_videos instead.\n\nUse this tool to discover:\n- Volume (0-100): How often people search for this keyword on YouTube\n- Competition (0-100): How many videos target this keyword\n- Overall score (0-100): Combined keyword opportunity score\n- Estimated monthly search volume\n- Top markets: the countries where the keyword is most searched, with each country's share of searches (useful for geo-targeting and localization)\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "keyword": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Seed keyword to research (for example 'minecraft tips')"
+      },
+      "includeRelated": {
+        "type": "boolean",
+        "default": true,
+        "description": "Include related keyword suggestions"
+      }
+    },
+    "required": [
+      "keyword"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

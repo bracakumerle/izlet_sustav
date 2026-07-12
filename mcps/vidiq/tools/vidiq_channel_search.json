@@ -1,0 +1,464 @@
+{
+  "name": "vidiq_channel_search",
+  "description": "Comprehensive YouTube channel search. Combines semantic + lexical text search with structured filters across identity, audience size, growth, format mix, and content metadata.\n\nUse this tool to:\n- Find channels by niche or topic with natural-language queries (semantic match on niche + description embeddings).\n- Look up a specific channel by YouTube handle (e.g. '@MrBeast').\n- Filter by channel size (subscriber/view/video count ranges), growth (7d / 30d / 1y subs and views), recency (last video published), format (long / short / mixed), per-format average duration and video/view counts (7d / 30d / 1y), creation date, country, language, main category, and flags (faceless, breakout).\n- Order results with the optional sort param (relevance / subscriberCount / subsGrowth30d / viewsGrowth30d / lastVideoPublished).\n- Combine any subset of inputs — at least one of query / handle / channel title / filters is required.\n\nFor finding the user's competitors specifically (with auto-exclusion and tuned scoring), prefer vidiq_similar_channels. For viral-video discovery, use vidiq_outliers.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500,
+        "description": "Free-text query describing the niche, topic, or content (e.g. 'vegan cooking tutorials', 'tech reviews', 'minecraft let's plays'). Drives semantic search across niches and description embeddings plus lexical match on niches/description. Optional — you can also run a pure metrics/attribute search by providing only filters."
+      },
+      "channelTitle": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200,
+        "description": "Optional channel title fragment to bias results toward channels whose title matches (e.g. 'Mark Rober')."
+      },
+      "channelTitleMatch": {
+        "type": "string",
+        "enum": [
+          "exact",
+          "fuzzy"
+        ],
+        "description": "How to match channelTitle. 'fuzzy' (default) ranks by title similarity (partial matches allowed). 'exact' restricts to channels whose title equals the value (case-insensitive). Requires channelTitle — rejected if set without it."
+      },
+      "handle": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100,
+        "description": "YouTube handle / custom URL (e.g. '@MrBeast' or 'mrbeast'). Leading '@' is optional. Use this when you want a specific channel."
+      },
+      "handleMatch": {
+        "type": "string",
+        "enum": [
+          "exact",
+          "fuzzy"
+        ],
+        "description": "How to match handle. 'exact' (default) returns only the channel with that exact handle. 'fuzzy' does a partial/relevance match (e.g. 'beast' matches '@MrBeast'). Requires handle — rejected if set without it."
+      },
+      "channelType": {
+        "type": "string",
+        "enum": [
+          "long",
+          "short",
+          "mixed"
+        ],
+        "description": "Filter by content format: 'long' (longform), 'short' (shorts-first), or 'mixed'."
+      },
+      "faceless": {
+        "type": "boolean",
+        "description": "Filter by faceless-channel status. true returns only faceless channels, false excludes them."
+      },
+      "breakoutChannel": {
+        "type": "boolean",
+        "description": "Filter by breakout-channel flag. Omit to return both breakout and non-breakout channels."
+      },
+      "country": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "minItems": 1,
+        "maxItems": 20,
+        "description": "Filter by channel country (ISO 3166-1 alpha-2 codes, uppercase, e.g. ['US', 'GB']). Multiple codes are OR-ed."
+      },
+      "languages": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "minItems": 1,
+        "maxItems": 20,
+        "description": "Filter by channel language(s) (ISO 639-1 codes, lowercase, e.g. ['en', 'es']). By default matches any channel that *contains* a requested language (multilingual channels included). Set exactLanguage=true to return only monolingual channels whose language is exactly the requested value."
+      },
+      "exactLanguage": {
+        "type": "boolean",
+        "description": "When true, match languages exactly (only monolingual channels whose single language equals the requested code). When false/omitted, match any channel containing the requested language(s). Requires a non-empty `languages` list — rejected if true without it."
+      },
+      "mainCategory": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "Music",
+            "Christian music",
+            "Classical music",
+            "Country music",
+            "Electronic music",
+            "Hip hop music",
+            "Independent music",
+            "Jazz",
+            "Music of Asia",
+            "Music of Latin America",
+            "Pop music",
+            "Reggae",
+            "Rhythm and blues",
+            "Rock music",
+            "Soul music",
+            "Video game culture",
+            "Action game",
+            "Action-adventure game",
+            "Casual game",
+            "Music video game",
+            "Puzzle video game",
+            "Racing video game",
+            "Role-playing video game",
+            "Simulation video game",
+            "Sports game",
+            "Strategy video game",
+            "Sport",
+            "American football",
+            "Association football",
+            "Baseball",
+            "Basketball",
+            "Boxing",
+            "Cricket",
+            "Golf",
+            "Ice hockey",
+            "Mixed martial arts",
+            "Motorsport",
+            "Professional wrestling",
+            "Tennis",
+            "Volleyball",
+            "Entertainment",
+            "Film",
+            "Humour",
+            "Performing arts",
+            "Television program",
+            "Lifestyle (sociology)",
+            "Fashion",
+            "Food",
+            "Hobby",
+            "Pet",
+            "Physical attractiveness",
+            "Physical fitness",
+            "Technology",
+            "Tourism",
+            "Vehicle",
+            "Society",
+            "Business",
+            "Health",
+            "Military",
+            "Politics",
+            "Religion",
+            "Knowledge"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 20,
+        "description": "Filter by main category (YouTube topic labels as stored in the index — e.g. 'Knowledge' for educational content, 'Video game culture' for gaming, 'Lifestyle (sociology)' for lifestyle). Values are case-sensitive and must come from the enum; multiple values are OR-ed."
+      },
+      "subscriberCountMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum subscriber count."
+      },
+      "subscriberCountMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum subscriber count."
+      },
+      "viewCountMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum lifetime view count."
+      },
+      "viewCountMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum lifetime view count."
+      },
+      "videoCountMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum total video count."
+      },
+      "videoCountMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum total video count."
+      },
+      "subsGrowth7dMin": {
+        "type": "number",
+        "description": "Minimum 7-day subscriber growth (percent, e.g. 5 = +5%)."
+      },
+      "subsGrowth7dMax": {
+        "type": "number",
+        "description": "Maximum 7-day subscriber growth (percent)."
+      },
+      "subsGrowth30dMin": {
+        "type": "number",
+        "description": "Minimum 30-day subscriber growth (percent)."
+      },
+      "subsGrowth30dMax": {
+        "type": "number",
+        "description": "Maximum 30-day subscriber growth (percent)."
+      },
+      "subsGrowth1yMin": {
+        "type": "number",
+        "description": "Minimum 1-year subscriber growth (percent)."
+      },
+      "subsGrowth1yMax": {
+        "type": "number",
+        "description": "Maximum 1-year subscriber growth (percent)."
+      },
+      "viewsGrowth7dMin": {
+        "type": "number",
+        "description": "Minimum 7-day view growth (percent)."
+      },
+      "viewsGrowth7dMax": {
+        "type": "number",
+        "description": "Maximum 7-day view growth (percent)."
+      },
+      "viewsGrowth30dMin": {
+        "type": "number",
+        "description": "Minimum 30-day view growth (percent)."
+      },
+      "viewsGrowth30dMax": {
+        "type": "number",
+        "description": "Maximum 30-day view growth (percent)."
+      },
+      "viewsGrowth1yMin": {
+        "type": "number",
+        "description": "Minimum 1-year view growth (percent)."
+      },
+      "viewsGrowth1yMax": {
+        "type": "number",
+        "description": "Maximum 1-year view growth (percent)."
+      },
+      "longAvgDuration7dMin": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Minimum average long-form video duration over the trailing 7 days (seconds)."
+      },
+      "longAvgDuration7dMax": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Maximum average long-form video duration over the trailing 7 days (seconds)."
+      },
+      "longAvgDuration30dMin": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Minimum average long-form video duration over the trailing 30 days (seconds)."
+      },
+      "longAvgDuration30dMax": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Maximum average long-form video duration over the trailing 30 days (seconds)."
+      },
+      "longAvgDuration1yMin": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Minimum average long-form video duration over the trailing year (seconds)."
+      },
+      "longAvgDuration1yMax": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Maximum average long-form video duration over the trailing year (seconds)."
+      },
+      "shortAvgDuration7dMin": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Minimum average short-form video duration over the trailing 7 days (seconds)."
+      },
+      "shortAvgDuration7dMax": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Maximum average short-form video duration over the trailing 7 days (seconds)."
+      },
+      "shortAvgDuration30dMin": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Minimum average short-form video duration over the trailing 30 days (seconds)."
+      },
+      "shortAvgDuration30dMax": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Maximum average short-form video duration over the trailing 30 days (seconds)."
+      },
+      "shortAvgDuration1yMin": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Minimum average short-form video duration over the trailing year (seconds)."
+      },
+      "shortAvgDuration1yMax": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Maximum average short-form video duration over the trailing year (seconds)."
+      },
+      "longVideoCount7dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum number of long-form videos published in the trailing 7 days."
+      },
+      "longVideoCount7dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum number of long-form videos published in the trailing 7 days."
+      },
+      "longVideoCount30dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum number of long-form videos published in the trailing 30 days."
+      },
+      "longVideoCount30dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum number of long-form videos published in the trailing 30 days."
+      },
+      "longVideoCount1yMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum number of long-form videos published in the trailing year."
+      },
+      "longVideoCount1yMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum number of long-form videos published in the trailing year."
+      },
+      "shortVideoCount7dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum number of short-form videos published in the trailing 7 days."
+      },
+      "shortVideoCount7dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum number of short-form videos published in the trailing 7 days."
+      },
+      "shortVideoCount30dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum number of short-form videos published in the trailing 30 days."
+      },
+      "shortVideoCount30dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum number of short-form videos published in the trailing 30 days."
+      },
+      "shortVideoCount1yMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum number of short-form videos published in the trailing year."
+      },
+      "shortVideoCount1yMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum number of short-form videos published in the trailing year."
+      },
+      "longViewCount7dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum long-form view count accrued in the trailing 7 days."
+      },
+      "longViewCount7dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum long-form view count accrued in the trailing 7 days."
+      },
+      "longViewCount30dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum long-form view count accrued in the trailing 30 days."
+      },
+      "longViewCount30dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum long-form view count accrued in the trailing 30 days."
+      },
+      "longViewCount1yMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum long-form view count accrued in the trailing year."
+      },
+      "longViewCount1yMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum long-form view count accrued in the trailing year."
+      },
+      "shortViewCount7dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum short-form view count accrued in the trailing 7 days."
+      },
+      "shortViewCount7dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum short-form view count accrued in the trailing 7 days."
+      },
+      "shortViewCount30dMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum short-form view count accrued in the trailing 30 days."
+      },
+      "shortViewCount30dMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum short-form view count accrued in the trailing 30 days."
+      },
+      "shortViewCount1yMin": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Minimum short-form view count accrued in the trailing year."
+      },
+      "shortViewCount1yMax": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Maximum short-form view count accrued in the trailing year."
+      },
+      "publishedAfter": {
+        "type": "string",
+        "format": "date",
+        "description": "Filter by channel creation date (ISO YYYY-MM-DD): created on or after this date."
+      },
+      "publishedBefore": {
+        "type": "string",
+        "format": "date",
+        "description": "Filter by channel creation date (ISO YYYY-MM-DD): created on or before this date."
+      },
+      "lastVideoPublishedAfter": {
+        "type": "string",
+        "format": "date",
+        "description": "Last uploaded video on or after this date (ISO YYYY-MM-DD) — active channels."
+      },
+      "lastVideoPublishedBefore": {
+        "type": "string",
+        "format": "date",
+        "description": "Last uploaded video on or before this date (ISO YYYY-MM-DD)."
+      },
+      "nicheConfidenceMin": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "default": 0.3,
+        "description": "Minimum niche-classification confidence (0–1). Each channel is tagged with a niche and a confidence score; this floors out low-confidence / likely-misclassified channels so results stay on-topic. Defaults to 0.3 to favor cleanly-classified channels — set to 0 to disable the floor and include unclassified/low-confidence channels."
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 10,
+        "description": "Number of channels to return (max 50)."
+      },
+      "sort": {
+        "type": "string",
+        "enum": [
+          "relevance",
+          "subscriberCount",
+          "subsGrowth30d",
+          "viewsGrowth30d",
+          "lastVideoPublished"
+        ],
+        "description": "Result ordering: 'relevance' (default for text searches; ranks by semantic + lexical score), 'subscriberCount' (subscribers desc), 'subsGrowth30d' (30-day subscriber growth desc), 'viewsGrowth30d' (30-day view growth desc), or 'lastVideoPublished' (most recently active first). Pure-filter searches default to subscriberCount desc."
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "vidiq_channel_performance_trends",
+  "description": "Get a channel's typical video performance curve — how views accumulate over time after publication.\n\nReturns statistical aggregates (min, max, avg, median, percentiles) of view counts at various time intervals since publication, based on the channel's recent videos.\n\nUse this tool to:\n- Understand how quickly a channel's videos gain views after publishing\n- Compare a channel's view velocity against benchmarks\n- Identify whether a channel has strong initial traction or slow-burn growth\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "channelId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube channel ID, handle (e.g. '@MrBeast'), or channel URL"
+      }
+    },
+    "required": [
+      "channelId"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

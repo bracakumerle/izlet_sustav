@@ -1,0 +1,112 @@
+{
+  "name": "vidiq_generate_thumbnail",
+  "description": "Generate a YouTube thumbnail\n\nProvide at least one of videoId, title, description, or userQuery (custom input).\nWith only videoId, the current title/description and the default YouTube thumbnail are pulled automatically.\nReturns the generated thumbnail (embedded inline as an image) plus its URL, a self-score, and feedback.\n\nCost: 22 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube video ID (e.g. 'dQw4w9WgXcQ'). When provided, title, description, and currentThumbnail are auto-filled from YouTube unless the caller supplies them explicitly. Optional when at least one of title, description, or userQuery is given."
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500,
+        "description": "Video title used for grounding. When omitted but videoId is provided, fetched from yt-proxy. Caller-supplied value wins."
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 5000,
+        "description": "Video description used for grounding. When omitted but videoId is provided, fetched from yt-proxy. Caller-supplied value wins."
+      },
+      "transcript": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 20000,
+        "description": "Optional transcript text. Used for subject detection in Quick Generate and as context in Pro Generate. Pair with vidiq_video_transcript when available."
+      },
+      "userQuery": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "description": "Natural-language creative direction (e.g. 'show the host pointing at a glowing dollar sign'). Highest-priority generation signal upstream."
+      },
+      "currentThumbnail": {
+        "type": "string",
+        "format": "uri",
+        "description": "URL of an existing/current thumbnail to reference for composition. When omitted but videoId is provided, auto-filled with the video's maxresdefault YouTube thumbnail."
+      },
+      "subjectImage": {
+        "type": "string",
+        "format": "uri",
+        "description": "URL of a subject/person image. Highest-priority likeness reference for the main face in the thumbnail."
+      },
+      "referenceImages": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        },
+        "maxItems": 10,
+        "description": "URLs of reference thumbnails to emulate style/composition. Presence of this field switches the request out of Quick Generate into the Pro / Improve flow upstream. Capped at 10 entries; duplicates removed."
+      },
+      "feedback": {
+        "type": "object",
+        "properties": {
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Overall quality score (0–100) returned by the previous scoring call."
+          },
+          "strengths": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "feature": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Short rubric label, e.g. 'face_clarity' or 'title_alignment'."
+                },
+                "message": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Human-readable explanation of this finding."
+                },
+                "pointImpact": {
+                  "type": "number",
+                  "description": "Point delta this finding contributed to the overall score (when available)."
+                }
+              },
+              "required": [
+                "feature",
+                "message"
+              ],
+              "additionalProperties": false
+            },
+            "description": "Findings to preserve in the next iteration."
+          },
+          "improvements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/properties/feedback/properties/strengths/items"
+            },
+            "description": "Findings to fix in the next iteration."
+          }
+        },
+        "required": [
+          "score",
+          "strengths",
+          "improvements"
+        ],
+        "additionalProperties": false,
+        "description": "Optional scorer feedback from a prior thumbnail (typically the output of vidiq_score_thumbnail). When provided alongside referenceImages, triggers the feedback-iteration flow."
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

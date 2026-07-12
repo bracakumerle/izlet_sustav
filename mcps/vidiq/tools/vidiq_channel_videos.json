@@ -1,0 +1,34 @@
+{
+  "name": "vidiq_channel_videos",
+  "description": "Get videos from a YouTube channel by format (long-form, Shorts, or live streams). Use this when you already know which channel to look at. To discover videos across many channels, use vidiq_outliers or vidiq_trending_videos.\n\nUse this tool to:\n- Browse a channel's recent uploads by video type (popular=false)\n- Discover a channel's most popular videos by type (popular=true, default)\n- Get video metadata including titles, publish dates, and thumbnails\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "channelId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube channel ID (e.g. 'UCX6OQ3DkcsbYNE6H8uQQuVA') or handle (e.g. '@MrBeast')"
+      },
+      "videoFormat": {
+        "type": "string",
+        "enum": [
+          "long",
+          "short",
+          "live"
+        ],
+        "description": "Type of videos to retrieve: 'long' for long-form, 'short' for Shorts, 'live' for live streams"
+      },
+      "popular": {
+        "type": "boolean",
+        "default": true,
+        "description": "When true (default), returns the most popular videos. When false, returns recent uploads."
+      }
+    },
+    "required": [
+      "channelId",
+      "videoFormat"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

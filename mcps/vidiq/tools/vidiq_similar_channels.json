@@ -1,0 +1,48 @@
+{
+  "name": "vidiq_similar_channels",
+  "description": "Find YouTube channels in a given niche using neural semantic search. The user's own authorized channels are automatically excluded from results.\n\nUse this tool when someone asks:\n- \"Who are my competitors?\" or \"Find channels like mine\"\n- \"What channels are in my niche?\" or \"Show me similar creators\"\n- \"Find channels in [topic] with [subscriber range]\"\n- \"Who else makes content about [topic]?\"\n\nThe 'niche' parameter is required — always provide a clear topic or content theme. Optionally narrow results with minSubscribers and maxSubscribers.\n\nResults are ranked by neural similarity combining content overlap, audience size proximity, and niche alignment. Each result includes the channel's title, subscriber count, niches, and languages.\n\nOptionally filter by country (ISO 3166-1 two-letter code) and/or language (ISO 639-1 code). When not provided, these are auto-detected from the user's authorized channel.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "niche": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The niche, topic, or content theme to search for similar channels in. Use natural language — e.g. 'tech reviews', 'vegan cooking tutorials', 'Minecraft let's plays', 'personal finance for millennials'. This is the primary search query and must always be provided."
+      },
+      "minSubscribers": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Lower bound for subscriber count. Use to filter out smaller channels — e.g. 10000 to only see channels with 10k+ subscribers. Use together with maxSubscribers to define a specific range."
+      },
+      "maxSubscribers": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Upper bound for subscriber count. Use to filter out larger channels — e.g. 1000000 to cap results at channels under 1M subscribers. Use together with minSubscribers to define a specific range."
+      },
+      "country": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "description": "Two-letter ISO 3166-1 country code to filter results by channel country — e.g. 'US', 'GB', 'BR', 'JP'. When omitted, the country is auto-detected from the user's authorized channel (if any)."
+      },
+      "language": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "description": "Two-letter ISO 639-1 language code to filter results by channel language — e.g. 'en', 'es', 'pt', 'ja'. Only a single language is accepted. When omitted, the language is auto-detected from the user's authorized channel (if any)."
+      },
+      "size": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 30,
+        "description": "Number of similar channels to return. Defaults to 30, maximum 50."
+      }
+    },
+    "required": [
+      "niche"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

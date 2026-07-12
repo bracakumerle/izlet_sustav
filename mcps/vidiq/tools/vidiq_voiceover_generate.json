@@ -1,0 +1,32 @@
+{
+  "name": "vidiq_voiceover_generate",
+  "description": "Generate a voiceover MP3 from a script.\n\nProvide the script text (max 5000 characters) and a voiceId\nfrom vidiq_voiceover_list_voices. Returns the audio duration, character count,\nand a temporary download URL for the MP3. Pass output='url_and_audio' to\nadditionally receive the MP3 inline as a base64 audio block.\n\nCost: 14 credit(s) per 1000 characters of script (rounded up).",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "script": {
+        "type": "string",
+        "description": "The text to synthesize into speech."
+      },
+      "voiceId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Voice identifier from vidiq_voiceover_list_voices."
+      },
+      "output": {
+        "type": "string",
+        "enum": [
+          "url_only",
+          "url_and_audio"
+        ],
+        "description": "How to return the audio. The MP3 is always uploaded and a temporary download URL returned. 'url_only' (default) returns just that URL — use this for hosts that can't render inline audio. 'url_and_audio' additionally attaches the MP3 inline as a base64 audio block."
+      }
+    },
+    "required": [
+      "script",
+      "voiceId"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "vidiq_balance",
+  "description": "Check the user's current vidIQ credits balance.\n\nvidIQ credits live in two buckets:\n- A renewable bucket sized by the user's plan (Free/Boost/Max/etc) that refills each billing cycle.\n- Zero or more add-on (bonus) credits. Add-on credits drain alongside renewable credits but do NOT refill.\n\nField semantics are in the output schema. Key invariant: totalCredits = renewableCredits + addOnCredits; maxRenewableCredits is the plan cap only.\n\nExample — Boost user with an open promo grant:\n  { type: 'limited', totalCredits: 1800,\n    renewableCredits: 1500, maxRenewableCredits: 2000,\n    renewableResetsAt: '2026-06-01T00:00:00Z',\n    addOnCredits: 300, maxAddOnCredits: 500 }\nRead as: 1,800 left = 1,500 of 2,000 renewable + 300 of a 500-credit bonus pool. Renews Jun 1.\n\nCost: 0 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "vidiq_trend_categories",
+  "description": "List all available trend category slugs with display names and descriptions. Use this as a reference before filtering outlier videos by trend category.\n\nCost: 0 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

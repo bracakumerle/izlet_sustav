@@ -1,0 +1,26 @@
+{
+  "name": "vidiq_voiceover_clone_start",
+  "description": "Start cloning the speaker's voice from a YouTube video.\n\nProvide a public YouTube URL and a name for the voice. This runs asynchronously:\nit returns an `mcpJobId` immediately — poll `vidiq_job_poll` with that id\nuntil it completes, then use the returned `voiceId`.\n\nCredits are charged on submit and automatically refunded if the clone fails.\n\nCost: 1 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "youtubeUrl": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Public YouTube URL of a video whose voice should be cloned (watch / youtu.be / shorts URL)."
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100,
+        "description": "A name for the cloned voice, used to label it once the clone completes."
+      }
+    },
+    "required": [
+      "youtubeUrl",
+      "name"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

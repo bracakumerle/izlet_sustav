@@ -1,0 +1,24 @@
+{
+  "name": "vidiq_video_watch",
+  "description": "Watch a YouTube video end-to-end and return a structured markdown walkthrough.\n\nUse this tool to:\n- Understand what happens visually in a video (not just what is said) — useful when transcripts miss context\n- Generate scene-by-scene breakdowns with timestamps for editing or analysis\n- Answer specific questions about a video by passing a custom `prompt`\n- Compare visual structure across videos for SEO / hook research\n\nThe response is **markdown** in the `analysisText` field — scene headers with time ranges followed by a summary.\n\nNote: prefer `vidiq_video_transcript` when you only need spoken words, since it is faster and cheaper.\n\nCost: 25 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "video": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube video ID (e.g. 'dQw4w9WgXcQ') or canonical watch/shorts/youtu.be URL. URLs are normalised to the bare ID before processing."
+      },
+      "prompt": {
+        "type": "string",
+        "maxLength": 2000,
+        "description": "Optional custom analysis instruction. If omitted, a scene-by-scene markdown walkthrough is produced (### Scene N: Label headers with mm:ss timestamps + ### Summary bullets). Markdown structure is enforced regardless — do not ask for JSON."
+      }
+    },
+    "required": [
+      "video"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

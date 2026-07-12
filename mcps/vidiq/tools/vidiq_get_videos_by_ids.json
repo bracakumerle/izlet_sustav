@@ -1,0 +1,24 @@
+{
+  "name": "vidiq_get_videos_by_ids",
+  "description": "Get detailed metadata for one or more YouTube videos by their IDs.\n\nUse this tool to:\n- Fetch video details such as title, description, tags, and category\n- Get current statistics (views, likes, comments) for specific videos\n- Look up publishing info, channel details, and thumbnails for videos\n- Check topic categories for videos\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoIds": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "description": "YouTube video ID (e.g. 'dQw4w9WgXcQ')"
+        },
+        "minItems": 1,
+        "maxItems": 50,
+        "description": "List of YouTube video IDs to fetch"
+      }
+    },
+    "required": [
+      "videoIds"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

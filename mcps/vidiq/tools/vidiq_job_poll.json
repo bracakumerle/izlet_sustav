@@ -1,0 +1,19 @@
+{
+  "name": "vidiq_job_poll",
+  "description": "Check the status of an asynchronous vidIQ job and retrieve its result.\n\nPass the `mcpJobId` returned by a `*_start` tool. Poll periodically until\n`status` is no longer 'inprogress':\n- 'completed' → the work is done; read `result`.\n- 'failed'/'expired' → it did not finish; the credits were refunded (`refunded: true`).\n\nThis tool is free.\n\nCost: 0 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "mcpJobId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The job id returned by a `*_start` tool (e.g. `vidiq_voiceover_clone_start`)."
+      }
+    },
+    "required": [
+      "mcpJobId"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

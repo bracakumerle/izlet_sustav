@@ -1,0 +1,34 @@
+{
+  "name": "vidiq_jobs_list",
+  "description": "List your asynchronous vidIQ jobs, newest first.\n\nFilter by `toolName` and/or `status`. To find jobs that are still running,\nfilter `status: 'inprogress'`. Use the returned `mcpJobId` with\n`vidiq_job_poll` to check a job's result.\n\nThis tool is free.\n\nCost: 0 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "toolName": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Filter to jobs created by this tool (e.g. 'vidiq_voiceover_clone_start')."
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "inprogress",
+          "completed",
+          "failed",
+          "expired",
+          "refunded"
+        ],
+        "description": "Filter by status. Omit for all. You usually want 'inprogress' to find jobs still running."
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 20,
+        "description": "Max jobs to return (1-50, default 20). Newest first."
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

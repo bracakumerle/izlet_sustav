@@ -1,0 +1,61 @@
+{
+  "name": "vidiq_ig_outlier_reels_search",
+  "description": "Find high-performing Instagram reels (outliers beating the creator's median by a significant margin). Returns reel IDs, URLs, counts, reel-median score. Extract shortcode from `url` for `vidiq_ig_reel_watch`.\n\nHow to call:\n- `audienceQuery` is a separate rescore layer (without it you get topical hits that miss the demographic). Format:\n  `Culture/Region: …; Global: <true|false>; Demographics: …;`\n  Example: `Culture/Region: UK/British; Global: false; Demographics: working professional men 25-45, fat loss, busy lifestyle;`\n  Derive from bio + recent reels (`vidiq_ig_profile` / `vidiq_ig_profile_reels` first), not from handle. If audience is vague, confirm with the user before searching.\n- Pick `embeddingType`:\n  - `description` — caption + hashtags; topical asks. `query` reads like a caption.\n  - `concept` — one-line summary; niche / competitor search. `query` describes the reel.\n  - `hook` — `Hook visual: …; Hook text: …; Hook audio: …;`; replicating an opening.\n  - `format` — subject-free production template, ideally <=6 words. Prefer second-pass use: first find relevant `concept`/`hook` hits, read `reelSummary.format.template`, then rerun `format` with exact template phrases. Do not use `format` alone for topic/audience fit.\n- Parallelize across embedding types with the same `audienceQuery`. Each parallel call must use a different `embeddingType` or a clearly different topic intent — no duplicates.\n- Sparse niche → widen `datePostedAfter`. Small-creator replication → cap `followersMax` near 10× the target. Non-English → set `descriptionLanguage` (ISO 639-1).\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "audienceQuery": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "embeddingType": {
+        "type": "string",
+        "enum": [
+          "description",
+          "concept",
+          "hook",
+          "format"
+        ],
+        "description": "Lane: description=captions/topics, concept=reel summary, hook=first-3-sec opening, format=subject-free production template. For formats, search concept/hook first, then reuse exact reelSummary.format.template phrases."
+      },
+      "datePostedAfter": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "viewsMax": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "followersMin": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "followersMax": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "descriptionLanguage": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "description": "ISO 639-1 codes."
+      }
+    },
+    "required": [
+      "query",
+      "audienceQuery",
+      "embeddingType"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

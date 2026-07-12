@@ -1,0 +1,30 @@
+{
+  "name": "vidiq_score_thumbnail",
+  "description": "Score a YouTube video thumbnail for click-through-rate potential. Returns a score (0-100) with detailed feedback on strengths and improvements. Provide a video ID and title; optionally supply a custom thumbnail image URL to score instead of the current YouTube thumbnail.\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "videoId": {
+        "type": "string",
+        "minLength": 1,
+        "description": "YouTube video ID"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Video title (used together with the thumbnail for scoring)"
+      },
+      "image": {
+        "type": "string",
+        "format": "uri",
+        "description": "Thumbnail image URL. If omitted, the current YouTube thumbnail is used."
+      }
+    },
+    "required": [
+      "videoId",
+      "title"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

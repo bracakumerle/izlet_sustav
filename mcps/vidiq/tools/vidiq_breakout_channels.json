@@ -1,0 +1,53 @@
+{
+  "name": "vidiq_breakout_channels",
+  "description": "Discover YouTube channels by niche or topic. Find breakout channels with growth metrics and audience data. Returns channels, not individual videos. To find viral videos across channels, use vidiq_outliers.\n\nUse this tool to:\n- Search for channels in a specific niche (e.g. 'cooking tutorials', 'tech reviews')\n- Filter by content type (long-form, shorts, or mixed)\n- Filter by country, subscriber count range, and faceless channel status\n- See channel growth metrics (30-day subscriber growth)\n\nCost: 5 credit(s) per call.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Search query to find YouTube channels by niche (e.g. 'cooking tutorials', 'tech reviews')"
+      },
+      "channelType": {
+        "type": "string",
+        "enum": [
+          "long",
+          "short",
+          "mixed"
+        ],
+        "description": "Filter by channel content type"
+      },
+      "country": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "description": "Filter by channel country (2-letter code, e.g. 'US')"
+      },
+      "subscriberCountMin": {
+        "type": "integer",
+        "description": "Minimum subscriber count"
+      },
+      "subscriberCountMax": {
+        "type": "integer",
+        "description": "Maximum subscriber count"
+      },
+      "faceless": {
+        "type": "boolean",
+        "description": "Filter by faceless channel status. Use true for faceless channels, false for non-faceless channels."
+      },
+      "limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 10,
+        "description": "Number of results"
+      }
+    },
+    "required": [
+      "query"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}
