@@ -17,46 +17,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="/assets/images/hero/hero-desktop_Foto_Lili_Zaneta_5000w.webp" media="(min-width:768px)"/>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MusicGroup",
-        "@id": "https://bracakumerle.com/entity/izlet",
-        "name": "iZLET",
-        "alternateName": "Braća Kumerle",
-        "url": "https://bracakumerle.com",
-        "foundingDate": "2007",
-        "foundingLocation": {"@type":"City","name":"Zagreb","addressCountry":"HR"},
-        "sameAs": [
-          "https://www.wikidata.org/wiki/Q139595518",
-          "https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f",
-          "https://www.discogs.com/artist/6610944",
-          "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d",
-          "https://music.apple.com/gb/artist/izlet/682224896",
-          "https://www.youtube.com/@bracakumerle",
-          "https://hr.wikipedia.org/wiki/IZLET"
-        ],
-        "member": [
-          {"@id": "https://bracakumerle.com/people/toni-kumerle"},
-          {"@id": "https://bracakumerle.com/people/petar-kumerle"}
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicGroup",
+      "@id": "https://bracakumerle.com/entity/izlet",
+      "name": "iZLET",
+      "alternateName": "Braća Kumerle",
+      "url": "https://bracakumerle.com",
+      "foundingDate": "2007",
+      "foundingLocation": {
+        "@type": "City",
+        "name": "Zagreb",
+        "addressCountry": "HR"
       },
-      {
-        "@type": "Person",
-        "@id": "https://bracakumerle.com/people/toni-kumerle",
-        "name": "Toni Kumerle",
-        "jobTitle": "Creative Director"
-      },
-      {
-        "@type": "Person",
-        "@id": "https://bracakumerle.com/people/petar-kumerle",
-        "name": "Petar Kumerle",
-        "jobTitle": "Project Manager"
-      }
-    ]
-  }
-  </script>
+      "sameAs": [
+        "https://open.spotify.com/artist/11wCFDSyZy0LfWkgllak6d",
+        "https://music.apple.com/artist/682224896",
+        "https://www.deezer.com/artist/5054702",
+        "https://www.youtube.com/@bracakumerle",
+        "https://music.youtube.com/channel/UC8jNEBUrOqCcXqVleV9ccKg",
+        "https://www.discogs.com/artist/6610944",
+        "https://musicbrainz.org/artist/b973e6f2-c282-473a-b2fb-ffb4466b312f",
+        "https://www.wikidata.org/wiki/Q139595518",
+        "https://tidal.com/artist/5080072",
+        "https://music.amazon.com/artists/11wCFDSyZy0LfWkgllak6d",
+        "https://www.instagram.com/bracakumerle",
+        "https://x.com/bracakumerle",
+        "https://www.tiktok.com/@bracakumerle",
+        "https://www.threads.net/@bracakumerle",
+        "https://www.facebook.com/142089129226973",
+        "https://hr.wikipedia.org/wiki/IZLET"
+      ],
+      "member": [
+        {
+          "@id": "https://bracakumerle.com/people/toni-kumerle"
+        },
+        {
+          "@id": "https://bracakumerle.com/people/petar-kumerle"
+        }
+      ],
+      "description": "Croatian rock band from Zagreb, active since 2007 — brothers Petar and Toni Kumerle (Braća Kumerle)."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bracakumerle.com/people/toni-kumerle",
+      "name": "Toni Kumerle",
+      "jobTitle": "Creative Director"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bracakumerle.com/people/petar-kumerle",
+      "name": "Petar Kumerle",
+      "jobTitle": "Project Manager"
+    }
+  ]
+}
+</script>
   <style>
     :root{
       --text-xs:clamp(.7rem,.65rem + .25vw,.82rem);
@@ -507,7 +525,7 @@
             </div>
             <div class="video-copy">
               <div class="eyebrow">@BracaKumerle</div>
-              <p style="color:var(--c-muted);font-size:var(--text-sm);line-height:1.7">Pet arhivskih epoha — od prvih demo snimki do live nastupa na Split Rivi i DHK-u. Kanal je primarna točka za audio-vizualni proof of work projekta.</p>
+              <p style="color:var(--c-muted);font-size:var(--text-sm);line-height:1.7">Pet arhivskih epoha — od prvih demo snimki do live nastupa na Split Rivi i DHK-u. Kanal je primarna točka za audio-vizualni arhiv projekta.</p>
               <a class="btn btn-s" href="https://www.youtube.com/@bracakumerle" target="_blank" rel="noopener">Otvori kanal →</a>
             </div>
           </div>
@@ -568,45 +586,38 @@
         <div class="arhiva-top">
           <div class="eyebrow">03 · Arhiva</div>
           <h2>Arhiva je aktivna, ne napuštena.</h2>
-          <p>Arhiv se gradi paralelno s novim izdanjima. Nije retrospektiva koja čeka kraj — ona je operativna infrastruktura projekta.</p>
+          <p>Arhiv se gradi paralelno s novim izdanjima. Nije retrospektiva koja čeka kraj — ona raste zajedno s bendom.</p>
         </div>
         <div class="arhiva-grid">
           <article class="card arhiva-active">
             <div class="ws-status ws-active">
               <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"/></svg>
-              Aktivan workstream
+              U izradi
             </div>
             <h3>/arhiva/strice-ivane</h3>
-            <p>Dokumentacija nastupa, setlisti i arhivskih materijala koji su javno dostupni i verificirani. Prvi konkretni workstream u izgradnji.</p>
+            <p>Dokumentacija nastupa, setlisti i arhivskih materijala — javno dostupna i provjerena. Prvi objavljeni dio arhive.</p>
             <div class="chip-row">
-              <span class="chip">Archive Construction</span>
-              <span class="chip">Setlists DB</span>
+              <span class="chip">Nastupi</span>
+              <span class="chip">Setliste</span>
             </div>
           </article>
           <div class="timeline-placeholder">
-            <h3>Timeline dolazi kroz sljedeće iteracije.</h3>
-            <p>Kronološki prikaz nastupa, izdanja i arhivskih epoha aktivira se kada Setlists DB dosegne prag verificiranih unosa.</p>
-            <div class="progress-bar-wrap">
-              <div class="progress-label"><span>Setlists DB popunjenost</span><span>18%</span></div>
-              <div class="progress-bar"><div class="progress-fill"></div></div>
-            </div>
+            <h3>Kronologija stiže uskoro.</h3>
+            <p>Kronološki prikaz nastupa, izdanja i arhivskih epoha objavljuje se kako arhiva raste.</p>
           </div>
         </div>
         <div class="arhiva-ws">
           <article class="card ws-card">
-            <div class="ws-status ws-active">● ACTIVE</div>
-            <div class="ws-title">Archive Construction</div>
-            <div class="ws-desc">Setlisti, nastupni podaci, vizualni materijali</div>
+            <div class="ws-title">Nastupi i setliste</div>
+            <div class="ws-desc">Dokumentacija koncerata, nastupni podaci i vizualni materijali</div>
           </article>
           <article class="card ws-card">
-            <div class="ws-status ws-active">● ACTIVE</div>
-            <div class="ws-title">Authority Acquisition</div>
-            <div class="ws-desc">MusicBrainz, Wikipedia EN, entity governance</div>
+            <div class="ws-title">Glazbene baze</div>
+            <div class="ws-desc">Prisutnost na MusicBrainz, Wikidati i Discogsu</div>
           </article>
           <article class="card ws-card">
-            <div class="ws-status ws-dormant">◌ DORMANT</div>
-            <div class="ws-title">Lyrics Corpus</div>
-            <div class="ws-desc">KAB-CORPUS-001 — /lyrics/* u izgradnji</div>
+            <div class="ws-title">Tekstovi pjesama</div>
+            <div class="ws-desc">Corpus tekstova — u izgradnji</div>
           </article>
         </div>
         <div class="archive-photos">
@@ -714,3 +725,4 @@
   </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

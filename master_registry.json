@@ -91,7 +91,8 @@
       "type": "Person",
       "ids": {
         "wikidata": "Q139595627",
-        "musicbrainz": "b134ce50"
+        "musicbrainz": "b134ce50",
+        "discogs": "3364223"
       },
       "urls": {
         "wikidata": "https://www.wikidata.org/wiki/Q139595627",

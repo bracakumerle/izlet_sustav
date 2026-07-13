@@ -34,6 +34,8 @@ Ne graditi tijekom probe. Svaki se validira stvarnom potrebom u 30 dana.
 | Datum | Situacija koju okvir ne pokriva | Sloj | Predloženo pravilo (v3.1) | Status |
 |---|---|---|---|---|
 | 2026-07-12 | Naziv `works_registry.json` koristi se za DVIJE različite datoteke (root=rights-kanon 44; `registries/`=census-candidate 76) → dugoročno zbunjuje | L2 Registry | Nakon reconciliationa preimenovati `registries/works_registry.json` → `works_census_registry.json` (ili `_candidate_`). Naming-collision guard u dissekciji. | TECH DEBT (ne hitno) — otkriveno u Dissection Track B |
+| 2026-07-12 | Dependency Validation nalaz nema „Canonical Source" (odakle „Expected") → za 6 mj neće biti očito | Metodologija (BETA) | Dodati stupac u finding format: Evidence · **Canonical Source** · Expected · Observed · Severity · Action | v3.1 KANDIDAT — validirano u BETA-01 (GPT) |
+| 2026-07-12 | Rizik parcijalne izmjene tijekom validacije (kontaminira analizu; gubi se jedinstven paket) | Metodologija (BETA) | **PRAVILO: „Validation Phase is READ-ONLY."** Implementacija = zasebna faza tek nakon: full validation → Validation Report → klasifikacija → jedinstveni Implementation Plan → ratifikacija → kontrolirani Implementation | GENERAL RATIFICIRAO 2026-07-12 |
 
 ---
 

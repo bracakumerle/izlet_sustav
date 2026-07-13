@@ -1,6 +1,36 @@
 # iZLET_sustav — SYSTEM INDEX (operativna kartografija)
+
+> ## ⚖️ ARCHITECTURAL LAW 0 — ustavno pravilo iZLET OS-a
+> **Architecture changes require evidence. Ideas may start investigations. Only evidence changes architecture.**
+> Promjena arhitekture / metodologije / terminologije / hijerarhije zahtijeva SVA TRI: (1) dokaz iz BETA validacije · (2) zajednička arhitektonska analiza (Claude+GPT) · (3) ratifikacija Generala.
+>
+> **Authority precedence (nikad obrnuto):** **Canonical Layer → Operational Layer → Execution → Representation.**
+> - **Canonical Layer** = jedini izvor istine (registry/runtime/architecture/identity/protocols). *Trenutna implementacija: Git repo; može postati SQL/Graph/API — arhitektura NE ovisi o tehnologiji.*
+> - **Operational Layer** = planning/coordination/status. **Vlasnik = General**; implementacija danas = Notion; agent = izvršitelj (ne vlasnik).
+> - **Execution** = agenti (Claude/GPT/Gemini/Grok/Perplexity/…) — izvode, ne pohranjuju istinu.
+> - **Representation** = adapteri (Web/YT/WD/MB/Spotify/Discogs/…) — nisu izvori istine.
+> Obriši li se Operational Layer, **Canonical Layer mora biti dovoljan za rekonstrukciju.** Ortogonalno 12-slojnom subsystem-inventaru (§1), ne redizajnira ga.
+
 ## Jedinstveni operativni indeks. SINTEZA postojećeg, ne novi moduli. „Repo wins."
 ### Autor: Claude (Ministar autoriteta) · 2026-07-12 · v1 · temelj Phase 0 orijentacije za sve buduće zadatke.
+
+## STATUS — Architecture Freeze v1.0 (ratificirano 2026-07-12)
+| Polje | Vrijednost |
+|---|---|
+| Definicija | **iZLET OS = Identity Consistency Engine** (dokazuje odnos svih reprezentacija istog entiteta kroz sve adaptere) |
+| Architecture Freeze | **v1.0 · State: ACTIVE** |
+| Architecture | 🔒 **LOCKED** |
+| Methodology (BETA) | 🔒 **LOCKED** |
+| Current Phase | **BETA** (BETA-01 YouTube = COMPLETE) |
+| Dopušteno mijenjati | ✓ Evidence · ✓ Validation · ✓ New findings |
+| Zabranjeno | ✗ Novi koncepti · ✗ Novi frameworci · ✗ Redizajn sloja · ✗ Promjena terminologije |
+| Arhitekturu mijenja SAMO | ponovljeni empirijski dokaz iz BETA validacija (visok prag) |
+| Uloge | General = ratifikacija · Claude = Chief Systems Architect (čuvar arhitekture) · GPT = COO (operativni model) |
+| Last Ratified | 2026-07-12 |
+
+> **Za novog agenta:** arhitektura i metodologija su ZAKLJUČANE. Tvoj posao nije dizajnirati nego **validirati**. Promjena zahtijeva dokaz, ne ideju.
+
+---
 
 > **Svrha:** povezati postojeću dokumentaciju (repo + Notion) u jedan indeks tako da se prije svakog zadatka zna što već postoji. Ne uvodi doktrinu — pokazuje na postojeću (`runtime_spec_v2_5.md`, `identity-canon.md`, `CLAUDE_OPERATING_PROTOCOL.md`, Notion 4. SYSTEM MAP, 001I, Platform Completion Tracker).
 > **Granica pristupa (ova sesija):** montiran cijeli `izlet_sustav` repo (OneDrive) + `diplomski/MRVELJ_CONTENT`. `.git` prisutan. Bash na OneDrive mountu spor (koristiti Read/Grep/Glob). Neke datoteke (`izlet_os/*.py` interni, `task_registry.json`, `transitions.md`) nisu pročitane u dubinu — označeno „⧗ dublji read pending".
