@@ -46,6 +46,17 @@ themes:
   - kontinuitet kroz generacije
   - osobno i kolektivno iskustvo
 
+language:                                  # ratificirano 2026-07-13 (General)
+  primary: hr
+  policy: >
+    HR primarno + kratki EN interoperabilni red (canonical ton). Vrijedi za
+    objavljeni sadržaj/metapodatke (opisi playlista, video-opisi, JSON-LD).
+    NIJE mandat za pune standalone EN-mirror stranice — /en/ ostaje
+    placeholder-arhetip dok General ne odluči zasebno.
+  origin: >
+    Uveden u Mrvelj Authority session 2026-07-12; commitan u kanon 2026-07-13
+    (24h je živio samo u sesiji → nevidljiv Gate-0 canon-provjeri).
+
 # works_reference NAMJERNO izostavljen iz jezgre (v0.4 odluka):
 # popis ključnih/sekundarnih djela je operativni izbor (end-screen klaster,
 # /pjesme/ stranice) koji se može promijeniti do 2040. bez utjecaja na
