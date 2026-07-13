@@ -1,3 +1,18 @@
+# Hide internal system artifacts — force (404!) shadows the physical files. MUST be first.
+/master_registry.json    /404.html   404!
+/works_registry.json     /404.html   404!
+/events_registry.json    /404.html   404!
+/metrics_registry.json   /404.html   404!
+/client_secrets.json     /404.html   404!
+/CANONICAL_CHANGES.md    /404.html   404!
+/CANONICAL_STATE.md      /404.html   404!
+/registries/*            /404.html   404!
+/docs/*                  /404.html   404!
+/izlet_os/*              /404.html   404!
+/scripts/*               /404.html   404!
+/_build/*                /404.html   404!
+/logs/*                  /404.html   404!
+
 # Corpus URL aliases — /pjesme/* → /lyrics/*
 /pjesme/zalo                    /lyrics/zalo                    301
 /pjesme/cast                    /lyrics/cast                    301
