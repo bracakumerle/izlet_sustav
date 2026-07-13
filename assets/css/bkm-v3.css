@@ -141,7 +141,7 @@ ul { list-style: none; padding: 0 }
 .bkm-prose p { color: var(--c-muted); line-height: 1.8; margin-bottom: var(--space-5) }
 .bkm-prose ul { display: grid; gap: var(--space-2); margin-bottom: var(--space-5) }
 .bkm-prose ul li { color: var(--c-muted); padding-left: var(--space-5); position: relative; font-size: var(--text-sm) }
-.bkm-prose ul li:before { content: "â€”"; position: absolute; left: 0; color: var(--c-p) }
+.bkm-prose ul li:before { content: "\2014"; position: absolute; left: 0; color: var(--c-p) }
 .bkm-prose a { color: var(--c-p); border-bottom: 1px solid var(--c-p-hl) }
 .bkm-prose a:hover { border-color: var(--c-p) }
 
