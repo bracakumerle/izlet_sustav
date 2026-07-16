@@ -3,8 +3,8 @@
     "entity": "iZLET",
     "context": "Wikipedia HR AfD active",
     "date_opened": "2026-05-07",
-    "date_updated": "2026-05-12",
-    "status": "pending_verification",
+    "date_updated": "2026-07-16",
+    "status": "closed_deleted",
     "deadline": "2026-05-14",
     "note": "Rok istekao 14.05.2026. Ishod nije potvrđen. Ne uvoditi pretpostavke.",
     "state": "borderline_KEEP",
@@ -66,8 +66,26 @@
     "links": {
       "wikipedia_hr": "https://hr.wikipedia.org/wiki/IZLET",
       "master_registry_entity": "izlet",
-      "works_registry_refs": ["W_CMC_2009_001"],
-      "fact_canon_refs": ["F_ORIGIN_001", "F_CMC_001"]
+      "works_registry_refs": [
+        "W_CMC_2009_001"
+      ],
+      "fact_canon_refs": [
+        "F_ORIGIN_001",
+        "F_CMC_001"
+      ]
+    },
+    "outcome": {
+      "result": "DELETED",
+      "date": "2026-07-16",
+      "time_local": "15:58 (Europe/Zagreb)",
+      "deleting_admin": "Runolist",
+      "reason": "ne zadovoljava kriterije značajnosti (WP:KR)",
+      "deletion_type": "notability (WP:KR) — nije brzo brisanje (WP:BB); evidencija brisanja ne linka raspravu (PROD ili administratorska odluka)",
+      "prior_deletion": "2007-01-12 (Roberta F.) — druga era, nevezano",
+      "source": "hr.wikipedia deletion log; verificirano preko logirane sesije 2026-07-16",
+      "assessment_delta": "prethodni 'low-risk KEEP candidate' OPOVRGNUT — članak pao na izvorima (source-clustering low-independence, contested GNG), ne na sadržaju",
+      "drv_note": "ako se ide na osporavanje (DRV) ili re-kreaciju: nužni novi NEOVISNI sekundarni izvori sa značajnom pokrivenošću (WP:ZNASMJE), ne re-cluster postojećih",
+      "status_flag": "RECORDED_BY_CLAUDE — čeka ratifikaciju (General = Canonical Decision Authority)"
     }
   }
 }
