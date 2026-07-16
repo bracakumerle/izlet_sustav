@@ -47,8 +47,9 @@
       "type": "authority",
       "description": "HR Wikipedia IZLET",
       "owner": "Claude",
-      "status": "done",
-      "output": "hr.wikipedia.org/wiki/IZLET"
+      "status": "invalidated",
+      "output": "DELETED 2026-07-16 — clanak uklonjen s hr.wikipedia",
+      "invalidated_note": "hr.wikipedia IZLET clanak obrisan, reported 2026-07-16"
     },
     {
       "id": "AUTH-002",
@@ -56,7 +57,9 @@
       "description": "EN Wikipedia objava",
       "owner": "Claude",
       "status": "pending",
-      "depends_on": ["AUTH-001"],
+      "depends_on": [
+        "AUTH-001"
+      ],
       "scheduled": "2026-05-09"
     },
     {
@@ -65,7 +68,10 @@
       "description": "Outreach Ivan M. (Fenix Magazin) — biografski intervju",
       "owner": "Claude",
       "status": "pending",
-      "depends_on": ["AUTH-001", "AUTH-002"]
+      "depends_on": [
+        "AUTH-001",
+        "AUTH-002"
+      ]
     },
     {
       "id": "DATA-004",

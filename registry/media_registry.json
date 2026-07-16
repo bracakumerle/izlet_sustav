@@ -2,7 +2,12 @@
   "schema_version": "1.0",
   "created": "2026-05-29",
   "description": "Centralni registar svih medijskih objava o iZLET / Braća Kumerle",
-  "categories": ["music_press", "patriotic_press", "mainstream_incident", "encyclopedic"],
+  "categories": [
+    "music_press",
+    "patriotic_press",
+    "mainstream_incident",
+    "encyclopedic"
+  ],
   "articles": [
     {
       "id": "ART001",
@@ -433,9 +438,10 @@
       "date": "2026-05-02",
       "url": "https://hr.wikipedia.org/wiki/IZLET",
       "gng_eligible": false,
-      "status": "live",
+      "status": "deleted",
       "tier": "A",
-      "notes": "Kanonski referentni dokument. Ne citirati kao izvor — samo referentni."
+      "notes": "Kanonski referentni dokument. Ne citirati kao izvor — samo referentni.",
+      "deleted_note": "clanak obrisan s hr.wikipedia, reported 2026-07-16"
     }
   ],
   "archival_losses": [
