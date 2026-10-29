@@ -17,3 +17,29 @@ izlet_sustav_v2/node_modules/
 izlet_sustav_v2/.next/
 izlet_sustav_v2/
 client_secrets.json
+
+# Video produkcija (ZAD-100, 29. 10. 2026.): u git ide samo tekst; mediji, node_modules, work i tmp ostaju izvan gita
+produkcija-video/**
+!produkcija-video/**/
+!produkcija-video/kanal/CLAUDE.md
+!produkcija-video/kanal/.claude/skills/**
+!produkcija-video/kanal/agents/**
+!produkcija-video/kanal/outputs/*.md
+!produkcija-video/kanal/lyrics_timed/**
+!produkcija-video/kanal/tools/**
+!produkcija-video/kanal/remotion/src/**
+!produkcija-video/kanal/remotion/*.json
+!produkcija-video/kanal/remotion/*.ts
+!produkcija-video/kanal/remotion/*.js
+!produkcija-video/kanal/remotion/*.md
+!produkcija-video/kanal/remotion/scripts/**
+!produkcija-video/kanal/remotion/configs/**
+!produkcija-video/mediji/*.md
+produkcija-video/**/node_modules/
+produkcija-video/kanal/work/
+produkcija-video/kanal/tmp/
+produkcija-video/**/__pycache__/
+produkcija-video/**/*.py[cod]
+
+# Interno (ZAD-103, 29. 10. 2026.): lokalni privatni repo, nikad u javni repo
+interno/
