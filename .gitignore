@@ -43,3 +43,6 @@ produkcija-video/**/*.py[cod]
 
 # Interno (ZAD-103, 29. 10. 2026.): lokalni privatni repo, nikad u javni repo
 interno/
+
+# lokalne Claude Code postavke (sadrze tajne)
+.claude/settings.local.json
