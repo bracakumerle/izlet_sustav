@@ -46,3 +46,11 @@ interno/
 
 # lokalne Claude Code postavke (sadrze tajne)
 .claude/settings.local.json
+
+# L3 (ZAD-136, 1. 11. 2026.): tokeni i lokalne tajne
+registries/.youtube_analytics_token.json
+registries/.*token*.json
+.env.*
+!.env.example
+client_secret*.json
+storageState*.json
